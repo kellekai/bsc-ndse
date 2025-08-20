@@ -1,0 +1,54 @@
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+ &NAMIO
+ NTASK_MULTIO    =           1,
+ NTASK_XIOS      =           0
+ /
+(I)  *** [Client] mpi::getComm "multio" - passed parent comm -1006632956 (Comm: -1006632956, size: 27, rank: 0)
+(I)  *** [Client] mpi::getComm "multio-clients" - try splitting from multio (Comm: -1006632956, size: 27, rank: 0) by color 777
+(I)  *** [Client] mpi::getComm "multio-clients" - successful split  from multio (Comm: -1006632956, size: 27, rank: 0) by color 777 (Comm: -1006632950, size: 26, rank: 0)
+(I)  *** MpiTransport::createPeers clientCount: 26, serverCount: 1, commSize: 27
+MPL_INIT : MPL_COMM=-1006632944 (non-default) , MPL_NUMPROC=26
+MPL_INIT : MPL_METHOD=JP_BLOCKING_BUFFERED , MPL_MBX_SIZE=0
+MPL_INIT : MPL_NCPU_PER_NODE = 1 (CAUTION: could not be inferred from hostname!)
+MPL_BUFFER_METHOD:  1     1000000
+(I) LOGGER RE-CONFIGURED BY IFS_INIT
+ ===============================================
+ *** MPUSERIN has read the following settings
+ *** LFDB =  T
+ *** LRSTPARALW =  T
+ *** LRSTPARALR =  T
+ *** LRSTINFDAT =  F
+ *** LWCOU=  T
+ *** LWNEMOCOU=  T
+ *** LWNEMOCOUSEND  =  T
+ *** LWNEMOCOURECV  =  T
+ *** LWNEMOCOUDEBUG =  F
+ *** LWNEMOCOUCIC   =  T
+ *** LWNEMOCOUCIT   =  T
+ *** LWNEMOCOUCUR   =  F
+ *** LWNEMOCOUSTK   =  T
+ *** LWNEMOCOUSTRN  =  F
+ *** LWNEMOTAUOC    =  T
+ *** LSUBGRID=  T
+ *** IPROPAGS=            2
+ *** IREFRA=            0
+ *** LLUNSTR=  F
+ *** LVECTOR=  F
+ *** IVECTOR=            1
+ *** LPREPROC=  F
+ *** LWCOUNORMS=  F
+ *** LLNORMIFS2WAM=  F
+ *** LLNORMWAM2IFS=  F
+ *** LLNORMWAMOUT=  F
+ *** LLNORMWAMOUT_GLOBAL=  F
+ *** LSMSSIG_WAM=  F
+ *** LWAM_USE_IO_SERV =  T
+ *** CPATH = restart.dir
+ *** LOUTMDLDCP =  F
+ *** NLOCGRB =           36
+ *** YEXPVER = hz9m
+ *** YCLASS = rd
+ *** ISTREAM =         1248
+ ===============================================
+MultIO initialising with plans file /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/raps/multio_yaml/multio-ifs-wam-config.yaml
+(W) Path for Encoding BitsPerValue table not configured, MultIO config key EncodingBitsPerValueTable or env variable MULTIO_ENCODING_TABLE

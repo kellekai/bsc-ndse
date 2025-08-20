@@ -1,5 +1,0 @@
->>> PSUBMIT: PWD=/gpfs/projects/bsc32/bsc631248/ifsnc_remote_dir/ifsnemo-build/ifsnemo
->>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
->>> PSUBMIT: Nodelist gs03r3b01:14
-        tm_1_CNT4: 4528369
->>> PSUBMIT: Exiting...
