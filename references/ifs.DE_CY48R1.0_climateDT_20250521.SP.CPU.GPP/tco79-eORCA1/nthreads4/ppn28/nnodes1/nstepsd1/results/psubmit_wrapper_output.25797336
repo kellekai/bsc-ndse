@@ -1,5 +1,0 @@
->>> PSUBMIT: PWD=/gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo
->>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
->>> PSUBMIT: Nodelist gs17r2b40:28
-        tm_1_CNT4: 35677173
->>> PSUBMIT: Exiting...

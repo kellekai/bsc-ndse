@@ -1,3 +1,7 @@
+DEBUG: entered postproc check
+DEBUG: PSUBMIT_POSTPROC='./ifsnemo-postproc.sh'
+DEBUG: relative path=ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//./ifsnemo-postproc.sh
+DEBUG: postproc file exists at ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//./ifsnemo-postproc.sh
 Set INTEL compilers as MPI wrappers backend
 remove impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
 load impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
@@ -8,8 +12,8 @@ load HDF5/1.14.1-2 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH, CPLUS_I
 load PNETCDF/1.12.3 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH)
 load NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH,
 CPLUS_INCLUDE_PATH, NETCDF_ROOT, NETCDF_DIR) 
-Submitted batch job 25795537
-Job ID 25795537
+Submitted batch job 26165901
+Job ID 26165901
 Nodetype: gp_ehpc; account: ehpc01
 Job status: Q
 Job status: R
@@ -17,22 +21,32 @@ Job status: CG
 Job status: 
 JOB DISAPPEARED!
 Job status: NONE
-Results collected: results.25795537/
-Rank 0 output: results.25795537/rank0
-Batch system output: results.25795537/slurm-25795537.out
-Psubmit wrapper output: results.25795537/psubmit_wrapper_output.25795537
+Results collected: results.26165901/
+Rank 0 output: results.26165901/rank0
+Batch system output: results.26165901/slurm-26165901.out
+Psubmit wrapper output: results.26165901/psubmit_wrapper_output.26165901
 
 --- Batch system output: ---
->>> PSUBMIT: PSUBMIT_JOBID=25795537 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
+>>> PSUBMIT: PSUBMIT_JOBID=26165901 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
 >>> PSUBMIT: args: -t slurm -n 448 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/ -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a 
->>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=10 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo -N 16 -n 448 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 448 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a "\"\""
-Submitted batch job 25795537
+>>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=120 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo -N 16 -n 448 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 448 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a "\"\""
+Submitted batch job 26165901
 
 --- Psubmit wrapper output: ---
->>> PSUBMIT: PWD=/gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo
->>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
->>> PSUBMIT: Nodelist gs14r1b07:28,gs14r1b08:28,gs14r1b12:28,gs14r1b16:28,gs14r1b22:28,gs14r1b26:28,gs14r1b30:28,gs14r1b31:28,gs14r1b33:28,gs14r1b34:28,gs14r1b37:28,gs14r1b41:28,gs14r1b43:28,gs14r1b47:28,gs14r1b51:28,gs14r1b72:28
-        tm_1_CNT4: 68802244
++++ '[' -e ../out.26165901.97 ']'
++++ mv out.26165901.97 ..
++++ for i in *${PSUBMIT_JOBID}*
++++ '[' -e ../out.26165901.98 ']'
++++ mv out.26165901.98 ..
++++ for i in *${PSUBMIT_JOBID}*
++++ '[' -e ../out.26165901.99 ']'
++++ mv out.26165901.99 ..
++++ cd ..
++++ mv ifsnemo_testbed_26165901 ifsnemo_testbed_26165901.26165901.dir
++++ true
++ info Exiting...
++ local str=Exiting...
++ echo '>>> PSUBMIT: Exiting...'
 >>> PSUBMIT: Exiting...
 
 --- Rank 0 output: ---

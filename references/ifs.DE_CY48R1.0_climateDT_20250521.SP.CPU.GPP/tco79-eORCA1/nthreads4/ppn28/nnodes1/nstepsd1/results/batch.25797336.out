@@ -1,4 +1,0 @@
->>> PSUBMIT: PSUBMIT_JOBID=25797336 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
->>> PSUBMIT: args: -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/ -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a 
->>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=10 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo -N 1 -n 28 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a "\"\""
-Submitted batch job 25797336

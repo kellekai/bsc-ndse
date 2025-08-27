@@ -1,0 +1,2 @@
+>>> PSUBMIT: PSUBMIT_JOBID=26175300 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
+>>> PSUBMIT: args: -t slurm -n 2080 -p 8 -h 14 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/ -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a 

@@ -1,0 +1,14 @@
+>>> PSUBMIT: PWD=/gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo
+>>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
+>>> PSUBMIT: Nodelist gs13r3b19:28
+>>> [PREPROC] Patching /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/raps/bin/hres to enable run.stat
+>>> [WAIT] Entering settle loop at 2025-08-27 15:31:17 in /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/ifsnemo_testbed_26172544
+>>> [WAIT] Iter 1: Found HRES.OUTPUT.26172544
+>>> [WAIT] Iter 1: Found time.step
+>>> [WAIT] Iter 1: Found ocean.output
+>>> [WAIT] Iter 1: Found run.stat
+>>> [WAIT] All wanted files are present at 2025-08-27 15:31:17
+>>> [WAIT] Settle loop finished at 2025-08-27 15:31:17
+>>> ENTERING /scratch/slurm/job26172544/slurm_script on gs13r3b19 at Wed Aug 27 15:31:17 CEST 2025
+        tm_1_CNT4: 33849745
+>>> PSUBMIT: Exiting...

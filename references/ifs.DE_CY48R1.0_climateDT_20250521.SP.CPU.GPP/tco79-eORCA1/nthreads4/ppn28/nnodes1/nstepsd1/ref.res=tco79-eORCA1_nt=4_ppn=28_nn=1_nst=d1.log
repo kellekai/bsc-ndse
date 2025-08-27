@@ -1,3 +1,7 @@
+DEBUG: entered postproc check
+DEBUG: PSUBMIT_POSTPROC='./ifsnemo-postproc.sh'
+DEBUG: relative path=ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//./ifsnemo-postproc.sh
+DEBUG: postproc file exists at ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//./ifsnemo-postproc.sh
 Set INTEL compilers as MPI wrappers backend
 remove impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
 load impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
@@ -8,8 +12,8 @@ load HDF5/1.14.1-2 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH, CPLUS_I
 load PNETCDF/1.12.3 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH)
 load NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH,
 CPLUS_INCLUDE_PATH, NETCDF_ROOT, NETCDF_DIR) 
-Submitted batch job 25797336
-Job ID 25797336
+Submitted batch job 26172544
+Job ID 26172544
 Nodetype: gp_ehpc; account: ehpc01
 Job status: Q
 Job status: R
@@ -17,37 +21,29 @@ Job status: CG
 Job status: 
 JOB DISAPPEARED!
 Job status: NONE
-Results collected: results.25797336/
-Rank 0 output: results.25797336/rank0
-Batch system output: results.25797336/slurm-25797336.out
-Psubmit wrapper output: results.25797336/psubmit_wrapper_output.25797336
+Results collected: results.26172544/
+Batch system output: results.26172544/slurm-26172544.out
+Psubmit wrapper output: results.26172544/psubmit_wrapper_output.26172544
 
 --- Batch system output: ---
->>> PSUBMIT: PSUBMIT_JOBID=25797336 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
+>>> PSUBMIT: PSUBMIT_JOBID=26172544 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
 >>> PSUBMIT: args: -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/ -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a 
->>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=10 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo -N 1 -n 28 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a "\"\""
-Submitted batch job 25797336
+>>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=120 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo -N 1 -n 28 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a "\"\""
+Submitted batch job 26172544
 
 --- Psubmit wrapper output: ---
 >>> PSUBMIT: PWD=/gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo
 >>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
->>> PSUBMIT: Nodelist gs17r2b40:28
-        tm_1_CNT4: 35677173
+>>> PSUBMIT: Nodelist gs13r3b19:28
+>>> [PREPROC] Patching /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/raps/bin/hres to enable run.stat
+>>> [WAIT] Entering settle loop at 2025-08-27 15:31:17 in /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/ifsnemo_testbed_26172544
+>>> [WAIT] Iter 1: Found HRES.OUTPUT.26172544
+>>> [WAIT] Iter 1: Found time.step
+>>> [WAIT] Iter 1: Found ocean.output
+>>> [WAIT] Iter 1: Found run.stat
+>>> [WAIT] All wanted files are present at 2025-08-27 15:31:17
+>>> [WAIT] Settle loop finished at 2025-08-27 15:31:17
+>>> ENTERING /scratch/slurm/job26172544/slurm_script on gs13r3b19 at Wed Aug 27 15:31:17 CEST 2025
+        tm_1_CNT4: 33849745
 >>> PSUBMIT: Exiting...
-
---- Rank 0 output: ---
- *** LLNORMIFS2WAM=  F
- *** LLNORMWAM2IFS=  F
- *** LLNORMWAMOUT=  F
- *** LLNORMWAMOUT_GLOBAL=  F
- *** LSMSSIG_WAM=  F
- *** LWAM_USE_IO_SERV =  T
- *** CPATH = restart.dir
- *** LOUTMDLDCP =  F
- *** NLOCGRB =           36
- *** YEXPVER = hz9m
- *** YCLASS = rd
- *** ISTREAM =         1248
- ===============================================
-MultIO initialising with plans file /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/raps/multio_yaml/multio-ifs-wam-config.yaml
-(W) Path for Encoding BitsPerValue table not configured, MultIO config key EncodingBitsPerValueTable or env variable MULTIO_ENCODING_TABLE
+cat: /gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/ifsnemo/results.26172544/rank0: No such file or directory
