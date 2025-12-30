@@ -1,0 +1,11 @@
++ [hres:19s:17:15:38:5456]: read -ra _prune_vars
+++ [hres:20s:17:15:38:5456]: printenv
+++ [hres:20s:17:15:38:5456]: egrep '^[a-z]'
+++ [hres:20s:17:15:38:5456]: cut -f1 -d=
+++ [hres:20s:17:15:38:5456]: egrep -v '^(bash)'
+++ [hres:20s:17:15:38:5456]: grep =
+++ [hres:20s:17:15:38:5456]: date +%s.%N
++ [hres:20s:17:15:38:5456]: unset nemoyproc MPI_EPOCH=1767024938.091046353
++ [hres:20s:17:15:38:5457]: export MPI_EPOCH
++ [hres:20s:17:15:38:5457]: set -eu
++ [hres:20s:17:15:38:5457]: mpirun -ppn 28 --errfile-pattern=err.34474502.%r --outfile-pattern=out.34474502.%r -np 28 /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20251105.SP.CPU.GPP/runner-script.sh /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20251105.SP.CPU.GPP/bin/ifsMASTER.SP

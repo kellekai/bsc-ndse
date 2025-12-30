@@ -1,0 +1,17 @@
+>>> PSUBMIT: PWD=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox
+>>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
+>>> PSUBMIT: Nodelist gs09r3b31:28,gs09r3b40:28,gs09r3b42:28,gs09r3b45:28,gs09r3b46:28,gs09r3b47:28,gs09r3b48:28,gs09r3b49:28,gs09r3b50:28,gs09r3b51:28,gs09r3b52:28,gs09r3b53:28,gs09r3b54:28,gs09r3b55:28,gs09r3b56:28,gs09r3b58:28
+>>> [PREPROC] Patching /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/raps/bin/hres to enable run.stat
+>>> [POSTPROC] JOBID=34474518
+>>> [POSTPROC] TESTBED_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/ifsnemo_testbed_34474518
+>>> [POSTPROC] RESULTS_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/results.34474518
+>>> [POSTPROC] Phase 1: Moving artifacts into /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/results.34474518
+>>> [POSTPROC] Archived testbed -> ifsnemo_testbed_34474518.34474518.dir
+>>> [POSTPROC] Phase 2: Verifying required files in results.34474518
+>>> [POSTPROC] Phase 3: Step-count consistency checks
+>>> [POSTPROC]   laststep (time.step/run.stat): 96
+>>> [POSTPROC]   NSTOP    (NODE.001_01)       : 96
+>>> [POSTPROC]   CNT0 last(ifs.stat)           : 96
+>>> [POSTPROC]   NODE.001_01 contains "*** END CNT0 ***"
+>>> [POSTPROC] IFS step-counts consistent: NSTOP=96 == CNT0=96
+>>> PSUBMIT: Exiting...

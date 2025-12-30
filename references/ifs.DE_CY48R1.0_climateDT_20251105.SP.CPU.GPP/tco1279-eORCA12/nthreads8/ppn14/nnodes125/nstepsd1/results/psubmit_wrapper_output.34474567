@@ -1,0 +1,17 @@
+>>> PSUBMIT: PWD=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox
+>>> PSUBMIT: INJOB_INIT_COMMANDS: "export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"
+>>> PSUBMIT: Nodelist gs21r3b01:14,gs21r3b02:14,gs21r3b03:14,gs21r3b04:14,gs21r3b05:14,gs21r3b06:14,gs21r3b07:14,gs21r3b08:14,gs21r3b09:14,gs21r3b10:14,gs21r3b11:14,gs21r3b12:14,gs21r3b13:14,gs21r3b14:14,gs21r3b15:14,gs21r3b16:14,gs21r3b17:14,gs21r3b18:14,gs21r3b19:14,gs21r3b20:14,gs21r3b21:14,gs21r3b22:14,gs21r3b23:14,gs21r3b24:14,gs21r3b25:14,gs21r3b26:14,gs21r3b27:14,gs21r3b28:14,gs21r3b29:14,gs21r3b30:14,gs21r3b31:14,gs21r3b32:14,gs21r3b33:14,gs21r3b34:14,gs21r3b35:14,gs21r3b36:14,gs21r3b37:14,gs21r3b38:14,gs21r3b39:14,gs21r3b40:14,gs21r3b41:14,gs21r3b42:14,gs21r3b43:14,gs21r3b44:14,gs21r3b45:14,gs21r3b46:14,gs21r3b47:14,gs21r3b48:14,gs21r3b49:14,gs21r3b50:14,gs21r3b51:14,gs21r3b52:14,gs21r3b53:14,gs23r3b01:14,gs23r3b02:14,gs23r3b03:14,gs23r3b04:14,gs23r3b05:14,gs23r3b06:14,gs23r3b07:14,gs23r3b08:14,gs23r3b09:14,gs23r3b10:14,gs23r3b11:14,gs23r3b12:14,gs23r3b13:14,gs23r3b14:14,gs23r3b15:14,gs23r3b16:14,gs23r3b17:14,gs23r3b18:14,gs23r3b19:14,gs23r3b20:14,gs23r3b21:14,gs23r3b22:14,gs23r3b23:14,gs23r3b24:14,gs23r3b25:14,gs23r3b26:14,gs23r3b27:14,gs23r3b28:14,gs23r3b29:14,gs23r3b30:14,gs23r3b31:14,gs23r3b32:14,gs23r3b33:14,gs23r3b34:14,gs23r3b35:14,gs23r3b36:14,gs23r3b37:14,gs23r3b38:14,gs23r3b39:14,gs23r3b40:14,gs23r3b41:14,gs23r3b42:14,gs23r3b43:14,gs23r3b44:14,gs23r3b45:14,gs23r3b46:14,gs23r3b47:14,gs23r3b48:14,gs23r3b49:14,gs23r3b50:14,gs23r3b51:14,gs23r3b52:14,gs23r3b53:14,gs23r3b54:14,gs23r3b55:14,gs23r3b56:14,gs23r3b57:14,gs23r3b58:14,gs23r3b59:14,gs23r3b60:14,gs23r3b61:14,gs23r3b62:14,gs23r3b63:14,gs23r3b64:14,gs23r3b65:14,gs23r3b66:14,gs23r3b67:14,gs23r3b68:14,gs23r3b69:14,gs23r3b70:14,gs23r3b71:14,gs23r3b72:14
+>>> [PREPROC] Patching /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/raps/bin/hres to enable run.stat
+>>> [POSTPROC] JOBID=34474567
+>>> [POSTPROC] TESTBED_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/ifsnemo_testbed_34474567
+>>> [POSTPROC] RESULTS_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/results.34474567
+>>> [POSTPROC] Phase 1: Moving artifacts into /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20251105/ifsnemo-build/src/sandbox/results.34474567
+>>> [POSTPROC] Archived testbed -> ifsnemo_testbed_34474567.34474567.dir
+>>> [POSTPROC] Phase 2: Verifying required files in results.34474567
+>>> [POSTPROC] Phase 3: Step-count consistency checks
+>>> [POSTPROC]   laststep (time.step/run.stat): 240
+>>> [POSTPROC]   NSTOP    (NODE.001_01)       : 192
+>>> [POSTPROC]   CNT0 last(ifs.stat)           : 192
+>>> [POSTPROC]   NODE.001_01 contains "*** END CNT0 ***"
+>>> [POSTPROC] IFS step-counts consistent: NSTOP=192 == CNT0=192
+>>> PSUBMIT: Exiting...

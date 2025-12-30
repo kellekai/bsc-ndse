@@ -1,0 +1,6 @@
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+ &NAMIO
+ NTASK_MULTIO    =           2,
+ NTASK_XIOS      =           0
+ /
+MultIO initialising with plans file /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250521/ifsnemo-build/src/sandbox/raps/multio_yaml/multio-ifs-wam-config.yaml

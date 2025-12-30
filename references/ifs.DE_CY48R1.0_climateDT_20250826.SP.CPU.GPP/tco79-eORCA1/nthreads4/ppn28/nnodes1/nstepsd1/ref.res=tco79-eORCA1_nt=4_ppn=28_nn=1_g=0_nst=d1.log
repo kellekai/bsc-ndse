@@ -1,0 +1,46 @@
+Set INTEL compilers as MPI wrappers backend
+remove impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
+load impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
+remove mkl/2023.2.0 (LD_LIBRARY_PATH)
+load mkl/2023.2.0 (LD_LIBRARY_PATH)
+load FFTW/3.3.10 (LD_LIBRARY_PATH, LIBRARY_PATH, CPATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH, PKG_CONFIG_PATH, FFTW_ROOT, FFTW_HOME)
+load HDF5/1.14.1-2 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH, HDF5_DIR, HDF5_ROOT,CFLAGS, CPPFLAGS, LDFLAGS)
+load PNETCDF/1.12.3 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH)
+load NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH,
+NETCDF_ROOT, NETCDF_DIR) 
+Submitted batch job 34474488
+Job ID 34474488
+Nodetype: gp_ehpc; account: ehpc01
+Job status: Q
+Job status: R
+Job status: CG
+Job status: 
+JOB DISAPPEARED!
+Job status: NONE
+Results collected: results.34474488/
+Batch system output: results.34474488/slurm-34474488.out
+Psubmit wrapper output: results.34474488/psubmit_wrapper_output.34474488
+
+--- Batch system output: ---
+>>> PSUBMIT: PSUBMIT_JOBID=34474488 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
+>>> PSUBMIT: args: -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/ -e false -o ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP//psubmit.opt -a 
+>>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=120 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox -N 1 -n 28 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 28 -p 28 -h 4 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP//psubmit.opt -a "\"\""
+Submitted batch job 34474488
+
+--- Psubmit wrapper output: ---
+>>> PSUBMIT: Nodelist gs05r1b32:28
+>>> [PREPROC] Patching /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/raps/bin/hres to enable run.stat
+>>> [POSTPROC] JOBID=34474488
+>>> [POSTPROC] TESTBED_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/ifsnemo_testbed_34474488
+>>> [POSTPROC] RESULTS_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/results.34474488
+>>> [POSTPROC] Phase 1: Moving artifacts into /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/results.34474488
+>>> [POSTPROC] Archived testbed -> ifsnemo_testbed_34474488.34474488.dir
+>>> [POSTPROC] Phase 2: Verifying required files in results.34474488
+>>> [POSTPROC] Phase 3: Step-count consistency checks
+>>> [POSTPROC]   laststep (time.step/run.stat): 24
+>>> [POSTPROC]   NSTOP    (NODE.001_01)       : 24
+>>> [POSTPROC]   CNT0 last(ifs.stat)           : 24
+>>> [POSTPROC]   NODE.001_01 contains "*** END CNT0 ***"
+>>> [POSTPROC] IFS step-counts consistent: NSTOP=24 == CNT0=24
+>>> PSUBMIT: Exiting...
+cat: /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/results.34474488/rank0: No such file or directory

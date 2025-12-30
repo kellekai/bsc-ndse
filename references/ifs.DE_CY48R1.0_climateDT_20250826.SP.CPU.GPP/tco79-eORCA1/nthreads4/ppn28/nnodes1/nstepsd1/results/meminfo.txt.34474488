@@ -1,0 +1,69 @@
+## EC_MEMINFO 
+## EC_MEMINFO : MPI-version 3.1
+## EC_MEMINFO : Start of MPI-library version
+Intel(R) MPI Library 2021.10 for Linux* OS
+## EC_MEMINFO : End of MPI-library version
+## EC_MEMINFO : OpenMP-version 4.5.201611
+## EC_MEMINFO : CPU-model : Intel(R) Xeon(R) Platinum 8480+
+## EC_MEMINFO : Hugepages : 2097152 bytes/page x 0 pages = 0 bytes
+## EC_MEMINFO 
+## EC_MEMINFO 
+## EC_MEMINFO ********************************************************************************
+## EC_MEMINFO *** Mapping of MPI & I/O-tasks to nodes and tasks' thread-to-core affinities ***
+## EC_MEMINFO ********************************************************************************
+## EC_MEMINFO 
+## EC_MEMINFO Running on 1 nodes (2-numa) with 26 compute + 1 I/O-tasks and 4+4 threads
+## EC_MEMINFO 
+## EC_MEMINFO      # NODE#             NODENAME    MPI#  WORLD#  GETPID    I/O#  MASTER    REF#    OMP#  Core affinities
+## EC_MEMINFO      = =====             ========    ====  ======  ======    ====  ======    ====    ====  ===============
+## EC_MEMINFO 
+## EC_MEMINFO      0     0            gs05r1b32       0       0 1047734    [No]     Yes       0       4  {56,57,58,59}
+## EC_MEMINFO      1     0            gs05r1b32       1       1 1047732    [No]    [No]       1       4  {60,61,62,63}
+## EC_MEMINFO      2     0            gs05r1b32       2       2 1047735    [No]    [No]       2       4  {64,65,66,67}
+## EC_MEMINFO      3     0            gs05r1b32       3       3 1047730    [No]    [No]       3       4  {68,69,70,71}
+## EC_MEMINFO      4     0            gs05r1b32       4       4 1047718    [No]    [No]       4       4  {72,73,74,75}
+## EC_MEMINFO      5     0            gs05r1b32       5       5 1047713    [No]    [No]       5       4  {76,77,78,79}
+## EC_MEMINFO      6     0            gs05r1b32       6       6 1047709    [No]    [No]       6       4  {80,81,82,83}
+## EC_MEMINFO      7     0            gs05r1b32       7       7 1047710    [No]    [No]       7       4  {84,85,86,87}
+## EC_MEMINFO      8     0            gs05r1b32       8       8 1047711    [No]    [No]       8       4  {88,89,90,91}
+## EC_MEMINFO      9     0            gs05r1b32       9       9 1047712    [No]    [No]       9       4  {92,93,94,95}
+## EC_MEMINFO     10     0            gs05r1b32      10      10 1047714    [No]    [No]      10       4  {96,97,98,99}
+## EC_MEMINFO     11     0            gs05r1b32      11      11 1047715    [No]    [No]      11       4  {100,101,102,103}
+## EC_MEMINFO     12     0            gs05r1b32      12      12 1047717    [No]    [No]      12       4  {104,105,106,107}
+## EC_MEMINFO     13     0            gs05r1b32      13      13 1047716    [No]    [No]      13       4  {108,109,110,111}
+## EC_MEMINFO     14     0            gs05r1b32      14      14 1047724    [No]    [No]      14       4  {0,1,2,3}
+## EC_MEMINFO     15     0            gs05r1b32      15      15 1047719    [No]    [No]      15       4  {4,5,6,7}
+## EC_MEMINFO     16     0            gs05r1b32      16      16 1047731    [No]    [No]      16       4  {8,9,10,11}
+## EC_MEMINFO     17     0            gs05r1b32      17      17 1047726    [No]    [No]      17       4  {12,13,14,15}
+## EC_MEMINFO     18     0            gs05r1b32      18      18 1047727    [No]    [No]      18       4  {16,17,18,19}
+## EC_MEMINFO     19     0            gs05r1b32      19      19 1047720    [No]    [No]      19       4  {20,21,22,23}
+## EC_MEMINFO     20     0            gs05r1b32      20      20 1047723    [No]    [No]      20       4  {24,25,26,27}
+## EC_MEMINFO     21     0            gs05r1b32      21      21 1047721    [No]    [No]      21       4  {28,29,30,31}
+## EC_MEMINFO     22     0            gs05r1b32      22      22 1047722    [No]    [No]      22       4  {32,33,34,35}
+## EC_MEMINFO     23     0            gs05r1b32      23      23 1047728    [No]    [No]      23       4  {36,37,38,39}
+## EC_MEMINFO     24     0            gs05r1b32      24      24 1047733    [No]    [No]      24       4  {40,41,42,43}
+## EC_MEMINFO     25     0            gs05r1b32      25      25 1047725    [No]    [No]      25       4  {44,45,46,47}
+## EC_MEMINFO     26     0            gs05r1b32      26      26 1047729       0    [No]      26       4  {48,49,50,51}
+## EC_MEMINFO 
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.283s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 26 compute + 1 I/O-tasks and 4+4 threads at 17:15:05.677 on 29-Dec-2025
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 34474488
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs05r1b32              19787    8180       0     11208   93584    19639   87954    214086    3155      3.6   0.0         0      0     109  Sm/p:master:computation
+## EC_MEMINFO 
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250826/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.301s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 25 compute + 1 I/O-tasks and 4+4 threads at 17:15:05.694 on 29-Dec-2025
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 34474488
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs05r1b32              19892    8181       0     11168   93486    19600   87936    213894    3156      3.6   0.0         0      0     109  Sm/p:oops:ifs_init
+## EC_MEMINFO 

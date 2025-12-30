@@ -1,0 +1,343 @@
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+[EC_DRHOOK:hostname:myproc:omltid:pid:unixtid] [YYYYMMDD:HHMMSS:walltime] [function@file:lineno] -- Max OpenMP threads = 4
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2209] fp = 0x15078a6306a0
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2220] ATP_ENABLED=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2221] ATP_MAX_CORES=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2222] ATP_MAX_ANALYSIS_TIME=300
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2223] ATP_IGNORE_SIGTERM=0
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2231] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2252] DR_HOOK_PROFILE=/gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250521/ifsnemo-build/src/sandbox/ifsnemo_testbed_34474499/drhook.%d
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2258] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2264] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2352] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2363] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2371] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2379] DR_HOOK_HARAKIRI_TIMEOUT=60
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2386] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2393] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2400] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2407] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2414] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [process_options@drhook.c:2495]
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [ignore_signals@drhook.c:1365]  DR_HOOK_IGNORE_SIGNALS=<undef>
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [restore_default_signals@drhook.c:1298] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [signal_drhook_init@drhook.c:2045] New signal handler 'signal_drhook' for signal#6 (SIGABRT) at 0x1507cd0c3990 (next at 0x416cc0)
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [signal_drhook_init@drhook.c:2046] New signal handler 'signal_drhook' for signal#7 (SIGBUS) at 0x1507cd0c3990 (next at (nil))
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.005] [signal_drhook_init@drhook.c:2047] New signal handler 'signal_drhook' for signal#11 (SIGSEGV) at 0x1507cd0c3990 (next at 0x416cc0)
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2052] New signal handler 'signal_drhook' for signal#16 (SIGSTKFLT) at 0x1507cd0c3990 (next at (nil))
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [trapfpe_treatment@drhook.c:1248] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [trapfpe@drhook.c:244] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [trapfpe@drhook.c:249] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [trapfpe@drhook.c:256] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2054] New signal handler 'signal_drhook' for signal#8 (SIGFPE) at 0x1507cd0c3990 (next at 0x416cc0)
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2055] New signal handler 'signal_drhook' for signal#4 (SIGILL) at 0x1507cd0c3990 (next at 0x416cc0)
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2056] New signal handler 'signal_drhook' for signal#5 (SIGTRAP) at 0x1507cd0c3990 (next at (nil))
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2057] New signal handler 'signal_drhook' for signal#2 (SIGINT) at 0x1507cd0c3990 (next at 0x416cc0)
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2071] New signal handler 'signal_drhook' for signal#24 (SIGXCPU) at 0x1507cd0c3990 (next at (nil))
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2073] New signal handler 'signal_drhook' for signal#25 (SIGXFSZ) at 0x1507cd0c3990 (next at (nil))
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [signal_drhook_init@drhook.c:2078] New signal handler 'signal_drhook' for signal#31 (SIGSYS) at 0x1507cd0c3990 (next at (nil))
+[EC_DRHOOK:gs12r3b07:1:1:3280140:3280140] [20251229:171525:0.006] [catch_signals@drhook.c:1210] DR_HOOK_CATCH_SIGNALS=<undef>
+ EC_MEMINFO@RNSORT: MINCID, MAXCID, NUMNODES =  0 111 16
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250521/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.136s
+## EC_MEMINFO Running on 16 nodes (2-numa) with 430 compute + 16 I/O-tasks and 4+4 threads at 17:15:25.339 on 29-Dec-2025
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 34474499
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs12r3b07              32731    7542       0     14386   90704    11208   98110    216105    3429      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    1 gs12r3b09              32732    7516       0     17471   89428    18228   90834    217622    2171      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    2 gs12r3b10              32732    7519       0     14608   92962    10151   98208    217580    2292      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    3 gs12r3b11              32732    7522       0     12439   92912    14750   94926    216696    2945      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    4 gs12r3b17              32732    7526       0     16848   90116     5476  103460    217604    2189      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    5 gs12r3b18              32732    7507       0      5610  101772    17992   89788    216863    2419      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    6 gs12r3b19              32732    7510       0     14311   90310     4720  104562    215607    2836      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    7 gs12r3b20              32732    7525       0      7866   97816    15541   93300    216227    2853      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    8 gs12r3b21              32730    7523       0      8267   99150    12927   94578    216623    2541      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    9 gs12r3b39              32732    7520       0     24185   82630    25055   83802    217377    2175      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   10 gs12r3b40              32732    7513       0     20721   86214    24234   84628    217497    2504      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   11 gs12r3b41              32732    7503       0     17498   88588    22992   87030    217810    2674      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   12 gs12r3b42              32732    7517       0     15455   91274    16508   92346    217283    2757      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   13 gs12r3b43              32732    7511       0     15797   90980    18416   91838    218720    1870      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   14 gs12r3b45              32732    7507       0     10929   95634    13189   96314    217764    2447      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   15 gs12r3b46              11690    5943       0     10290   97450    13685   95380    218504    2847      2.6   0.0         0      0     106  Sm/p:master:computation
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-refgen-20251229/ifs-bundle-20250521/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.171s
+## EC_MEMINFO Running on 16 nodes (2-numa) with 414 compute + 16 I/O-tasks and 4+4 threads at 17:15:25.374 on 29-Dec-2025
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 34474499
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs12r3b07              32844    7853       0     14343   90658    11161   98082    215941    3441      3.5   0.0         0      0     112  Sm/p:oops:ifs_init
+## EC_MEMINFO    1 gs12r3b09              32845    7824       0     17431   89400    18183   90794    217471    2183      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    2 gs12r3b10              32845    7824       0     14561   92924    10107   98182    217424    2303      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    3 gs12r3b11              32845    7835       0     12395   92882    14703   94892    216542    2957      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    4 gs12r3b17              32845    7839       0     16801   90082     5442  103430    217459    2199      3.4   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO    5 gs12r3b18              32845    7811       0      5563  101748    17945   89756    216713    2431      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    6 gs12r3b19              32845    7814       0     14265   90282     4674  104522    215446    2850      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    7 gs12r3b20              32845    7830       0      7819   97796    15497   93262    216076    2864      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    8 gs12r3b21              32843    7840       0      8224   99122    12881   94544    216472    2553      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    9 gs12r3b39              32845    7821       0     24141   82606    25010   83782    217244    2186      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   10 gs12r3b40              32845    7813       0     20675   86170    24193   84600    217338    2514      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   11 gs12r3b41              32845    7809       0     17451   88558    22947   87000    217660    2685      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   12 gs12r3b42              32845    7818       0     15411   91248    16465   92318    217142    2767      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   13 gs12r3b43              32845    7826       0     15751   90948    18370   91810    218568    1880      3.4   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO   14 gs12r3b45              32845    7805       0     10884   95614    13142   96284    217621    2460      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   15 gs12r3b46              11731    2798       0     10167   96646    13619   95090    217224    2852      1.3   0.0         0      0     107  Sm/p:master:comput
+[EC_DRHOOK:gs12r3b07:1:4:3280140:3280241] [20251229:171525:0.444] [trapfpe_treatment@drhook.c:1248] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs12r3b07:1:4:3280140:3280241] [20251229:171525:0.444] [trapfpe@drhook.c:244] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs12r3b07:1:4:3280140:3280241] [20251229:171525:0.444] [trapfpe@drhook.c:249] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs12r3b07:1:4:3280140:3280241] [20251229:171525:0.444] [trapfpe@drhook.c:256] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+ ODB Observation Store options : L_READ_FROM_OBS_STORE =  F
+ ODB Observation Store options : L_WRITE_TO_OBS_STORE  =  F
+ ODB Observation Store options : ODB_OBS_STORE_PATH    = 
+ ODB Observation Store options : NPOOLS_COPEDB         =            0
+ Reading /gpfs/projects/ehpc01/models/ifs-nemo/inidata/tco399l137/hz9n/data/ifsdata/RADRRTM
+ Reading /gpfs/projects/ehpc01/models/ifs-nemo/inidata/tco399l137/hz9n/data/ifsdata/RADSRTM
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+  17:15:57 STEP    0 H=   0:00 +CPU=  6.424    
+           STEP    0 :## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power LoadAvg
+           STEP    0 :## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+           STEP    0 :## EC_MEMINFO Node Name                 | Heap  | RSS(tsk)        | Small  Huge or | Small  Huge or | Total          |
+           STEP    0 :## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+           STEP    0 :## EC_MEMINFO    0 gs12r3b07               3323    2454       0      7597   71238     4715   78838    164086    3642      1.4   0.0         0      0   12.76  Sm/p
+  17:16:00 STEP    1 H=   0:15 +CPU=  6.048    
+           STEP    1 :## EC_MEMINFO    0 gs12r3b07               3699    2826       0      7327   67528     4407   75210    156167    3668      1.7   0.0         0      0   12.76  Sm/p
+  17:16:00 STEP    2 H=   0:30 +CPU=  1.061    
+           STEP    2 :## EC_MEMINFO    0 gs12r3b07               3699    2831       0      7319   67548     4393   75206    156166    3678      1.7   0.0         0      0   12.76  Sm/p
+  17:16:00 STEP    3 H=   0:45 +CPU=  1.047    
+           STEP    3 :## EC_MEMINFO    0 gs12r3b07               3699    2831       0      7315   67546     4387   75214    156161    3685      1.7   0.0         0      0   12.76  Sm/p
+  17:16:03 STEP    4 H=   1:00 +CPU=  8.235    
+           STEP    4 :## EC_MEMINFO    0 gs12r3b07               3707    2846       0      7227   67290     4272   74932    155414    3716      1.8   0.0         0      0   20.71  Sm/p
+  17:16:03 STEP    5 H=   1:15 +CPU=  1.088    
+           STEP    5 :## EC_MEMINFO    0 gs12r3b07               3707    2861       0      7218   67166     4264   74784    155131    3716      1.8   0.0         0      0   20.71  Sm/p
+  17:16:03 STEP    6 H=   1:30 +CPU=  1.080    
+           STEP    6 :## EC_MEMINFO    0 gs12r3b07               3707    2862       0      7211   67166     4252   74790    155115    3724      1.8   0.0         0      0   20.71  Sm/p
+  17:16:03 STEP    7 H=   1:45 +CPU=  1.080    
+           STEP    7 :## EC_MEMINFO    0 gs12r3b07               3707    2862       0      7212   67158     4255   74786    155107    3728      1.8   0.0         0      0   20.71  Sm/p
+  17:16:05 STEP    8 H=   2:00 +CPU=  5.764    
+           STEP    8 :## EC_MEMINFO    0 gs12r3b07               3707    2865       0      7208   67152     4255   74818    155126    3737      1.8   0.0         0      0   20.71  Sm/p
+  17:16:05 STEP    9 H=   2:15 +CPU=  1.058    
+           STEP    9 :## EC_MEMINFO    0 gs12r3b07               3707    2865       0      7207   67130     4252   74718    155002    3738      1.8   0.0         0      0   20.71  Sm/p
+  17:16:05 STEP   10 H=   2:30 +CPU=  1.085    
+           STEP   10 :## EC_MEMINFO    0 gs12r3b07               3707    2866       0      7206   67128     4251   74704    154984    3740      1.8   0.0         0      0   20.71  Sm/p
+  17:16:06 STEP   11 H=   2:45 +CPU=  1.098    
+           STEP   11 :## EC_MEMINFO    0 gs12r3b07               3707    2867       0      7204   67124     4248   74698    154972    3740      1.8   0.0         0      0   20.71  Sm/p
+  17:16:07 STEP   12 H=   3:00 +CPU=  5.754    
+           STEP   12 :## EC_MEMINFO    0 gs12r3b07               3707    2869       0      7202   67134     4251   74744    155024    3749      1.8   0.0         0      0   28.02  Sm/p
+  17:16:07 STEP   13 H=   3:15 +CPU=  1.032    
+           STEP   13 :## EC_MEMINFO    0 gs12r3b07               3707    2870       0      7202   67124     4246   74690    154956    3749      1.8   0.0         0      0   28.02  Sm/p
+  17:16:08 STEP   14 H=   3:30 +CPU=  1.095    
+           STEP   14 :## EC_MEMINFO    0 gs12r3b07               3707    2870       0      7201   67122     4246   74698    154961    3749      1.8   0.0         0      0   28.02  Sm/p
+  17:16:08 STEP   15 H=   3:45 +CPU=  1.097    
+           STEP   15 :## EC_MEMINFO    0 gs12r3b07               3707    2870       0      7202   67122     4245   74690    154953    3749      1.8   0.0         0      0   28.02  Sm/p
+  17:16:09 STEP   16 H=   4:00 +CPU=  5.748    
+           STEP   16 :## EC_MEMINFO    0 gs12r3b07               3707    2872       0      7200   67128     4246   74728    154995    3753      1.8   0.0         0      0   28.02  Sm/p
+  17:16:10 STEP   17 H=   4:15 +CPU=  1.031    
+           STEP   17 :## EC_MEMINFO    0 gs12r3b07               3707    2873       0      7199   67122     4243   74686    154946    3753      1.8   0.0         0      0   28.02  Sm/p
+  17:16:10 STEP   18 H=   4:30 +CPU=  1.083    
+           STEP   18 :## EC_MEMINFO    0 gs12r3b07               3707    2873       0      7199   67124     4241   74696    154956    3754      1.8   0.0         0      0   28.02  Sm/p
+  17:16:10 STEP   19 H=   4:45 +CPU=  1.096    
+           STEP   19 :## EC_MEMINFO    0 gs12r3b07               3707    2874       0      7199   67116     4239   74692    154940    3756      1.8   0.0         0      0   28.02  Sm/p
+  17:16:12 STEP   20 H=   5:00 +CPU=  5.717    
+           STEP   20 :## EC_MEMINFO    0 gs12r3b07               3707    2882       0      7197   67124     4244   74724    154982    3758      1.8   0.0         0      0   34.74  Sm/p
+  17:16:12 STEP   21 H=   5:15 +CPU=  1.074    
+           STEP   21 :## EC_MEMINFO    0 gs12r3b07               3707    2882       0      7197   67122     4243   74700    154955    3758      1.8   0.0         0      0   34.74  Sm/p
+  17:16:12 STEP   22 H=   5:30 +CPU=  1.062    
+           STEP   22 :## EC_MEMINFO    0 gs12r3b07               3707    2882       0      7198   67120     4243   74694    154948    3759      1.8   0.0         0      0   34.74  Sm/p
+  17:16:12 STEP   23 H=   5:45 +CPU=  1.090    
+           STEP   23 :## EC_MEMINFO    0 gs12r3b07               3707    2882       0      7197   67120     4241   74674    154925    3759      1.8   0.0         0      0   34.74  Sm/p
+  17:16:14 STEP   24 H=   6:00 +CPU=  5.770    
+           STEP   24 :## EC_MEMINFO    0 gs12r3b07               3707    2885       0      7200   67120     4240   74704    154957    3761      1.8   0.0         0      0   34.74  Sm/p
+  17:16:14 STEP   25 H=   6:15 +CPU=  1.075    
+           STEP   25 :## EC_MEMINFO    0 gs12r3b07               3707    2885       0      7199   67120     4240   74688    154940    3761      1.8   0.0         0      0   34.74  Sm/p
+  17:16:14 STEP   26 H=   6:30 +CPU=  1.077    
+           STEP   26 :## EC_MEMINFO    0 gs12r3b07               3707    2885       0      7200   67120     4238   74690    154942    3761      1.8   0.0         0      0   34.74  Sm/p
+  17:16:15 STEP   27 H=   6:45 +CPU=  1.086    
+           STEP   27 :## EC_MEMINFO    0 gs12r3b07               3707    2885       0      7200   67110     4236   74686    154926    3761      1.8   0.0         0      0   34.74  Sm/p
+  17:16:16 STEP   28 H=   7:00 +CPU=  5.828    
+           STEP   28 :## EC_MEMINFO    0 gs12r3b07               3707    2887       0      7200   67122     4236   74718    154968    3763      1.8   0.0         0      0   40.93  Sm/p
+  17:16:16 STEP   29 H=   7:15 +CPU=  1.046    
+           STEP   29 :## EC_MEMINFO    0 gs12r3b07               3707    2887       0      7199   67110     4235   74680    154918    3763      1.8   0.0         0      0   40.93  Sm/p
+  17:16:17 STEP   30 H=   7:30 +CPU=  1.103    
+           STEP   30 :## EC_MEMINFO    0 gs12r3b07               3707    2887       0      7199   67082     4237   74690    154902    3763      1.8   0.0         0      0   40.93  Sm/p
+  17:16:17 STEP   31 H=   7:45 +CPU=  1.105    
+           STEP   31 :## EC_MEMINFO    0 gs12r3b07               3707    2887       0      7199   67082     4234   74682    154891    3764      1.8   0.0         0      0   40.93  Sm/p
+  17:16:18 STEP   32 H=   8:00 +CPU=  5.778    
+           STEP   32 :## EC_MEMINFO    0 gs12r3b07               3707    2889       0      7199   67084     4235   74716    154927    3765      1.8   0.0         0      0   40.93  Sm/p
+  17:16:19 STEP   33 H=   8:15 +CPU=  1.037    
+           STEP   33 :## EC_MEMINFO    0 gs12r3b07               3707    2889       0      7199   67074     4236   74678    154880    3765      1.8   0.0         0      0   40.93  Sm/p
+  17:16:19 STEP   34 H=   8:30 +CPU=  1.122    
+           STEP   34 :## EC_MEMINFO    0 gs12r3b07               3707    2889       0      7199   67082     4230   74688    154892    3766      1.8   0.0         0      0   40.93  Sm/p
+  17:16:19 STEP   35 H=   8:45 +CPU=  1.097    
+           STEP   35 :## EC_MEMINFO    0 gs12r3b07               3707    2889       0      7198   67080     4233   74690    154894    3766      1.8   0.0         0      0   40.93  Sm/p
+  17:16:21 STEP   36 H=   9:00 +CPU=  5.886    
+           STEP   36 :## EC_MEMINFO    0 gs12r3b07               3707    2891       0      7198   67064     4233   74710    154898    3767      1.8   0.0         0      0   40.93  Sm/p
+  17:16:21 STEP   37 H=   9:15 +CPU=  1.047    
+           STEP   37 :## EC_MEMINFO    0 gs12r3b07               3707    2891       0      7198   67054     4234   74682    154861    3767      1.8   0.0         0      0   40.93  Sm/p
+  17:16:21 STEP   38 H=   9:30 +CPU=  1.119    
+           STEP   38 :## EC_MEMINFO    0 gs12r3b07               3707    2891       0      7199   67052     4235   74690    154868    3767      1.8   0.0         0      0   46.62  Sm/p
+  17:16:22 STEP   39 H=   9:45 +CPU=  1.103    
+           STEP   39 :## EC_MEMINFO    0 gs12r3b07               3707    2891       0      7198   67048     4233   74688    154860    3767      1.8   0.0         0      0   46.62  Sm/p
+  17:16:23 STEP   40 H=  10:00 +CPU=  5.781    
+           STEP   40 :## EC_MEMINFO    0 gs12r3b07               3707    2893       0      7198   67080     4231   74704    154906    3769      1.8   0.0         0      0   46.62  Sm/p
+  17:16:23 STEP   41 H=  10:15 +CPU=  1.052    
+           STEP   41 :## EC_MEMINFO    0 gs12r3b07               3707    2893       0      7196   67062     4231   74674    154856    3769      1.8   0.0         0      0   46.62  Sm/p
+  17:16:24 STEP   42 H=  10:30 +CPU=  1.116    
+           STEP   42 :## EC_MEMINFO    0 gs12r3b07               3707    2893       0      7197   67068     4230   74680    154868    3769      1.8   0.0         0      0   46.62  Sm/p
+  17:16:24 STEP   43 H=  10:45 +CPU=  1.095    
+           STEP   43 :## EC_MEMINFO    0 gs12r3b07               3707    2893       0      7196   67064     4231   74678    154863    3769      1.8   0.0         0      0   46.62  Sm/p
+  17:16:25 STEP   44 H=  11:00 +CPU=  5.724    
+           STEP   44 :## EC_MEMINFO    0 gs12r3b07               3707    2894       0      7196   67076     4230   74694    154888    3770      1.8   0.0         0      0   46.62  Sm/p
+  17:16:26 STEP   45 H=  11:15 +CPU=  1.047    
+           STEP   45 :## EC_MEMINFO    0 gs12r3b07               3707    2894       0      7195   67070     4230   74662    154849    3770      1.8   0.0         0      0   46.62  Sm/p
+  17:16:26 STEP   46 H=  11:30 +CPU=  1.088    
+           STEP   46 :## EC_MEMINFO    0 gs12r3b07               3707    2894       0      7196   67066     4227   74688    154870    3770      1.8   0.0         0      0   46.62  Sm/p
+  17:16:26 STEP   47 H=  11:45 +CPU=  1.116    
+           STEP   47 :## EC_MEMINFO    0 gs12r3b07               3707    2894       0      7196   67062     4225   74666    154841    3771      1.8   0.0         0      0   51.86  Sm/p
+  17:16:28 STEP   48 H=  12:00 +CPU=  5.757    
+           STEP   48 :## EC_MEMINFO    0 gs12r3b07               3707    2895       0      7195   67072     4225   74706    154892    3772      1.8   0.0         0      0   51.86  Sm/p
+  17:16:28 STEP   49 H=  12:15 +CPU=  1.045    
+           STEP   49 :## EC_MEMINFO    0 gs12r3b07               3707    2895       0      7195   67058     4226   74658    154830    3772      1.8   0.0         0      0   51.86  Sm/p
+  17:16:28 STEP   50 H=  12:30 +CPU=  1.142    
+           STEP   50 :## EC_MEMINFO    0 gs12r3b07               3707    2895       0      7195   67060     4229   74666    154842    3772      1.8   0.0         0      0   51.86  Sm/p
+  17:16:28 STEP   51 H=  12:45 +CPU=  1.083    
+           STEP   51 :## EC_MEMINFO    0 gs12r3b07               3707    2895       0      7193   67062     4225   74656    154829    3772      1.8   0.0         0      0   51.86  Sm/p
+  17:16:30 STEP   52 H=  13:00 +CPU=  5.748    
+           STEP   52 :## EC_MEMINFO    0 gs12r3b07               3707    2897       0      7193   67066     4227   74690    154868    3773      1.8   0.0         0      0   51.86  Sm/p
+  17:16:30 STEP   53 H=  13:15 +CPU=  1.043    
+           STEP   53 :## EC_MEMINFO    0 gs12r3b07               3707    2897       0      7195   67062     4230   74658    154838    3773      1.8   0.0         0      0   51.86  Sm/p
+  17:16:30 STEP   54 H=  13:30 +CPU=  1.114    
+           STEP   54 :## EC_MEMINFO    0 gs12r3b07               3707    2897       0      7195   67062     4226   74662    154837    3773      1.8   0.0         0      0   51.86  Sm/p
+  17:16:31 STEP   55 H=  13:45 +CPU=  1.067    
+           STEP   55 :## EC_MEMINFO    0 gs12r3b07               3707    2897       0      7194   67062     4226   74658    154833    3773      1.8   0.0         0      0   51.86  Sm/p
+  17:16:32 STEP   56 H=  14:00 +CPU=  5.736    
+           STEP   56 :## EC_MEMINFO    0 gs12r3b07               3707    2898       0      7194   67056     4226   74680    154848    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:32 STEP   57 H=  14:15 +CPU=  1.058    
+           STEP   57 :## EC_MEMINFO    0 gs12r3b07               3707    2898       0      7191   67068     4229   74634    154814    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:33 STEP   58 H=  14:30 +CPU=  1.089    
+           STEP   58 :## EC_MEMINFO    0 gs12r3b07               3707    2898       0      7191   67058     4227   74644    154813    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:33 STEP   59 H=  14:45 +CPU=  1.091    
+           STEP   59 :## EC_MEMINFO    0 gs12r3b07               3707    2898       0      7192   67066     4224   74646    154820    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:34 STEP   60 H=  15:00 +CPU=  5.726    
+           STEP   60 :## EC_MEMINFO    0 gs12r3b07               3707    2899       0      7193   67066     4226   74668    154845    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:35 STEP   61 H=  15:15 +CPU=  1.039    
+           STEP   61 :## EC_MEMINFO    0 gs12r3b07               3707    2899       0      7193   67064     4225   74628    154802    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:35 STEP   62 H=  15:30 +CPU=  1.116    
+           STEP   62 :## EC_MEMINFO    0 gs12r3b07               3707    2899       0      7193   67060     4223   74652    154820    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:35 STEP   63 H=  15:45 +CPU=  1.089    
+           STEP   63 :## EC_MEMINFO    0 gs12r3b07               3707    2899       0      7193   67060     4229   74664    154838    3775      1.8   0.0         0      0   56.67  Sm/p
+  17:16:37 STEP   64 H=  16:00 +CPU=  5.736    
+           STEP   64 :## EC_MEMINFO    0 gs12r3b07               3707    2900       0      7191   67066     4226   74674    154850    3776      1.8   0.0         0      0   61.10  Sm/p
+  17:16:37 STEP   65 H=  16:15 +CPU=  1.057    
+           STEP   65 :## EC_MEMINFO    0 gs12r3b07               3707    2900       0      7190   67056     4225   74634    154798    3776      1.8   0.0         0      0   61.10  Sm/p
+  17:16:37 STEP   66 H=  16:30 +CPU=  1.110    
+           STEP   66 :## EC_MEMINFO    0 gs12r3b07               3707    2900       0      7190   67058     4226   74642    154808    3776      1.8   0.0         0      0   61.10  Sm/p
+  17:16:37 STEP   67 H=  16:45 +CPU=  1.094    
+           STEP   67 :## EC_MEMINFO    0 gs12r3b07               3707    2900       0      7191   67052     4226   74652    154813    3776      1.8   0.0         0      0   61.10  Sm/p
+  17:16:39 STEP   68 H=  17:00 +CPU=  5.770    
+           STEP   68 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7191   67060     4226   74648    154818    3777      1.8   0.0         0      0   61.10  Sm/p
+  17:16:39 STEP   69 H=  17:15 +CPU=  1.050    
+           STEP   69 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7192   67058     4223   74626    154792    3777      1.8   0.0         0      0   61.10  Sm/p
+  17:16:39 STEP   70 H=  17:30 +CPU=  1.109    
+           STEP   70 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7192   67054     4224   74642    154804    3777      1.8   0.0         0      0   61.10  Sm/p
+  17:16:40 STEP   71 H=  17:45 +CPU=  1.111    
+           STEP   71 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7192   67054     4226   74638    154803    3777      1.8   0.0         0      0   61.10  Sm/p
+  17:16:41 STEP   72 H=  18:00 +CPU=  5.773    
+           STEP   72 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7191   67060     4225   74666    154835    3778      1.8   0.0         0      0   65.18  Sm/p
+  17:16:41 STEP   73 H=  18:15 +CPU=  1.057    
+           STEP   73 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7190   67054     4223   74636    154796    3778      1.8   0.0         0      0   65.18  Sm/p
+  17:16:42 STEP   74 H=  18:30 +CPU=  1.143    
+           STEP   74 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7190   67054     4224   74624    154785    3778      1.8   0.0         0      0   65.18  Sm/p
+  17:16:42 STEP   75 H=  18:45 +CPU=  1.104    
+           STEP   75 :## EC_MEMINFO    0 gs12r3b07               3707    2902       0      7190   67050     4221   74626    154781    3778      1.8   0.0         0      0   65.18  Sm/p
+  17:16:44 STEP   76 H=  19:00 +CPU=  5.764    
+           STEP   76 :## EC_MEMINFO    0 gs12r3b07               3707    2903       0      7190   67058     4227   74682    154850    3779      1.8   0.0         0      0   65.18  Sm/p
+  17:16:44 STEP   77 H=  19:15 +CPU=  1.054    
+           STEP   77 :## EC_MEMINFO    0 gs12r3b07               3707    2903       0      7190   67056     4226   74630    154795    3779      1.8   0.0         0      0   65.18  Sm/p
+  17:16:44 STEP   78 H=  19:30 +CPU=  1.134    
+           STEP   78 :## EC_MEMINFO    0 gs12r3b07               3707    2903       0      7190   67056     4223   74624    154786    3779      1.8   0.0         0      0   65.18  Sm/p
+  17:16:44 STEP   79 H=  19:45 +CPU=  1.091    
+           STEP   79 :## EC_MEMINFO    0 gs12r3b07               3707    2903       0      7189   67052     4225   74632    154791    3779      1.8   0.0         0      0   65.18  Sm/p
+  17:16:46 STEP   80 H=  20:00 +CPU=  5.728    
+           STEP   80 :## EC_MEMINFO    0 gs12r3b07               3707    2904       0      7189   67050     4227   74662    154821    3780      1.8   0.0         0      0   65.18  Sm/p
+  17:16:46 STEP   81 H=  20:15 +CPU=  1.069    
+           STEP   81 :## EC_MEMINFO    0 gs12r3b07               3707    2904       0      7190   67036     4219   74622    154760    3780      1.8   0.0         0      0   65.18  Sm/p
+  17:16:46 STEP   82 H=  20:30 +CPU=  1.110    
+           STEP   82 :## EC_MEMINFO    0 gs12r3b07               3707    2904       0      7189   67030     4221   74632    154765    3780      1.8   0.0         0      0   68.93  Sm/p
+  17:16:47 STEP   83 H=  20:45 +CPU=  1.132    
+           STEP   83 :## EC_MEMINFO    0 gs12r3b07               3707    2904       0      7189   67028     4219   74624    154753    3780      1.8   0.0         0      0   68.93  Sm/p
+  17:16:48 STEP   84 H=  21:00 +CPU=  5.738    
+           STEP   84 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7189   67038     4223   74636    154778    3780      1.8   0.0         0      0   68.93  Sm/p
+  17:16:48 STEP   85 H=  21:15 +CPU=  1.039    
+           STEP   85 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7187   67042     4221   74618    154762    3781      1.8   0.0         0      0   68.93  Sm/p
+  17:16:49 STEP   86 H=  21:30 +CPU=  1.100    
+           STEP   86 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7187   67038     4221   74628    154768    3781      1.8   0.0         0      0   68.93  Sm/p
+  17:16:49 STEP   87 H=  21:45 +CPU=  1.086    
+           STEP   87 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7188   67054     4222   74644    154803    3781      1.8   0.0         0      0   68.93  Sm/p
+  17:16:50 STEP   88 H=  22:00 +CPU=  5.740    
+           STEP   88 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7189   67050     4223   74666    154821    3781      1.8   0.0         0      0   68.93  Sm/p
+  17:16:51 STEP   89 H=  22:15 +CPU=  1.078    
+           STEP   89 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7189   67042     4220   74630    154774    3781      1.8   0.0         0      0   68.93  Sm/p
+  17:16:51 STEP   90 H=  22:30 +CPU=  1.088    
+           STEP   90 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7189   67040     4219   74640    154780    3781      1.8   0.0         0      0   68.93  Sm/p
+  17:16:51 STEP   91 H=  22:45 +CPU=  1.081    
+           STEP   91 :## EC_MEMINFO    0 gs12r3b07               3707    2907       0      7189   67036     4220   74640    154778    3781      1.8   0.0         0      0   72.38  Sm/p
+  17:16:53 STEP   92 H=  23:00 +CPU=  5.720    
+           STEP   92 :## EC_MEMINFO    0 gs12r3b07               3707    2908       0      7189   67052     4224   74660    154817    3781      1.8   0.0         0      0   72.38  Sm/p
+  17:16:53 STEP   93 H=  23:15 +CPU=  1.059    
+           STEP   93 :## EC_MEMINFO    0 gs12r3b07               3707    2908       0      7189   67046     4221   74636    154784    3781      1.8   0.0         0      0   72.38  Sm/p
+  17:16:53 STEP   94 H=  23:30 +CPU=  1.080    
+           STEP   94 :## EC_MEMINFO    0 gs12r3b07               3707    2908       0      7188   67048     4222   74634    154786    3781      1.8   0.0         0      0   72.38  Sm/p
+  17:16:54 STEP   95 H=  23:45 +CPU=  1.615    
+           STEP   95 :## EC_MEMINFO    0 gs12r3b07               3707    2908       0      7184   67034     4214   74618    154746    3781      1.8   0.0         0      0   72.38  Sm/p
+  17:16:58 STEP   96 H=  24:00 +CPU= 11.828    
+           STEP   96 :## EC_MEMINFO    0 gs12r3b07               3717    2930       0      7016   66966     4032   74630    154338    3782      1.8   0.0         0      0   72.19  Sm/p

@@ -1,0 +1,35 @@
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+ &NAMIO
+ NTASK_MULTIO    =           2,
+ NTASK_XIOS      =           0
+ /
+ &NAMIO_SERV
+ NPROC_IO        =          16,
+ NTHREAD_IO      =           4,
+ NIO_SERV_METHOD =           2,
+ NIO_SERV_BUF_MAXSIZE    =          10,
+ LMSG_FLUSH_CLIENT       = F,
+ LMSG_FLUSH_SERVER       = T,
+ WAIT_TIME_THRESHOLD     =  0.500000000000000     ,
+ LFLDDESC_UNIQ   = T,
+ LFLDDESC_CHECK  = T,
+ NMSG_LEVEL_CLIENT       =           0,
+ NMSG_LEVEL_SERVER       =           1,
+ NPROCESS_LEVEL  =           5,
+ PIOPROCR_MDL    =  -1.000000    ,
+ CIFDIR  =                                                                                                                           
+                                                                                                                                     
+   ,
+ COFDIR  = .                                                                                                                         
+                                                                                                                                     
+   ,
+ COXMLDIR        = io_serv.xml.d                                                                                                     
+                                                                                                                                     
+           ,
+ LIO_SERV_UVSIF  = T,
+ PTDEC   =  0.0000000E+00
+ /
+MPL_INIT : MPL_COMM=-1006632958 (non-default) , MPL_NUMPROC=16
+MPL_INIT : MPL_METHOD=JP_BLOCKING_BUFFERED , MPL_MBX_SIZE=0
+MPL_INIT : MPL_NCPU_PER_NODE = 1 (CAUTION: could not be inferred from hostname!)
+MPL_BUFFER_METHOD:  1     1000000

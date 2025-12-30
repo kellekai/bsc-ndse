@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gstats 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ecmwf.int/services/prepifs/gstats   ./gstats.xsd">
+<timing_all_tasks>
+<item id="   0">
+<description>CNT0     - COMPLETE EXECUTION           </description>
+<calls>       1</calls><mean unit="ms">    48897.428</mean>
+<max unit="ms">    48897.470</max>
+<fraction unit="percent">   100.00</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="   1">
+<description>CNT4     - FORWARD INTEGRATION          </description>
+<calls>       1</calls><mean unit="ms">    42410.820</mean>
+<max unit="ms">    42412.039</max>
+<fraction unit="percent">    86.74</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="   7">
+<description>SCAN2M - MASS FIXERS TOTAL              </description>
+<calls>      25</calls><mean unit="ms">        5.411</mean>
+<max unit="ms">        8.309</max>
+<fraction unit="percent">     0.42</fraction>
+<unbalanced unit="percent">     0.15</unbalanced>
+</item>
+<item id="   8">
+<description>SCAN2M - GRID-POINT DYNAMICS            </description>
+<calls>      75</calls><mean unit="ms">        9.719</mean>
+<max unit="ms">       10.916</max>
+<fraction unit="percent">     1.67</fraction>
+<unbalanced unit="percent">     0.18</unbalanced>
+</item>
+<item id="   9">
+<description>SPCM     - SPECTRAL COMP.               </description>
+<calls>      24</calls><mean unit="ms">        0.953</mean>
+<max unit="ms">        1.013</max>
+<fraction unit="percent">     0.05</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  10">
+<description>SCAN2M - PHYSICS                        </description>
+<calls>      25</calls><mean unit="ms">      216.976</mean>
+<max unit="ms">      222.512</max>
+<fraction unit="percent">    11.38</fraction>
+<unbalanced unit="percent">     0.28</unbalanced>
+</item>
+<item id="  11">
+<description>IOPACK   - OUTPUT P.P. RESULTS          </description>
+<calls>      25</calls><mean unit="ms">        6.917</mean>
+<max unit="ms">        6.936</max>
+<fraction unit="percent">     0.35</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  12">
+<description>SPNORM   - SPECTRAL NORM COMP.          </description>
+<calls>       3</calls><mean unit="ms">        0.152</mean>
+<max unit="ms">        0.188</max>
+<fraction unit="percent">     0.00</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  13">
+<description>SCAN2M - RADIATION CALC.                </description>
+<calls>      25</calls><mean unit="ms">      140.323</mean>
+<max unit="ms">      143.351</max>
+<fraction unit="percent">     7.33</fraction>
+<unbalanced unit="percent">     0.15</unbalanced>
+</item>
+<item id="  14">
+<description>SUINIF                                  </description>
+<calls>       1</calls><mean unit="ms">      327.558</mean>
+<max unit="ms">      328.929</max>
+<fraction unit="percent">     0.67</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  17">
+<description>GRIDFPOS IN CNT4                        </description>
+<calls>      50</calls><mean unit="ms">        1.085</mean>
+<max unit="ms">        1.267</max>
+<fraction unit="percent">     0.13</fraction>
+<unbalanced unit="percent">     0.02</unbalanced>
+</item>
+<item id="  18">
+<description>SUSPECG                                 </description>
+<calls>       1</calls><mean unit="ms">       49.666</mean>
+<max unit="ms">       50.358</max>
+<fraction unit="percent">     0.10</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  19">
+<description>SUSPEC                                  </description>
+<calls>       1</calls><mean unit="ms">       94.357</mean>
+<max unit="ms">       94.906</max>
+<fraction unit="percent">     0.19</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  24">
+<description>SUGRIDU                                 </description>
+<calls>       1</calls><mean unit="ms">       90.610</mean>
+<max unit="ms">       94.069</max>
+<fraction unit="percent">     0.19</fraction>
+<unbalanced unit="percent">     0.01</unbalanced>
+</item>
+<item id="  25">
+<description>SPECRT                                  </description>
+<calls>       1</calls><mean unit="ms">       73.968</mean>
+<max unit="ms">       74.888</max>
+<fraction unit="percent">     0.15</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  26">
+<description>SUGRIDF                                 </description>
+<calls>       1</calls><mean unit="ms">       63.947</mean>
+<max unit="ms">       64.829</max>
+<fraction unit="percent">     0.13</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  27">
+<description>RESTART FILES - WRITING                 </description>
+<calls>       1</calls><mean unit="ms">      172.655</mean>
+<max unit="ms">      173.157</max>
+<fraction unit="percent">     0.35</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  28">
+<description>RESTART FILES - READING                 </description>
+<calls>       1</calls><mean unit="ms">        0.006</mean>
+<max unit="ms">        0.016</max>
+<fraction unit="percent">     0.00</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  29">
+<description>SU4FPOS IN CNT4                         </description>
+<calls>      75</calls><mean unit="ms">        0.582</mean>
+<max unit="ms">        0.633</max>
+<fraction unit="percent">     0.10</fraction>
+<unbalanced unit="percent">     0.01</unbalanced>
+</item>
+<item id="  30">
+<description>DYNFPOS IN CNT4                         </description>
+<calls>      25</calls><mean unit="ms">       10.281</mean>
+<max unit="ms">       12.339</max>
+<fraction unit="percent">     0.63</fraction>
+<unbalanced unit="percent">     0.11</unbalanced>
+</item>
+<item id="  31">
+<description>POSDDH IN STEPO                         </description>
+<calls>       1</calls><mean unit="ms">        0.138</mean>
+<max unit="ms">        0.201</max>
+<fraction unit="percent">     0.00</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  32">
+<description>NEMO     - COST OF OCEAN MODEL          </description>
+<calls>      50</calls><mean unit="ms">      202.306</mean>
+<max unit="ms">      202.354</max>
+<fraction unit="percent">    20.69</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  33">
+<description>NEMO     - IFS ACCUM. OF DATA           </description>
+<calls>      26</calls><mean unit="ms">        0.781</mean>
+<max unit="ms">        0.862</max>
+<fraction unit="percent">     0.05</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  37">
+<description>CPGLAG   - SL COMPUTATIONS              </description>
+<calls>      25</calls><mean unit="ms">       27.831</mean>
+<max unit="ms">       29.270</max>
+<fraction unit="percent">     1.50</fraction>
+<unbalanced unit="percent">     0.07</unbalanced>
+</item>
+<item id="  38">
+<description>WAM      - TOTAL COST OF WAVE MODEL     </description>
+<calls>      24</calls><mean unit="ms">       32.218</mean>
+<max unit="ms">       32.251</max>
+<fraction unit="percent">     1.58</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  39">
+<description>SU0YOMB                                 </description>
+<calls>       1</calls><mean unit="ms">     2912.060</mean>
+<max unit="ms">     2912.434</max>
+<fraction unit="percent">     5.96</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  51">
+<description>SCAN2M   - SL COMM. PART 1              </description>
+<calls>      25</calls><mean unit="ms">        7.387</mean>
+<max unit="ms">        9.121</max>
+<fraction unit="percent">     0.47</fraction>
+<unbalanced unit="percent">     0.09</unbalanced>
+</item>
+<item id="  54">
+<description>SPCM     - M TO S/S TO M TRANSP.        </description>
+<calls>      24</calls><mean unit="ms">        0.617</mean>
+<max unit="ms">        0.766</max>
+<fraction unit="percent">     0.04</fraction>
+<unbalanced unit="percent">     0.01</unbalanced>
+</item>
+<item id="  55">
+<description>SPCIMPF  - S TO M/M TO S TRANSP.        </description>
+<calls>      24</calls><mean unit="ms">        0.242</mean>
+<max unit="ms">        0.312</max>
+<fraction unit="percent">     0.02</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  56">
+<description>SPNORM   - SPECTRAL NORM COMM.          </description>
+<calls>       3</calls><mean unit="ms">        1.042</mean>
+<max unit="ms">        6.458</max>
+<fraction unit="percent">     0.04</fraction>
+<unbalanced unit="percent">     0.03</unbalanced>
+</item>
+<item id="  65">
+<description>RADINTG  - SL COMM. OUTPUT              </description>
+<calls>      25</calls><mean unit="ms">        9.628</mean>
+<max unit="ms">       21.783</max>
+<fraction unit="percent">     1.11</fraction>
+<unbalanced unit="percent">     0.62</unbalanced>
+</item>
+<item id="  66">
+<description>RADINTG  - SL COMM. INPUT               </description>
+<calls>      25</calls><mean unit="ms">        3.868</mean>
+<max unit="ms">        5.661</max>
+<fraction unit="percent">     0.29</fraction>
+<unbalanced unit="percent">     0.09</unbalanced>
+</item>
+<item id="  71">
+<description>IOSERV   - RECLAIM BUF SPACE            </description>
+<calls>      76</calls><mean unit="ms">        0.008</mean>
+<max unit="ms">        0.010</max>
+<fraction unit="percent">     0.00</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  72">
+<description>IOSERV   - SEND MDL                     </description>
+<calls>      76</calls><mean unit="ms">        0.013</mean>
+<max unit="ms">        0.028</max>
+<fraction unit="percent">     0.00</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id="  89">
+<description>SCAN2M - SL COMM. PART 2                </description>
+<calls>      25</calls><mean unit="ms">        8.726</mean>
+<max unit="ms">       11.274</max>
+<fraction unit="percent">     0.58</fraction>
+<unbalanced unit="percent">     0.13</unbalanced>
+</item>
+<item id=" 102">
+<description>LTINV_CTL   - INVERSE LEGENDRE TRANSFORM</description>
+<calls>      53</calls><mean unit="ms">        0.443</mean>
+<max unit="ms">        0.502</max>
+<fraction unit="percent">     0.05</fraction>
+<unbalanced unit="percent">     0.01</unbalanced>
+</item>
+<item id=" 103">
+<description>LTDIR_CTL   - DIRECT LEGENDRE TRANSFORM </description>
+<calls>      25</calls><mean unit="ms">        0.610</mean>
+<max unit="ms">        0.732</max>
+<fraction unit="percent">     0.04</fraction>
+<unbalanced unit="percent">     0.01</unbalanced>
+</item>
+<item id=" 106">
+<description>FTDIR_CTL   - DIRECT FOURIER TRANSFORM  </description>
+<calls>      25</calls><mean unit="ms">        2.300</mean>
+<max unit="ms">        2.892</max>
+<fraction unit="percent">     0.15</fraction>
+<unbalanced unit="percent">     0.03</unbalanced>
+</item>
+<item id=" 107">
+<description>FTINV_CTL   - INVERSE FOURIER TRANSFORM </description>
+<calls>      53</calls><mean unit="ms">        2.086</mean>
+<max unit="ms">        2.544</max>
+<fraction unit="percent">     0.28</fraction>
+<unbalanced unit="percent">     0.05</unbalanced>
+</item>
+<item id=" 140">
+<description>SULEG       - COMP. OF LEGENDRE POL.    </description>
+<calls>       2</calls><mean unit="ms">        1.792</mean>
+<max unit="ms">        1.814</max>
+<fraction unit="percent">     0.01</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id=" 152">
+<description>LTINV_CTL   - M TO L TRANSPOSITION      </description>
+<calls>      53</calls><mean unit="ms">       20.089</mean>
+<max unit="ms">       31.392</max>
+<fraction unit="percent">     3.40</fraction>
+<unbalanced unit="percent">     1.23</unbalanced>
+</item>
+<item id=" 153">
+<description>LTDIR_CTL   - L TO M TRANSPOSITION      </description>
+<calls>      25</calls><mean unit="ms">        4.833</mean>
+<max unit="ms">       11.285</max>
+<fraction unit="percent">     0.58</fraction>
+<unbalanced unit="percent">     0.33</unbalanced>
+</item>
+<item id=" 157">
+<description>FTINV_CTL   - L TO G TRANSPOSITION      </description>
+<calls>      53</calls><mean unit="ms">        5.041</mean>
+<max unit="ms">        8.042</max>
+<fraction unit="percent">     0.87</fraction>
+<unbalanced unit="percent">     0.33</unbalanced>
+</item>
+<item id=" 158">
+<description>FTDIR_CTL   - G TO L TRANSPOSITION      </description>
+<calls>      25</calls><mean unit="ms">        3.493</mean>
+<max unit="ms">        9.631</max>
+<fraction unit="percent">     0.49</fraction>
+<unbalanced unit="percent">     0.31</unbalanced>
+</item>
+<item id=" 400">
+<description>GSTATS                                  </description>
+<calls>   10640</calls><mean unit="ms">        0.001</mean>
+<max unit="ms">        0.001</max>
+<fraction unit="percent">     0.01</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+<item id=" 401">
+<description>GSTATS HOOK                             </description>
+<calls>    7471</calls><mean unit="ms">        0.002</mean>
+<max unit="ms">        0.002</max>
+<fraction unit="percent">     0.04</fraction>
+<unbalanced unit="percent">     0.00</unbalanced>
+</item>
+</timing_all_tasks>
+<totalwallclocktime>     48.897</totalwallclocktime>
+<cputime>    124.600</cputime>
+<vectortime>    124.600</vectortime>
+
+
+</gstats>

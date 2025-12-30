@@ -1,0 +1,14 @@
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+ &NAMIO
+ NTASK_MULTIO    =           1,
+ NTASK_XIOS      =           0
+ /
+ *** [Server] mpi::getComm "multio" - passed parent comm -1006632960 (Comm: -1006632960, size: 27, rank: 26)
+ *** [Server] mpi::getComm "multio-servers" - try splitting from multio (Comm: -1006632960, size: 27, rank: 26) by color 888
+ *** [Server] mpi::getComm "multio-servers" - successful split  from multio (Comm: -1006632960, size: 27, rank: 26) by color 888 (Comm: -1006632956, size: 1, rank: 0)
+Multio GridDownloader: configuration is missing the coordinates encoder template, running without encoding!
+ *** MpiTransport::createPeers clientCount: 26, serverCount: 1, commSize: 27
+Server start listening...
+ResourceUsage multio listener => gs05r1b41 resident size: 247.113 Mbytes, mapped shared: 4.33504 Gbytes, mapped private: 7.07845 Gbytes, malloc arena: 105.613 Mbytes, malloc free bins: 32 bytes, malloc total: 103.351 Mbytes, malloc free: 2.26245 Mbytes, malloc releasable: 110.25 Kbytes
+ResourceUsage multio listener <= gs05r1b41 resident size: 1.51611 Gbytes (+1.27478 Gbytes), mapped private: 8.31282 Gbytes (+1.23437 Gbytes), malloc arena: 659.566 Mbytes (+553.953 Mbytes), malloc free bins: 1.40625 Kbytes (+1.375 Kbytes), malloc total: 122.794 Mbytes (+19.4429 Mbytes), malloc free: 536.773 Mbytes (+534.51 Mbytes), malloc releasable: 770.453 Kbytes (+660.203 Kbytes)
+Listening loop has stopped
