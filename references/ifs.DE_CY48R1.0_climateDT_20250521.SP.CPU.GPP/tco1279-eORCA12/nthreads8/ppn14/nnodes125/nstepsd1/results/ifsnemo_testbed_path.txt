@@ -1,1 +1,0 @@
-/gpfs/projects/bsc32/bsc631248/ifsncDE_CY48R1.0_climateDT_20250521-goldgen/ifsnemo-build/src/sandbox/results.26173031/ifsnemo_testbed_26173031.26173031.dir
