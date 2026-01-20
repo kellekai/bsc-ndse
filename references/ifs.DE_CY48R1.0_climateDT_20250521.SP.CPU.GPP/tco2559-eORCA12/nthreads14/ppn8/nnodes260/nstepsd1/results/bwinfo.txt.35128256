@@ -1,0 +1,129 @@
+
+
+	**** COMMS STATS : file = /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/src/sandbox/ifsnemo_testbed_35128256/NODE.001_01 ****
+
+  NPROC =    1984
+  NPRGPNS =      62
+  NPRGPEW =      32
+  NPRTRW =      64
+  NPRTRV =      31
+  NPRTRN =      31
+  NPRTRNS =      64
+ MAXIMUM NUMBER OF THREADS          14
+ CURRENT NUMBER OF THREADS          14
+  NPROC      :         1984
+  MTHREADS   :           14
+   !!!!!!!!! REPRODUCIBLE ONLY IF SAME NPROC!
+            MAXIMUM,   NON MISSING POINTS, NPROC
+   !!!!!!!!! REPRODUCIBLE ONLY IF SAME NPROC!
+            MAXIMUM,   NON MISSING POINTS, NPROC
+   !!!!!!!!! REPRODUCIBLE ONLY IF SAME NPROC!
+            MAXIMUM,   NON MISSING POINTS, NPROC
+   !!!!!!!!! REPRODUCIBLE ONLY IF SAME NPROC!
+            MAXIMUM,   NON MISSING POINTS, NPROC
+TOTAL WALLCLOCK TIME     750.599 CPU TIME   6545.614 VECTOR TIME    6545.614
+STATS FOR ALL TASKS
+ NUM ROUTINE                                     CALLS      MEAN(ms)       MAX(ms)   FRAC(%)  UNBAL(%)
+   0 CNT0     - COMPLETE EXECUTION                   1    750606.557    750608.291    100.00      0.00
+   1 CNT4     - FORWARD INTEGRATION                  1    478306.436    478308.371     63.72      0.00
+   7 SCAN2M - MASS FIXERS TOTAL                    385        63.333       115.591      5.93      2.68
+   8 SCAN2M - GRID-POINT DYNAMICS                  795        59.688        88.729      9.40      3.08
+   9 SPCM     - SPECTRAL COMP.                     384         5.139         5.593      0.29      0.02
+  10 SCAN2M - PHYSICS                              385       255.692       281.168     14.42      1.31
+  11 IOPACK   - OUTPUT P.P. RESULTS                 25        32.905        33.420      0.11      0.00
+  12 SPNORM   - SPECTRAL NORM COMP.                  5         0.860         1.667      0.00      0.00
+  13 SCAN2M - RADIATION CALC.                       25       496.349       593.407      1.98      0.32
+  14 SUINIF                                          1     15650.927     15888.215      2.12      0.03
+  17 GRIDFPOS IN CNT4                               50        43.709        45.707      0.30      0.01
+  18 SUSPECG                                         1      1284.381      1431.336      0.19      0.02
+  19 SUSPEC                                          1      2749.715      2882.430      0.38      0.02
+  24 SUGRIDU                                         1      5798.875      5896.480      0.79      0.01
+  25 SPECRT                                          1      2829.999      2927.922      0.39      0.01
+  26 SUGRIDF                                         1      4117.524      4167.649      0.56      0.01
+  27 RESTART FILES - WRITING                         1       815.151       835.306      0.11      0.00
+  28 RESTART FILES - READING                         1         0.013         0.084      0.00      0.00
+  29 SU4FPOS IN CNT4                                75         0.920        11.380      0.11      0.10
+  30 DYNFPOS IN CNT4                                25       127.497       190.455      0.63      0.21
+  31 POSDDH IN STEPO                                 3        11.530        35.579      0.01      0.01
+  32 NEMO     - COST OF OCEAN MODEL                 50      1154.090      1155.415      7.70      0.01
+  33 NEMO     - IFS ACCUM. OF DATA                  26         3.221         4.475      0.02      0.00
+  37 CPGLAG   - SL COMPUTATIONS                    385        98.981       103.534      5.31      0.23
+  38 WAM      - TOTAL COST OF WAVE MODEL           384       157.396       161.748      8.27      0.22
+  39 SU0YOMB                                         1     27285.721     27393.668      3.65      0.01
+  51 SCAN2M   - SL COMM. PART 1                    385        39.585        96.340      4.94      2.91
+  54 SPCM     - M TO S/S TO M TRANSP.              384        15.864        27.599      1.41      0.60
+  55 SPCIMPF  - S TO M/M TO S TRANSP.              384         3.627         4.149      0.21      0.03
+  56 SPNORM   - SPECTRAL NORM COMM.                  5        23.968       221.551      0.15      0.13
+  65 RADINTG  - SL COMM. OUTPUT                     25        46.689       160.928      0.54      0.38
+  66 RADINTG  - SL COMM. INPUT                      25        16.824        94.349      0.31      0.26
+  71 IOSERV   - RECLAIM BUF SPACE                 4429         0.013         0.016      0.01      0.00
+  72 IOSERV   - SEND MDL                            78         7.143         9.323      0.10      0.02
+  89 SCAN2M - SL COMM. PART 2                      385        30.050        69.105      3.54      2.00
+ 102 LTINV_CTL   - INVERSE LEGENDRE TRANSFORM      773         9.350        13.197      1.36      0.40
+ 103 LTDIR_CTL   - DIRECT LEGENDRE TRANSFORM       385        15.015       100.189      5.14      4.37
+ 106 FTDIR_CTL   - DIRECT FOURIER TRANSFORM        385         9.083        12.425      0.64      0.17
+ 107 FTINV_CTL   - INVERSE FOURIER TRANSFORM       773         8.872        12.405      1.28      0.36
+ 140 SULEG       - COMP. OF LEGENDRE POL.            2      1540.802      1607.265      0.43      0.02
+ 152 LTINV_CTL   - M TO L TRANSPOSITION            773        12.849        15.800      1.63      0.30
+ 153 LTDIR_CTL   - L TO M TRANSPOSITION            385        39.926        72.056      3.70      1.65
+ 157 FTINV_CTL   - L TO G TRANSPOSITION            773        55.718        74.195      7.64      1.90
+ 158 FTDIR_CTL   - G TO L TRANSPOSITION            385        54.675        93.319      4.79      1.98
+ 400 GSTATS                                      77398         0.000         0.001      0.01      0.00
+ 401 GSTATS HOOK                                 70994         0.003         0.004      0.04      0.01
+TOTAL MEASURED IMBALANCE =       0.0 SECONDS,  0.0 PERCENT
+TOTAL WALLCLOCK TIME     750.599 CPU TIME   6545.614 VECTOR TIME    6545.614
+
+   8 SCAN2M - GRID-POINT DYNAMICS                  795        59.688        88.729      9.40      3.08 : DYNAMICS = 47.5s
+   9 SPCM     - SPECTRAL COMP.                     384         5.139         5.593      0.29      0.02 : SEMI-IMPL = 2.0s
+  10 SCAN2M - PHYSICS                              385       255.692       281.168     14.42      1.31 : PHYSICS = 98.4s
+  11 IOPACK   - OUTPUT P.P. RESULTS                 25        32.905        33.420      0.11      0.00 : I/O = 0.8s
+  13 SCAN2M - RADIATION CALC.                       25       496.349       593.407      1.98      0.32 : RADIATION = 12.4s
+  17 GRIDFPOS IN CNT4                               50        43.709        45.707      0.30      0.01 : I/O = 2.2s
+  25 SPECRT                                          1      2829.999      2927.922      0.39      0.01 : I/O = 2.8s
+  29 SU4FPOS IN CNT4                                75         0.920        11.380      0.11      0.10 : I/O = 0.1s
+  30 DYNFPOS IN CNT4                                25       127.497       190.455      0.63      0.21 : I/O = 3.2s
+  31 POSDDH IN STEPO                                 3        11.530        35.579      0.01      0.01 : I/O = 0.0s
+  32 NEMO     - COST OF OCEAN MODEL                 50      1154.090      1155.415      7.70      0.01 : NEMO = 57.7s
+  33 NEMO     - IFS ACCUM. OF DATA                  26         3.221         4.475      0.02      0.00 : NEMO = 0.1s
+  37 CPGLAG   - SL COMPUTATIONS                    385        98.981       103.534      5.31      0.23 : DYNAMICS = 38.1s
+  38 WAM      - TOTAL COST OF WAVE MODEL           384       157.396       161.748      8.27      0.22 : WAM = 60.4s
+  51 SCAN2M   - SL COMM. PART 1                    385        39.585        96.340      4.94      2.91 : DYNAMICS = 15.2s
+  54 SPCM     - M TO S/S TO M TRANSP.              384        15.864        27.599      1.41      0.60 : SEMI-IMPL = 6.1s
+  55 SPCIMPF  - S TO M/M TO S TRANSP.              384         3.627         4.149      0.21      0.03 : SEMI-IMPL = 1.4s
+  65 RADINTG  - SL COMM. OUTPUT                     25        46.689       160.928      0.54      0.38 : RADIATION = 1.2s
+  66 RADINTG  - SL COMM. INPUT                      25        16.824        94.349      0.31      0.26 : RADIATION = 0.4s
+  89 SCAN2M - SL COMM. PART 2                      385        30.050        69.105      3.54      2.00 : DYNAMICS = 11.6s
+ 102 LTINV_CTL   - INVERSE LEGENDRE TRANSFORM      773         9.350        13.197      1.36      0.40 : TRANS = 7.2s
+ 103 LTDIR_CTL   - DIRECT LEGENDRE TRANSFORM       385        15.015       100.189      5.14      4.37 : TRANS = 5.8s
+ 106 FTDIR_CTL   - DIRECT FOURIER TRANSFORM        385         9.083        12.425      0.64      0.17 : TRANS = 3.5s
+ 107 FTINV_CTL   - INVERSE FOURIER TRANSFORM       773         8.872        12.405      1.28      0.36 : TRANS = 6.9s
+ 152 LTINV_CTL   - M TO L TRANSPOSITION            773        12.849        15.800      1.63      0.30 : TRANS = 9.9s
+ 153 LTDIR_CTL   - L TO M TRANSPOSITION            385        39.926        72.056      3.70      1.65 : TRANS = 15.4s
+ 157 FTINV_CTL   - L TO G TRANSPOSITION            773        55.718        74.195      7.64      1.90 : TRANS = 43.1s
+ 158 FTDIR_CTL   - G TO L TRANSPOSITION            385        54.675        93.319      4.79      1.98 : TRANS = 21.0s
+
+wall = 750.599s (actual) : time = 474.409421s (calculated)
+
+The following numbers maybe useful for pie-charts:
+
+PHYSICS    :    98.4s --  13.1%
+RADIATION  :    14.0s --   1.9%
+DYNAMICS   :   112.4s --  15.0%
+SEMI-IMPL  :     9.5s --   1.3%
+TRANS      :   112.8s --  15.0%
+NEMO       :    57.8s --   7.7%
+WAM        :    60.4s --   8.1%
+I/O        :     9.1s --   1.2%
+OTHER      :   276.2s --  36.8%
+
+#CSV
+#label,time,fraction
+"PHYSICS",98.4,13.1
+"RADIATION",14.0,1.9
+"DYNAMICS",112.4,15.0
+"SEMI-IMPL",9.5,1.3
+"TRANS",112.8,15.0
+"NEMO",57.8,7.7
+"WAM",60.4,8.1
+"I/O",9.1,1.2
+"OTHER",276.2,36.8

@@ -1,0 +1,10 @@
+#label,time,fraction
+"PHYSICS",98.4,13.1
+"RADIATION",14.0,1.9
+"DYNAMICS",112.4,15.0
+"SEMI-IMPL",9.5,1.3
+"TRANS",112.8,15.0
+"NEMO",57.8,7.7
+"WAM",60.4,8.1
+"I/O",9.1,1.2
+"OTHER",276.2,36.8

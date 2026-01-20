@@ -1,0 +1,385 @@
++ [hres:20s:15:56:36:5456]: read -ra _prune_vars
+++ [hres:20s:15:56:36:5456]: printenv
+++ [hres:20s:15:56:36:5456]: cut -f1 -d=
+++ [hres:20s:15:56:36:5456]: egrep '^[a-z]'
+++ [hres:20s:15:56:36:5456]: grep =
+++ [hres:20s:15:56:36:5456]: egrep -v '^(bash)'
+++ [hres:20s:15:56:36:5456]: date +%s.%N
++ [hres:20s:15:56:36:5456]: unset nemoyproc MPI_EPOCH=1768834596.646505467
++ [hres:20s:15:56:36:5457]: export MPI_EPOCH
++ [hres:20s:15:56:36:5457]: set -eu
++ [hres:20s:15:56:36:5457]: mpirun -np 28 /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20251105-usearchandraps/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20251105.SP.CPU.GPP/bin/ifsMASTER.SP
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+[EC_DRHOOK:hostname:myproc:omltid:pid:unixtid] [YYYYMMDD:HHMMSS:walltime] [function@file:lineno] -- Max OpenMP threads = 4
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2209] fp = 0x151608f5f6a0
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2220] ATP_ENABLED=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2221] ATP_MAX_CORES=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2222] ATP_MAX_ANALYSIS_TIME=300
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2223] ATP_IGNORE_SIGTERM=0
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2231] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2252] DR_HOOK_PROFILE=/gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20251105-usearchandraps/ifsnemo-build/src/sandbox/ifsnemo_testbed_35126609/drhook.%d
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2258] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2264] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2352] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2363] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2371] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2379] DR_HOOK_HARAKIRI_TIMEOUT=60
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2386] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2393] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2400] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2407] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2414] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [process_options@drhook.c:2495]
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [ignore_signals@drhook.c:1365]  DR_HOOK_IGNORE_SIGNALS=<undef>
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [restore_default_signals@drhook.c:1298] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2045] New signal handler 'signal_drhook' for signal#6 (SIGABRT) at 0x15164b9fa990 (next at 0x417cc0)
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2046] New signal handler 'signal_drhook' for signal#7 (SIGBUS) at 0x15164b9fa990 (next at (nil))
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2047] New signal handler 'signal_drhook' for signal#11 (SIGSEGV) at 0x15164b9fa990 (next at 0x417cc0)
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2052] New signal handler 'signal_drhook' for signal#16 (SIGSTKFLT) at 0x15164b9fa990 (next at (nil))
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [trapfpe_treatment@drhook.c:1248] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [trapfpe@drhook.c:244] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [trapfpe@drhook.c:249] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [trapfpe@drhook.c:256] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2054] New signal handler 'signal_drhook' for signal#8 (SIGFPE) at 0x15164b9fa990 (next at 0x417cc0)
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2055] New signal handler 'signal_drhook' for signal#4 (SIGILL) at 0x15164b9fa990 (next at 0x417cc0)
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2056] New signal handler 'signal_drhook' for signal#5 (SIGTRAP) at 0x15164b9fa990 (next at (nil))
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2057] New signal handler 'signal_drhook' for signal#2 (SIGINT) at 0x15164b9fa990 (next at 0x417cc0)
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2071] New signal handler 'signal_drhook' for signal#24 (SIGXCPU) at 0x15164b9fa990 (next at (nil))
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2073] New signal handler 'signal_drhook' for signal#25 (SIGXFSZ) at 0x15164b9fa990 (next at (nil))
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [signal_drhook_init@drhook.c:2078] New signal handler 'signal_drhook' for signal#31 (SIGSYS) at 0x15164b9fa990 (next at (nil))
+[EC_DRHOOK:gs07r1b72:1:1:1538438:1538438] [20260119:155641:0.003] [catch_signals@drhook.c:1210] DR_HOOK_CATCH_SIGNALS=<undef>
+ EC_MEMINFO@RNSORT: MINCID, MAXCID, NUMNODES =  0 111 1
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20251105-usearchandraps/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20251105.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.327s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 26 compute + 1 I/O-tasks and 4+4 threads at 15:56:42.168 on 19-Jan-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 35126609
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs07r1b72              14899    8007       0      9778   96852    28597   76808    213736    2984      3.6   0.0         0      0     109  Sm/p:master:computation
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20251105-usearchandraps/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20251105.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.346s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 25 compute + 1 I/O-tasks and 4+4 threads at 15:56:42.187 on 19-Jan-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 35126609
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs07r1b72              15004    8025       0      9739   96742    28557   76784    213526    2986      3.6   0.0         0      0     109  Sm/p:oops:ifs_init
+[EC_DRHOOK:gs07r1b72:1:4:1538438:1538542] [20260119:155642:0.694] [trapfpe_treatment@drhook.c:1248] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs07r1b72:1:4:1538438:1538542] [20260119:155642:0.694] [trapfpe@drhook.c:244] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs07r1b72:1:4:1538438:1538542] [20260119:155642:0.694] [trapfpe@drhook.c:249] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs07r1b72:1:4:1538438:1538542] [20260119:155642:0.694] [trapfpe@drhook.c:256] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+ ODB Observation Store options : L_READ_FROM_OBS_STORE =  F
+ ODB Observation Store options : L_WRITE_TO_OBS_STORE  =  F
+ ODB Observation Store options : ODB_OBS_STORE_PATH    = 
+ ODB Observation Store options : NPOOLS_COPEDB         =            0
+ Reading /gpfs/projects/ehpc01/models/ifs-nemo/inidata/tco79l137/hz9m/data/ifsdata/RADRRTM
+ Reading /gpfs/projects/ehpc01/models/ifs-nemo/inidata/tco79l137/hz9m/data/ifsdata/RADSRTM
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+MASTER-HOSTNAME-PID gs07r1b72 1538464
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+  15:56:53 STEP    0 H=   0:00 +CPU=  4.039    
+           STEP    0 :## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power LoadAvg
+           STEP    0 :## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+           STEP    0 :## EC_MEMINFO Node Name                 | Heap  | RSS(tsk)        | Small  Huge or | Small  Huge or | Total          |
+           STEP    0 :## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+           STEP    0 :## EC_MEMINFO    0 gs07r1b72               1512    1318       0      5766   91810    24072   70962    194317    3205      0.7   0.0         0      0    4.65  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          0 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:56:56 STEP    1 H=   1:00 +CPU=  6.803    
+           STEP    1 :## EC_MEMINFO    0 gs07r1b72               1697    1674       0      4704   90918    22818   69916    190059    3257      0.9   0.0         0      0   13.00  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          1 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:56:57 STEP    2 H=   2:00 +CPU=  2.998    
+           STEP    2 :## EC_MEMINFO    0 gs07r1b72               1756    1674       0      4444   90704    22586   69704    189142    3268      0.9   0.0         0      0   13.00  Sm/p
+  15:56:58 STEP    3 H=   3:00 +CPU=  2.918    
+           STEP    3 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4433   90702    22553   69694    189087    3275      0.9   0.0         0      0   13.00  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          2 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:56:59 STEP    4 H=   4:00 +CPU=  2.994    
+           STEP    4 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4425   90692    22552   69688    189066    3278      0.9   0.0         0      0   20.69  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          3 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:01 STEP    5 H=   5:00 +CPU=  2.988    
+           STEP    5 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4413   90698    22553   69692    189060    3289      0.9   0.0         0      0   20.69  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          4 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:02 STEP    6 H=   6:00 +CPU=  2.962    
+           STEP    6 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4407   90698    22459   69698    188970    3383      0.9   0.0         0      0   20.69  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          5 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:04 STEP    7 H=   7:00 +CPU=  2.929    
+           STEP    7 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4408   90702    22457   69694    188965    3385      0.9   0.0         0      0   27.76  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          6 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:06 STEP    8 H=   8:00 +CPU=  2.950    
+           STEP    8 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4409   90704    22459   69692    188975    3387      0.9   0.0         0      0   27.76  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          7 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:07 STEP    9 H=   9:00 +CPU=  2.930    
+           STEP    9 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4411   90700    22456   69696    188970    3388      0.9   0.0         0      0   27.76  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          8 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:09 STEP   10 H=  10:00 +CPU=  2.960    
+           STEP   10 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4407   90702    22457   69692    188962    3389      0.9   0.0         0      0   34.27  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                          9 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:11 STEP   11 H=  11:00 +CPU=  2.982    
+           STEP   11 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4405   90700    22455   69684    188950    3390      0.9   0.0         0      0   34.27  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         10 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:12 STEP   12 H=  12:00 +CPU=  3.041    
+           STEP   12 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4403   90702    22452   69688    188951    3391      0.9   0.0         0      0   34.27  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         11 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:14 STEP   13 H=  13:00 +CPU=  2.927    
+           STEP   13 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4402   90700    22457   69690    188960    3392      0.9   0.0         0      0   40.25  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         12 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:15 STEP   14 H=  14:00 +CPU=  2.963    
+           STEP   14 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4402   90704    22457   69676    188948    3393      0.9   0.0         0      0   40.25  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         13 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:17 STEP   15 H=  15:00 +CPU=  2.928    
+           STEP   15 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4402   90698    22464   69674    188942    3394      0.9   0.0         0      0   40.25  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         14 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:19 STEP   16 H=  16:00 +CPU=  2.930    
+           STEP   16 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4403   90704    22450   69688    188953    3394      0.9   0.0         0      0   40.25  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         15 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:20 STEP   17 H=  17:00 +CPU=  2.940    
+           STEP   17 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4408   90708    22455   69682    188960    3394      0.9   0.0         0      0   45.76  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         16 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:22 STEP   18 H=  18:00 +CPU=  2.949    
+           STEP   18 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4402   90698    22452   69686    188938    3395      0.9   0.0         0      0   45.76  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         17 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:23 STEP   19 H=  19:00 +CPU=  2.970    
+           STEP   19 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4406   90696    22449   69678    188937    3396      0.9   0.0         0      0   45.76  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         18 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:25 STEP   20 H=  20:00 +CPU=  2.983    
+           STEP   20 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4403   90698    22452   69684    188942    3397      0.9   0.0         0      0   44.58  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         19 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:27 STEP   21 H=  21:00 +CPU=  2.986    
+           STEP   21 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4406   90694    22450   69684    188943    3397      0.9   0.0         0      0   44.58  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         20 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:28 STEP   22 H=  22:00 +CPU=  2.959    
+           STEP   22 :## EC_MEMINFO    0 gs07r1b72               1758    1674       0      4405   90702    22451   69680    188946    3397      0.9   0.0         0      0   44.58  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         21 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:30 STEP   23 H=  23:00 +CPU=  3.215    
+           STEP   23 :## EC_MEMINFO    0 gs07r1b72               1820    1696       0      4396   89876    22455   68738    187166    3397      0.9   0.0         0      0   43.49  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         22 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  15:57:32 STEP   24 H=  24:00 +CPU=  4.276    
+           STEP   24 :## EC_MEMINFO    0 gs07r1b72               1822    1721       0      3948   90598    22228   69776    188254    3398      0.9   0.0         0      0   43.49  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         23 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  IO_SERV_CLOSE_EC FLUSHFDB           27
+xmeter                         24 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           

@@ -1,0 +1,50 @@
+Set INTEL compilers as MPI wrappers backend
+remove impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
+load impi/2021.10.0 (PATH, MANPATH, LD_LIBRARY_PATH)
+remove mkl/2023.2.0 (LD_LIBRARY_PATH)
+load mkl/2023.2.0 (LD_LIBRARY_PATH)
+load FFTW/3.3.10 (LD_LIBRARY_PATH, LIBRARY_PATH, CPATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, PKG_CONFIG_PATH, FFTW_ROOT, FFTW_HOME) 
+load HDF5/1.14.1-2 (PATH, LD_LIBRARY_PATH, LIBRARY_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, HDF5_DIR, HDF5_ROOT,CFLAGS, CPPFLAGS, LDFLAGS) 
+load PNETCDF/1.12.3 (PATH, MANPATH, LD_LIBRARY_PATH, LIBRARY_PATH,
+PKG_CONFIG_PATH, C_INCLUDE_PATH, CPLUS_INCLUDE_PATH) 
+load NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3
+(PATH, LD_LIBRARY_PATH, LIBRARY_PATH, PKG_CONFIG_PATH, C_INCLUDE_PATH,
+CPLUS_INCLUDE_PATH, NETCDF_ROOT, NETCDF_DIR) 
+Submitted batch job 35128256
+Job ID 35128256
+Nodetype: gp_ehpc; account: ehpc01
+Job status: Q
+Job status: R
+Job status: CG
+Job status: 
+JOB DISAPPEARED!
+Job status: NONE
+Results collected: results.35128256/
+Batch system output: results.35128256/slurm-35128256.out
+Psubmit wrapper output: results.35128256/psubmit_wrapper_output.35128256
+
+--- Batch system output: ---
+>>> PSUBMIT: PSUBMIT_JOBID=35128256 PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
+>>> PSUBMIT: args: -t slurm -n 2080 -p 8 -h 14 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/ -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a 
+>>> PSUBMIT: sbatch -J ifsnemo-basic-test --exclusive --time=120 --qos=gp_ehpc    --account=ehpc01   -D /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/ifsnemo -N 260 -n 2080 /gpfs/home/bsc/bsc631248/bin/psubmit-mpiexec-wrapper.sh -t slurm -n 2080 -p 8 -h 14 -g 0 -d /gpfs/home/bsc/bsc631248/bin -s ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP/  -e false -o ifs.DE_CY48R1.0_climateDT_20250521.SP.CPU.GPP//psubmit.opt -a "\"\""
+Submitted batch job 35128256
+
+--- Psubmit wrapper output: ---
+>>> PSUBMIT: Nodelist gs03r3b01:8,gs03r3b02:8,gs03r3b03:8,gs03r3b04:8,gs03r3b05:8,gs03r3b06:8,gs03r3b07:8,gs03r3b08:8,gs03r3b09:8,gs03r3b10:8,gs03r3b11:8,gs03r3b12:8,gs03r3b13:8,gs03r3b15:8,gs03r3b16:8,gs03r3b17:8,gs03r3b18:8,gs03r3b20:8,gs03r3b21:8,gs03r3b22:8,gs03r3b23:8,gs03r3b24:8,gs03r3b25:8,gs03r3b26:8,gs03r3b27:8,gs03r3b28:8,gs03r3b29:8,gs03r3b30:8,gs03r3b31:8,gs03r3b32:8,gs03r3b33:8,gs03r3b34:8,gs03r3b35:8,gs03r3b36:8,gs03r3b37:8,gs03r3b38:8,gs03r3b39:8,gs03r3b40:8,gs03r3b41:8,gs03r3b42:8,gs03r3b45:8,gs03r3b46:8,gs03r3b47:8,gs03r3b48:8,gs03r3b49:8,gs03r3b50:8,gs03r3b51:8,gs03r3b52:8,gs03r3b53:8,gs03r3b54:8,gs03r3b55:8,gs03r3b56:8,gs03r3b57:8,gs03r3b58:8,gs03r3b59:8,gs03r3b60:8,gs03r3b61:8,gs03r3b62:8,gs03r3b63:8,gs03r3b64:8,gs03r3b66:8,gs03r3b67:8,gs03r3b68:8,gs03r3b69:8,gs03r3b70:8,gs03r3b72:8,gs09r2b01:8,gs09r2b02:8,gs09r2b03:8,gs09r2b04:8,gs09r2b05:8,gs09r2b06:8,gs09r2b07:8,gs09r2b08:8,gs09r2b09:8,gs09r2b10:8,gs09r2b11:8,gs09r2b12:8,gs09r2b13:8,gs09r2b14:8,gs09r2b15:8,gs09r2b16:8,gs09r2b17:8,gs09r2b18:8,gs09r2b19:8,gs09r2b20:8,gs09r2b21:8,gs09r2b22:8,gs09r2b23:8,gs09r2b24:8,gs09r2b25:8,gs09r2b26:8,gs09r2b27:8,gs09r2b28:8,gs09r2b29:8,gs09r2b30:8,gs09r2b31:8,gs09r2b32:8,gs09r2b33:8,gs09r2b34:8,gs09r2b35:8,gs09r2b36:8,gs09r2b37:8,gs09r2b38:8,gs09r2b39:8,gs09r2b40:8,gs09r2b46:8,gs09r2b47:8,gs09r2b48:8,gs09r2b49:8,gs09r2b50:8,gs09r2b51:8,gs09r2b52:8,gs09r2b53:8,gs09r2b54:8,gs09r2b55:8,gs09r2b56:8,gs09r2b57:8,gs09r2b58:8,gs09r2b59:8,gs09r2b60:8,gs09r2b61:8,gs09r2b62:8,gs09r2b63:8,gs09r2b64:8,gs09r2b65:8,gs09r2b66:8,gs09r2b67:8,gs09r2b68:8,gs09r2b71:8,gs09r2b72:8,gs10r1b03:8,gs10r1b04:8,gs10r1b05:8,gs10r1b07:8,gs10r1b10:8,gs10r1b11:8,gs10r1b12:8,gs10r1b13:8,gs10r1b16:8,gs10r1b17:8,gs10r1b18:8,gs10r1b19:8,gs10r1b20:8,gs10r1b21:8,gs10r1b22:8,gs10r1b23:8,gs10r1b24:8,gs10r1b25:8,gs10r1b26:8,gs10r1b27:8,gs10r1b28:8,gs10r1b29:8,gs10r1b30:8,gs10r1b31:8,gs10r1b32:8,gs10r1b33:8,gs10r1b34:8,gs10r1b35:8,gs10r1b36:8,gs10r1b37:8,gs10r1b38:8,gs10r1b39:8,gs10r1b40:8,gs10r1b41:8,gs10r1b42:8,gs10r1b43:8,gs10r1b44:8,gs10r1b45:8,gs10r1b46:8,gs10r1b47:8,gs10r1b48:8,gs10r1b49:8,gs10r1b50:8,gs10r1b51:8,gs10r1b52:8,gs10r1b53:8,gs10r1b54:8,gs10r1b55:8,gs10r1b56:8,gs10r1b58:8,gs10r1b59:8,gs10r1b60:8,gs10r1b61:8,gs10r1b62:8,gs10r1b63:8,gs10r1b64:8,gs10r1b65:8,gs10r1b66:8,gs10r1b67:8,gs10r1b68:8,gs10r1b69:8,gs10r3b01:8,gs10r3b02:8,gs10r3b03:8,gs10r3b04:8,gs10r3b05:8,gs10r3b08:8,gs10r3b09:8,gs10r3b11:8,gs10r3b12:8,gs10r3b13:8,gs10r3b14:8,gs10r3b15:8,gs10r3b16:8,gs10r3b17:8,gs10r3b18:8,gs10r3b19:8,gs10r3b20:8,gs10r3b21:8,gs10r3b22:8,gs10r3b23:8,gs10r3b24:8,gs10r3b25:8,gs10r3b26:8,gs10r3b27:8,gs10r3b28:8,gs10r3b29:8,gs10r3b30:8,gs10r3b31:8,gs10r3b32:8,gs10r3b33:8,gs10r3b34:8,gs10r3b35:8,gs10r3b36:8,gs10r3b37:8,gs10r3b38:8,gs10r3b39:8,gs10r3b40:8,gs10r3b41:8,gs10r3b42:8,gs10r3b43:8,gs10r3b44:8,gs10r3b45:8,gs10r3b46:8,gs10r3b47:8,gs10r3b48:8,gs10r3b49:8,gs10r3b50:8,gs10r3b51:8,gs10r3b52:8,gs10r3b53:8,gs10r3b54:8,gs10r3b55:8,gs10r3b56:8,gs10r3b57:8,gs10r3b58:8,gs10r3b59:8,gs10r3b60:8,gs10r3b61:8,gs10r3b62:8,gs10r3b63:8,gs10r3b64:8,gs10r3b65:8,gs10r3b66:8,gs10r3b67:8,gs10r3b68:8,gs10r3b70:8,gs10r3b71:8,gs10r3b72:8
+>>> [PREPROC] Patching /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/ifsnemo/raps/bin/hres to enable run.stat
+>>> [POSTPROC] JOBID=35128256
+>>> [POSTPROC] TESTBED_DIR=/gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/ifsnemo/ifsnemo_testbed_35128256
+>>> [POSTPROC] RESULTS_DIR=/gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/ifsnemo/results.35128256
+>>> [POSTPROC] Phase 1: Moving artifacts into /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/ifsnemo/results.35128256
+>>> [POSTPROC] Archived testbed -> ifsnemo_testbed_35128256.35128256.dir
+>>> [POSTPROC] Phase 2: Verifying required files in results.35128256
+>>> [POSTPROC] Phase 3: Step-count consistency checks
+>>> [POSTPROC]   laststep (time.step/run.stat): 240
+>>> [POSTPROC]   NSTOP    (NODE.001_01)       : 384
+>>> [POSTPROC]   CNT0 last(ifs.stat)           : 384
+>>> [POSTPROC]   NODE.001_01 contains "*** END CNT0 ***"
+>>> [POSTPROC] IFS step-counts consistent: NSTOP=384 == CNT0=384
+>>> PSUBMIT: Exiting...
+cat: /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250521-usearchandraps/ifsnemo-build/ifsnemo/results.35128256/rank0: No such file or directory

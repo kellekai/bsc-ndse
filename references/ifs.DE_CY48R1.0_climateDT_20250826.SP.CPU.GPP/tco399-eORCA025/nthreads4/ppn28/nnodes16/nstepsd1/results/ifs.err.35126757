@@ -1,0 +1,3800 @@
++ [hres:93s:16:01:05:5453]: read -ra _prune_vars
+++ [hres:93s:16:01:05:5453]: printenv
+++ [hres:93s:16:01:06:5453]: cut -f1 -d=
+++ [hres:93s:16:01:06:5453]: egrep '^[a-z]'
+++ [hres:93s:16:01:06:5453]: egrep -v '^(bash)'
+++ [hres:93s:16:01:06:5453]: grep =
+++ [hres:94s:16:01:06:5453]: date +%s.%N
++ [hres:94s:16:01:06:5453]: unset nemoyproc MPI_EPOCH=1768834866.050946782
++ [hres:94s:16:01:06:5454]: export MPI_EPOCH
++ [hres:94s:16:01:06:5454]: set -eu
++ [hres:94s:16:01:06:5454]: mpirun -np 448 /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250826-usearchandraps/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/bin/ifsMASTER.SP
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+[EC_DRHOOK:hostname:myproc:omltid:pid:unixtid] [YYYYMMDD:HHMMSS:walltime] [function@file:lineno] -- Max OpenMP threads = 4
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.004] [process_options@drhook.c:2209] fp = 0x1535157816a0
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2220] ATP_ENABLED=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2221] ATP_MAX_CORES=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2222] ATP_MAX_ANALYSIS_TIME=300
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2223] ATP_IGNORE_SIGTERM=0
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2231] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2252] DR_HOOK_PROFILE=/gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250826-usearchandraps/ifsnemo-build/src/sandbox/ifsnemo_testbed_35126757/drhook.%d
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2258] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2264] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2352] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2363] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2371] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2379] DR_HOOK_HARAKIRI_TIMEOUT=60
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2386] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2393] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2400] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2407] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2414] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [process_options@drhook.c:2495]
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [ignore_signals@drhook.c:1365]  DR_HOOK_IGNORE_SIGNALS=<undef>
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [restore_default_signals@drhook.c:1298] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2045] New signal handler 'signal_drhook' for signal#6 (SIGABRT) at 0x15355821c990 (next at 0x417cc0)
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2046] New signal handler 'signal_drhook' for signal#7 (SIGBUS) at 0x15355821c990 (next at (nil))
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2047] New signal handler 'signal_drhook' for signal#11 (SIGSEGV) at 0x15355821c990 (next at 0x417cc0)
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2052] New signal handler 'signal_drhook' for signal#16 (SIGSTKFLT) at 0x15355821c990 (next at (nil))
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [trapfpe_treatment@drhook.c:1248] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [trapfpe@drhook.c:244] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [trapfpe@drhook.c:249] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [trapfpe@drhook.c:256] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2054] New signal handler 'signal_drhook' for signal#8 (SIGFPE) at 0x15355821c990 (next at 0x417cc0)
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2055] New signal handler 'signal_drhook' for signal#4 (SIGILL) at 0x15355821c990 (next at 0x417cc0)
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2056] New signal handler 'signal_drhook' for signal#5 (SIGTRAP) at 0x15355821c990 (next at (nil))
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2057] New signal handler 'signal_drhook' for signal#2 (SIGINT) at 0x15355821c990 (next at 0x417cc0)
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2071] New signal handler 'signal_drhook' for signal#24 (SIGXCPU) at 0x15355821c990 (next at (nil))
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2073] New signal handler 'signal_drhook' for signal#25 (SIGXFSZ) at 0x15355821c990 (next at (nil))
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [signal_drhook_init@drhook.c:2078] New signal handler 'signal_drhook' for signal#31 (SIGSYS) at 0x15355821c990 (next at (nil))
+[EC_DRHOOK:gs29r3b21:1:1:3105704:3105704] [20260119:160113:0.005] [catch_signals@drhook.c:1210] DR_HOOK_CATCH_SIGNALS=<undef>
+ EC_MEMINFO@RNSORT: MINCID, MAXCID, NUMNODES =  0 111 16
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250826-usearchandraps/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.320s
+## EC_MEMINFO Running on 16 nodes (2-numa) with 430 compute + 16 I/O-tasks and 4+4 threads at 16:01:13.950 on 19-Jan-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 35126757
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs29r3b21              27469    7507       0     15663   91656     4138  104150    217310    3001      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    1 gs29r3b34              27468    7520       0     16426   90164    14051   94180    216515    2170      3.3   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO    2 gs29r3b42              27468    7502       0      8056   99160     7628  100316    216864    2617      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    3 gs29r3b43              27468    7506       0      7921   98728     7034  102488    217873    2185      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    4 gs29r3b44              27468    7522       0      8101  100618     8310   99604    218335    1541      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    5 gs29r3b45              27468    7520       0      6595  101826    16700   93414    220216    1487      3.3   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO    6 gs29r3b46              27468    7529       0      9292   97138    10674   98270    217076    2804      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    7 gs29r3b49              27468    7530       0     11779   95456    12751   95052    216740    2602      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    8 gs29r3b50              27468    7529       0     11151   96172    10101   97984    217111    2329      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    9 gs29r3b51              27468    7508       0     16852   90336    19702   89404    217996    2035      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   10 gs29r3b52              27468    7550       0      9614   97738    12236   95902    217193    2604      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   11 gs29r3b57              27468    7515       0     14177   92480     9691   99312    217363    2027      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   12 gs29r3b58              27468    7539       0      9789   97890    15501   93166    218050    2028      3.3   0.0         0      0     114  Sm/p:master:computation
+## EC_MEMINFO   13 gs29r3b59              27468    7506       0     17608   88654    11675   97898    217538    2449      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   14 gs29r3b62              27468    7512       0     10905   96922    18500   89024    217053    2343      3.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   15 gs29r3b65               9810    5891       0     10390   97326    11144   98118    218680    2597      2.6   0.0         0      0     106  Sm/p:master:computation
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/bsc32/bsc631248/ifsnc-refgen-20250826-usearchandraps/ifsnemo-build/src/sandbox/ifs.DE_CY48R1.0_climateDT_20250826.SP.CPU.GPP/bin/ifsMASTER.SP -- wall-time :      0.357s
+## EC_MEMINFO Running on 16 nodes (2-numa) with 414 compute + 16 I/O-tasks and 4+4 threads at 16:01:13.987 on 19-Jan-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 35126757
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs29r3b21              27582    7818       0     15619   91616     4094  104118    217151    3013      3.4   0.0         0      0     112  Sm/p:oops:ifs_init
+## EC_MEMINFO    1 gs29r3b34              27581    7824       0     16381   90148    14005   94166    216395    2180      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    2 gs29r3b42              27581    7809       0      8010   99144     7584  100288    216729    2625      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    3 gs29r3b43              27581    7811       0      7873   98710     6990  102458    217733    2194      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    4 gs29r3b44              27581    7831       0      8055  100586     8264   99564    218172    1552      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    5 gs29r3b45              27581    7832       0      6552  101792    16653   93388    220066    1497      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    6 gs29r3b46              27581    7837       0      9246   97102    10628   98240    216918    2813      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    7 gs29r3b49              27581    7837       0     11734   95418    12704   95022    216581    2612      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    8 gs29r3b50              27581    7839       0     11106   96160    10056   97956    216982    2341      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    9 gs29r3b51              27581    7819       0     16809   90306    19656   89384    217858    2047      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   10 gs29r3b52              27581    7861       0      9570   97710    12189   95858    217031    2615      3.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   11 gs29r3b57              27581    7818       0     14132   92448     9645   99290    217219    2038      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   12 gs29r3b58              27581    7846       0      9743   97850    15456   93150    217903    2038      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   13 gs29r3b59              27581    7810       0     17560   88610    11632   97878    217383    2459      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   14 gs29r3b62              27581    7815       0     10861   96900    18452   89002    216919    2353      3.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   15 gs29r3b65               9851    2794       0     10334   97016    11074   97254    217380    2601      1.3   0.0         0      0     106  Sm/p:master:comput
+[EC_DRHOOK:gs29r3b21:1:4:3105704:3105830] [20260119:160115:1.738] [trapfpe_treatment@drhook.c:1248] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs29r3b21:1:4:3105704:3105830] [20260119:160115:1.738] [trapfpe@drhook.c:244] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs29r3b21:1:4:3105704:3105830] [20260119:160115:1.738] [trapfpe@drhook.c:249] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs29r3b21:1:4:3105704:3105830] [20260119:160115:1.738] [trapfpe@drhook.c:256] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+ ODB Observation Store options : L_READ_FROM_OBS_STORE =  F
+ ODB Observation Store options : L_WRITE_TO_OBS_STORE  =  F
+ ODB Observation Store options : ODB_OBS_STORE_PATH    = 
+ ODB Observation Store options : NPOOLS_COPEDB         =            0
+ Reading /gpfs/projects/ehpc01/models/ifs-nemo/inidata/tco399l137/hz9n/data/ifsdata/RADRRTM
+ Reading /gpfs/projects/ehpc01/models/ifs-nemo/inidata/tco399l137/hz9n/data/ifsdata/RADSRTM
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ *******************************************************
+ 
+ *******************************************************
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ *******************************************************
+ 
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ *******************************************************
+ *******************************************************
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ *******************************************************
+ *******************************************************
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ 
+ 
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+ 
+ *******************************************************
+  WARNING IN PRESET_WGRIB_TEMPLATE !!!!! 
+  IGRIB_VERSION = 2 FOR SPECTRA NOT YET IMPLEMENTED !!! 
+  REVERT TO USING GRIB 1 FOR THE SPECTRA
+ *******************************************************
+ 
+MASTER-HOSTNAME-PID gs29r3b65 4173579
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+  16:01:48 STEP    0 H=   0:00 +CPU=  6.672    
+           STEP    0 :## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power LoadAvg
+           STEP    0 :## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+           STEP    0 :## EC_MEMINFO Node Name                 | Heap  | RSS(tsk)        | Small  Huge or | Small  Huge or | Total          |
+           STEP    0 :## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+           STEP    0 :## EC_MEMINFO    0 gs29r3b21               2379    1686       0      9190   82182     1083   91272    185433    3210      0.9   0.0         0      0   22.00  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+xmeter                          0 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:01:51 STEP    1 H=   0:15 +CPU=  5.858    
+           STEP    1 :## EC_MEMINFO    0 gs29r3b21               2544    1838       0      8619   81434      815   90290    182871    3242      1.0   0.0         0      0   22.80  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+xmeter                          0 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:01:51 STEP    2 H=   0:30 +CPU=  1.190    
+           STEP    2 :## EC_MEMINFO    0 gs29r3b21               2544    1838       0      8620   81546      806   90332    183020    3253      1.0   0.0         0      0   22.80  Sm/p
+  16:01:51 STEP    3 H=   0:45 +CPU=  1.142    
+           STEP    3 :## EC_MEMINFO    0 gs29r3b21               2544    1838       0      8611   81536      810   90332    183002    3257      1.0   0.0         0      0   22.80  Sm/p
+  16:01:53 STEP    4 H=   1:00 +CPU=  8.194    
+           STEP    4 :## EC_MEMINFO    0 gs29r3b21               2569    1876       0      7785   81172      743   89252    180656    3291      1.0   0.0         0      0   22.80  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          1 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:01:54 STEP    5 H=   1:15 +CPU=  1.160    
+           STEP    5 :## EC_MEMINFO    0 gs29r3b21               2582    1897       0      7704   81122      697   89156    180390    3291      1.0   0.0         0      0   22.80  Sm/p
+  16:01:54 STEP    6 H=   1:30 +CPU=  1.149    
+           STEP    6 :## EC_MEMINFO    0 gs29r3b21               2582    1905       0      7718   81116      742   89140    180424    3302      1.0   0.0         0      0   22.80  Sm/p
+  16:01:54 STEP    7 H=   1:45 +CPU=  1.132    
+           STEP    7 :## EC_MEMINFO    0 gs29r3b21               2582    1906       0      7722   81116      745   89144    180440    3303      1.0   0.0         0      0   22.80  Sm/p
+  16:01:56 STEP    8 H=   2:00 +CPU=  5.927    
+           STEP    8 :## EC_MEMINFO    0 gs29r3b21               2594    1922       0      7669   81122      703   89112    180313    3313      1.0   0.0         0      0   29.95  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          2 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:01:56 STEP    9 H=   2:15 +CPU=  1.144    
+           STEP    9 :## EC_MEMINFO    0 gs29r3b21               2594    1924       0      7690   81120      716   89106    180338    3315      1.0   0.0         0      0   29.95  Sm/p
+  16:01:56 STEP   10 H=   2:30 +CPU=  1.147    
+           STEP   10 :## EC_MEMINFO    0 gs29r3b21               2594    1924       0      7692   81118      718   89108    180348    3315      1.0   0.0         0      0   29.95  Sm/p
+  16:01:57 STEP   11 H=   2:45 +CPU=  1.155    
+           STEP   11 :## EC_MEMINFO    0 gs29r3b21               2594    1924       0      7720   81154      752   89156    180495    3315      1.0   0.0         0      0   29.95  Sm/p
+  16:01:58 STEP   12 H=   3:00 +CPU=  5.909    
+           STEP   12 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7707   81170      748   89152    180477    3324      1.0   0.0         0      0   29.95  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          3 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:01:58 STEP   13 H=   3:15 +CPU=  1.128    
+           STEP   13 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7724   81160      746   89160    180500    3324      1.0   0.0         0      0   29.95  Sm/p
+  16:01:59 STEP   14 H=   3:30 +CPU=  1.134    
+           STEP   14 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7722   81158      747   89156    180494    3324      1.0   0.0         0      0   29.95  Sm/p
+  16:01:59 STEP   15 H=   3:45 +CPU=  1.139    
+           STEP   15 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7722   81154      767   89186    180536    3328      1.0   0.0         0      0   29.95  Sm/p
+  16:02:00 STEP   16 H=   4:00 +CPU=  6.011    
+           STEP   16 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7739   81210      832   89288    180769    3331      1.0   0.0         0      0   36.52  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          4 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:01 STEP   17 H=   4:15 +CPU=  1.125    
+           STEP   17 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7764   81234      862   89322    180892    3331      1.0   0.0         0      0   36.52  Sm/p
+  16:02:01 STEP   18 H=   4:30 +CPU=  1.131    
+           STEP   18 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7768   81252      859   89330    180916    3332      1.0   0.0         0      0   36.52  Sm/p
+  16:02:01 STEP   19 H=   4:45 +CPU=  1.242    
+           STEP   19 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7773   81254      860   89316    180915    3332      1.0   0.0         0      0   36.52  Sm/p
+  16:02:03 STEP   20 H=   5:00 +CPU=  6.381    
+           STEP   20 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7770   81254      855   89324    180906    3335      1.0   0.0         0      0   36.52  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+xmeter                          5 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:03 STEP   21 H=   5:15 +CPU=  1.186    
+           STEP   21 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7771   81246      862   89324    180911    3336      1.0   0.0         0      0   36.52  Sm/p
+  16:02:04 STEP   22 H=   5:30 +CPU=  1.123    
+           STEP   22 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7778   81262      866   89332    180947    3336      1.0   0.0         0      0   36.52  Sm/p
+  16:02:04 STEP   23 H=   5:45 +CPU=  1.159    
+           STEP   23 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7783   81266      875   89356    180988    3336      1.0   0.0         0      0   36.52  Sm/p
+  16:02:05 STEP   24 H=   6:00 +CPU=  5.897    
+           STEP   24 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7806   81308      879   89362    181055    3339      1.0   0.0         0      0   42.56  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+xmeter                          6 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:06 STEP   25 H=   6:15 +CPU=  1.128    
+           STEP   25 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7804   81304      878   89368    181064    3339      1.0   0.0         0      0   42.56  Sm/p
+  16:02:06 STEP   26 H=   6:30 +CPU=  1.192    
+           STEP   26 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7807   81312      883   89372    181082    3340      1.0   0.0         0      0   42.56  Sm/p
+  16:02:06 STEP   27 H=   6:45 +CPU=  1.368    
+           STEP   27 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7821   81324      902   89392    181150    3341      1.0   0.0         0      0   42.56  Sm/p
+  16:02:08 STEP   28 H=   7:00 +CPU=  5.929    
+           STEP   28 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7882   81408      926   89428    181344    3343      1.0   0.0         0      0   42.56  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          7 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:08 STEP   29 H=   7:15 +CPU=  1.127    
+           STEP   29 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7917   81442      927   89446    181437    3344      1.0   0.0         0      0   42.56  Sm/p
+  16:02:08 STEP   30 H=   7:30 +CPU=  1.125    
+           STEP   30 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7928   81458      940   89454    181491    3344      1.0   0.0         0      0   42.56  Sm/p
+  16:02:09 STEP   31 H=   7:45 +CPU=  1.143    
+           STEP   31 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7938   81462      953   89474    181539    3344      1.0   0.0         0      0   42.56  Sm/p
+  16:02:10 STEP   32 H=   8:00 +CPU=  5.831    
+           STEP   32 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7952   81500      968   89492    181612    3346      1.0   0.0         0      0   48.44  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          8 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:10 STEP   33 H=   8:15 +CPU=  1.123    
+           STEP   33 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7958   81498      973   89516    181656    3346      1.0   0.0         0      0   48.44  Sm/p
+  16:02:11 STEP   34 H=   8:30 +CPU=  1.134    
+           STEP   34 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7961   81506      986   89530    181693    3346      1.0   0.0         0      0   48.44  Sm/p
+  16:02:11 STEP   35 H=   8:45 +CPU=  1.139    
+           STEP   35 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7976   81526      995   89538    181741    3347      1.0   0.0         0      0   48.44  Sm/p
+  16:02:12 STEP   36 H=   9:00 +CPU=  5.852    
+           STEP   36 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8002   81572     1041   89592    181908    3348      1.0   0.0         0      0   48.44  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                          9 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:13 STEP   37 H=   9:15 +CPU=  1.131    
+           STEP   37 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8007   81578     1049   89620    181964    3348      1.0   0.0         0      0   48.44  Sm/p
+  16:02:13 STEP   38 H=   9:30 +CPU=  1.141    
+           STEP   38 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8022   81592     1069   89656    182045    3349      1.0   0.0         0      0   48.44  Sm/p
+  16:02:13 STEP   39 H=   9:45 +CPU=  1.126    
+           STEP   39 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8030   81608     1082   89672    182103    3349      1.0   0.0         0      0   48.44  Sm/p
+  16:02:15 STEP   40 H=  10:00 +CPU=  5.882    
+           STEP   40 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8041   81628     1130   89738    182238    3351      1.0   0.0         0      0   48.44  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+xmeter                         10 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:15 STEP   41 H=  10:15 +CPU=  1.121    
+           STEP   41 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8046   81640     1126   89742    182259    3351      1.0   0.0         0      0   48.44  Sm/p
+  16:02:15 STEP   42 H=  10:30 +CPU=  1.143    
+           STEP   42 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8051   81632     1129   89738    182261    3351      1.0   0.0         0      0   53.53  Sm/p
+  16:02:16 STEP   43 H=  10:45 +CPU=  1.134    
+           STEP   43 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8044   81634     1136   89766    182290    3351      1.0   0.0         0      0   53.53  Sm/p
+  16:02:17 STEP   44 H=  11:00 +CPU=  5.812    
+           STEP   44 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8082   81684     1152   89782    182400    3352      1.0   0.0         0      0   53.53  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         11 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:17 STEP   45 H=  11:15 +CPU=  1.133    
+           STEP   45 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8101   81706     1142   89762    182421    3352      1.0   0.0         0      0   53.53  Sm/p
+  16:02:18 STEP   46 H=  11:30 +CPU=  1.147    
+           STEP   46 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8104   81710     1138   89768    182432    3352      1.0   0.0         0      0   53.53  Sm/p
+  16:02:18 STEP   47 H=  11:45 +CPU=  1.132    
+           STEP   47 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8103   81702     1142   89762    182418    3353      1.0   0.0         0      0   53.53  Sm/p
+  16:02:19 STEP   48 H=  12:00 +CPU=  5.856    
+           STEP   48 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8127   81732     1141   89764    182464    3354      1.0   0.0         0      0   53.53  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         12 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:20 STEP   49 H=  12:15 +CPU=  1.133    
+           STEP   49 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8142   81758     1134   89756    182498    3354      1.0   0.0         0      0   53.53  Sm/p
+  16:02:20 STEP   50 H=  12:30 +CPU=  1.130    
+           STEP   50 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8140   81760     1132   89750    182489    3354      1.0   0.0         0      0   53.53  Sm/p
+  16:02:20 STEP   51 H=  12:45 +CPU=  1.134    
+           STEP   51 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8145   81760     1136   89760    182510    3354      1.0   0.0         0      0   58.22  Sm/p
+  16:02:22 STEP   52 H=  13:00 +CPU=  5.878    
+           STEP   52 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8142   81756     1140   89772    182511    3356      1.0   0.0         0      0   58.22  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+xmeter                         13 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:22 STEP   53 H=  13:15 +CPU=  1.123    
+           STEP   53 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8145   81756     1132   89758    182497    3356      1.0   0.0         0      0   58.22  Sm/p
+  16:02:22 STEP   54 H=  13:30 +CPU=  1.133    
+           STEP   54 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8143   81756     1130   89754    182493    3356      1.0   0.0         0      0   58.22  Sm/p
+  16:02:23 STEP   55 H=  13:45 +CPU=  1.140    
+           STEP   55 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8141   81762     1126   89764    182504    3356      1.0   0.0         0      0   58.22  Sm/p
+  16:02:24 STEP   56 H=  14:00 +CPU=  5.861    
+           STEP   56 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8137   81752     1136   89776    182501    3356      1.0   0.0         0      0   58.22  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         14 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:24 STEP   57 H=  14:15 +CPU=  1.145    
+           STEP   57 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8137   81752     1122   89758    182479    3356      1.0   0.0         0      0   58.22  Sm/p
+  16:02:25 STEP   58 H=  14:30 +CPU=  1.137    
+           STEP   58 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8136   81756     1125   89756    182484    3356      1.0   0.0         0      0   58.22  Sm/p
+  16:02:25 STEP   59 H=  14:45 +CPU=  1.133    
+           STEP   59 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8138   81750     1125   89764    182484    3357      1.0   0.0         0      0   58.22  Sm/p
+  16:02:26 STEP   60 H=  15:00 +CPU=  5.834    
+           STEP   60 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8135   81750     1130   89766    182481    3357      1.0   0.0         0      0   62.52  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         15 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:27 STEP   61 H=  15:15 +CPU=  1.127    
+           STEP   61 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8136   81746     1124   89752    182465    3357      1.0   0.0         0      0   62.52  Sm/p
+  16:02:27 STEP   62 H=  15:30 +CPU=  1.134    
+           STEP   62 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8131   81752     1134   89782    182503    3358      1.0   0.0         0      0   62.52  Sm/p
+  16:02:27 STEP   63 H=  15:45 +CPU=  1.145    
+           STEP   63 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8132   81752     1147   89786    182526    3358      1.0   0.0         0      0   62.52  Sm/p
+  16:02:29 STEP   64 H=  16:00 +CPU=  5.843    
+           STEP   64 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8133   81748     1163   89822    182566    3358      1.0   0.0         0      0   62.52  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         16 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:29 STEP   65 H=  16:15 +CPU=  1.132    
+           STEP   65 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8127   81740     1172   89824    182569    3358      1.0   0.0         0      0   62.52  Sm/p
+  16:02:29 STEP   66 H=  16:30 +CPU=  1.145    
+           STEP   66 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8122   81736     1160   89824    182552    3358      1.0   0.0         0      0   62.52  Sm/p
+  16:02:30 STEP   67 H=  16:45 +CPU=  1.141    
+           STEP   67 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8121   81740     1168   89838    182576    3358      1.0   0.0         0      0   62.52  Sm/p
+  16:02:31 STEP   68 H=  17:00 +CPU=  5.861    
+           STEP   68 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8117   81740     1174   89840    182571    3359      1.0   0.0         0      0   66.48  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         17 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:31 STEP   69 H=  17:15 +CPU=  1.127    
+           STEP   69 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8116   81740     1168   89832    182564    3359      1.0   0.0         0      0   66.48  Sm/p
+  16:02:32 STEP   70 H=  17:30 +CPU=  1.148    
+           STEP   70 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8116   81738     1162   89826    182552    3359      1.0   0.0         0      0   66.48  Sm/p
+  16:02:32 STEP   71 H=  17:45 +CPU=  1.153    
+           STEP   71 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8114   81738     1167   89828    182558    3360      1.0   0.0         0      0   66.48  Sm/p
+  16:02:33 STEP   72 H=  18:00 +CPU=  5.791    
+           STEP   72 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8115   81744     1166   89842    182568    3360      1.0   0.0         0      0   66.48  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         18 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:34 STEP   73 H=  18:15 +CPU=  1.125    
+           STEP   73 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8112   81740     1163   89832    182558    3360      1.0   0.0         0      0   66.48  Sm/p
+  16:02:34 STEP   74 H=  18:30 +CPU=  1.143    
+           STEP   74 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8113   81748     1162   89816    182548    3360      1.0   0.0         0      0   66.48  Sm/p
+  16:02:34 STEP   75 H=  18:45 +CPU=  1.151    
+           STEP   75 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8115   81740     1162   89828    182555    3360      1.0   0.0         0      0   66.48  Sm/p
+  16:02:36 STEP   76 H=  19:00 +CPU=  5.864    
+           STEP   76 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8113   81746     1170   89842    182570    3361      1.0   0.0         0      0   70.13  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+xmeter                         19 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:36 STEP   77 H=  19:15 +CPU=  1.133    
+           STEP   77 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8112   81740     1155   89826    182536    3361      1.0   0.0         0      0   70.13  Sm/p
+  16:02:36 STEP   78 H=  19:30 +CPU=  1.149    
+           STEP   78 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8111   81740     1160   89834    182556    3361      1.0   0.0         0      0   70.13  Sm/p
+  16:02:37 STEP   79 H=  19:45 +CPU=  1.135    
+           STEP   79 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8111   81748     1162   89838    182568    3361      1.0   0.0         0      0   70.13  Sm/p
+  16:02:38 STEP   80 H=  20:00 +CPU=  5.798    
+           STEP   80 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8113   81744     1164   89838    182559    3362      1.0   0.0         0      0   70.13  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         20 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:38 STEP   81 H=  20:15 +CPU=  1.127    
+           STEP   81 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8109   81744     1156   89836    182555    3362      1.0   0.0         0      0   70.13  Sm/p
+  16:02:39 STEP   82 H=  20:30 +CPU=  1.156    
+           STEP   82 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8108   81736     1152   89828    182535    3362      1.0   0.0         0      0   70.13  Sm/p
+  16:02:39 STEP   83 H=  20:45 +CPU=  1.165    
+           STEP   83 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8111   81748     1145   89816    182528    3362      1.0   0.0         0      0   70.13  Sm/p
+  16:02:40 STEP   84 H=  21:00 +CPU=  5.864    
+           STEP   84 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8111   81736     1154   89824    182525    3362      1.0   0.0         0      0   73.48  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         21 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:41 STEP   85 H=  21:15 +CPU=  1.121    
+           STEP   85 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8111   81746     1143   89812    182521    3362      1.0   0.0         0      0   73.48  Sm/p
+  16:02:41 STEP   86 H=  21:30 +CPU=  1.126    
+           STEP   86 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8113   81744     1139   89812    182511    3362      1.0   0.0         0      0   73.48  Sm/p
+  16:02:41 STEP   87 H=  21:45 +CPU=  1.138    
+           STEP   87 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8115   81752     1144   89816    182537    3362      1.0   0.0         0      0   73.48  Sm/p
+  16:02:43 STEP   88 H=  22:00 +CPU=  5.784    
+           STEP   88 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8116   81764     1150   89820    182550    3363      1.0   0.0         0      0   73.48  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         22 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:43 STEP   89 H=  22:15 +CPU=  1.120    
+           STEP   89 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8110   81762     1145   89818    182541    3363      1.0   0.0         0      0   73.48  Sm/p
+  16:02:43 STEP   90 H=  22:30 +CPU=  1.126    
+           STEP   90 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8112   81758     1143   89836    182557    3363      1.0   0.0         0      0   73.48  Sm/p
+  16:02:44 STEP   91 H=  22:45 +CPU=  1.120    
+           STEP   91 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8108   81748     1146   89824    182536    3363      1.0   0.0         0      0   73.48  Sm/p
+  16:02:45 STEP   92 H=  23:00 +CPU=  5.866    
+           STEP   92 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8107   81742     1152   89838    182540    3363      1.0   0.0         0      0   76.56  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+xmeter                         23 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
+  16:02:45 STEP   93 H=  23:15 +CPU=  1.108    
+           STEP   93 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8108   81756     1148   89822    182542    3363      1.0   0.0         0      0   76.56  Sm/p
+  16:02:46 STEP   94 H=  23:30 +CPU=  1.112    
+           STEP   94 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8107   81752     1145   89822    182536    3363      1.0   0.0         0      0   76.56  Sm/p
+  16:02:46 STEP   95 H=  23:45 +CPU=  1.507    
+           STEP   95 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      8103   81746     1140   89824    182520    3364      1.0   0.0         0      0   76.56  Sm/p
+  16:02:50 STEP   96 H=  24:00 +CPU= 12.331    
+           STEP   96 :## EC_MEMINFO    0 gs29r3b21               2594    1928       0      7813   81664      868   89734    181779    3364      1.0   0.0         0      0   72.68  Sm/p
+  IO_SERV_CLOSE_EC FLUSHFDB          431
+  IO_SERV_CLOSE_EC FLUSHFDB          432
+  IO_SERV_CLOSE_EC FLUSHFDB          433
+  IO_SERV_CLOSE_EC FLUSHFDB          434
+  IO_SERV_CLOSE_EC FLUSHFDB          435
+  IO_SERV_CLOSE_EC FLUSHFDB          436
+  IO_SERV_CLOSE_EC FLUSHFDB          437
+  IO_SERV_CLOSE_EC FLUSHFDB          438
+  IO_SERV_CLOSE_EC FLUSHFDB          439
+  IO_SERV_CLOSE_EC FLUSHFDB          440
+  IO_SERV_CLOSE_EC FLUSHFDB          441
+  IO_SERV_CLOSE_EC FLUSHFDB          442
+  IO_SERV_CLOSE_EC FLUSHFDB          443
+  IO_SERV_CLOSE_EC FLUSHFDB          444
+  IO_SERV_CLOSE_EC FLUSHFDB          445
+  IO_SERV_CLOSE_EC FLUSHFDB          446
+xmeter                         24 not posted  because neither SMSNAME nor ECF_NAME  is defined. LEN=  5NOSMS           NOECF           
