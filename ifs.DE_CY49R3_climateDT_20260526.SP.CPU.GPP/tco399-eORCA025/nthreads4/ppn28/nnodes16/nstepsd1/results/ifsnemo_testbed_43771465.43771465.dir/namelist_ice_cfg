@@ -1,0 +1,203 @@
+&NAMPAR
+    JPL=5,
+    NLAY_I=4,
+    NLAY_S=1,
+    LN_VIRTUAL_ITD=false,
+    LN_ICEDYN=true,
+    LN_ICETHD=true,
+    RN_AMAX_N=0.997,
+    RN_AMAX_S=0.997,
+    CN_ICERST_IN='restart_ice_in',
+    CN_ICERST_OUT='restart_ice_out',
+    CN_ICERST_INDIR='.',
+    CN_ICERST_OUTDIR='restart.dir',
+/
+
+&NAMITD
+    LN_CAT_HFN=true,
+    RN_HIMEAN=2.0,
+    LN_CAT_USR=false,
+    RN_CATBND=0.0, 0.45, 1.1, 2.1, 3.7, 6.0,
+    RN_HIMIN=0.1,
+    RN_HIMAX=99.0,
+/
+
+&NAMDYN
+    LN_DYNALL=true,
+    LN_DYNRHGADV=false,
+    LN_DYNADV1D=false,
+    LN_DYNADV2D=false,
+    RN_UICE=1e-05,
+    RN_VICE=0.0,
+    RN_ISHLAT=2.0,
+    LN_LANDFAST_L16=false,
+    RN_LF_DEPFRA=0.125,
+    RN_LF_BFR=10.0,
+    RN_LF_RELAX=1e-05,
+    RN_LF_TENSILE=0.05,
+/
+
+&NAMDYN_RDGRFT
+    LN_STR_H79=true,
+    RN_PSTAR=15000.0,
+    RN_CRHG=20.0,
+    RN_CSRDG=0.5,
+    LN_PARTF_LIN=false,
+    RN_GSTAR=0.15,
+    LN_PARTF_EXP=true,
+    RN_ASTAR=0.03,
+    LN_RIDGING=true,
+    RN_HSTAR=25.0,
+    RN_PORORDG=0.3,
+    RN_FSNWRDG=0.5,
+    RN_FPNDRDG=1.0,
+    LN_RAFTING=true,
+    RN_HRAFT=0.75,
+    RN_CRAFT=5.0,
+    RN_FSNWRFT=0.5,
+    RN_FPNDRFT=1.0,
+/
+
+&NAMDYN_RHG
+    LN_RHG_EVP=true,
+    LN_AEVP=false,
+    RN_CREEPL=2e-09,
+    RN_ECC=2.0,
+    NN_NEVP=120,
+    RN_RELAST=0.333,
+    NN_RHG_CHKCVG=0,
+/
+
+&NAMDYN_ADV
+    LN_ADV_PRA=true,
+    LN_ADV_UMX=false,
+    NN_UMX=5,
+/
+
+&NAMSBC
+    RN_CIO=0.0075,
+    NN_SNWFRA=0,
+    RN_SNWBLOW=0.66,
+    NN_FLXDIST=3,
+    LN_CNDFLX=false,
+    LN_CNDEMULATE=false,
+    NN_QTRICE=0,
+/
+
+&NAMTHD
+    LN_ICEDH=true,
+    LN_ICEDA=true,
+    LN_ICEDO=true,
+    LN_ICEDS=true,
+    LN_LEADHFX=true,
+/
+
+&NAMTHD_ZDF
+    LN_ZDF_BL99=true,
+    LN_CNDI_U64=false,
+    LN_CNDI_P07=true,
+    RN_CND_S=0.35,
+    RN_KAPPA_I=1.0,
+    RN_KAPPA_S=10.0,
+    RN_KAPPA_SMLT=7.0,
+    RN_KAPPA_SDRY=10.0,
+    LN_ZDF_CHKCVG=false,
+    RN_OIHT=0.003,
+/
+
+&NAMTHD_DA
+    RN_BETA=1.0,
+    RN_DMIN=8.0,
+/
+
+&NAMTHD_DO
+    RN_HINEW=0.1,
+    LN_FRAZIL=false,
+    RN_MAXFRAZ=1.0,
+    RN_VFRAZ=0.417,
+    RN_CFRAZ=5.0,
+/
+
+&NAMTHD_SAL
+    NN_ICESAL=2,
+    RN_ICESAL=4.0,
+    RN_SAL_GD=5.0,
+    RN_TIME_GD=1730000.0,
+    RN_SAL_FL=2.0,
+    RN_TIME_FL=864000.0,
+    RN_SIMAX=20.0,
+    RN_SIMIN=0.1,
+/
+
+&NAMTHD_PND
+    LN_PND=true,
+    LN_PND_LEV=true,
+    RN_APND_MIN=0.15,
+    RN_APND_MAX=0.85,
+    LN_PND_CST=false,
+    RN_APND=0.2,
+    RN_HPND=0.05,
+    LN_PND_LIDS=true,
+    LN_PND_ALB=true,
+/
+
+&NAMINI
+    LN_ICEINI=true,
+    NN_ICEINI_FILE=0,
+    RN_THRES_SST=2.0,
+    RN_HTI_INI_N=3.0,
+    RN_HTI_INI_S=1.0,
+    RN_HTS_INI_N=0.3,
+    RN_HTS_INI_S=0.3,
+    RN_ATI_INI_N=0.9,
+    RN_ATI_INI_S=0.9,
+    RN_SMI_INI_N=6.3,
+    RN_SMI_INI_S=6.3,
+    RN_TMI_INI_N=270.0,
+    RN_TMI_INI_S=270.0,
+    RN_TSU_INI_N=270.0,
+    RN_TSU_INI_S=270.0,
+    RN_TMS_INI_N=270.0,
+    RN_TMS_INI_S=270.0,
+    RN_APD_INI_N=0.2,
+    RN_APD_INI_S=0.2,
+    RN_HPD_INI_N=0.05,
+    RN_HPD_INI_S=0.05,
+    RN_HLD_INI_N=0.0,
+    RN_HLD_INI_S=0.0,
+    SN_HTI='Ice_initialization', -12, 'hti', false, true, 'yearly', '',
+           '', '',
+    SN_HTS='Ice_initialization', -12, 'hts', false, true, 'yearly', '',
+           '', '',
+    SN_ATI='Ice_initialization', -12, 'ati', false, true, 'yearly', '',
+           '', '',
+    SN_SMI='Ice_initialization', -12, 'smi', false, true, 'yearly', '',
+           '', '',
+    SN_TMI='Ice_initialization', -12, 'tmi', false, true, 'yearly', '',
+           '', '',
+    SN_TSU='Ice_initialization', -12, 'tsu', false, true, 'yearly', '',
+           '', '',
+    SN_TMS='NOT USED', -12, 'tms', false, true, 'yearly', '', '', '',
+    SN_APD='NOT USED', -12, 'apd', false, true, 'yearly', '', '', '',
+    SN_HPD='NOT USED', -12, 'hpd', false, true, 'yearly', '', '', '',
+    SN_HLD='NOT USED', -12, 'hld', false, true, 'yearly', '', '', '',
+    CN_DIR='./',
+/
+
+&NAMALB
+    RN_ALB_SDRY=0.8,
+    RN_ALB_SMLT=0.78,
+    RN_ALB_IDRY=0.6,
+    RN_ALB_IMLT=0.58,
+    RN_ALB_DPND=0.3,
+/
+
+&NAMDIA
+    LN_ICEDIACHK=false,
+    RN_ICECHK_CEL=100.0,
+    RN_ICECHK_GLO=1.0,
+    LN_ICEDIAHSB=false,
+    LN_ICECTL=false,
+    IICEPRT=10,
+    JICEPRT=10,
+/

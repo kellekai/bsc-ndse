@@ -1,0 +1,67 @@
+name: fluxAvg-hourly-healpix
+enable: '1'
+actions:
+- type: select
+  match:
+  - levtype: sfc
+    param:
+    - 146
+    - 147
+    - 169
+    - 175
+    - 176
+    - 177
+    - 178
+    - 179
+    - 180
+    - 181
+    - 208
+    - 209
+    - 210
+    - 211
+    - 212
+    - 228144
+    - 228228
+    - 231010
+    - 231012
+    - 260259
+  ignore:
+  - timespan: 0
+- type: metadata-mapping
+  mapping: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43769894/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:additional-destinE-Metadata.yaml
+  overwrite-existing: true
+  enforce-match: true
+- type: average-rate
+- type: statistics-mtg2
+  output-frequency: 1d
+  options:
+    initial-condition-present: true
+    set-metadata:
+      stream: clte
+    use-current-time: true
+  operations:
+  - average
+- type: interpolate-mtg2
+  outputs:
+  - grid: H128_nested
+    enable: '1'
+    options:
+      caching: true
+    additional-metadata:
+      resolution: standard
+  - grid: H512_nested
+    enable: '1'
+    options:
+      caching: true
+    additional-metadata:
+      resolution: high
+- type: encode-mtg2
+  cached: '1'
+- type: sink
+  sinks:
+  - type: fdb5
+    enable: true
+    config:
+      fdb_home: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43769894/fdb/HEALPix

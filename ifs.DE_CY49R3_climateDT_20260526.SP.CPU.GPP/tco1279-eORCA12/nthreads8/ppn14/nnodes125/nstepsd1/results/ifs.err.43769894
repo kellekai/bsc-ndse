@@ -1,0 +1,2450 @@
++ [clim:44s:15:02:57:2260]: unset_lowercase_vars
++ [clim:45s:15:02:58:2246]: IFS==
+++ [clim:45s:15:02:58:2246]: printenv
+++ [clim:45s:15:02:58:2246]: grep -E '^[a-z]\w*='
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ icmgg =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset icmgg
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ nemoyproc =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset nemoyproc
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ multio_ifs_plan_template =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset multio_ifs_plan_template
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ oceanpart =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset oceanpart
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ purge_namafn =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset purge_namafn
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ ddh_template =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset ddh_template
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ trunc =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset trunc
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ nemo =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset nemo
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ delayaft =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset delayaft
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ absnproma =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset absnproma
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ dphy_template =~ ^bash ]]
++ [clim:45s:15:02:58:2246]: unset dphy_template
++ [clim:45s:15:02:58:2246]: IFS==
++ [clim:45s:15:02:58:2246]: read -r name _
++ [clim:45s:15:02:58:2246]: [[ ecbind =~ ^bash ]]
++ [clim:45s:15:02:59:2246]: unset ecbind
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ nfrsdi =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset nfrsdi
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ fi_info =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset fi_info
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ purge_namsatsim =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset purge_namsatsim
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ mpilib =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset mpilib
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ defaults =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset defaults
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ numactl =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset numactl
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ ifsdata =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset ifsdata
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ resolution =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset resolution
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ multio_ifs_model =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset multio_ifs_model
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ dyncore_template =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset dyncore_template
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ hardlimit =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset hardlimit
++ [clim:46s:15:02:59:2246]: IFS==
++ [clim:46s:15:02:59:2246]: read -r name _
++ [clim:46s:15:02:59:2246]: [[ lscpu_raw =~ ^bash ]]
++ [clim:46s:15:02:59:2246]: unset lscpu_raw
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ attr =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset attr
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ multio_plans_root =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset multio_plans_root
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ ocean_nproc_ionodes =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset ocean_nproc_ionodes
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ nfrpos =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset nfrpos
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ num =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset num
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ nwinoff =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset nwinoff
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ multio_message_queue_size =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset multio_message_queue_size
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ ocedirdate =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset ocedirdate
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ multio_server_mpi_buffer_size =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset multio_server_mpi_buffer_size
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ iodevnull =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset iodevnull
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ ioppn =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset ioppn
++ [clim:47s:15:03:00:2246]: IFS==
++ [clim:47s:15:03:00:2246]: read -r name _
++ [clim:47s:15:03:00:2246]: [[ abort =~ ^bash ]]
++ [clim:47s:15:03:00:2246]: unset abort
++ [clim:47s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ errcnt =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset errcnt
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ experiment =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset experiment
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ nfrdhfg =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset nfrdhfg
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ this_namelist =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset this_namelist
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ gstats =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset gstats
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ compnodes =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset compnodes
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ afn_template =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset afn_template
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ ghg_scenario =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset ghg_scenario
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ mars_stream =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset mars_stream
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ htstr =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset htstr
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ restart_directory =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset restart_directory
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:48s:15:03:01:2246]: read -r name _
++ [clim:48s:15:03:01:2246]: [[ lf =~ ^bash ]]
++ [clim:48s:15:03:01:2246]: unset lf
++ [clim:48s:15:03:01:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ member =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset member
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ prlimit =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset prlimit
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ yyyymmddzz =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset yyyymmddzz
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ no_restart =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset no_restart
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ tstep =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset tstep
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ grb_template =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset grb_template
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ nproc_io =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset nproc_io
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ send =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset send
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ nemo_full_grid =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset nemo_full_grid
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ fclen =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset fclen
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ activity =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset activity
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:02:2246]: [[ lfdbop =~ ^bash ]]
++ [clim:49s:15:03:02:2246]: unset lfdbop
++ [clim:49s:15:03:02:2246]: IFS==
++ [clim:49s:15:03:02:2246]: read -r name _
++ [clim:49s:15:03:03:2246]: [[ vmax2 =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset vmax2
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ mptype =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset mptype
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ ppnin =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset ppnin
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ nemo_vertical_axis =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset nemo_vertical_axis
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ totens =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset totens
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ nemover =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset nemover
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ nradint =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset nradint
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ chem_template =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset chem_template
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ compodata =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset compodata
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ compo_emis_aux_template =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset compo_emis_aux_template
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ purge_namdyna =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset purge_namdyna
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ inprootnam =~ ^bash ]]
++ [clim:50s:15:03:03:2246]: unset inprootnam
++ [clim:50s:15:03:03:2246]: IFS==
++ [clim:50s:15:03:03:2246]: read -r name _
++ [clim:50s:15:03:03:2246]: [[ dyna_template =~ ^bash ]]
++ [clim:50s:15:03:04:2246]: unset dyna_template
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ nflag_value =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset nflag_value
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ coup_namelist =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset coup_namelist
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ purge_namcompo =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset purge_namcompo
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ pigz =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset pigz
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ purge_namdyncore =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset purge_namdyncore
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ nrproma =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset nrproma
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ dd =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset dd
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ stktrace =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset stktrace
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ lscpu =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset lscpu
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ nposts =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset nposts
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:51s:15:03:04:2246]: [[ pid =~ ^bash ]]
++ [clim:51s:15:03:04:2246]: unset pid
++ [clim:51s:15:03:04:2246]: IFS==
++ [clim:51s:15:03:04:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ jobid =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset jobid
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ threads =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset threads
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ purge_namgfl =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset purge_namgfl
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ nhdynstr =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset nhdynstr
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ nemo_oce_restart =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset nemo_oce_restart
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ cutjobid =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset cutjobid
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ gem_template =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset gem_template
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ writerst =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset writerst
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ wam_output =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset wam_output
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ forge_ddt =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset forge_ddt
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ nouttype =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset nouttype
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ nnuma =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset nnuma
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:05:2246]: read -r name _
++ [clim:52s:15:03:05:2246]: [[ idelpro =~ ^bash ]]
++ [clim:52s:15:03:05:2246]: unset idelpro
++ [clim:52s:15:03:05:2246]: IFS==
++ [clim:52s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ fc1 =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset fc1
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ resol =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset resol
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ nemo_icebergs =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset nemo_icebergs
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ naephy_template =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset naephy_template
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ nfrdhp =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset nfrdhp
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ gdb =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset gdb
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ this_gridtype =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset this_gridtype
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ fw =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset fw
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ json =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset json
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ valb =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset valb
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ lrefgen =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset lrefgen
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ purge_namddh =~ ^bash ]]
++ [clim:53s:15:03:06:2246]: unset purge_namddh
++ [clim:53s:15:03:06:2246]: IFS==
++ [clim:53s:15:03:06:2246]: read -r name _
++ [clim:53s:15:03:06:2246]: [[ icm =~ ^bash ]]
++ [clim:53s:15:03:07:2246]: unset icm
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ rstsize =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset rstsize
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ tasks =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset tasks
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ purge_namdphy =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset purge_namdphy
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ keepfdb =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset keepfdb
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ purge_namgem =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset purge_namgem
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ levels =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset levels
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ leradi =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset leradi
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ satsim_template =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset satsim_template
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ purge_namcompo_emis =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset purge_namcompo_emis
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ purge_nammcc =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset purge_nammcc
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ args =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset args
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:54s:15:03:07:2246]: [[ ifs_dir =~ ^bash ]]
++ [clim:54s:15:03:07:2246]: unset ifs_dir
++ [clim:54s:15:03:07:2246]: IFS==
++ [clim:54s:15:03:07:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ stacksize =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset stacksize
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ naerad_template =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset naerad_template
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ dryrun =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset dryrun
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ namelist_nemo_seaice =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset namelist_nemo_seaice
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ labelroot =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset labelroot
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ noutput =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset noutput
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ remap =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset remap
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ end_restart =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset end_restart
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ lkey =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset lkey
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ volcanic =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset volcanic
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ fpc_template =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset fpc_template
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ delaybef =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset delaybef
++ [clim:55s:15:03:08:2246]: IFS==
++ [clim:55s:15:03:08:2246]: read -r name _
++ [clim:55s:15:03:08:2246]: [[ ppc_template =~ ^bash ]]
++ [clim:55s:15:03:08:2246]: unset ppc_template
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ perf =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset perf
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ iobufs =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset iobufs
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ s =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset s
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ compo_template =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset compo_template
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ runroot =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset runroot
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ gfl_template =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset gfl_template
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ levimoe =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset levimoe
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ f =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset f
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ e =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset e
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ d =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset d
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ keepcore =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset keepcore
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:09:2246]: [[ lopt_scalar =~ ^bash ]]
++ [clim:56s:15:03:09:2246]: unset lopt_scalar
++ [clim:56s:15:03:09:2246]: IFS==
++ [clim:56s:15:03:09:2246]: read -r name _
++ [clim:56s:15:03:10:2246]: [[ b =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset b
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ trueargs =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset trueargs
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ pp1 =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset pp1
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ shiftby =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset shiftby
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ limit =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset limit
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ nprtrw =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset nprtrw
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ ct0_template =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset ct0_template
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ nprtrv =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset nprtrv
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ nradfr =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset nradfr
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ purge_naerad =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset purge_naerad
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ multio_server_mpi_pool_size =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset multio_server_mpi_pool_size
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ ice_cpl_albedo =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset ice_cpl_albedo
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:57s:15:03:10:2246]: [[ nemo_eos =~ ^bash ]]
++ [clim:57s:15:03:10:2246]: unset nemo_eos
++ [clim:57s:15:03:10:2246]: IFS==
++ [clim:57s:15:03:10:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ spp_template =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset spp_template
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ wam_start =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset wam_start
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ nemo_grid =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset nemo_grid
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ compiler =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset compiler
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ bench =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset bench
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ fesom_grid =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset fesom_grid
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ compo =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset compo
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ ppout =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset ppout
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ multio_client_mpi_buffer_size =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset multio_client_mpi_buffer_size
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ nemo_next_chunk_step0_chunk =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset nemo_next_chunk_step0_chunk
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ lnrcfread =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset lnrcfread
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ multio_client_mpi_pool_size =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset multio_client_mpi_pool_size
++ [clim:58s:15:03:11:2246]: IFS==
++ [clim:58s:15:03:11:2246]: read -r name _
++ [clim:58s:15:03:11:2246]: [[ ifs_initial_date_epoch =~ ^bash ]]
++ [clim:58s:15:03:11:2246]: unset ifs_initial_date_epoch
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ prec =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset prec
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ realization =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset realization
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ expver =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset expver
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ luseflt =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset luseflt
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ iomode =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset iomode
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ trl =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset trl
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ multio_ocean_plan_processor_args =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset multio_ocean_plan_processor_args
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ ppn =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset ppn
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ places =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset places
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ nml_localgrb =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset nml_localgrb
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ purge_nam_spp_active =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset purge_nam_spp_active
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ wrapper =~ ^bash ]]
++ [clim:59s:15:03:12:2246]: unset wrapper
++ [clim:59s:15:03:12:2246]: IFS==
++ [clim:59s:15:03:12:2246]: read -r name _
++ [clim:59s:15:03:12:2246]: [[ sync_level =~ ^bash ]]
++ [clim:59s:15:03:13:2246]: unset sync_level
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ tropaerosols =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset tropaerosols
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ nfrhis =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset nfrhis
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ purge_namchem =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset purge_namchem
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ nn_stock =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset nn_stock
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ absnrproma =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset absnrproma
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ xypos =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset xypos
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ uniq =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset uniq
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ idelwo =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset idelwo
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ idelwi =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset idelwi
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ multio_mpi_buffer_size =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset multio_mpi_buffer_size
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ purge_namspp =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset purge_namspp
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:60s:15:03:13:2246]: [[ ocean_ioppn =~ ^bash ]]
++ [clim:60s:15:03:13:2246]: unset ocean_ioppn
++ [clim:60s:15:03:13:2246]: IFS==
++ [clim:60s:15:03:13:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ noxml =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset noxml
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ nwrtout =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset nwrtout
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ spp_active_template =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset spp_active_template
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ mcc_template =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset mcc_template
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ orca =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset orca
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ nproma =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset nproma
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ nproc_io_nodes =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset nproc_io_nodes
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ htway =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset htway
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ bashsrc =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ tracing_ =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset tracing_
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ nfrco =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset nfrco
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ convection =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset convection
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:61s:15:03:14:2246]: [[ exefrom =~ ^bash ]]
++ [clim:61s:15:03:14:2246]: unset exefrom
++ [clim:61s:15:03:14:2246]: IFS==
++ [clim:61s:15:03:14:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ purge_namppc =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset purge_namppc
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ refdir =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset refdir
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ nemo_ice_albedos =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset nemo_ice_albedos
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ dycore =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset dycore
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ tropaerosols_file =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset tropaerosols_file
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ nemorwdist =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset nemorwdist
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ spsdt_template =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset spsdt_template
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ ozone_scenario =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset ozone_scenario
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ nhdyn =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset nhdyn
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ end_restarts =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset end_restarts
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ mars_class =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset mars_class
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ tag =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset tag
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:62s:15:03:15:2246]: read -r name _
++ [clim:62s:15:03:15:2246]: [[ ghg_file =~ ^bash ]]
++ [clim:62s:15:03:15:2246]: unset ghg_file
++ [clim:62s:15:03:15:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ nml_generatingProcessIdentifier =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset nml_generatingProcessIdentifier
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ interval =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset interval
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ fort4 =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset fort4
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ thread_stacksize_mb =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset thread_stacksize_mb
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ started =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset started
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ icmcl =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset icmcl
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ label =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset label
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ cmd =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset cmd
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ nn_flxdist =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset nn_flxdist
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ hfclen =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset hfclen
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ nemo_time_step =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset nemo_time_step
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ coupfreq =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset coupfreq
++ [clim:63s:15:03:16:2246]: IFS==
++ [clim:63s:15:03:16:2246]: read -r name _
++ [clim:63s:15:03:16:2246]: [[ nprintlev =~ ^bash ]]
++ [clim:63s:15:03:16:2246]: unset nprintlev
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ nodes =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset nodes
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ launcher =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset launcher
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ idelt =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset idelt
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ purge_namspsdt =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset purge_namspsdt
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ nemo_start_date =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset nemo_start_date
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ user_cores_per_socket =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset user_cores_per_socket
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ purge_naephy =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset purge_naephy
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ astro =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset astro
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ exe =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset exe
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ cpstr =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset cpstr
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ purge_namdyn =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset purge_namdyn
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ norms_frequency =~ ^bash ]]
++ [clim:64s:15:03:17:2246]: unset norms_frequency
++ [clim:64s:15:03:17:2246]: IFS==
++ [clim:64s:15:03:17:2246]: read -r name _
++ [clim:64s:15:03:17:2246]: [[ lscpu_data =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset lscpu_data
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ ice_cpl_type =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset ice_cpl_type
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ nsockets =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset nsockets
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ use_multio_ifs =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset use_multio_ifs
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ icmcl_dir =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset icmcl_dir
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ multio_ifs_plan_processor_args =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset multio_ifs_plan_processor_args
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ nang =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset nang
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ nstpw =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset nstpw
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ nemorcf_file =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset nemorcf_file
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ purge_naeaer =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset purge_naeaer
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ lwcou =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset lwcou
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ rcldiff =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset rcldiff
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:18:2246]: [[ nemo_ice_restart =~ ^bash ]]
++ [clim:65s:15:03:18:2246]: unset nemo_ice_restart
++ [clim:65s:15:03:18:2246]: IFS==
++ [clim:65s:15:03:18:2246]: read -r name _
++ [clim:65s:15:03:19:2246]: [[ delprolf =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset delprolf
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ ghg =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset ghg
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ drhook =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset drhook
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ naeaer_template =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset naeaer_template
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ re =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset re
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ rc =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset rc
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ nfrgdi =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset nfrgdi
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ purge_namfpc =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset purge_namfpc
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ nn_itend =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset nn_itend
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ nwrnode =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset nwrnode
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ tr =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset tr
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ multio_ocean_grib_templates_path =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset multio_ocean_grib_templates_path
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ nemoreadchunk =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset nemoreadchunk
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:66s:15:03:19:2246]: read -r name _
++ [clim:66s:15:03:19:2246]: [[ nproma_wam =~ ^bash ]]
++ [clim:66s:15:03:19:2246]: unset nproma_wam
++ [clim:66s:15:03:19:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ ref_input_path =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset ref_input_path
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ purge_namgrb =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset purge_namgrb
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ multio_ocean_plan_template =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset multio_ocean_plan_template
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ physics =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset physics
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ cmddir =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset cmddir
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ lrefout =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset lrefout
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ toa_tuning =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset toa_tuning
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ keepxml =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset keepxml
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ jobname =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset jobname
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ nstop =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset nstop
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ core =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset core
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ ioserv =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset ioserv
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ ozone_dir =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset ozone_dir
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:67s:15:03:20:2246]: read -r name _
++ [clim:67s:15:03:20:2246]: [[ perftool =~ ^bash ]]
++ [clim:67s:15:03:20:2246]: unset perftool
++ [clim:67s:15:03:20:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ lnrcfwrite =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset lnrcfwrite
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ gtype =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset gtype
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ t1 =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset t1
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ cver_template =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset cver_template
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ compo_emis_template =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset compo_emis_template
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ nemostack =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset nemostack
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ stripe =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset stripe
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ volcanic_file =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset volcanic_file
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ uniqcmd =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset uniqcmd
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ ncores =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset ncores
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ firstout =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset firstout
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ which_declare =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset which_declare
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ khz =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset khz
++ [clim:68s:15:03:21:2246]: IFS==
++ [clim:68s:15:03:21:2246]: read -r name _
++ [clim:68s:15:03:21:2246]: [[ mcc =~ ^bash ]]
++ [clim:68s:15:03:21:2246]: unset mcc
++ [clim:68s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ cmdargs =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset cmdargs
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ host =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset host
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ rkey =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset rkey
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ cores_per_socket =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset cores_per_socket
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ utstep =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset utstep
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ ocean_nproc_io =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset ocean_nproc_io
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ nemoext =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset nemoext
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ purge_namcompo_emis_aux =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset purge_namcompo_emis_aux
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ coxmldir =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset coxmldir
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ climdata =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset climdata
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ portfolio =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset portfolio
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ membind =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset membind
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ ozone =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset ozone
++ [clim:69s:15:03:22:2246]: IFS==
++ [clim:69s:15:03:22:2246]: read -r name _
++ [clim:69s:15:03:22:2246]: [[ nemoxproc =~ ^bash ]]
++ [clim:69s:15:03:22:2246]: unset nemoxproc
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ nhists =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset nhists
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ outexp =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset outexp
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ ifrelfmax =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset ifrelfmax
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ nodelabel =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset nodelabel
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ fesom =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset fesom
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ namelist_nemo_ocean =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset namelist_nemo_ocean
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ multio_mpi_pool_size =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset multio_mpi_pool_size
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ delay =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset delay
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ purge_namcver =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset purge_namcver
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ fixyear =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset fixyear
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ thread_guardsize_mb =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset thread_guardsize_mb
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ rundir =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset rundir
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:23:2246]: read -r name _
++ [clim:70s:15:03:23:2246]: [[ purge_namct0 =~ ^bash ]]
++ [clim:70s:15:03:23:2246]: unset purge_namct0
++ [clim:70s:15:03:23:2246]: IFS==
++ [clim:70s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ target =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset target
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ gpmodel =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset gpmodel
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ si3_flux_dist =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset si3_flux_dist
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ ucx_info =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset ucx_info
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ fdbdir =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset fdbdir
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ generation =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset generation
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ wam_six_hours_later =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset wam_six_hours_later
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ nproc =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset nproc
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ ppout_unit =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset ppout_unit
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ use_multio_ocean =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset use_multio_ocean
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ ddh_frequency =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset ddh_frequency
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ ocedirconst =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset ocedirconst
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ nopt_memory =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset nopt_memory
++ [clim:71s:15:03:24:2246]: IFS==
++ [clim:71s:15:03:24:2246]: read -r name _
++ [clim:71s:15:03:24:2246]: [[ namelists_nemo_ref =~ ^bash ]]
++ [clim:71s:15:03:24:2246]: unset namelists_nemo_ref
++ [clim:71s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ nemo_start_time =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset nemo_start_time
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ output_off =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset output_off
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ stochastic =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset stochastic
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ dyn_template =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset dyn_template
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ multio_server_distribution =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset multio_server_distribution
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ forge_map =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset forge_map
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ labelzz =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset labelzz
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2246]: [[ memtrace =~ ^bash ]]
++ [clim:72s:15:03:25:2246]: unset memtrace
++ [clim:72s:15:03:25:2246]: IFS==
++ [clim:72s:15:03:25:2246]: read -r name _
++ [clim:72s:15:03:25:2260]: unset_functions
+++ [clim:72s:15:03:25:2249]: compgen -A function
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset apply_custom_namelist_edits
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset clearLmod
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset clearMT
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset contains_var
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset defaults_parse_opts
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset fesom_apply_custom_namelist_edits
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset fesom_parse_opts
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset fesom_postprocess_restart
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:72s:15:03:25:2249]: unset fesom_setup_files
++ [clim:72s:15:03:25:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fesom_setup_namelists
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset forcings_parse_opts
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset forcings_setup_files
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset forcings_setup_namelists
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namafn
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namcnt0
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namddh
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namfpc
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namgfl
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namgrib
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_assemble_namppc
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_count_fields
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset fullpos_parse_opts
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset gpu_check_opts
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset gpu_option_enabled
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset gpu_parse_opts
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset gpu_setup_namelists
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_naeaer
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_naephy
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_naerad
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_nam_spp_active
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_namchem
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_namcompo
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_namcompo_emis
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_namcompo_emis_aux
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_namcver
++ [clim:73s:15:03:26:2249]: for f in $(compgen -A function)
++ [clim:73s:15:03:26:2249]: unset ifs_namelist_assemble_namdphy
++ [clim:73s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namdyn
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namdyna
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namdyncore
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namgem
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_nammcc
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namsatsim
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namspp
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_assemble_namspsdt
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifs_namelist_parse_opts
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifsphys_check_opts
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifsphys_parse_opts
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ifsphys_setup_namelists
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset is_function
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset load_defaults
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset ml
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset module
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset module_load
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset module_purge
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset module_unload
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_check_opts
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_ifs_plan_defaults
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_ocean_grib_templates_path
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_ocean_plan_defaults
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_parse_opts
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_setup_ifs
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_setup_nemo
++ [clim:74s:15:03:27:2249]: for f in $(compgen -A function)
++ [clim:74s:15:03:27:2249]: unset multio_setup_ocean
++ [clim:74s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset multio_setup_optimizations
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset nemo_check_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset nemo_parse_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset nemo_setup_files
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset nemo_setup_namelists
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset nfrhis
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset nfrpos
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset ocean_check_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset ocean_parse_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset ocean_setup_files
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset ocean_setup_namelists
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset parse_etc_model
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset restart_check_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset restart_parse_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset restart_setup_files
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset restart_setup_namelists
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset unset_functions
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset unset_lowercase_vars
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset wam_assemble_namelists_io
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset wam_check_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset wam_parse_opts
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset wam_setup_files
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset wam_setup_namelists
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset which
++ [clim:75s:15:03:28:2249]: for f in $(compgen -A function)
++ [clim:75s:15:03:28:2249]: unset xSetTitleLmod
+++ [clim:75s:15:03:28:2261]: date +%s.%N
++ [clim:75s:15:03:28:2261]: MPI_EPOCH=1784898208.930198785
++ [clim:75s:15:03:28:2261]: export MPI_EPOCH
++ [clim:75s:15:03:28:2262]: printenv
++ [clim:76s:15:03:29:2263]: set -eu
++ [clim:76s:15:03:29:2265]: srun -N 125 -n 1750 --cpus-per-task=8 --ntasks-per-node=14 --hint=nomultithread /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps/bin/ecbind -V0 --ppn 14 -h 1 --depth 8 --bind=2 --places --cps 56 /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP
++ [clim:82s:15:03:35:612]: exec /usr/bin/taskset --cpu-list 0,1,2,3,4,5,6,7 /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] KMP_ABORT_DELAY='0'
+  [host] KMP_ADAPTIVE_LOCK_PROPS='1,1024'
+  [host] KMP_ALIGN_ALLOC='64'
+  [host] KMP_ALL_THREADPRIVATE='896'
+  [host] KMP_ATOMIC_MODE='2'
+  [host] KMP_BLOCKTIME='2147483ms
+  [host] KMP_CPUINFO_FILE: value is not defined
+  [host] KMP_DETERMINISTIC_REDUCTION='FALSE'
+  [host] KMP_DEVICE_THREAD_LIMIT='2147483647'
+  [host] KMP_DISP_HAND_THREAD='FALSE'
+  [host] KMP_DISP_NUM_BUFFERS='7'
+  [host] KMP_DUPLICATE_LIB_OK='FALSE'
+  [host] KMP_ENABLE_TASK_THROTTLING='TRUE'
+  [host] KMP_FORCE_MONOTONIC_DYNAMIC_SCHEDULE='FALSE'
+  [host] KMP_FORCE_REDUCTION: value is not defined
+  [host] KMP_FOREIGN_THREADS_THREADPRIVATE='TRUE'
+  [host] KMP_FORKJOIN_BARRIER='2,2'
+  [host] KMP_FORKJOIN_BARRIER_PATTERN='hyper,hyper'
+  [host] KMP_FORKJOIN_FRAMES='TRUE'
+  [host] KMP_FORKJOIN_FRAMES_MODE='3'
+  [host] KMP_GTID_MODE='3'
+  [host] KMP_HANDLE_SIGNALS='FALSE'
+  [host] KMP_HIDDEN_HELPER_AFFINITY='noverbose,warnings,granularity=core,none'
+  [host] KMP_HOT_TEAMS_MAX_LEVEL='1'
+  [host] KMP_HOT_TEAMS_MODE='0'
+  [host] KMP_INIT_AT_FORK='TRUE'
+  [host] KMP_ITT_PREPARE_DELAY='0'
+  [host] KMP_LIBRARY='turnaround'
+  [host] KMP_LOCK_KIND='tas'
+  [host] KMP_MALLOC_POOL_INCR='1M'
+  [host] KMP_MWAIT_HINTS='0'
+  [host] KMP_NESTING_MODE=0
+  [host] KMP_NUM_LOCKS_IN_BLOCK='1'
+  [host] KMP_PLAIN_BARRIER='2,2'
+  [host] KMP_PLAIN_BARRIER_PATTERN='hyper,hyper'
+  [host] KMP_REDUCTION_BARRIER='1,1'
+  [host] KMP_REDUCTION_BARRIER_PATTERN='hyper,hyper'
+  [host] KMP_SCHEDULE='static,balanced;guided,iterative'
+  [host] KMP_SETTINGS='FALSE'
+  [host] KMP_SPIN_BACKOFF_PARAMS='4096,100'
+  [host] KMP_STACKOFFSET='64'
+  [host] KMP_STACKPAD='0'
+  [host] KMP_STACKSIZE='950M'
+  [host] KMP_STORAGE_MAP='FALSE'
+  [host] KMP_TASKING='2'
+  [host] KMP_TASKLOOP_MIN_TASKS='0'
+  [host] KMP_TASK_STEALING_CONSTRAINT='1'
+  [host] KMP_TEAMS_PROC_BIND='spread'
+  [host] KMP_TEAMS_THREAD_LIMIT='224'
+  [host] KMP_TOPOLOGY_METHOD='all'
+  [host] KMP_TPAUSE='0'
+  [host] KMP_USER_LEVEL_MWAIT='FALSE'
+  [host] KMP_USE_YIELD='1'
+  [host] KMP_VERSION='FALSE'
+  [host] KMP_WARNINGS='TRUE'
+  [host] LIBOMP_NUM_HIDDEN_HELPER_THREADS='0'
+  [host] LIBOMP_USE_HIDDEN_HELPER_TASK='FALSE'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEBUG='disabled'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='VERBOSE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_TEAMS='0'
+  [host] OMP_NUM_THREADS='8'
+  [host] OMP_PLACES='0,1,2,3,4,5,6,7'
+  [host] OMP_PROC_BIND='spread'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='950M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_TEAMS_THREAD_LIMIT='0'
+  [host] OMP_THREAD_LIMIT='8'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_TOOL_VERBOSE_INIT: value is not defined
+  [host] OMP_WAIT_POLICY='ACTIVE'
+  [host] KMP_AFFINITY='noverbose,warnings,respect,noreset,granularity=thread,proclist=[0,1,2,3,4,5,6,7],explicit'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+ MAIN: MPI startup cost =             -1784896536.032675 secs
+[EC_DRHOOK:hostname:myproc:omltid:pid:unixtid] [YYYYMMDD:HHMMSS:walltime] [function@file:lineno] -- Max OpenMP threads = 8
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2276] DR_HOOK_SILENT=0
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2279] fp = 0x1498412bd6a0
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2301] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2322] DR_HOOK_PROFILE=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43769894/drhook.dir/drhook.%d
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2328] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2334] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2422] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2433] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2441] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2449] DR_HOOK_HARAKIRI_TIMEOUT=500
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2456] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2463] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2470] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2477] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2484] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [process_options@drhook.c:2639]
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [ignore_signals@drhook.c:1417]  DR_HOOK_IGNORE_SIGNALS=<undef>
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [restore_default_signals@drhook.c:1350] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2097] New signal handler 'signal_drhook' for signal#6 (SIGABRT) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2098] New signal handler 'signal_drhook' for signal#7 (SIGBUS) at 0x149844568fb0 (next at (nil))
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2099] New signal handler 'signal_drhook' for signal#11 (SIGSEGV) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2104] New signal handler 'signal_drhook' for signal#16 (SIGSTKFLT) at 0x149844568fb0 (next at (nil))
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [trapfpe_treatment@drhook.c:1300] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [trapfpe@drhook.c:258] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [trapfpe@drhook.c:263] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [trapfpe@drhook.c:270] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2106] New signal handler 'signal_drhook' for signal#8 (SIGFPE) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2107] New signal handler 'signal_drhook' for signal#4 (SIGILL) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2108] New signal handler 'signal_drhook' for signal#5 (SIGTRAP) at 0x149844568fb0 (next at (nil))
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2109] New signal handler 'signal_drhook' for signal#2 (SIGINT) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2117] New signal handler 'signal_drhook' for signal#3 (SIGQUIT) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2118] New signal handler 'signal_drhook' for signal#15 (SIGTERM) at 0x149844568fb0 (next at 0x416d80)
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2123] New signal handler 'signal_drhook' for signal#24 (SIGXCPU) at 0x149844568fb0 (next at (nil))
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2125] New signal handler 'signal_drhook' for signal#25 (SIGXFSZ) at 0x149844568fb0 (next at (nil))
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [signal_drhook_init@drhook.c:2130] New signal handler 'signal_drhook' for signal#31 (SIGSYS) at 0x149844568fb0 (next at (nil))
+[EC_DRHOOK:gs04r2b09:1:1:44914:44914] [20260724:150347:0.001] [catch_signals@drhook.c:1262] DR_HOOK_CATCH_SIGNALS=<undef>
+ EC_MEMINFO@RNSORT: MINCID, MAXCID, NUMNODES =  0 111 122
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP -- wall-time :      0.055s
+## EC_MEMINFO Running on 122 nodes (2-numa) with 1652 compute + 56 I/O-tasks and 8+1 threads at 15:03:48.051 on 24-Jul-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 43769894
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs04r2b09              95400    5380       0        19  110826       22  111202    223770    3294      2.3   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO    1 gs04r2b10              95340    5260       0        16  109820        6  112726    224268    3204      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    2 gs04r2b37              95340    5387       0     45652   61282    35868   73200    217668    1965      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    3 gs04r2b38              95340    5308       0     55859   52788    31914   76400    218630    1969      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    4 gs04r2b39              95340    5363       0     49027   57482    36525   72148    216858    1922      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    5 gs04r2b40              95340    5324       0     16336   89012    17098   88794    212892    4697      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    6 gs04r2b42              95340    5387       0     18594   90000    16839   89448    216500    3389      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    7 gs04r2b43              95340    5520       0     13226   92856    18029   87604    213411    4004      2.5   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    8 gs04r2b44              95340    5277       0     24839   82290    34880   71192    214896    2864      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO    9 gs04r2b46              95340    5234       0     22595   83696    15095   89696    212721    4110      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   10 gs04r2b47              95340    5338       0     20881   85698    26332   81788    216401    2291      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   11 gs04r2b55              95340    5353       0      3352  107608     3963  108282    224908    1399      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   12 gs04r2b56              95342    5276       0      3529  107500     3055  109294    225070    1401      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   13 gs04r2b59              95340    5360       0     18097   89412    30768   78810    218785    1611      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   14 gs04r2b60              95340    5327       0      8711  100332     7918  100490    219113    1691      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   15 gs04r2b61              95340    5354       0     11476   96042    27018   81008    217245    1823      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   16 gs04r2b62              95342    5215       0     12218   95782    32179   75446    217326    1811      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   17 gs04r2b63              95342    5267       0     18776   89178    23780   85358    218791    2051      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   18 gs04r2b64              95340    5272       0     17027   91812    18884   88958    218377    2002      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   19 gs04r2b65              95342    5304       0     29551   76776    14724   92384    215134    3130      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   20 gs11r1b10              95340    5380       0     21560   86714    31815   74442    216198    3817      2.4   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO   21 gs11r1b11              95344    5325       0     14269   93168     5322  103880    218339    2341      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   22 gs11r1b61              95340    5382       0      9106   97080     8922   99902    216711    2862      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   23 gs11r1b69              95340    5391       0       645  109980      520  112934    225784    1398      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   24 gs11r1b70              95340    5270       0       103  112328     1274  110588    225994    1386      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   25 gs11r1b72              95340    5564       0     13204   93296    26502   79104    213806    3714      2.5   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   26 gs11r2b50              95340    5333       0     26551   81208    27940   77710    215109    3632      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   27 gs11r2b51              95340    5257       0     14306   91298     9837   96150    213276    3227      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   28 gs11r2b52              95340    5373       0      7563  101744    28649   79518    219179    3227      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   29 gs11r2b53              95340    5228       0     23391   82860    32043   75612    215547    2271      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   30 gs11r2b54              95340    5335       0     17759   89076    31246   75118    214899    3044      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   31 gs11r2b55              95340    5375       0     27927   75740    27224   80210    212802    4925      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   32 gs11r2b56              95340    5227       0     21863   83966    23584   82572    213684    4164      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   33 gs11r2b57              95340    5465       0     18746   87994    24930   84854    218225    5123      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   34 gs11r2b58              95340    5449       0      6388  101362    11944   97248    218645    3606      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   35 gs11r2b59              95340    5310       0     26315   77892    18257   87890    212045    5040      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   36 gs11r2b60              95340    5414       0     14515   91390    19635   86174    213403    4824      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   37 gs11r2b61              95340    5190       0     22830   80410    29006   76904    210850    7155      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   38 gs11r2b62              95340    5450       0     11050   94910    17373   87894    212920    5299      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   39 gs11r2b66              95340    5230       0     20467   85546    10710   95638    214063    4561      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   40 gs11r2b67              95340    5267       0     17369   90370    11334   96878    217602    5164      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   41 gs11r2b68              95340    5418       0     22828   81944    30326   74132    210930    6517      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   42 gs11r2b69              95340    5266       0     35578   69134    21040   84152    211573    4782      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   43 gs11r2b71              95340    5339       0     16918   85592    20147   81844    206201    5892      2.5   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   44 gs11r2b72              95340    5278       0     24821   81602    23492   80720    212328    5807      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   45 gs12r1b42              95340    5316       0     11256   96186    21104   84964    215207    4366      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   46 gs12r1b43              95340    5269       0     12079   94088    23061   84546    215446    4295      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   47 gs12r1b44              95340    5360       0     10159   96278    24290   81532    213960    4462      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   48 gs12r1b45              95340    5177       0     15220   91764    20601   87418    216702    3674      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   49 gs12r1b46              95340    5269       0      9904   98486    21508   85716    217315    3250      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   50 gs12r1b48              95340    5372       0     11496   95888    20416   86426    215918    3867      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   51 gs12r1b49              95340    5414       0     25216   81784    28215   79458    216375    3381      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   52 gs12r1b50              95344    5386       0     18852   88074    22687   84328    215641    3986      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   53 gs12r1b51              95340    5310       0     16436   90106    11852   96886    216981    3355      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   54 gs12r1b56              95344    5295       0     15671   92454    12937   94872    217633    2236      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   55 gs12r1b65              95340    5296       0     13223   93634    19812   88250    216621    2227      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   56 gs12r1b66              95340    5276       0     21068   86688    20278   85526    215195    2961      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   57 gs12r1b68              95340    5256       0      9004   97896    11050   93354    212999    4139      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   58 gs12r1b70              95340    5351       0     13738   94650    13171   94662    217923    2181      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   59 gs13r2b38              95340    5268       0      8228   99874     9711   96494    216008    3638      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   60 gs13r2b39              95340    5285       0     10430   96824    19934   86248    215139    4175      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   61 gs13r2b57              95340    5370       0     22700   83640    17659   90028    215730    3399      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   62 gs13r2b58              95342    5218       0     18863   87690    19125   88466    215846    3717      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   63 gs13r2b63              95340    5341       0     27699   75128    36831   69380    210725    4575      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   64 gs13r2b64              95340    5439       0     28862   79148    23194   83636    216539    2492      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   65 gs13r2b66              95340    5322       0     32403   73978    37498   67472    213053    4810      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   66 gs15r2b63              95340    5172       0     28497   77692    23975   84584    216405    4033      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   67 gs15r2b65              95342    5268       0     24342   80472    27908   78634    213043    3565      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   68 gs15r2b66              95342    5185       0     14726   91798    20653   84440    213295    3810      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   69 gs15r2b67              95340    5210       0     30364   75922    28025   77094    213105    5857      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   70 gs15r2b70              95340    5206       0      8674  102432    10224  100124    223155    1948      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   71 gs15r2b72              95342    5224       0      9422   98264     7519   99180    216087    2574      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   72 gs16r3b03              95340    5346       0     23574   80022    25316   80828    211372    6636      2.4   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO   73 gs16r3b05              95340    5267       0     18748   82816    20164   86088    209418    7257      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   74 gs16r3b07              95340    5263       0      7884   89990     5300  103398    208271   10597      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   75 gs16r3b55              95340    5281       0     24950   79758    32271   72988    211638    6269      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   76 gs16r3b56              95342    5330       0     19171   87254    19611   85528    213205    4622      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   77 gs16r3b57              95342    5221       0     16406   88430    16624   90782    213893    4616      2.3   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO   78 gs17r2b13              95342    5305       0     19383   86552    21400   85904    214940    4338      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   79 gs17r2b38              95340    5357       0     24151   82662    19679   87088    215280    3146      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   80 gs17r2b39              95340    5321       0      7188  101336     6528  103414    220169    1089      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   81 gs17r2b40              95340    5232       0     14553   91724    24918   80372    213219    4514      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   82 gs17r2b41              95340    5356       0      5719  102860     7767  102600    220639     963      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   83 gs17r2b42              95340    5378       0     28995   78390    28222   78864    216171    2727      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   84 gs17r2b67              95340    5361       0     21251   84502    21734   83740    212927    4449      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   85 gs17r2b71              95340    5297       0     17066   90588    24279   83478    217113    3484      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   86 gs17r3b31              95340    5204       0     22094   84300    13662   94964    216725    3455      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   87 gs17r3b67              95342    5354       0      8734  100612    14464   98466    223975    1410      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   88 gs17r3b68              95340    5418       0     17968   92350    18350   92036    222403    1394      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   89 gs17r3b70              95340    5190       0     20158   87390    27518   76290    213058    4573      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   90 gs17r3b71              95340    5228       0     30389   75688    17936   89588    215305    2731      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   91 gs17r3b72              95340    5407       0     16878   89916    26147   79666    214307    3506      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   92 gs18r3b48              95340    5479       0     13053   93180    13313   93334    214561    4986      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   93 gs18r3b49              95340    5261       0     19509   85798    21064   86958    214944    4526      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   94 gs18r3b50              95340    5324       0     22722   83930    18283   86200    212837    5910      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   95 gs18r3b53              95340    5306       0     19916   87940    22077   86632    218268    2329      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   96 gs18r3b56              95340    5295       0     15076   91932    19575   84912    213195    5097      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   97 gs18r3b58              95340    5300       0     14648   92420    14589   90396    213753    4741      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   98 gs18r3b59              95340    5299       0     22087   83022    21680   85318    213725    4647      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO   99 gs18r3b60              95340    5492       0     27365   78796    27793   77604    213200    3744      2.5   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  100 gs18r3b61              95340    5266       0     10311   96072    11186   96166    215430    3563      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  101 gs18r3b62              95340    5343       0     23454   83890    24152   80416    213607    4041      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  102 gs18r3b63              95340    5233       0     26964   79130    28841   77906    214479    3847      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  103 gs18r3b64              95344    5574       0     23593   83416    25028   80728    214467    3944      2.5   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  104 gs18r3b65              95340    5251       0     28498   76670    20114   86994    213977    4578      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  105 gs18r3b66              95340    5410       0     18180   88708    20667   84144    213402    4086      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  106 gs18r3b67              95340    5266       0     22691   83062    21267   84232    212903    5029      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  107 gs18r3b68              95340    5221       0     23033   82958    28166   77894    213700    4441      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  108 gs18r3b69              95340    5366       0     22632   82412    22493   82392    211630    4965      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  109 gs18r3b70              95340    5562       0     17602   88006    20597   81896    209803    5229      2.5   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  110 gs19r3b02              95340    5487       0     23514   82238    25400   81162    214013    6049      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  111 gs19r3b33              95342    5275       0     16179   89600    33138   74602    215222    2603      2.4   0.0         0      0     113  Sm/p:master:computation
+## EC_MEMINFO  112 gs19r3b34              95340    5188       0     34280   75842    28623   80756    221170    2522      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  113 gs19r3b40              95342    5217       0     28213   75108    33758   71320    210099    7418      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  114 gs19r3b41              95340    5216       0     28568   80172    35698   74118    220245    3159      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  115 gs19r3b42              95340    5388       0     22581   83794    29667   75508    213193    5445      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  116 gs19r3b43              95344    5234       0     28532   75860    25301   82310    213698    4521      2.3   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  117 gs19r3b44              95340    5249       0     20897   85006    26194   78838    212627    5210      2.4   0.0         0      0     112  Sm/p:master:computation
+## EC_MEMINFO  118 gs19r3b45                  0    2908       0     23903   83180    12057   95392    216228    4151      1.3   0.0         0      0      14  Sm/p:master:io-server
+## EC_MEMINFO  119 gs19r3b46                  0    2905       0     24750   81948    27751   78804    214953    4817      1.3   0.0         0      0      14  Sm/p:master:io-server
+## EC_MEMINFO  120 gs19r3b67                  0    2914       0     26504   82248    27799   82634    220878    1540      1.3   0.0         0      0      14  Sm/p:master:io-server
+## EC_MEMINFO  121 gs19r3b68                  0    2909       0     22327   87498    32452   77058    221001    1726      1.3   0.0         0      0      14  Sm/p:master:io-server
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP -- wall-time :      0.199s
+## EC_MEMINFO Running on 122 nodes (2-numa) with 1596 compute + 56 I/O-tasks and 8+1 threads at 15:03:48.195 on 24-Jul-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 43769894
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs04r2b09              95498    5606       0        19  110766       22  111140    223650    3303      2.4   0.0         0      0     112  Sm/p:oops:ifs_init
+## EC_MEMINFO    1 gs04r2b10              95438    5482       0        16  109772        4  112676    224170    3213      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    2 gs04r2b37              95450    5612       0     45630   61250    35842   73172    217559    1974      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    3 gs04r2b38              95446    5535       0     55837   52752    31888   76376    218520    1978      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    4 gs04r2b39              95442    5590       0     49000   57462    36501   72104    216744    1932      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    5 gs04r2b40              95440    5549       0     16309   88984    17073   88758    212776    4706      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    6 gs04r2b42              95450    5615       0     18568   89964    16816   89414    216382    3397      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    7 gs04r2b43              95444    5749       0     13199   92826    18005   87560    213287    4013      2.6   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO    8 gs04r2b44              95446    5503       0     24815   82262    34856   71156    214786    2872      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO    9 gs04r2b46              95444    5460       0     22572   83666    15071   89660    212611    4118      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   10 gs04r2b47              95446    5567       0     20859   85662    26308   81756    216289    2299      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   11 gs04r2b55              95444    5578       0      3326  107576     3937  108254    224796    1409      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   12 gs04r2b56              95442    5504       0      3501  107474     3033  109254    224955    1410      2.4   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO   13 gs04r2b59              95446    5594       0     18073   89378    30744   78778    218672    1619      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   14 gs04r2b60              95442    5555       0      8686  100304     7896  100458    219006    1699      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   15 gs04r2b61              95446    5583       0     11454   96006    26998   80972    217132    1832      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   16 gs04r2b62              95444    5446       0     12191   95750    32157   75412    217212    1820      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   17 gs04r2b63              95442    5494       0     18752   89142    23754   85322    218666    2063      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   18 gs04r2b64              95442    5497       0     17001   91782    18878   88924    218282    2010      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   19 gs04r2b65              95450    5530       0     29527   76740    14699   92352    215019    3138      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   20 gs11r1b10              95438    5607       0     21537   86684    31796   74406    216091    3826      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   21 gs11r1b11              95446    5557       0     14244   93134     5299  103838    218218    2349      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   22 gs11r1b61              95440    5609       0      9081   97044     8899   99866    216593    2870      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   23 gs11r1b69              95444    5621       0       624  109938      494  112902    225663    1407      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   24 gs11r1b70              95442    5498       0        84  112290     1251  110548    225875    1395      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   25 gs11r1b72              95444    5795       0     13183   93250    26482   79072    213689    3723      2.6   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   26 gs11r2b50              95446    5557       0     26523   81178    27913   77674    214989    3642      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   27 gs11r2b51              95444    5483       0     14283   91266     9816   96114    213166    3235      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   28 gs11r2b52              95442    5603       0      7542  101708    28627   79478    219061    3237      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   29 gs11r2b53              95442    5452       0     23369   82834    32020   75576    215438    2280      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   30 gs11r2b54              95444    5562       0     17735   89034    31223   75092    214784    3053      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   31 gs11r2b55              95444    5600       0     27906   75700    27196   80182    212686    4934      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   32 gs11r2b56              95444    5452       0     21840   83930    23560   82544    213574    4173      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   33 gs11r2b57              95444    5692       0     18722   87968    24909   84816    218118    5131      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   34 gs11r2b58              95448    5683       0      6360  101330    11921   97216    218530    3615      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   35 gs11r2b59              95448    5537       0     26295   77856    18230   87858    211929    5048      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   36 gs11r2b60              95442    5640       0     14494   91354    19614   86140    213293    4833      2.5   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO   37 gs11r2b61              95446    5418       0     22807   80370    28978   76874    210732    7164      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   38 gs11r2b62              95442    5682       0     11025   94874    17353   87842    212789    5307      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   39 gs11r2b66              95438    5457       0     20444   85518    10683   95602    213950    4570      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   40 gs11r2b67              95446    5496       0     17347   90322    11312   96842    217474    5174      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   41 gs11r2b68              95444    5646       0     22806   81916    30305   74098    210824    6527      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   42 gs11r2b69              95444    5489       0     35555   69102    21012   84118    211456    4791      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   43 gs11r2b71              95442    5572       0     16889   85558    20119   81808    206077    5901      2.6   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   44 gs11r2b72              95444    5507       0     24797   81572    23469   80686    212215    5817      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   45 gs12r1b42              95444    5541       0     11232   96158    21077   84936    215101    4375      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   46 gs12r1b43              95446    5493       0     12052   94060    23036   84510    215332    4304      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   47 gs12r1b44              95444    5585       0     10134   96240    24265   81496    213838    4470      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   48 gs12r1b45              95440    5402       0     15195   91734    20577   87386    216590    3684      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   49 gs12r1b46              95446    5494       0      9879   98454    21486   85680    217200    3258      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   50 gs12r1b48              95446    5602       0     11473   95852    20393   86392    215803    3875      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   51 gs12r1b49              95448    5645       0     25196   81736    28195   79422    216253    3391      2.5   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO   52 gs12r1b50              95444    5614       0     18829   88038    22663   84294    215526    3994      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   53 gs12r1b51              95448    5535       0     16414   90080    11827   96854    216877    3364      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   54 gs12r1b56              95448    5525       0     15649   92416    12917   94828    217511    2245      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   55 gs12r1b65              95448    5524       0     13196   93602    19787   88212    216501    2236      2.5   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO   56 gs12r1b66              95446    5502       0     21042   86658    20253   85490    215077    2970      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   57 gs12r1b68              95444    5486       0      8979   97870    11028   93314    212886    4148      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   58 gs12r1b70              95444    5577       0     13714   94612    13147   94632    217808    2189      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   59 gs13r2b38              95442    5493       0      8202   99842     9689   96458    215893    3647      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   60 gs13r2b39              95442    5513       0     10407   96798    19909   86210    215029    4184      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   61 gs13r2b57              95444    5600       0     22674   83606    17633   89998    215615    3408      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   62 gs13r2b58              95442    5450       0     18840   87660    19102   88432    215737    3726      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   63 gs13r2b63              95448    5566       0     27675   75092    36811   69350    210617    4584      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   64 gs13r2b64              95442    5669       0     28837   79112    23172   83600    216421    2501      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   65 gs13r2b66              95444    5555       0     32380   73938    37478   67436    212934    4818      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   66 gs15r2b63              95440    5394       0     28470   77660    23957   84550    216296    4041      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   67 gs15r2b65              95446    5496       0     24322   80438    27898   78602    212948    3574      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   68 gs15r2b66              95444    5411       0     14702   91770    20631   84408    213191    3818      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   69 gs15r2b67              95446    5436       0     30344   75888    28001   77058    212992    5866      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   70 gs15r2b70              95446    5435       0      8652  102386    10202  100084    223028    1957      2.4   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO   71 gs15r2b72              95446    5455       0      9398   98228     7497   99146    215971    2582      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   72 gs16r3b03              95444    5576       0     23547   79996    25292   80800    211267    6645      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   73 gs16r3b05              95448    5495       0     18728   82778    20141   86058    209308    7265      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   74 gs16r3b07              95444    5490       0      7865   89946     5277  103366    208156   10605      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   75 gs16r3b55              95444    5509       0     24926   79718    32244   72956    211516    6278      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   76 gs16r3b56              95448    5555       0     19148   87222    19590   85484    213087    4631      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   77 gs16r3b57              95446    5447       0     16383   88402    16601   90742    213779    4625      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   78 gs17r2b13              95446    5535       0     19359   86516    21378   85864    214819    4346      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   79 gs17r2b38              95442    5584       0     24127   82622    19656   87052    215159    3154      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   80 gs17r2b39              95442    5546       0      7166  101304     6499  103386    220055    1099      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   81 gs17r2b40              95448    5461       0     14529   91692    24899   80324    213098    4522      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   82 gs17r2b41              95446    5582       0      5695  102828     7749  102572    220538     972      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   83 gs17r2b42              95438    5608       0     28971   78356    28199   78826    216053    2735      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   84 gs17r2b67              95444    5593       0     21231   84454    21706   83708    212801    4457      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   85 gs17r2b71              95442    5522       0     17045   90552    24256   83452    217008    3492      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   86 gs17r3b31              95448    5431       0     22068   84268    13637   94932    216611    3464      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   87 gs17r3b67              95448    5587       0      8712  100580    14446   98424    223862    1418      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   88 gs17r3b68              95440    5647       0     17948   92310    18325   92002    222287    1402      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   89 gs17r3b70              95442    5418       0     20135   87358    27491   76260    212948    4581      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   90 gs17r3b71              95444    5454       0     30366   75644    17911   89554    215177    2740      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   91 gs17r3b72              95448    5633       0     16856   89876    26122   79638    214191    3514      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   92 gs18r3b48              95448    5713       0     13029   93140    13292   93296    214437    4994      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   93 gs18r3b49              95440    5487       0     19487   85766    21038   86938    214845    4534      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   94 gs18r3b50              95444    5548       0     22699   83898    18259   86166    212724    5919      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   95 gs18r3b53              95444    5533       0     19891   87914    22056   86602    218165    2338      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   96 gs18r3b56              95446    5521       0     15048   91902    19555   84870    213075    5105      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   97 gs18r3b58              95448    5528       0     14623   92394    14568   90364    213651    4750      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   98 gs18r3b59              95442    5522       0     22064   82990    21657   85274    213604    4655      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO   99 gs18r3b60              95438    5729       0     27343   78756    27769   77568    213079    3752      2.6   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  100 gs18r3b61              95440    5491       0     10285   96048    11161   96134    215325    3571      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  101 gs18r3b62              95442    5573       0     23432   83854    24130   80372    213484    4049      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  102 gs18r3b63              95444    5457       0     26939   79094    28815   77870    214355    3855      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  103 gs18r3b64              95448    5809       0     23570   83378    25003   80684    214339    3952      2.6   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  104 gs18r3b65              95448    5478       0     28474   76630    20092   86954    213853    4587      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  105 gs18r3b66              95448    5641       0     18153   88670    20646   84108    213281    4095      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  106 gs18r3b67              95442    5493       0     22668   83034    21244   84196    212795    5038      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  107 gs18r3b68              95438    5448       0     23009   82922    28144   77866    213592    4449      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  108 gs18r3b69              95450    5592       0     22604   82378    22469   82362    211516    4974      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  109 gs18r3b70              95444    5792       0     17580   87958    20574   81860    209673    5239      2.6   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  110 gs19r3b02              95446    5715       0     23495   82196    25378   81122    213892    6058      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  111 gs19r3b33              95446    5503       0     16159   89564    33112   74566    215104    2613      2.5   0.0         0      0     113  Sm/p:master:comput
+## EC_MEMINFO  112 gs19r3b34              95450    5413       0     34253   75810    28601   80716    221052    2529      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  113 gs19r3b40              95444    5443       0     28189   75080    33734   71290    209994    7427      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  114 gs19r3b41              95440    5445       0     28546   80132    35674   74078    220120    3168      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  115 gs19r3b42              95450    5620       0     22558   83766    29646   75468    213081    5452      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  116 gs19r3b43              95448    5468       0     28508   75824    25278   82274    213579    4530      2.4   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  117 gs19r3b44              95444    5475       0     20876   84970    26167   78804    212510    5218      2.5   0.0         0      0     112  Sm/p:master:comput
+## EC_MEMINFO  118 gs19r3b44              95444    5475       0     20876   84970    26167   78804    212510    5218      2.5   0.0         0      0     112  Sm/p:oops:ifs_init
+## EC_MEMINFO  119 gs19r3b44              95444    5475       0     20876   84970    26167   78804    212510    5218      2.5   0.0         0      0     112  Sm/p:oops:ifs_init
+## EC_MEMINFO  120 gs19r3b44              95444    5475       0     20876   84970    26167   78804    212510    5218      2.5   0.0         0      0     112  Sm/p:oops:ifs_init
+## EC_MEMINFO  121 gs19r3b44              95444    5475       0     20876   84970    26167   78804    212510    5218      2.5   0.0         0      0     112  Sm/p:oops:ifs_init
+[EC_DRHOOK:gs04r2b09:1:8:44914:46316] [20260724:150348:0.615] [trapfpe_treatment@drhook.c:1300] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs04r2b09:1:8:44914:46316] [20260724:150348:0.615] [trapfpe@drhook.c:258] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs04r2b09:1:8:44914:46316] [20260724:150348:0.615] [trapfpe@drhook.c:263] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs04r2b09:1:8:44914:46316] [20260724:150348:0.615] [trapfpe@drhook.c:270] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         504
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+  15:06:30 STEP    0 H=   0:00 +CPU=255.454    
+           STEP    0 :## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power LoadAvg
+           STEP    0 :## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+           STEP    0 :## EC_MEMINFO Node Name                 | Heap  | RSS(tsk)        | Small  Huge or | Small  Huge or | Total          |
+           STEP    0 :## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+           STEP    0 :## EC_MEMINFO    0 gs04r2b09              11660    6168       0       745   93378      570   95230    191628    3659      3.1   0.0         0      0  104.81  Sm/p
+  15:06:30 STEP    1 H=   0:07 +CPU=  3.754    
+           STEP    1 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       585   93516      515   95726    192056    3669      3.1   0.0         0      0  104.81  Sm/p
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+        1651
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+        1651
+  15:06:34 STEP    2 H=   0:15 +CPU= 32.357    
+           STEP    2 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       486   91100      416   93354    187057    3683      3.1   0.0         0      0  105.39  Sm/p
+  15:06:34 STEP    3 H=   0:22 +CPU=  3.245    
+           STEP    3 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       517   91120      439   93410    187196    3686      3.1   0.0         0      0  105.39  Sm/p
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+        1652
+  15:06:35 STEP    4 H=   0:30 +CPU=  4.093    
+           STEP    4 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       526   91470      414   93312    187431    3688      3.1   0.0         0      0  105.39  Sm/p
+  15:06:35 STEP    5 H=   0:37 +CPU=  3.124    
+           STEP    5 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       530   91460      415   93492    187611    3692      3.1   0.0         0      0  105.39  Sm/p
+  15:06:36 STEP    6 H=   0:45 +CPU=  3.736    
+           STEP    6 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       520   91458      419   93490    187598    3693      3.1   0.0         0      0  105.39  Sm/p
+  15:06:36 STEP    7 H=   0:52 +CPU=  3.140    
+           STEP    7 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0       520   91456      410   93454    187550    3696      3.1   0.0         0      0  105.39  Sm/p
+  15:06:48 STEP    8 H=   1:00 +CPU= 94.598    
+           STEP    8 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1343   91144     1124   92868    188179    3705      3.1   0.0         0      0  106.85  Sm/p
+  15:06:49 STEP    9 H=   1:07 +CPU=  3.442    
+           STEP    9 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1271   90954     1030   92718    187683    3705      3.1   0.0         0      0  106.85  Sm/p
+  15:06:49 STEP   10 H=   1:15 +CPU=  4.480    
+           STEP   10 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1247   90952     1040   92640    187580    3706      3.1   0.0         0      0  106.85  Sm/p
+  15:06:50 STEP   11 H=   1:22 +CPU=  3.159    
+           STEP   11 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1241   90956     1047   92682    187638    3706      3.1   0.0         0      0  106.85  Sm/p
+  15:06:50 STEP   12 H=   1:30 +CPU=  3.873    
+           STEP   12 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1245   90988     1046   92754    187739    3709      3.1   0.0         0      0  106.85  Sm/p
+  15:06:51 STEP   13 H=   1:37 +CPU=  3.128    
+           STEP   13 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1247   91052     1044   92774    187829    3709      3.1   0.0         0      0  106.85  Sm/p
+  15:06:51 STEP   14 H=   1:45 +CPU=  3.804    
+           STEP   14 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1248   91072     1045   92780    187853    3710      3.1   0.0         0      0  106.85  Sm/p
+  15:06:52 STEP   15 H=   1:52 +CPU=  3.114    
+           STEP   15 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1245   91082     1031   92756    187827    3711      3.1   0.0         0      0  106.85  Sm/p
+  15:06:54 STEP   16 H=   2:00 +CPU= 19.161    
+           STEP   16 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1242   90892      985   92534    187353    3713      3.1   0.0         0      0  107.26  Sm/p
+  15:06:54 STEP   17 H=   2:07 +CPU=  3.113    
+           STEP   17 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1219   90782      975   92474    187157    3713      3.1   0.0         0      0  107.26  Sm/p
+  15:06:55 STEP   18 H=   2:15 +CPU=  4.354    
+           STEP   18 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1208   90766      970   92420    187072    3713      3.1   0.0         0      0  107.26  Sm/p
+  15:06:55 STEP   19 H=   2:22 +CPU=  3.212    
+           STEP   19 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1207   90750      956   92412    187037    3714      3.1   0.0         0      0  107.26  Sm/p
+  15:06:56 STEP   20 H=   2:30 +CPU=  3.817    
+           STEP   20 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1202   90762      967   92442    187084    3714      3.1   0.0         0      0  107.26  Sm/p
+  15:06:56 STEP   21 H=   2:37 +CPU=  3.215    
+           STEP   21 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1197   90758      958   92436    187059    3714      3.1   0.0         0      0  107.26  Sm/p
+  15:06:57 STEP   22 H=   2:45 +CPU=  3.762    
+           STEP   22 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1201   90766      963   92438    187079    3714      3.1   0.0         0      0  107.26  Sm/p
+  15:06:57 STEP   23 H=   2:52 +CPU=  3.127    
+           STEP   23 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1195   90752      950   92434    187041    3714      3.1   0.0         0      0  107.64  Sm/p
+  15:07:00 STEP   24 H=   3:00 +CPU= 19.514    
+           STEP   24 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1226   90834      984   92510    187253    3716      3.1   0.0         0      0  107.64  Sm/p
+  15:07:00 STEP   25 H=   3:07 +CPU=  3.173    
+           STEP   25 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1210   90728     1087   92454    187191    3716      3.1   0.0         0      0  107.64  Sm/p
+  15:07:01 STEP   26 H=   3:15 +CPU=  4.372    
+           STEP   26 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1216   90748     1409   92706    187781    3717      3.1   0.0         0      0  107.64  Sm/p
+  15:07:01 STEP   27 H=   3:22 +CPU=  3.201    
+           STEP   27 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90822     1394   92690    187981    3717      3.1   0.0         0      0  107.64  Sm/p
+  15:07:01 STEP   28 H=   3:30 +CPU=  3.790    
+           STEP   28 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90836     1404   92704    188014    3718      3.1   0.0         0      0  107.64  Sm/p
+  15:07:02 STEP   29 H=   3:37 +CPU=  3.115    
+           STEP   29 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90834     1390   92692    187986    3718      3.1   0.0         0      0  107.64  Sm/p
+  15:07:02 STEP   30 H=   3:45 +CPU=  3.742    
+           STEP   30 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90840     1399   92704    188008    3718      3.1   0.0         0      0  107.99  Sm/p
+  15:07:03 STEP   31 H=   3:52 +CPU=  3.132    
+           STEP   31 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1357   90832     1391   92690    187982    3719      3.1   0.0         0      0  107.99  Sm/p
+  15:07:05 STEP   32 H=   4:00 +CPU= 19.181    
+           STEP   32 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1372   90922     1405   92822    188222    3720      3.1   0.0         0      0  107.99  Sm/p
+  15:07:05 STEP   33 H=   4:07 +CPU=  3.092    
+           STEP   33 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90812     1381   92682    187949    3720      3.1   0.0         0      0  107.99  Sm/p
+  15:07:06 STEP   34 H=   4:15 +CPU=  4.297    
+           STEP   34 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90830     1399   92712    188016    3720      3.1   0.0         0      0  107.99  Sm/p
+  15:07:06 STEP   35 H=   4:22 +CPU=  3.207    
+           STEP   35 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90818     1380   92692    187959    3720      3.1   0.0         0      0  107.99  Sm/p
+  15:07:07 STEP   36 H=   4:30 +CPU=  3.855    
+           STEP   36 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1366   90826     1397   92712    188011    3720      3.1   0.0         0      0  107.99  Sm/p
+  15:07:07 STEP   37 H=   4:37 +CPU=  3.124    
+           STEP   37 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90818     1378   92696    187963    3720      3.1   0.0         0      0  108.31  Sm/p
+  15:07:08 STEP   38 H=   4:45 +CPU=  3.808    
+           STEP   38 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90830     1395   92712    188006    3721      3.1   0.0         0      0  108.31  Sm/p
+  15:07:08 STEP   39 H=   4:52 +CPU=  3.132    
+           STEP   39 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90816     1377   92696    187955    3721      3.1   0.0         0      0  108.31  Sm/p
+  15:07:11 STEP   40 H=   5:00 +CPU= 18.737    
+           STEP   40 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90920     1403   92826    188217    3722      3.1   0.0         0      0  108.31  Sm/p
+  15:07:11 STEP   41 H=   5:07 +CPU=  3.099    
+           STEP   41 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90812     1376   92682    187945    3722      3.1   0.0         0      0  108.31  Sm/p
+  15:07:11 STEP   42 H=   5:15 +CPU=  4.301    
+           STEP   42 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90836     1393   92710    188004    3722      3.1   0.0         0      0  108.31  Sm/p
+  15:07:12 STEP   43 H=   5:22 +CPU=  3.196    
+           STEP   43 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90820     1376   92688    187956    3722      3.1   0.0         0      0  108.31  Sm/p
+  15:07:12 STEP   44 H=   5:30 +CPU=  3.788    
+           STEP   44 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1366   90840     1392   92714    188019    3722      3.1   0.0         0      0  108.61  Sm/p
+  15:07:13 STEP   45 H=   5:37 +CPU=  3.185    
+           STEP   45 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90824     1373   92686    187955    3722      3.1   0.0         0      0  108.61  Sm/p
+  15:07:13 STEP   46 H=   5:45 +CPU=  3.763    
+           STEP   46 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90834     1388   92706    187998    3722      3.1   0.0         0      0  108.61  Sm/p
+  15:07:14 STEP   47 H=   5:52 +CPU=  3.133    
+           STEP   47 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90822     1373   92694    187963    3723      3.1   0.0         0      0  108.61  Sm/p
+  15:07:16 STEP   48 H=   6:00 +CPU= 18.772    
+           STEP   48 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90938     1397   92820    188223    3723      3.1   0.0         0      0  108.61  Sm/p
+  15:07:16 STEP   49 H=   6:07 +CPU=  3.090    
+           STEP   49 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90826     1370   92686    187957    3723      3.1   0.0         0      0  108.61  Sm/p
+  15:07:17 STEP   50 H=   6:15 +CPU=  4.353    
+           STEP   50 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1366   90828     1390   92706    188001    3723      3.1   0.0         0      0  108.61  Sm/p
+  15:07:17 STEP   51 H=   6:22 +CPU=  3.185    
+           STEP   51 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90826     1372   92684    187955    3723      3.1   0.0         0      0  108.88  Sm/p
+  15:07:18 STEP   52 H=   6:30 +CPU=  3.929    
+           STEP   52 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90834     1385   92700    187992    3724      3.1   0.0         0      0  108.88  Sm/p
+  15:07:18 STEP   53 H=   6:37 +CPU=  3.158    
+           STEP   53 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90812     1371   92682    187936    3724      3.1   0.0         0      0  108.88  Sm/p
+  15:07:19 STEP   54 H=   6:45 +CPU=  3.767    
+           STEP   54 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90832     1382   92700    187982    3724      3.1   0.0         0      0  108.88  Sm/p
+  15:07:19 STEP   55 H=   6:52 +CPU=  3.120    
+           STEP   55 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90822     1367   92682    187941    3724      3.1   0.0         0      0  108.88  Sm/p
+  15:07:21 STEP   56 H=   7:00 +CPU= 18.557    
+           STEP   56 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90934     1397   92816    188212    3724      3.1   0.0         0      0  108.88  Sm/p
+  15:07:22 STEP   57 H=   7:07 +CPU=  3.111    
+           STEP   57 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90814     1372   92676    187938    3724      3.1   0.0         0      0  108.88  Sm/p
+  15:07:22 STEP   58 H=   7:15 +CPU=  4.387    
+           STEP   58 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90836     1388   92704    188004    3724      3.1   0.0         0      0  109.13  Sm/p
+  15:07:23 STEP   59 H=   7:22 +CPU=  3.200    
+           STEP   59 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1357   90820     1373   92684    187947    3725      3.1   0.0         0      0  109.13  Sm/p
+  15:07:23 STEP   60 H=   7:30 +CPU=  3.850    
+           STEP   60 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1354   90828     1384   92696    187972    3725      3.1   0.0         0      0  109.13  Sm/p
+  15:07:24 STEP   61 H=   7:37 +CPU=  3.112    
+           STEP   61 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1357   90820     1371   92676    187937    3725      3.1   0.0         0      0  109.13  Sm/p
+  15:07:24 STEP   62 H=   7:45 +CPU=  3.799    
+           STEP   62 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90830     1385   92696    187977    3725      3.1   0.0         0      0  109.13  Sm/p
+  15:07:25 STEP   63 H=   7:52 +CPU=  3.143    
+           STEP   63 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1354   90818     1370   92686    187942    3725      3.1   0.0         0      0  109.13  Sm/p
+  15:07:27 STEP   64 H=   8:00 +CPU= 18.566    
+           STEP   64 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90922     1397   92810    188197    3725      3.1   0.0         0      0  109.13  Sm/p
+  15:07:27 STEP   65 H=   8:07 +CPU=  3.083    
+           STEP   65 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90808     1372   92678    187931    3725      3.1   0.0         0      0  109.36  Sm/p
+  15:07:28 STEP   66 H=   8:15 +CPU=  4.429    
+           STEP   66 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90820     1383   92698    187973    3725      3.1   0.0         0      0  109.36  Sm/p
+  15:07:28 STEP   67 H=   8:22 +CPU=  3.255    
+           STEP   67 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90816     1373   92684    187943    3725      3.1   0.0         0      0  109.36  Sm/p
+  15:07:29 STEP   68 H=   8:30 +CPU=  4.161    
+           STEP   68 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90826     1380   92696    187971    3725      3.1   0.0         0      0  109.36  Sm/p
+  15:07:29 STEP   69 H=   8:37 +CPU=  3.976    
+           STEP   69 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90814     1368   92686    187935    3725      3.1   0.0         0      0  109.36  Sm/p
+  15:07:30 STEP   70 H=   8:45 +CPU=  4.036    
+           STEP   70 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1354   90824     1380   92706    187975    3726      3.1   0.0         0      0  109.36  Sm/p
+  15:07:30 STEP   71 H=   8:52 +CPU=  3.117    
+           STEP   71 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1351   90820     1369   92686    187937    3726      3.1   0.0         0      0  109.36  Sm/p
+  15:07:32 STEP   72 H=   9:00 +CPU= 18.391    
+           STEP   72 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90932     1395   92814    188205    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:33 STEP   73 H=   9:07 +CPU=  3.079    
+           STEP   73 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1355   90816     1371   92676    187930    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:33 STEP   74 H=   9:15 +CPU=  4.332    
+           STEP   74 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90834     1386   92702    187992    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:34 STEP   75 H=   9:22 +CPU=  3.279    
+           STEP   75 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1355   90818     1369   92678    187933    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:34 STEP   76 H=   9:30 +CPU=  3.885    
+           STEP   76 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90824     1384   92708    187980    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:35 STEP   77 H=   9:37 +CPU=  3.169    
+           STEP   77 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1350   90816     1369   92682    187928    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:35 STEP   78 H=   9:45 +CPU=  3.728    
+           STEP   78 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90826     1383   92698    187970    3726      3.1   0.0         0      0  109.57  Sm/p
+  15:07:36 STEP   79 H=   9:52 +CPU=  3.105    
+           STEP   79 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1350   90810     1367   92678    187918    3727      3.1   0.0         0      0  109.57  Sm/p
+  15:07:38 STEP   80 H=  10:00 +CPU= 18.477    
+           STEP   80 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90924     1398   92814    188199    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:38 STEP   81 H=  10:07 +CPU=  3.083    
+           STEP   81 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1354   90810     1372   92688    187937    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:39 STEP   82 H=  10:15 +CPU=  4.201    
+           STEP   82 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90830     1388   92700    187984    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:39 STEP   83 H=  10:22 +CPU=  3.213    
+           STEP   83 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1355   90810     1373   92676    187926    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:40 STEP   84 H=  10:30 +CPU=  3.814    
+           STEP   84 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90830     1382   92694    187974    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:40 STEP   85 H=  10:37 +CPU=  3.126    
+           STEP   85 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1351   90812     1368   92684    187927    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:41 STEP   86 H=  10:45 +CPU=  3.821    
+           STEP   86 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1350   90830     1384   92698    187973    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:41 STEP   87 H=  10:52 +CPU=  3.073    
+           STEP   87 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1349   90814     1367   92686    187927    3727      3.1   0.0         0      0  109.77  Sm/p
+  15:07:43 STEP   88 H=  11:00 +CPU= 18.528    
+           STEP   88 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1370   90922     1400   92814    188207    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:44 STEP   89 H=  11:07 +CPU=  3.035    
+           STEP   89 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90810     1373   92684    187939    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:44 STEP   90 H=  11:15 +CPU=  4.295    
+           STEP   90 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1355   90830     1392   92700    187987    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:45 STEP   91 H=  11:22 +CPU=  3.218    
+           STEP   91 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90808     1368   92678    187924    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:45 STEP   92 H=  11:30 +CPU=  3.807    
+           STEP   92 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90826     1382   92694    187974    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:45 STEP   93 H=  11:37 +CPU=  3.097    
+           STEP   93 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90804     1374   92680    187930    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:46 STEP   94 H=  11:45 +CPU=  3.751    
+           STEP   94 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90830     1384   92684    187969    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:46 STEP   95 H=  11:52 +CPU=  3.092    
+           STEP   95 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1355   90806     1371   92672    187916    3727      3.1   0.0         0      0  109.95  Sm/p
+  15:07:49 STEP   96 H=  12:00 +CPU= 18.671    
+           STEP   96 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1372   90920     1396   92816    188203    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:49 STEP   97 H=  12:07 +CPU=  3.054    
+           STEP   97 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90806     1375   92678    187936    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:50 STEP   98 H=  12:15 +CPU=  4.412    
+           STEP   98 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90822     1384   92690    187977    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:50 STEP   99 H=  12:22 +CPU=  3.162    
+           STEP   99 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90812     1375   92674    187932    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:50 STEP  100 H=  12:30 +CPU=  3.821    
+           STEP  100 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90818     1379   92688    187959    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:51 STEP  101 H=  12:37 +CPU=  3.110    
+           STEP  101 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90804     1369   92676    187918    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:51 STEP  102 H=  12:45 +CPU=  3.761    
+           STEP  102 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90826     1379   92684    187959    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:52 STEP  103 H=  12:52 +CPU=  3.091    
+           STEP  103 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90812     1370   92672    187921    3727      3.1   0.0         0      0  110.11  Sm/p
+  15:07:54 STEP  104 H=  13:00 +CPU= 18.661    
+           STEP  104 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1369   90918     1398   92812    188197    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:54 STEP  105 H=  13:07 +CPU=  3.087    
+           STEP  105 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90816     1374   92666    187931    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:55 STEP  106 H=  13:15 +CPU=  4.318    
+           STEP  106 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90826     1383   92688    187976    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:55 STEP  107 H=  13:22 +CPU=  3.264    
+           STEP  107 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90810     1374   92674    187930    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:56 STEP  108 H=  13:30 +CPU=  3.828    
+           STEP  108 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90826     1383   92688    187968    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:56 STEP  109 H=  13:37 +CPU=  3.108    
+           STEP  109 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90812     1370   92676    187934    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:57 STEP  110 H=  13:45 +CPU=  3.743    
+           STEP  110 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1357   90814     1380   92694    187956    3727      3.1   0.0         0      0  110.26  Sm/p
+  15:07:57 STEP  111 H=  13:52 +CPU=  3.103    
+           STEP  111 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90810     1370   92668    187915    3727      3.1   0.0         0      0  110.40  Sm/p
+  15:08:00 STEP  112 H=  14:00 +CPU= 18.642    
+           STEP  112 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1371   90924     1395   92806    188196    3727      3.1   0.0         0      0  110.40  Sm/p
+  15:08:00 STEP  113 H=  14:07 +CPU=  3.074    
+           STEP  113 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90816     1375   92668    187934    3727      3.1   0.0         0      0  110.40  Sm/p
+  15:08:00 STEP  114 H=  14:15 +CPU=  4.538    
+           STEP  114 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90824     1387   92698    187979    3727      3.1   0.0         0      0  110.40  Sm/p
+  15:08:01 STEP  115 H=  14:22 +CPU=  3.187    
+           STEP  115 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90802     1373   92676    187924    3727      3.1   0.0         0      0  110.40  Sm/p
+  15:08:01 STEP  116 H=  14:30 +CPU=  3.814    
+           STEP  116 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1356   90818     1378   92686    187942    3728      3.1   0.0         0      0  110.40  Sm/p
+  15:08:02 STEP  117 H=  14:37 +CPU=  3.149    
+           STEP  117 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90804     1370   92674    187918    3728      3.1   0.0         0      0  110.40  Sm/p
+  15:08:02 STEP  118 H=  14:45 +CPU=  3.759    
+           STEP  118 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90816     1380   92696    187959    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:03 STEP  119 H=  14:52 +CPU=  3.075    
+           STEP  119 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1357   90806     1366   92674    187915    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:05 STEP  120 H=  15:00 +CPU= 18.780    
+           STEP  120 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1374   90924     1397   92806    188200    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:05 STEP  121 H=  15:07 +CPU=  3.088    
+           STEP  121 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90806     1373   92672    187927    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:06 STEP  122 H=  15:15 +CPU=  4.447    
+           STEP  122 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90824     1380   92696    187976    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:06 STEP  123 H=  15:22 +CPU=  3.314    
+           STEP  123 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90808     1365   92672    187921    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:07 STEP  124 H=  15:30 +CPU=  3.819    
+           STEP  124 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90814     1367   92676    187927    3728      3.1   0.0         0      0  110.53  Sm/p
+  15:08:07 STEP  125 H=  15:37 +CPU=  3.148    
+           STEP  125 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90814     1361   92676    187920    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:08 STEP  126 H=  15:45 +CPU=  3.742    
+           STEP  126 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90822     1372   92682    187948    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:08 STEP  127 H=  15:52 +CPU=  3.120    
+           STEP  127 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90814     1359   92684    187928    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:10 STEP  128 H=  16:00 +CPU= 18.524    
+           STEP  128 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1369   90924     1390   92804    188187    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:11 STEP  129 H=  16:07 +CPU=  3.060    
+           STEP  129 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90802     1364   92672    187914    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:11 STEP  130 H=  16:15 +CPU=  4.476    
+           STEP  130 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90820     1378   92692    187963    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:12 STEP  131 H=  16:22 +CPU=  3.178    
+           STEP  131 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90808     1360   92676    187917    3728      3.1   0.0         0      0  110.65  Sm/p
+  15:08:12 STEP  132 H=  16:30 +CPU=  3.824    
+           STEP  132 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90824     1373   92688    187956    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:13 STEP  133 H=  16:37 +CPU=  3.105    
+           STEP  133 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90816     1357   92680    187924    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:13 STEP  134 H=  16:45 +CPU=  3.803    
+           STEP  134 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90824     1372   92688    187952    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:14 STEP  135 H=  16:52 +CPU=  3.109    
+           STEP  135 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90816     1363   92676    187926    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:16 STEP  136 H=  17:00 +CPU= 18.630    
+           STEP  136 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1372   90918     1387   92810    188187    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:16 STEP  137 H=  17:07 +CPU=  3.048    
+           STEP  137 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90810     1365   92668    187918    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:17 STEP  138 H=  17:15 +CPU=  4.313    
+           STEP  138 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90824     1374   92682    187954    3728      3.1   0.0         0      0  110.76  Sm/p
+  15:08:17 STEP  139 H=  17:22 +CPU=  3.220    
+           STEP  139 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90808     1363   92670    187913    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:18 STEP  140 H=  17:30 +CPU=  3.830    
+           STEP  140 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1367   90830     1372   92686    187964    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:18 STEP  141 H=  17:37 +CPU=  3.147    
+           STEP  141 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90814     1367   92672    187930    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:19 STEP  142 H=  17:45 +CPU=  3.780    
+           STEP  142 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90826     1375   92682    187957    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:19 STEP  143 H=  17:52 +CPU=  3.169    
+           STEP  143 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90816     1362   92672    187921    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:21 STEP  144 H=  18:00 +CPU= 18.937    
+           STEP  144 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1370   90924     1387   92810    188191    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:22 STEP  145 H=  18:07 +CPU=  3.081    
+           STEP  145 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90814     1365   92670    187922    3728      3.1   0.0         0      0  110.86  Sm/p
+  15:08:22 STEP  146 H=  18:15 +CPU=  4.252    
+           STEP  146 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90828     1373   92690    187959    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:23 STEP  147 H=  18:22 +CPU=  3.215    
+           STEP  147 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90806     1359   92672    187910    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:23 STEP  148 H=  18:30 +CPU=  3.831    
+           STEP  148 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90822     1371   92682    187942    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:24 STEP  149 H=  18:37 +CPU=  3.132    
+           STEP  149 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90808     1356   92672    187909    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:24 STEP  150 H=  18:45 +CPU=  3.783    
+           STEP  150 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90824     1367   92684    187946    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:24 STEP  151 H=  18:52 +CPU=  3.093    
+           STEP  151 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90814     1358   92672    187914    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:27 STEP  152 H=  19:00 +CPU= 18.892    
+           STEP  152 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1373   90934     1392   92800    188198    3728      3.1   0.0         0      0  110.95  Sm/p
+  15:08:27 STEP  153 H=  19:07 +CPU=  3.115    
+           STEP  153 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1366   90816     1368   92670    187933    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:28 STEP  154 H=  19:15 +CPU=  4.344    
+           STEP  154 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90820     1380   92684    187959    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:28 STEP  155 H=  19:22 +CPU=  3.229    
+           STEP  155 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90820     1372   92676    187943    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:29 STEP  156 H=  19:30 +CPU=  3.832    
+           STEP  156 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90828     1378   92684    187957    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:29 STEP  157 H=  19:37 +CPU=  3.878    
+           STEP  157 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90800     1366   92674    187910    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:30 STEP  158 H=  19:45 +CPU=  4.351    
+           STEP  158 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90818     1372   92686    187947    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:30 STEP  159 H=  19:52 +CPU=  3.122    
+           STEP  159 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90802     1363   92670    187905    3728      3.1   0.0         0      0  111.03  Sm/p
+  15:08:32 STEP  160 H=  20:00 +CPU= 18.809    
+           STEP  160 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1369   90926     1389   92804    188188    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:33 STEP  161 H=  20:07 +CPU=  3.088    
+           STEP  161 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1363   90808     1371   92668    187923    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:33 STEP  162 H=  20:15 +CPU=  4.292    
+           STEP  162 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90816     1381   92688    187962    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:34 STEP  163 H=  20:22 +CPU=  3.156    
+           STEP  163 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90804     1367   92664    187909    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:34 STEP  164 H=  20:30 +CPU=  3.794    
+           STEP  164 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1367   90822     1373   92674    187947    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:35 STEP  165 H=  20:37 +CPU=  3.171    
+           STEP  165 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90806     1366   92670    187919    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:35 STEP  166 H=  20:45 +CPU=  3.726    
+           STEP  166 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90826     1373   92682    187950    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:35 STEP  167 H=  20:52 +CPU=  3.092    
+           STEP  167 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90802     1367   92664    187904    3728      3.1   0.0         0      0  111.11  Sm/p
+  15:08:38 STEP  168 H=  21:00 +CPU= 18.788    
+           STEP  168 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1371   90918     1389   92802    188180    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:38 STEP  169 H=  21:07 +CPU=  3.099    
+           STEP  169 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90806     1366   92658    187901    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:39 STEP  170 H=  21:15 +CPU=  4.221    
+           STEP  170 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90826     1379   92688    187966    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:39 STEP  171 H=  21:22 +CPU=  3.114    
+           STEP  171 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90806     1364   92666    187909    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:40 STEP  172 H=  21:30 +CPU=  3.808    
+           STEP  172 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90818     1370   92676    187934    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:40 STEP  173 H=  21:37 +CPU=  3.077    
+           STEP  173 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90808     1364   92672    187918    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:40 STEP  174 H=  21:45 +CPU=  3.724    
+           STEP  174 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90822     1367   92678    187943    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:41 STEP  175 H=  21:52 +CPU=  3.067    
+           STEP  175 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90800     1363   92670    187903    3728      3.1   0.0         0      0  111.18  Sm/p
+  15:08:43 STEP  176 H=  22:00 +CPU= 19.046    
+           STEP  176 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1373   90920     1389   92802    188184    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:44 STEP  177 H=  22:07 +CPU=  3.068    
+           STEP  177 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90814     1365   92660    187917    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:44 STEP  178 H=  22:15 +CPU=  4.279    
+           STEP  178 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1368   90824     1371   92674    187947    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:45 STEP  179 H=  22:22 +CPU=  3.129    
+           STEP  179 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1364   90806     1359   92666    187906    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:45 STEP  180 H=  22:30 +CPU=  3.807    
+           STEP  180 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1366   90832     1375   92690    187973    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:45 STEP  181 H=  22:37 +CPU=  3.129    
+           STEP  181 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1361   90810     1365   92668    187918    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:46 STEP  182 H=  22:45 +CPU=  3.767    
+           STEP  182 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   90826     1366   92676    187941    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:46 STEP  183 H=  22:52 +CPU=  3.045    
+           STEP  183 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90808     1363   92666    187906    3729      3.1   0.0         0      0  111.25  Sm/p
+  15:08:49 STEP  184 H=  23:00 +CPU= 19.040    
+           STEP  184 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1370   90922     1391   92800    188183    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:49 STEP  185 H=  23:07 +CPU=  3.071    
+           STEP  185 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90808     1366   92666    187911    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:50 STEP  186 H=  23:15 +CPU=  4.224    
+           STEP  186 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1362   90820     1377   92680    187952    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:50 STEP  187 H=  23:22 +CPU=  3.146    
+           STEP  187 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90810     1362   92666    187910    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:50 STEP  188 H=  23:30 +CPU=  3.735    
+           STEP  188 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1360   90820     1368   92676    187932    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:51 STEP  189 H=  23:37 +CPU=  3.103    
+           STEP  189 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1358   90808     1363   92662    187902    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:51 STEP  190 H=  23:45 +CPU=  3.670    
+           STEP  190 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90822     1368   92680    187939    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:52 STEP  191 H=  23:52 +CPU=  3.079    
+           STEP  191 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1359   90810     1359   92666    187906    3729      3.1   0.0         0      0  111.31  Sm/p
+  15:08:54 STEP  192 H=  24:00 +CPU= 19.408    
+           STEP  192 :## EC_MEMINFO    0 gs04r2b09              11694    6168       0      1365   91318     1378   93126    188888    3729      3.1   0.0         0      0  111.44  Sm/p

@@ -1,0 +1,360 @@
+ &NAMPAR
+ JPL     =           5,
+ NLAY_I  =           4,
+ NLAY_S  =           1,
+ LN_VIRTUAL_ITD  = F,
+ LN_ICEDYN       = T,
+ LN_ICETHD       = T,
+ LN_ICEDMP       = F,
+ RN_AMAX_N       =  0.9970000    ,
+ RN_AMAX_S       =  0.9970000    ,
+ CN_ICERST_IN    = restart_ice_in                                                                                                    
+                                                                                                                                     
+           ,
+ CN_ICERST_INDIR = .                                                                                                                 
+                                                                                                                                     
+           ,
+ CN_ICERST_OUT   = restart_ice_out                                                                                                   
+                                                                                                                                     
+           ,
+ CN_ICERST_OUTDIR        = restart.dir                                                                                               
+                                                                                                                                     
+                   ,
+ EPSI06  =  1.0000000E-06,
+ EPSI08  =  9.9999999E-09,
+ EPSI10  =  1.0000000E-10,
+ EPSI20  =  9.9999997E-21
+ /
+ &NAMITD
+ LN_CAT_HFN      = T,
+ RN_HIMEAN       =   2.000000    ,
+ LN_CAT_USR      = F,
+ RN_CATBND       =  0.0000000E+00,  0.4500000    ,   1.100000    ,   2.100000    ,   3.700000    ,   6.000000    ,
+  95*0.0000000E+00  ,
+ RN_HIMIN        =  0.1000000    ,
+ RN_HIMAX        =   99.00000    
+ /
+ &NAMTHD
+ LN_ICEDH        = T,
+ LN_ICEDA        = T,
+ LN_ICEDO        = T,
+ LN_ICEDS        = T,
+ LN_LEADHFX      = T
+ /
+ &NAMTHD_ZDF
+ LN_ZDF_BL99     = T,
+ LN_CNDI_U64     = F,
+ LN_CNDI_P07     = T,
+ RN_CND_S        =  0.3500000    ,
+ RN_KAPPA_I      =   1.000000    ,
+ RN_KAPPA_S      =   10.00000    ,
+ RN_KAPPA_SMLT   =   7.000000    ,
+ RN_KAPPA_SDRY   =   10.00000    ,
+ LN_ZDF_CHKCVG   = F,
+ RN_OIHT =  3.0000000E-03
+ /
+ &NAMTHD_DA
+ RN_BETA =   1.000000    ,
+ RN_DMIN =   8.000000    
+ /
+ &NAMTHD_DO
+ RN_HINEW        =  0.1000000    ,
+ LN_FRAZIL       = F,
+ RN_MAXFRAZ      =   1.000000    ,
+ RN_VFRAZ        =  0.4170000    ,
+ RN_CFRAZ        =   5.000000    
+ /
+ &NAMTHD_SAL
+ NN_ICESAL       =           2,
+ RN_ICESAL       =   4.000000    ,
+ RN_SAL_GD       =   5.000000    ,
+ RN_TIME_GD      =   1730000.    ,
+ RN_SAL_FL       =   2.000000    ,
+ RN_TIME_FL      =   864000.0    ,
+ RN_SIMAX        =   20.00000    ,
+ RN_SIMIN        =  0.1000000    
+ /
+ &NAMTHD_PND
+ LN_PND  = T,
+ LN_PND_LEV      = T,
+ RN_APND_MIN     =  0.1500000    ,
+ RN_APND_MAX     =  0.8500000    ,
+ RN_PND_FLUSH    =  0.0000000E+00,
+ LN_PND_CST      = F,
+ RN_APND =  0.2000000    ,
+ RN_HPND =  5.0000001E-02,
+ LN_PND_LIDS     = T,
+ LN_PND_ALB      = T
+ /
+ &NAMSBC
+ RN_CIO  =  7.4999998E-03,
+ NN_SNWFRA       =           0,
+ RN_SNWBLOW      =  0.6600000    ,
+ NN_FLXDIST      =           3,
+ LN_CNDFLX       = F,
+ LN_CNDEMULATE   = F,
+ NN_QTRICE       =           0
+ /
+ &NAMSDMP
+ LN_ICESDMP      = F,
+ NN_ICESDMP_ATI  =           0,
+ NN_ICESDMP_CAT  =           0,
+ RN_ALPHAI_DMP   =   6.000000    ,
+ RN_ROBSI_DMP    =  9.9999998E-03,
+ SN_ATI_DMP%CLNAME  = NOT USED                                                                                                       
+                                                                                                                                     
+              ,
+ SN_ATI_DMP%FREQH   =  -12.00000    ,
+ SN_ATI_DMP%CLVAR   = iicethick                         ,
+ SN_ATI_DMP%LN_TINT = F,
+ SN_ATI_DMP%LN_CLIM = T,
+ SN_ATI_DMP%CLTYPE  = yearly  ,
+ SN_ATI_DMP%WNAME   =                                                                                                                
+                                                                                                                                     
+              ,
+ SN_ATI_DMP%VCOMP   =                                   ,
+ SN_ATI_DMP%LNAME   =                                   ,
+ SN_HTI_DMP%CLNAME  = NOT USED                                                                                                       
+                                                                                                                                     
+              ,
+ SN_HTI_DMP%FREQH   =  -12.00000    ,
+ SN_HTI_DMP%CLVAR   = iiceconc                          ,
+ SN_HTI_DMP%LN_TINT = F,
+ SN_HTI_DMP%LN_CLIM = T,
+ SN_HTI_DMP%CLTYPE  = yearly  ,
+ SN_HTI_DMP%WNAME   =                                                                                                                
+                                                                                                                                     
+              ,
+ SN_HTI_DMP%VCOMP   =                                   ,
+ SN_HTI_DMP%LNAME   =                                   ,
+ CN_DIR  = ./                                                                                                                        
+                                                                                                                                     
+   ,
+ CN_RESTO        = resto_ice.nc                                                                                                      
+                                                                                                                                     
+           
+ /
+ &NAMINI
+ LN_ICEINI       = T,
+ NN_ICEINICOR    =           0,
+ NN_ICEINI_FILE  =           0,
+ RN_THRES_SST    =   2.000000    ,
+ RN_HTI_INI_N    =   3.000000    ,
+ RN_HTI_INI_S    =   1.000000    ,
+ RN_HTS_INI_N    =  0.3000000    ,
+ RN_HTS_INI_S    =  0.3000000    ,
+ RN_ATI_INI_N    =  0.9000000    ,
+ RN_ATI_INI_S    =  0.9000000    ,
+ RN_SMI_INI_N    =   6.300000    ,
+ RN_SMI_INI_S    =   6.300000    ,
+ RN_TMI_INI_N    =   270.0000    ,
+ RN_TMI_INI_S    =   270.0000    ,
+ RN_TSU_INI_N    =   270.0000    ,
+ RN_TSU_INI_S    =   270.0000    ,
+ RN_TMS_INI_N    =   270.0000    ,
+ RN_TMS_INI_S    =   270.0000    ,
+ RN_APD_INI_N    =  0.2000000    ,
+ RN_APD_INI_S    =  0.2000000    ,
+ RN_HPD_INI_N    =  5.0000001E-02,
+ RN_HPD_INI_S    =  5.0000001E-02,
+ RN_HLD_INI_N    =  0.0000000E+00,
+ RN_HLD_INI_S    =  0.0000000E+00,
+ SN_HTI%CLNAME  = Ice_initialization                                                                                                 
+                                                                                                                                     
+          ,
+ SN_HTI%FREQH   =  -12.00000    ,
+ SN_HTI%CLVAR   = hti                               ,
+ SN_HTI%LN_TINT = F,
+ SN_HTI%LN_CLIM = T,
+ SN_HTI%CLTYPE  = yearly  ,
+ SN_HTI%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_HTI%VCOMP   =                                   ,
+ SN_HTI%LNAME   =                                   ,
+ SN_HTS%CLNAME  = Ice_initialization                                                                                                 
+                                                                                                                                     
+          ,
+ SN_HTS%FREQH   =  -12.00000    ,
+ SN_HTS%CLVAR   = hts                               ,
+ SN_HTS%LN_TINT = F,
+ SN_HTS%LN_CLIM = T,
+ SN_HTS%CLTYPE  = yearly  ,
+ SN_HTS%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_HTS%VCOMP   =                                   ,
+ SN_HTS%LNAME   =                                   ,
+ SN_ATI%CLNAME  = Ice_initialization                                                                                                 
+                                                                                                                                     
+          ,
+ SN_ATI%FREQH   =  -12.00000    ,
+ SN_ATI%CLVAR   = ati                               ,
+ SN_ATI%LN_TINT = F,
+ SN_ATI%LN_CLIM = T,
+ SN_ATI%CLTYPE  = yearly  ,
+ SN_ATI%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_ATI%VCOMP   =                                   ,
+ SN_ATI%LNAME   =                                   ,
+ SN_TSU%CLNAME  = Ice_initialization                                                                                                 
+                                                                                                                                     
+          ,
+ SN_TSU%FREQH   =  -12.00000    ,
+ SN_TSU%CLVAR   = tsu                               ,
+ SN_TSU%LN_TINT = F,
+ SN_TSU%LN_CLIM = T,
+ SN_TSU%CLTYPE  = yearly  ,
+ SN_TSU%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_TSU%VCOMP   =                                   ,
+ SN_TSU%LNAME   =                                   ,
+ SN_TMI%CLNAME  = Ice_initialization                                                                                                 
+                                                                                                                                     
+          ,
+ SN_TMI%FREQH   =  -12.00000    ,
+ SN_TMI%CLVAR   = tmi                               ,
+ SN_TMI%LN_TINT = F,
+ SN_TMI%LN_CLIM = T,
+ SN_TMI%CLTYPE  = yearly  ,
+ SN_TMI%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_TMI%VCOMP   =                                   ,
+ SN_TMI%LNAME   =                                   ,
+ SN_SMI%CLNAME  = Ice_initialization                                                                                                 
+                                                                                                                                     
+          ,
+ SN_SMI%FREQH   =  -12.00000    ,
+ SN_SMI%CLVAR   = smi                               ,
+ SN_SMI%LN_TINT = F,
+ SN_SMI%LN_CLIM = T,
+ SN_SMI%CLTYPE  = yearly  ,
+ SN_SMI%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_SMI%VCOMP   =                                   ,
+ SN_SMI%LNAME   =                                   ,
+ SN_TMS%CLNAME  = NOT USED                                                                                                           
+                                                                                                                                     
+          ,
+ SN_TMS%FREQH   =  -12.00000    ,
+ SN_TMS%CLVAR   = tms                               ,
+ SN_TMS%LN_TINT = F,
+ SN_TMS%LN_CLIM = T,
+ SN_TMS%CLTYPE  = yearly  ,
+ SN_TMS%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_TMS%VCOMP   =                                   ,
+ SN_TMS%LNAME   =                                   ,
+ SN_APD%CLNAME  = NOT USED                                                                                                           
+                                                                                                                                     
+          ,
+ SN_APD%FREQH   =  -12.00000    ,
+ SN_APD%CLVAR   = apd                               ,
+ SN_APD%LN_TINT = F,
+ SN_APD%LN_CLIM = T,
+ SN_APD%CLTYPE  = yearly  ,
+ SN_APD%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_APD%VCOMP   =                                   ,
+ SN_APD%LNAME   =                                   ,
+ SN_HPD%CLNAME  = NOT USED                                                                                                           
+                                                                                                                                     
+          ,
+ SN_HPD%FREQH   =  -12.00000    ,
+ SN_HPD%CLVAR   = hpd                               ,
+ SN_HPD%LN_TINT = F,
+ SN_HPD%LN_CLIM = T,
+ SN_HPD%CLTYPE  = yearly  ,
+ SN_HPD%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_HPD%VCOMP   =                                   ,
+ SN_HPD%LNAME   =                                   ,
+ SN_HLD%CLNAME  = NOT USED                                                                                                           
+                                                                                                                                     
+          ,
+ SN_HLD%FREQH   =  -12.00000    ,
+ SN_HLD%CLVAR   = hld                               ,
+ SN_HLD%LN_TINT = F,
+ SN_HLD%LN_CLIM = T,
+ SN_HLD%CLTYPE  = yearly  ,
+ SN_HLD%WNAME   =                                                                                                                    
+                                                                                                                                     
+          ,
+ SN_HLD%VCOMP   =                                   ,
+ SN_HLD%LNAME   =                                   ,
+ CN_DIR  = ./                                                                                                                        
+                                                                                                                                     
+   ,
+ LN_ICEAGEIGN    = F
+ /
+ &NAMDYN
+ LN_DYNALL       = T,
+ LN_DYNRHGADV    = F,
+ LN_DYNADV1D     = F,
+ LN_DYNADV2D     = F,
+ RN_UICE =  9.9999997E-06,
+ RN_VICE =  0.0000000E+00,
+ RN_ISHLAT       =   2.000000    ,
+ LN_LANDFAST_L16 = F,
+ RN_LF_DEPFRA    =  0.1250000    ,
+ RN_LF_BFR       =   10.00000    ,
+ RN_LF_RELAX     =  9.9999997E-06,
+ RN_LF_TENSILE   =  5.0000001E-02
+ /
+ &NAMDYN_RDGRFT
+ LN_STR_H79      = T,
+ RN_PSTAR        =   15000.00    ,
+ RN_CRHG =   20.00000    ,
+ RN_CSRDG        =  0.5000000    ,
+ LN_PARTF_LIN    = F,
+ RN_GSTAR        =  0.1500000    ,
+ LN_PARTF_EXP    = T,
+ RN_ASTAR        =  2.9999999E-02,
+ LN_RIDGING      = T,
+ RN_HSTAR        =   25.00000    ,
+ RN_PORORDG      =  0.3000000    ,
+ RN_FSNWRDG      =  0.5000000    ,
+ RN_FPNDRDG      =   1.000000    ,
+ LN_RAFTING      = T,
+ RN_HRAFT        =  0.7500000    ,
+ RN_CRAFT        =   5.000000    ,
+ RN_FSNWRFT      =  0.5000000    ,
+ RN_FPNDRFT      =   1.000000    
+ /
+ &NAMDYN_RHG
+ LN_RHG_EVP      = T,
+ LN_AEVP = F,
+ RN_CREEPL       =  1.9999999E-09,
+ RN_ECC  =   2.000000    ,
+ NN_NEVP =         120,
+ RN_RELAST       =  0.3330000    ,
+ NN_RHG_CHKCVG   =           0
+ /
+ &NAMDYN_ADV
+ LN_ADV_PRA      = T,
+ LN_ADV_UMX      = F,
+ NN_UMX  =           5
+ /
+ &NAMALB
+ RN_ALB_SDRY     =  0.8000000    ,
+ RN_ALB_SMLT     =  0.7800000    ,
+ RN_ALB_IDRY     =  0.6000000    ,
+ RN_ALB_IMLT     =  0.5800000    ,
+ RN_ALB_DPND     =  0.3000000    
+ /
+ &NAMDIA
+ LN_ICEDIACHK    = F,
+ RN_ICECHK_CEL   =   100.0000    ,
+ RN_ICECHK_GLO   =   1.000000    ,
+ LN_ICEDIAHSB    = F,
+ LN_ICECTL       = F,
+ IICEPRT =          10,
+ JICEPRT =          10
+ /

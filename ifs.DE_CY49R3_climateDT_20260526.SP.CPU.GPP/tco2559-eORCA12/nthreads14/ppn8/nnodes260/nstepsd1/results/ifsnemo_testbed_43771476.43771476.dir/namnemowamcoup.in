@@ -1,0 +1,11 @@
+&NAMNEMOWAMCOUP
+    CDFILE_WAM_TO_T='./remap/remap_wam_ifs_2559_4_mask_to_eORCA12_GO8_Z75_mask_T_L1.nc',
+    CDFILE_WAM_TO_U='./remap/remap_wam_ifs_2559_4_mask_to_eORCA12_GO8_Z75_mask_U_L1.nc',
+    CDFILE_WAM_TO_V='./remap/remap_wam_ifs_2559_4_mask_to_eORCA12_GO8_Z75_mask_V_L1.nc',
+    CDFILE_T_TO_WAM='./remap/remap_eORCA12_GO8_Z75_mask_T_L1_to_wam_ifs_2559_4_mask.nc',
+    CDPATHDIST='./',
+    LREADDIST=false,
+    LWRITEDIST=false,
+    LPARBCAST=true,
+    LPARINTMULTWAM=true,
+/

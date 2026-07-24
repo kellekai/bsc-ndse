@@ -1,0 +1,3 @@
+HEALPix_FDB_HOME=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/fdb/HEALPix
+Native_FDB_HOME=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/fdb/Native
+RegularLL_FDB_HOME=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/fdb/RegularLL

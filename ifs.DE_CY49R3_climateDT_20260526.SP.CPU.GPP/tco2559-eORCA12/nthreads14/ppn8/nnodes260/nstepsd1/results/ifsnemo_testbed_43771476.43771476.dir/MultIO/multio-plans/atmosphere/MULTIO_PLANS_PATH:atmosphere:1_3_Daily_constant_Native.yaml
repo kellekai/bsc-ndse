@@ -1,0 +1,34 @@
+name: constant-daily-native-grid
+enable: true
+actions:
+- type: select
+  match:
+  - levtype: sfc
+    param:
+    - 129
+    - 172
+- type: metadata-mapping
+  mapping: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771476/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:additional-destinE-Metadata.yaml
+  overwrite-existing: true
+  enforce-match: true
+- type: statistics-mtg2
+  output-frequency: 1d
+  options:
+    initial-condition-present: true
+  operations:
+  - instant
+- type: scale
+  custom-mappings:
+  - param-in: 129
+    param-out: 228002
+    scaling: 0.1019716213
+- type: encode-mtg2
+  cached: '1'
+- type: sink
+  sinks:
+  - type: fdb5
+    enable: true
+    config:
+      fdb_home: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771476/fdb/Native

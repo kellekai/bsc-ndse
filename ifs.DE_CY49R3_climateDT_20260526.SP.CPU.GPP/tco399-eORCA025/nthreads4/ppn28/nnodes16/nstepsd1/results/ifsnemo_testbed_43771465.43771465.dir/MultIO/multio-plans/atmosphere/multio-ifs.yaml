@@ -1,0 +1,21 @@
+plans:
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_1_Hourly_Native.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_2_FluxAvg_Daily_Native.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_3_Daily_constant_Native.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_1_Monthly_Native.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_2_FluxAvg_Monthly_Native.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_1_Hourly_HEALPix.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_2_FluxAvg_Daily_HEALPix.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_3_Daily_constant_HEALPix.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_1_Monthly_HEALPix.yaml
+- file: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:atmosphere:1_2_FluxAvg_Monthly_HEALPix.yaml

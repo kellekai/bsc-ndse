@@ -1,0 +1,311 @@
+client:
+  on-error: abort-transport
+  plans:
+  - name: ocean-domain-info
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-domain-map
+        - ocean-mask
+    - type: transport
+      target: server
+  - name: stream-daily
+    actions:
+    - type: select
+      match:
+      - name:
+        - snwvolu
+        - woce
+        - icevolu
+        - icethic
+        - ice_cover
+        - iicevelur
+        - iicevelvr
+        - sss
+        - sst
+        - ssh
+        - vocen
+        - uocee
+        - toce
+        - soce
+        - hcbtm
+        - hc300
+        - hc700
+    - type: metadata-mapping
+      mapping: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/multio-plans/ocean/MULTIO_PLANS_PATH:ocean:mapping:nemo-to-grib.yaml
+      enforce-match: true
+    - type: metadata-mapping
+      mapping: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/multio-plans/ocean/MULTIO_PLANS_PATH:ocean:mapping:mapping-nemo-special-values.yaml
+      enforce-match: true
+      overwrite-existing: false
+    - type: statistics
+      output-frequency: 1d
+      operations:
+      - average
+    - type: metadata-mapping
+      mapping: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/multio-plans/ocean/MULTIO_PLANS_PATH:ocean:mapping:mapping-climateDT-instant-fields-ocean.yaml
+      overwrite-existing: true
+      enforce-match: true
+    - type: transport
+      target: server
+server:
+  transport: mpi
+  on-error: abort-transport
+  plans:
+  - name: ocean-fields-native
+    enable: '1'
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-2d
+        - ocean-3d
+    - type: aggregate
+    - type: mask
+      apply-bitmap: true
+      offset-fields:
+      - sst
+      - toce
+      - icettop
+      offset-value: 273.15
+    - type: encode
+      format: grib
+      template: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/grib_templates/templates.unstructured/unstr_avg_fc.tmpl
+      unstructured-grid-type: eORCA1
+      additional-metadata:
+        resolution: high
+    - type: sink
+      sinks:
+      - type: file
+        enable: '0'
+        append: true
+        per-server: true
+        path: ocean-output-field-daily-native.grib
+      - type: fdb5
+        enable: '1'
+        config:
+          fdb_home: 
+            /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/fdb/Native
+  - name: ocean-fields-healpix-standard
+    enable: '1'
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-2d
+        - ocean-3d
+    - type: aggregate
+    - type: mask
+      apply-bitmap: true
+      offset-fields:
+      - sst
+      - toce
+      - icettop
+      offset-value: 273.15
+    - type: interpolate
+      input: eORCA1
+      grid: H32_nested
+      options:
+        caching: true
+    - type: encode
+      format: grib
+      template: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/grib_templates/HEALPix_statistical.tmpl
+      additional-metadata:
+        resolution: standard
+    - type: sink
+      sinks:
+      - type: file
+        enable: '0'
+        append: true
+        per-server: true
+        path: ocean-output-field-daily-standard.grib
+      - type: fdb5
+        enable: '1'
+        config:
+          fdb_home: 
+            /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/fdb/HEALPix
+  - name: ocean-fields-healpix-high
+    enable: '0'
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-2d
+        - ocean-3d
+    - type: aggregate
+    - type: mask
+      apply-bitmap: true
+      offset-fields:
+      - sst
+      - toce
+      - icettop
+      offset-value: 273.15
+    - type: interpolate
+      input: eORCA1
+      grid: '{MULTIO_HEALPIX_HIGH_GRID}'
+      options:
+        caching: true
+    - type: encode
+      format: grib
+      template: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/grib_templates/HEALPix_statistical.tmpl
+      additional-metadata:
+        resolution: high
+    - type: sink
+      sinks:
+      - type: file
+        enable: '0'
+        append: true
+        per-server: true
+        path: ocean-output-field-daily-high.grib
+      - type: fdb5
+        enable: '1'
+        config:
+          fdb_home: 
+            /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/fdb/HEALPix
+  - name: ocean-fields-monthly-native
+    enable: '1'
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-3d
+        - ocean-2d
+    - type: aggregate
+    - type: mask
+      apply-bitmap: true
+      offset-fields:
+      - sst
+      - toce
+      - icettop
+      offset-value: 273.15
+    - type: statistics
+      output-frequency: 1m
+      operations:
+      - average
+    - type: metadata-mapping
+      mapping: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/multio-plans/ocean/MULTIO_PLANS_PATH:ocean:mapping:daily-to-monthly-stream.yaml
+      overwrite-existing: true
+      enforce-match: true
+    - type: encode
+      format: grib
+      template: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/grib_templates/templates.unstructured/unstr_avg.tmpl
+      unstructured-grid-type: eORCA1
+      additional-metadata:
+        resolution: high
+    - type: sink
+      sinks:
+      - type: file
+        enable: '0'
+        append: true
+        per-server: true
+        path: ocean-output-field-monthly-native.grib
+      - type: fdb5
+        enable: '1'
+        config:
+          fdb_home: 
+            /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/fdb/Native
+  - name: ocean-fields-monthly-healpix-standard
+    enable: '1'
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-3d
+        - ocean-2d
+    - type: aggregate
+    - type: mask
+      apply-bitmap: true
+      offset-fields:
+      - sst
+      - toce
+      - icettop
+      offset-value: 273.15
+    - type: statistics
+      output-frequency: 1m
+      operations:
+      - average
+    - type: metadata-mapping
+      mapping: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/multio-plans/ocean/MULTIO_PLANS_PATH:ocean:mapping:daily-to-monthly-stream.yaml
+      overwrite-existing: true
+      enforce-match: true
+    - type: interpolate
+      input: eORCA1
+      grid: H32_nested
+      options:
+        caching: true
+    - type: encode
+      format: grib
+      template: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/grib_templates/HEALPix_statistical.tmpl
+      additional-metadata:
+        resolution: standard
+    - type: sink
+      sinks:
+      - type: file
+        enable: '0'
+        append: true
+        per-server: true
+        path: ocean-output-field-monthly-standard.grib
+      - type: fdb5
+        enable: '1'
+        config:
+          fdb_home: 
+            /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/fdb/HEALPix
+  - name: ocean-fields-monthly-healpix-high
+    enable: '0'
+    actions:
+    - type: select
+      match:
+      - category:
+        - ocean-3d
+        - ocean-2d
+    - type: aggregate
+    - type: mask
+      apply-bitmap: true
+      offset-fields:
+      - sst
+      - toce
+      - icettop
+      offset-value: 273.15
+    - type: statistics
+      output-frequency: 1m
+      operations:
+      - average
+    - type: metadata-mapping
+      mapping: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/multio-plans/ocean/MULTIO_PLANS_PATH:ocean:mapping:daily-to-monthly-stream.yaml
+      overwrite-existing: true
+      enforce-match: true
+    - type: interpolate
+      input: eORCA1
+      grid: '{MULTIO_HEALPIX_HIGH_GRID}'
+      options:
+        caching: true
+    - type: encode
+      format: grib
+      template: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/MultIO/grib_templates/HEALPix_statistical.tmpl
+      additional-metadata:
+        resolution: high
+    - type: sink
+      sinks:
+      - type: file
+        enable: '0'
+        append: true
+        per-server: true
+        path: ocean-output-field-monthly-high.grib
+      - type: fdb5
+        enable: '1'
+        config:
+          fdb_home: 
+            /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/fdb/HEALPix

@@ -1,0 +1,22 @@
+mappings:
+- match:
+    stream: mod-mars-stream
+  map:
+    dataset: dataset
+    activity: activity
+    experiment: experiment
+    generation: generation
+    model: model
+    realization: realization
+    resolution: resolution
+    misc-destineLocalVersion: misc-destineLocalVersion
+data:
+- mod-mars-stream: clte
+  dataset: climate-dt
+  activity: baseline
+  experiment: hist
+  generation: '2'
+  model: IFS-NEMO
+  realization: '1'
+  resolution: high
+  misc-destineLocalVersion: 1

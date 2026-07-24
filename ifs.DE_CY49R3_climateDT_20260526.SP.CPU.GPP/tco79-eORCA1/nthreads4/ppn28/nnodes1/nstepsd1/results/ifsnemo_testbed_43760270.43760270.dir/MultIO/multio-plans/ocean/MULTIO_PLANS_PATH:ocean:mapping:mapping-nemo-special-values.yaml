@@ -1,0 +1,10 @@
+mappings:
+- match:
+    category: mod-ocean-fields
+  map:
+    timeStep: timeStep
+data:
+- mod-ocean-fields: ocean-3d
+  timeStep: '3600'
+- mod-ocean-fields: ocean-2d
+  timeStep: '3600'

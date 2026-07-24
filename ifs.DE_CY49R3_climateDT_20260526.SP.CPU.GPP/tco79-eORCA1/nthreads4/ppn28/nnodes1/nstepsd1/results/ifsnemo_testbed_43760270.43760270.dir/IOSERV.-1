@@ -1,0 +1,5 @@
+(W) CACHE-MANAGER mir/weights, /tmp/cache does not exist
+(W) CACHE-MANAGER mir/weights, /tmp/cache created
+(I) Cache file /tmp/cache/mir/weights/18/linear/R80-2fe65e98c3f7e32149becfab9c76d6fc-89.1415:0:-89.1415:358.929/H32n-490338047e8403eeb8067430c3dc9d09.mat does not exist
+(I) Creating cache file /tmp/cache/mir/weights/18/linear/R80-2fe65e98c3f7e32149becfab9c76d6fc-89.1415:0:-89.1415:358.929/H32n-490338047e8403eeb8067430c3dc9d09.mat
+(I) CacheManager creating file /tmp/cache/mir/weights/18/linear/R80-2fe65e98c3f7e32149becfab9c76d6fc-89.1415:0:-89.1415:358.929/H32n-490338047e8403eeb8067430c3dc9d09.mat

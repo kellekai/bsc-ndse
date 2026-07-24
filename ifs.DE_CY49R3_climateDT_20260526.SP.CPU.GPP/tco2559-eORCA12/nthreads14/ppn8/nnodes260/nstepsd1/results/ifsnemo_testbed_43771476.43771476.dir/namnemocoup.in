@@ -1,0 +1,12 @@
+&NAMNEMOCOUP
+    CDFILE_GAUSS_TO_T='./remap/remap_2559_4_mask_to_eORCA12_GO8_Z75_mask_T_L1.nc',
+    CDFILE_GAUSS_TO_U='./remap/remap_2559_4_mask_to_eORCA12_GO8_Z75_mask_U_L1.nc',
+    CDFILE_GAUSS_TO_V='./remap/remap_2559_4_mask_to_eORCA12_GO8_Z75_mask_V_L1.nc',
+    CDFILE_T_TO_GAUSS='./remap/remap_eORCA12_GO8_Z75_mask_T_L1_to_2559_4_mask.nc',
+    NSSTLVL(1:2)=1, 1,
+    LPARBCAST=true,
+    CDPATHDIST='./',
+    LREADDIST=false,
+    LWRITEDIST=false,
+    LPARINTMULTATM=true,
+/

@@ -1,0 +1,301 @@
+SHELL=/bin/bash
+I_MPI_F77=ifort
+SLURM_ERSBAC=1
+DNB_IFSNEMO_BUILD_SUBDIR=build.49r3.intel
+PSUBMIT_RANK0=out.43769894.0
+DNB_IFSNEMO_INPROOT=/gpfs/scratch/ehpc01/ecm774380/49r3_input_files_scientific/
+FFTW_HOME=/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/
+SLURM_JOB_USER=bsc631248
+SLURM_TASKS_PER_NODE=14(x125)
+DNB_IFSNEMO_HOST=mn5-gpp
+SLURM_JOB_UID=4216
+PSUBMIT_NTH=8
+HISTCONTROL=ignoredups
+I_MPI_EXTRA_FILESYSTEM=on
+SLURM_TASK_PID=37568
+PKG_CONFIG_PATH=/apps/GPP/UCX/1.16.0/INTEL/lib/pkgconfig:/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/pkgconfig:/apps/GPP/PYTHON/3.12.1/INTEL/lib/pkgconfig:/apps/GPP/SQLITE3/3.45.2/INTEL/lib/pkgconfig:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib/pkgconfig:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib/pkgconfig:/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib/pkgconfig:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/pkgconfig
+SLURM_LOCALID=0
+EAR_TMP=/var/tmp/ear
+SLURM_SUBMIT_DIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox
+__LMOD_REF_COUNT_TBB_SHLIB=-I/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8:1;-tbb:1
+HOSTNAME=gs04r2b09
+HISTSIZE=1000
+SLURMD_NODENAME=gs04r2b09
+RAPS_VERSION=23
+I_MPI_FABRICS=shm:ofi
+MKL_DYNAMIC=FALSE
+SLURM_JOB_START_TIME=1784898098
+PSUBMIT_OMIT_STACKTRACE_SCAN=ON
+PSUBMIT_NODELIST=gs04r2b09:14,gs04r2b10:14,gs04r2b37:14,gs04r2b38:14,gs04r2b39:14,gs04r2b40:14,gs04r2b42:14,gs04r2b43:14,gs04r2b44:14,gs04r2b46:14,gs04r2b47:14,gs04r2b55:14,gs04r2b56:14,gs04r2b59:14,gs04r2b60:14,gs04r2b61:14,gs04r2b62:14,gs04r2b63:14,gs04r2b64:14,gs04r2b65:14,gs11r1b10:14,gs11r1b11:14,gs11r1b61:14,gs11r1b69:14,gs11r1b70:14,gs11r1b72:14,gs11r2b50:14,gs11r2b51:14,gs11r2b52:14,gs11r2b53:14,gs11r2b54:14,gs11r2b55:14,gs11r2b56:14,gs11r2b57:14,gs11r2b58:14,gs11r2b59:14,gs11r2b60:14,gs11r2b61:14,gs11r2b62:14,gs11r2b66:14,gs11r2b67:14,gs11r2b68:14,gs11r2b69:14,gs11r2b71:14,gs11r2b72:14,gs12r1b42:14,gs12r1b43:14,gs12r1b44:14,gs12r1b45:14,gs12r1b46:14,gs12r1b48:14,gs12r1b49:14,gs12r1b50:14,gs12r1b51:14,gs12r1b56:14,gs12r1b65:14,gs12r1b66:14,gs12r1b68:14,gs12r1b70:14,gs13r2b38:14,gs13r2b39:14,gs13r2b57:14,gs13r2b58:14,gs13r2b63:14,gs13r2b64:14,gs13r2b66:14,gs15r2b63:14,gs15r2b65:14,gs15r2b66:14,gs15r2b67:14,gs15r2b70:14,gs15r2b72:14,gs16r3b03:14,gs16r3b05:14,gs16r3b07:14,gs16r3b55:14,gs16r3b56:14,gs16r3b57:14,gs17r2b13:14,gs17r2b38:14,gs17r2b39:14,gs17r2b40:14,gs17r2b41:14,gs17r2b42:14,gs17r2b67:14,gs17r2b71:14,gs17r3b31:14,gs17r3b67:14,gs17r3b68:14,gs17r3b70:14,gs17r3b71:14,gs17r3b72:14,gs18r3b48:14,gs18r3b49:14,gs18r3b50:14,gs18r3b53:14,gs18r3b56:14,gs18r3b58:14,gs18r3b59:14,gs18r3b60:14,gs18r3b61:14,gs18r3b62:14,gs18r3b63:14,gs18r3b64:14,gs18r3b65:14,gs18r3b66:14,gs18r3b67:14,gs18r3b68:14,gs18r3b69:14,gs18r3b70:14,gs19r3b02:14,gs19r3b33:14,gs19r3b34:14,gs19r3b40:14,gs19r3b41:14,gs19r3b42:14,gs19r3b43:14,gs19r3b44:14,gs19r3b45:14,gs19r3b46:14,gs19r3b67:14,gs19r3b68:14,gs19r3b70:14,gs19r3b71:14,gs19r3b72:14
+HYDRA_LAUNCHER_EXTRA_ARGS=--external-launcher
+_ModuleTable007_=Mi4wIiwKd1YgPSAiXjAwMDAyMDIzLjAwMDAwMDAwMi4qemZpbmFsIiwKfSwKcG5ldGNkZiA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2xpYnMvcG5ldGNkZi8xLjEyLjMubHVhIiwKZnVsbE5hbWUgPSAicG5ldGNkZi8xLjEyLjMiLApsb2FkT3JkZXIgPSA3LApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInBuZXRjZGYvMS4xMi4zIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCnB5dGhvbiA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2Vudmlyb25tZW50L3B5dGhvbi8zLjEyLjEubHVhIiwKZnVsbE5hbWUgPSAicHl0aG9uLzMuMTIuMSIsCmxvYWRP
+MPICC=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin/mpiicc
+_ModuleTable002_=YnMvZmZ0dy8zLjMuMTAiLApmdWxsTmFtZSA9ICJmZnR3LzMuMy4xMCIsCmxvYWRPcmRlciA9IDUsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiZmZ0dy8zLjMuMTAiLAp3ViA9ICIwMDAwMDAwMDMuMDAwMDAwMDAzLjAwMDAwMDAxMC4qemZpbmFsIiwKfSwKaGRmNSA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2xpYnMvaGRmNS8xLjE0LjEtMi5sdWEiLApmdWxsTmFtZSA9ICJoZGY1LzEuMTQuMS0yIiwKbG9hZE9yZGVyID0gNiwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJoZGY1LzEuMTQuMS0yIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDAx
+HDF5_DIR=/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI
+PSUBMIT_NP=1750
+SSH_AUTH_SOCK=/tmp/ssh-XXXX6QfzPE/agent.1819733
+MPI_V=2021.10.0
+__LMOD_REF_COUNT_MODULEPATH=/apps/GPP/modulefiles/applications:1;/apps/GPP/modulefiles/compilers:1;/apps/GPP/modulefiles/environment:1;/apps/GPP/modulefiles/libs:1
+__LMOD_REF_COUNT_CPLUS_INCLUDE_PATH=/apps/GPP/UCX/1.16.0/INTEL/include:1;/apps/GPP/PYTHON/3.12.1/INTEL/include/python3.12:1;/apps/GPP/PYTHON/3.12.1/INTEL/include:1;/apps/GPP/SQLITE3/3.45.2/INTEL/include:1;/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/include:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/include:1;/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/include:1
+DNB_IFSNEMO_RAPS_BUNDLE_FILE=49r3.yml
+I_MPI_CC=icc
+I_MPI_ROOT=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0
+_ModuleTable005_=YW4tNC42LjFfY3h4NC00LjMuMV9oZGY1LTEuMTQuMS0yX3BuZXRjZGYtMS4xMi4zLmx1YSIsCmZ1bGxOYW1lID0gIm5ldGNkZi9jLTQuOS4yX2ZvcnRyYW4tNC42LjFfY3h4NC00LjMuMV9oZGY1LTEuMTQuMS0yX3BuZXRjZGYtMS4xMi4zIiwKbG9hZE9yZGVyID0gOCwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJuZXRjZGYvYy00LjkuMl9mb3J0cmFuLTQuNi4xX2N4eDQtNC4zLjFfaGRmNS0xLjE0LjEtMl9wbmV0Y2RmLTEuMTIuMyIsCndWID0gIipjLip6ZmluYWwtLjAwMDAwMDAwNC4wMDAwMDAwMDkuMDAwMDAwMDAyLipfLipmb3J0cmFuLip6ZmluYWwtLjAwMDAwMDAwNC4wMDAwMDAwMDYuMDAwMDAwMDAxLipf
+SLURM_CLUSTER_NAME=marenostrum5
+BSC_MACHINE=mn5
+SLURM_JOB_END_TIME=1784905298
+INTEL_INC=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest//linux/include
+SLURM_ECPLUG=1
+SLURM_CPUS_ON_NODE=112
+FI_PROVIDER_PATH=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/lib/prov:/usr/lib64/libfabric
+TBB_DIR=/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8
+DNB_IFSNEMO_EXPORTS=ATLAS_DATA_PATH=/gpfs/projects/ehpc01/atlas-orca-data-cache
+SLURM_JOB_CPUS_PER_NODE=112(x125)
+MPICXX=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin/mpiicpc
+LMOD_DIR=/apps/modules/LMOD/8.7/lmod/lmod/libexec
+PSUBMIT_PREPROC=ifsMASTER.SP.CPU.GPP//ifsnemo-preproc.sh
+MPIFC=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin/mpiifort
+DNB_IFSNEMO_USE_ARCH_AND_RAPS=True
+MPICH_ABORT_ON_ERROR=1
+__LMOD_REF_COUNT_SQLite3_INCLUDE_DIR=/apps/GPP/SQLITE3/3.45.2/INTEL/include:1
+PRTE_MCA_plm_slurm_args=--external-launcher
+PWD=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43769894
+SLURM_GTIDS=0
+LOGNAME=bsc631248
+DNB_IFSNEMO_TESTBED=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43769894
+SLURM_JOB_PARTITION=gpp
+MODULESHOME=/apps/modules/LMOD/8.7/lmod/lmod
+__LMOD_REF_COUNT_SQLITE3_LIBRARY=/apps/GPP/SQLITE3/3.45.2/INTEL/lib:1
+SLURM_ERLAST=sbatch
+MANPATH=/apps/GPP/PYTHON/3.12.1/INTEL/share/man:/apps/GPP/SQLITE3/3.45.2/INTEL/share/man:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/share/man:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/man:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/documentation/en/man/common:/apps/modules/LMOD/8.7/lmod/lmod/share/man::
+SLURM_OOM_KILL_STEP=0
+__LMOD_REF_COUNT_CPPFLAGS=-I/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include:1
+SLURM_JOB_NUM_NODES=125
+CXX=icpc
+DNB_IFSNEMO_SCRIPT_DIR=mn5-gpp
+_ModuleTable008_=cmRlciA9IDExLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInB5dGhvbi8zLjEyLjEiLAp3ViA9ICIwMDAwMDAwMDMuMDAwMDAwMDEyLjAwMDAwMDAwMS4qemZpbmFsIiwKfSwKc3FsaXRlMyA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2xpYnMvc3FsaXRlMy8zLjQ1LjIubHVhIiwKZnVsbE5hbWUgPSAic3FsaXRlMy8zLjQ1LjIiLApsb2FkT3JkZXIgPSAxMCwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJzcWxpdGUzLzMuNDUuMiIsCndWID0gIjAwMDAwMDAwMy4wMDAwMDAwNDUuMDAwMDAwMDAyLip6ZmluYWwiLAp9LAp0YmIgPSB7CmZuID0g
+PSUBMIT_JOBID=43769894
+__LMOD_REF_COUNT_CMAKE_PREFIX_PATH=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/cmake:1
+NSTEPS=d1
+DNB_IFSNEMO_BUNDLE_GIT=https://github.com/ecmwf-ifs/ifs-bundle.git
+SLURM_JOBID=43769894
+MKL_HOME=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0
+RAPS_ETCDIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps/etc
+SQLite3_LIBRARY=/apps/GPP/SQLITE3/3.45.2/INTEL/lib
+SLURM_JOB_QOS=gp_ehpc
+I_MPI_HYDRA_BOOTSTRAP_EXEC_EXTRA_ARGS=--external-launcher
+SLURM_THREADS_PER_CORE=1
+MPI_HOME=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0
+OMP_WAIT_POLICY=ACTIVE
+MOTD_SHOWN=pam
+__LMOD_REF_COUNT_PATH=/apps/GPP/UCX/1.16.0/INTEL/bin:1;/apps/GPP/PYTHON/3.12.1/INTEL/bin:1;/apps/GPP/SQLITE3/3.45.2/INTEL/bin:1;/apps/GPP/CMAKE/3.29.2/bin:1;/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/bin:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/bin:1;/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/bin:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/bin:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/bin:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/bin/intel64:1;/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin:1;/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps/bin:1;/home/bsc/bsc631248/opt/mosh/bin:2;/home/bsc/bsc631248/.local/bin:1;/home/bsc/bsc631248/bin:1;/home/bsc/bsc631248/sshfs-laptop/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/home/bsc/bsc631248/.fzf/bin:1
+LDFLAGS=-L/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib
+HOME=/home/bsc/bsc631248
+FI_PROVIDER=mlx
+SQLITE3_LIBRARY=/apps/GPP/SQLITE3/3.45.2/INTEL/lib
+_ModuleTable_Sz_=10
+__LMOD_REF_COUNT_LIBRARY_PATH=/apps/GPP/UCX/1.16.0/INTEL/lib:1;/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8:1;/apps/GPP/PYTHON/3.12.1/INTEL/lib:1;/apps/GPP/SQLITE3/3.45.2/INTEL/lib:1;/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib:1;/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib:1;/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib/release:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/intel64:1
+MPMD_PROGRAMS=
+HISTFILE=/home/bsc/bsc631248/.bash_history.mn5
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:
+RAPS_IFS_BUILDDIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/apps/GPP/UCX/1.16.0/INTEL/lib/pkgconfig:1;/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/pkgconfig:1;/apps/GPP/PYTHON/3.12.1/INTEL/lib/pkgconfig:1;/apps/GPP/SQLITE3/3.45.2/INTEL/lib/pkgconfig:1;/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib/pkgconfig:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib/pkgconfig:1;/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib/pkgconfig:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/pkgconfig:1
+SLURM_PROCID=0
+MPIF90=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin/mpiifort
+PSUBMIT_NGPUS=0
+DNB_GITLAB_ACCESS_TOKEN=xGH_UsKHxbsajX8krEkL
+MPICH_CXX=icpc
+I_MPI_PLATFORM=spr
+OMPI_F90=ifort
+__LMOD_REF_COUNT_CPATH=/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/include:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/include:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/include:1
+RUNNER_SCRIPT_DEFAULT_ARGS=
+LMOD_SETTARG_FULL_SUPPORT=no
+I_MPI_TUNING_BIN=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/etc/tuning_spr_shm-ofi.dat
+TMPDIR=/scratch/tmp/43769894
+__LMOD_REF_COUNT_PNETCDF_DIR=/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI:1
+PSUBMIT_ERANK0=err.43769894.0
+CMAKE_PREFIX_PATH=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/arch/eurohpc/mn5-gpp/intel/2021.10.0/intelmpi/2021.10.0/install:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/cmake
+CPPFLAGS=-I/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include
+MPIF77=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin/mpiifort
+_ModuleTable010_=MDAwMDAwMDEuMDAwMDAwMDE2Lip6ZmluYWwiLAp9LAp9LAptcGF0aEEgPSB7CiIvYXBwcy9HUFAvbW9kdWxlZmlsZXMvYXBwbGljYXRpb25zIiwgIi9hcHBzL0dQUC9tb2R1bGVmaWxlcy9jb21waWxlcnMiCiwgIi9hcHBzL0dQUC9tb2R1bGVmaWxlcy9lbnZpcm9ubWVudCIsICIvYXBwcy9HUFAvbW9kdWxlZmlsZXMvbGlicyIsCn0sCnN5c3RlbUJhc2VNUEFUSCA9ICIvYXBwcy9HUFAvbW9kdWxlZmlsZXMvYXBwbGljYXRpb25zOi9hcHBzL0dQUC9tb2R1bGVmaWxlcy9jb21waWxlcnM6L2FwcHMvR1BQL21vZHVsZWZpbGVzL2Vudmlyb25tZW50Oi9hcHBzL0dQUC9tb2R1bGVmaWxlcy9saWJzIiwKfQo=
+NETCDF_DIR=/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI
+SLURM_NTASKS=1750
+DNB_IFSNEMO_BASE_GIT_URL=https://github.com/ecmwf-ifs
+OMPI_F77=ifort
+DNB_IFSNEMO_IO_TASKS_TCO1279=4:14:3:8
+DNB_IFSNEMO_DEFAULT_NPROMA=32
+SLURM_TOPOLOGY_ADDR=core.gi01ibsw.gs04r2ibsw.gs04r2b09
+ECKIT_GEO_CACHE_PATH=/gpfs/projects/ehpc01/eckit-geo-cache
+LMOD_VERSION=8.7
+SSH_CONNECTION=192.168.77.151 48240 212.128.225.11 22
+OUTROOT=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43769894
+INPROOT=/gpfs/scratch/ehpc01/ecm774380/49r3_input_files_scientific/
+PSUBMIT_DIRNAME=/gpfs/home/bsc/bsc631248/bin
+CMPLR_ROOT=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/
+TBBMALLOC_DIR=/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8
+MPICH_F77=ifort
+DNB_GITLAB_USERNAME=nabel
+_ModuleTable003_=NC4wMDAwMDAwMDEuKnpmaW5hbC0uMDAwMDAwMDAyLip6ZmluYWwiLAp9LAppbXBpID0gewpmbiA9ICIvYXBwcy9HUFAvbW9kdWxlZmlsZXMvZW52aXJvbm1lbnQvaW1waS8yMDIxLjEwLjAiLApmdWxsTmFtZSA9ICJpbXBpLzIwMjEuMTAuMCIsCmxvYWRPcmRlciA9IDQsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiaW1waS8yMDIxLjEwLjAiLAp3ViA9ICJeMDAwMDIwMjEuMDAwMDAwMDEwLip6ZmluYWwiLAp9LAppbnRlbCA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2NvbXBpbGVycy9pbnRlbC8yMDIzLjIuMCIsCmZ1bGxOYW1lID0gImludGVsLzIwMjMuMi4wIiwKbG9hZE9yZGVyID0gMSwKcHJvcFQg
+HYDRA_BOOTSTRAP=slurm
+ATLAS_DATA_PATH=/gpfs/projects/ehpc01/atlas-orca-data-cache
+I_MPI_CXX=icpc
+PSUBMIT_SUBDIR=ifsMASTER.SP.CPU.GPP/
+MODULEPATH_ROOT=/apps/modules/LMOD/8.7/modulefiles
+FESOM_PLATFORM_STRATEGY=mn5-gpp
+SLURM_TOPOLOGY_ADDR_PATTERN=switch.switch.switch.node
+SLURM_MEM_PER_CPU=2000
+TARGET_BIN=false
+PSUBMIT_OPTLIST=time=120:ngpus=0
+MAKEFLAGS=--max-load 6
+LMOD_PKG=/apps/modules/LMOD/8.7/lmod/lmod
+SLURM_SCRIPT_CONTEXT=prolog_task
+__LMOD_REF_COUNT_TBB_INC=-I/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/include:1
+PYTHONPATH=/apps/GPP/PYTHON/3.12.1/INTEL/lib/python3.12/site-packages
+MPICH_F90=ifort
+__LMOD_REF_COUNT_PYTHONPATH=/apps/GPP/PYTHON/3.12.1/INTEL/lib/python3.12/site-packages:1
+TERM=xterm-256color
+MPICH_FC=ifort
+CPLUS_INCLUDE_PATH=/apps/GPP/UCX/1.16.0/INTEL/include:/apps/GPP/PYTHON/3.12.1/INTEL/include/python3.12:/apps/GPP/PYTHON/3.12.1/INTEL/include:/apps/GPP/SQLITE3/3.45.2/INTEL/include:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/include:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/include:/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/include
+F77=ifort
+__LMOD_REF_COUNT_LDFLAGS=-L/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib:1
+__LMOD_REF_COUNT_SQLite3_LIBRARY=/apps/GPP/SQLITE3/3.45.2/INTEL/lib:1
+PSUBMIT_PPN=14
+MPI=impi
+PYTHONHOME=/apps/GPP/PYTHON/3.12.1/INTEL
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+EAR_INSTALL_PATH=/opt/EAR/current
+SLURM_ECLIBR=0
+USER=bsc631248
+I_MPI_EXTRA_FILESYSTEM_FORCE=gpfs
+I_MPI_F90=ifort
+LIBRARY_PATH=/apps/GPP/UCX/1.16.0/INTEL/lib:/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8:/apps/GPP/PYTHON/3.12.1/INTEL/lib:/apps/GPP/SQLITE3/3.45.2/INTEL/lib:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib:/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib:/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib/release:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/intel64
+SLURM_NODELIST=gs04r2b[09-10,37-40,42-44,46-47,55-56,59-65],gs11r1b[10-11,61,69-70,72],gs11r2b[50-62,66-69,71-72],gs12r1b[42-46,48-51,56,65-66,68,70],gs13r2b[38-39,57-58,63-64,66],gs15r2b[63,65-67,70,72],gs16r3b[03,05,07,55-57],gs17r2b[13,38-42,67,71],gs17r3b[31,67-68,70-72],gs18r3b[48-50,53,56,58-70],gs19r3b[02,33-34,40-46,67-68,70-72]
+MPICH_OFI_STARTUP_CONNECT=1
+SQLite3_INCLUDE_DIR=/apps/GPP/SQLITE3/3.45.2/INTEL/include
+OMPI_FC=ifort
+ENVIRONMENT=BATCH
+MPI_ROOT=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0
+MPICH_CC=icc
+LOADEDMODULES=intel/2023.2.0:mkl/2023.2.0:oneapi/2023.2.0:impi/2021.10.0:fftw/3.3.10:hdf5/1.14.1-2:pnetcdf/1.12.3:netcdf/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3:cmake/3.29.2:sqlite3/3.45.2:python/3.12.1:tbb/2021.10.0:ucx/1.16.0
+F95=ifort
+OMPI_CC=icc
+F90=ifort
+SLURM_JOB_ACCOUNT=ehpc01
+SLURM_PRIO_PROCESS=0
+SLURM_NPROCS=1750
+DISPLAY=localhost:48.0
+RESOLUTION=tco1279-eORCA12
+LMOD_ROOT=/apps/modules/LMOD/8.7/lmod
+DNB_IFSNEMO_TOPOLOGY=ncores=112:numa=8:nsockets=2:compiler=intel
+SHLVL=3
+RAPS_BINDIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps/bin
+SLURM_NNODES=125
+LD_RUN_PATH=/apps/GPP/UCX/1.16.0/INTEL/lib:/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8:/apps/GPP/PYTHON/3.12.1/INTEL/lib:/apps/GPP/SQLITE3/3.45.2/INTEL/lib:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib:/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib:/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib/release:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../vpl/latest/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../tbb/latest/lib/intel64/gcc4.8:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../itac/latest/slib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ipp/latest/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ippcp/latest/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../dnnl/latest/cpu_dpcpp_gpu_dpcpp/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../dal/latest/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ccl/latest/lib/cpu_gpu_dpcpp:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib/x64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib/emu:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/compiler/lib/intel64_lin
+BASH_ENV=/apps/modules/LMOD/8.7/lmod/lmod/init/bash
+_ModuleTable006_=LipjeHguMDAwMDAwMDA0Lip6ZmluYWwtLjAwMDAwMDAwNC4wMDAwMDAwMDMuMDAwMDAwMDAxLipfLipoZGYuMDAwMDAwMDA1Lip6ZmluYWwtLjAwMDAwMDAwMS4wMDAwMDAwMTQuMDAwMDAwMDAxLip6ZmluYWwtLjAwMDAwMDAwMi4qXy4qcG5ldGNkZi4qemZpbmFsLS4wMDAwMDAwMDEuMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKb25lYXBpID0gewpmbiA9ICIvYXBwcy9HUFAvbW9kdWxlZmlsZXMvZW52aXJvbm1lbnQvb25lYXBpLzIwMjMuMi4wLmx1YSIsCmZ1bGxOYW1lID0gIm9uZWFwaS8yMDIzLjIuMCIsCmxvYWRPcmRlciA9IDMsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAib25lYXBpLzIwMjMu
+LMOD_sys=Linux
+RAPS_IFS_CYCLE=49r3
+MKL_VERBOSE=0
+I_MPI_PMI_LIBRARY=/usr/lib64/libpmi2.so
+MKL_CBWR=AUTO,STRICT
+OCL_ICD_FILENAMES=libintelocl_emu.so:libalteracl.so:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/2023.2.0/linux/lib/x64/libintelocl.so
+BATCH=/gpfs/home/bsc/bsc631248/bin/psub_slurm.sh
+PNETCDF_ROOT=/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI
+_ModuleTable009_=Ii9hcHBzL0dQUC9tb2R1bGVmaWxlcy9saWJzL3RiYi8yMDIxLjEwLjAubHVhIiwKZnVsbE5hbWUgPSAidGJiLzIwMjEuMTAuMCIsCmxvYWRPcmRlciA9IDEyLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInRiYi8yMDIxLjEwLjAiLAp3ViA9ICIwMDAwMDIwMjEuMDAwMDAwMDEwLip6ZmluYWwiLAp9LAp1Y3ggPSB7CmZuID0gIi9hcHBzL0dQUC9tb2R1bGVmaWxlcy9saWJzL3VjeC8xLjE2LjAubHVhIiwKZnVsbE5hbWUgPSAidWN4LzEuMTYuMCIsCmxvYWRPcmRlciA9IDEzLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInVjeC8xLjE2LjAiLAp3ViA9ICIw
+__LMOD_REF_COUNT_MANPATH=/apps/GPP/PYTHON/3.12.1/INTEL/share/man:1;/apps/GPP/SQLITE3/3.45.2/INTEL/share/man:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/share/man:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/man:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/documentation/en/man/common:1;/apps/modules/LMOD/8.7/lmod/lmod/share/man:1
+DNB_IFSNEMO_URL=https://github.com/ecmwf-ifs/
+SLURM_SUBMIT_HOST=glogin4
+MP_COMPILER=intel
+__LMOD_REF_COUNT_SQLITE3_INCLUDE_DIR=/apps/GPP/SQLITE3/3.45.2/INTEL/include:1
+RAPS_ROOTDIR=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps
+_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IGZhbHNlLApjX3Nob3J0VGltZSA9IGZhbHNlLApkZXB0aFQgPSB7fSwKZmFtaWx5ID0ge30sCm1UID0gewpjbWFrZSA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2FwcGxpY2F0aW9ucy9jbWFrZS8zLjI5LjIubHVhIiwKZnVsbE5hbWUgPSAiY21ha2UvMy4yOS4yIiwKbG9hZE9yZGVyID0gOSwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJjbWFrZS8zLjI5LjIiLAp3ViA9ICIwMDAwMDAwMDMuMDAwMDAwMDI5LjAwMDAwMDAwMi4qemZpbmFsIiwKfSwKZmZ0dyA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2xp
+MPIEXEC=/gpfs/home/bsc/bsc631248/bin/mpiexec-impi.sh
+__LMOD_REF_COUNT_PNETCDF_ROOT=/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI:1
+LD_LIBRARY_PATH=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/arch/eurohpc/mn5-gpp/intel/2021.10.0/intelmpi/2021.10.0/install/lib:/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/arch/eurohpc/mn5-gpp/intel/2021.10.0/intelmpi/2021.10.0/install/lib64:/apps/GPP/UCX/1.16.0/INTEL/lib:/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8:/apps/GPP/PYTHON/3.12.1/INTEL/lib:/apps/GPP/SQLITE3/3.45.2/INTEL/lib:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib:/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib:/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib/release:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../vpl/latest/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../tbb/latest/lib/intel64/gcc4.8:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../itac/latest/slib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ipp/latest/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ippcp/latest/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../dnnl/latest/cpu_dpcpp_gpu_dpcpp/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../dal/latest/lib/intel64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ccl/latest/lib/cpu_gpu_dpcpp:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib/x64:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib/emu:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/compiler/lib/intel64_lin
+DNB_IFSNEMO_IO_TASKS_TCO2559=8:14:4:8
+SLURM_JOB_ID=43769894
+PSUBMIT_POSTPROC=./ifsnemo-postproc.sh
+SLURM_NODEID=0
+SQLITE3_INCLUDE_DIR=/apps/GPP/SQLITE3/3.45.2/INTEL/include
+TBB_INC=-I/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/include
+_ModuleTable004_=PSB7fSwKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJpbnRlbC8yMDIzLjIuMCIsCndWID0gIl4wMDAwMjAyMy4wMDAwMDAwMDIuKnpmaW5hbCIsCn0sCm1rbCA9IHsKZm4gPSAiL2FwcHMvR1BQL21vZHVsZWZpbGVzL2xpYnMvbWtsLzIwMjMuMi4wIiwKZnVsbE5hbWUgPSAibWtsLzIwMjMuMi4wIiwKbG9hZE9yZGVyID0gMiwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJta2wvMjAyMy4yLjAiLAp3ViA9ICJeMDAwMDIwMjMuMDAwMDAwMDAyLip6ZmluYWwiLAp9LApuZXRjZGYgPSB7CmZuID0gIi9hcHBzL0dQUC9tb2R1bGVmaWxlcy9saWJzL25ldGNkZi9jLTQuOS4yX2ZvcnRy
+SSH_CLIENT=192.168.77.151 48240 22
+BSC_I_MPI_VERSION=2021.10.0
+NETCDF_ROOT=/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI
+MKLROOT=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0
+OMP_NUM_THREADS=8
+DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
+DNB_IFSNEMO_BUNDLE_BRANCH=CY49R3
+FC=ifort
+which_declare=declare -f
+DNB_IFSNEMO_ARCH_DIR=arch/eurohpc/mn5-gpp/intel/2021.10.0/intelmpi/2021.10.0
+__LMOD_REF_COUNT_C_INCLUDE_PATH=/apps/GPP/UCX/1.16.0/INTEL/include:1;/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/include:1;/apps/GPP/PYTHON/3.12.1/INTEL/include/python3.12:1;/apps/GPP/PYTHON/3.12.1/INTEL/include:1;/apps/GPP/SQLITE3/3.45.2/INTEL/include:1;/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/include:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/include:1;/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include:1;/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/include:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/include:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/include:1
+DNB_IFSNEMO_DVC_CACHE_DIR=/gpfs/scratch/ehpc01/data/.dvc.ehpc01/cache
+XDG_DATA_DIRS=/home/bsc/bsc631248/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+I_MPI_OFI_PROVIDER=mlx
+SLURM_CONF=/etc/slurm/slurm.conf
+PATH=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/arch/eurohpc/mn5-gpp/intel/2021.10.0/intelmpi/2021.10.0/install/bin:/apps/GPP/UCX/1.16.0/INTEL/bin:/apps/GPP/PYTHON/3.12.1/INTEL/bin:/apps/GPP/SQLITE3/3.45.2/INTEL/bin:/apps/GPP/CMAKE/3.29.2/bin:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/bin:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/bin:/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/bin:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/bin:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/bin:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/bin:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/bin/intel64:/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin:/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps/bin:/home/bsc/bsc631248/opt/mosh/bin:/home/bsc/bsc631248/.local/bin:/home/bsc/bsc631248/bin:/home/bsc/bsc631248/sshfs-laptop/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bsc/bsc631248/.fzf/bin
+SLURM_JOB_NAME=ifsnemo-basic-test
+MODULEPATH=/apps/GPP/modulefiles/applications:/apps/GPP/modulefiles/compilers:/apps/GPP/modulefiles/environment:/apps/GPP/modulefiles/libs
+CC=icc
+CFLAGS=-I/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include
+_LMFILES_=/apps/GPP/modulefiles/compilers/intel/2023.2.0:/apps/GPP/modulefiles/libs/mkl/2023.2.0:/apps/GPP/modulefiles/environment/oneapi/2023.2.0.lua:/apps/GPP/modulefiles/environment/impi/2021.10.0:/apps/GPP/modulefiles/libs/fftw/3.3.10:/apps/GPP/modulefiles/libs/hdf5/1.14.1-2.lua:/apps/GPP/modulefiles/libs/pnetcdf/1.12.3.lua:/apps/GPP/modulefiles/libs/netcdf/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3.lua:/apps/GPP/modulefiles/applications/cmake/3.29.2.lua:/apps/GPP/modulefiles/libs/sqlite3/3.45.2.lua:/apps/GPP/modulefiles/environment/python/3.12.1.lua:/apps/GPP/modulefiles/libs/tbb/2021.10.0.lua:/apps/GPP/modulefiles/libs/ucx/1.16.0.lua
+TBB_SHLIB=-I/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8 -tbb
+LMOD_CMD=/apps/modules/LMOD/8.7/lmod/lmod/libexec/lmod
+C_INCLUDE_PATH=/apps/GPP/UCX/1.16.0/INTEL/include:/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/include:/apps/GPP/PYTHON/3.12.1/INTEL/include/python3.12:/apps/GPP/PYTHON/3.12.1/INTEL/include:/apps/GPP/SQLITE3/3.45.2/INTEL/include:/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/include:/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/include:/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include:/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/include:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/include:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/include
+OMPI_CXX=icpc
+HDF5_ROOT=/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI
+BUILD=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/..
+MAIL=/var/spool/mail/bsc631248
+SSH_TTY=/dev/pts/131
+DNB_IFSNEMO_WITH_GPU=FALSE
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/apps/GPP/UCX/1.16.0/INTEL/lib:1;/apps/GPP/ONEAPI/2023.2.0/tbb/2021.10.0/lib/intel64/gcc4.8:1;/apps/GPP/PYTHON/3.12.1/INTEL/lib:1;/apps/GPP/SQLITE3/3.45.2/INTEL/lib:1;/apps/GPP/NETCDF/c-4.9.2_fortran-4.6.1_cxx4-4.3.1_hdf5-1.14.1-2_pnetcdf-1.12.3/INTEL/IMPI/lib:1;/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI/lib:1;/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/lib:1;/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/libfabric/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mpi/2021.10.0/lib/release:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/lib/intel64:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../vpl/latest/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../tbb/latest/lib/intel64/gcc4.8:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../itac/latest/slib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ipp/latest/lib/intel64:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ippcp/latest/lib/intel64:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../dnnl/latest/cpu_dpcpp_gpu_dpcpp/lib:2;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../dal/latest/lib/intel64:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/../../ccl/latest/lib/cpu_gpu_dpcpp:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib/x64:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/lib/emu:1;/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/compiler/lib/intel64_lin:1
+INTEL_HOME=/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/
+PNETCDF_DIR=/apps/GPP/PNETCDF/1.12.3/INTEL/IMPI
+OMPI_MCA_plm_slurm_args=--external-launcher
+SLURM_HINT=nomultithread
+SLURM_JOB_GID=50000
+FFTW_ROOT=/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/
+CPATH=/gpfs/apps/MN5/GPP/FFTW/3.3.10/INTEL/IMPI/include:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/mkl/2023.2.0/include:/gpfs/apps/MN5/GPP/ONEAPI/2023.2.0/compiler/latest/linux/include
+__LMOD_REF_COUNT_CFLAGS=-I/apps/GPP/HDF5/1.14.1-2/INTEL/IMPI/include:1
+INTEL_VERSION=2023.2.0
+OLDPWD=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps
+RUNNER_SCRIPT_DEFAULT_BINARY=false
+PSUBMIT_BATCH_TYPE=slurm
+SLURM_JOB_NODELIST=gs04r2b[09-10,37-40,42-44,46-47,55-56,59-65],gs11r1b[10-11,61,69-70,72],gs11r2b[50-62,66-69,71-72],gs12r1b[42-46,48-51,56,65-66,68,70],gs13r2b[38-39,57-58,63-64,66],gs15r2b[63,65-67,70,72],gs16r3b[03,05,07,55-57],gs17r2b[13,38-42,67,71],gs17r3b[31,67-68,70-72],gs18r3b[48-50,53,56,58-70],gs19r3b[02,33-34,40-46,67-68,70-72]
+DNB_IFSNEMO_IO_TASKS_TCO399=16:2
+DNB_IFSNEMO_IO_TASKS_TCO79=1:1
+I_MPI_HYDRA_BOOTSTRAP=slurm
+BASH_FUNC_ml%%=() {  eval "$($LMOD_DIR/ml_cmd "$@")"
+}
+BASH_FUNC_which%%=() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+BASH_FUNC_module%%=() {  local __lmod_my_status;
+ local __lmod_sh_dbg;
+ if [ -z "${LMOD_SH_DBG_ON+x}" ]; then
+ case "$-" in 
+ *v*x*)
+ __lmod_sh_dbg='vx'
+ ;;
+ *v*)
+ __lmod_sh_dbg='v'
+ ;;
+ *x*)
+ __lmod_sh_dbg='x'
+ ;;
+ esac;
+ fi;
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ set +$__lmod_sh_dbg;
+ echo "Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output" 1>&2;
+ fi;
+ eval "$($LMOD_CMD bash "$@")" && eval $(${LMOD_SETTARG_CMD:-:} -s sh);
+ __lmod_my_status=$?;
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ echo "Shell debugging restarted" 1>&2;
+ set -$__lmod_sh_dbg;
+ fi;
+ return $__lmod_my_status
+}
+_=/usr/bin/printenv

@@ -1,0 +1,93 @@
+name: hourly-healpix
+enable: '1'
+actions:
+- type: select
+  match:
+  - levtype:
+    - sfc
+    - pl
+    - pt
+    - pv
+    - sol
+    - hl
+    param:
+    - 31
+    - 33
+    - 34
+    - 39
+    - 40
+    - 41
+    - 42
+    - 60
+    - 75
+    - 76
+    - 78
+    - 79
+    - 129
+    - 130
+    - 131
+    - 132
+    - 133
+    - 134
+    - 135
+    - 136
+    - 137
+    - 139
+    - 151
+    - 157
+    - 165
+    - 166
+    - 167
+    - 168
+    - 170
+    - 183
+    - 207
+    - 235
+    - 236
+    - 246
+    - 247
+    - 248
+    - 228029
+    - 228038
+    - 228051
+    - 228089
+    - 228090
+    - 228141
+    - 228164
+    - 228235
+    - 260048
+    - 260199
+    - 260360
+  ignore:
+  - levtype:
+    - sfc
+    param:
+    - 129
+- type: metadata-mapping
+  mapping: 
+    /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/MultIO/multio-plans/atmosphere/MULTIO_PLANS_PATH:additional-destinE-Metadata.yaml
+  overwrite-existing: true
+  enforce-match: true
+- type: interpolate-mtg2
+  outputs:
+  - grid: H128_nested
+    enable: '1'
+    options:
+      caching: true
+    additional-metadata:
+      resolution: standard
+  - grid: '{MULTIO_HEALPIX_HIGH_GRID}'
+    enable: '0'
+    options:
+      caching: true
+    additional-metadata:
+      resolution: high
+- type: encode-mtg2
+  cached: '1'
+- type: sink
+  sinks:
+  - type: fdb5
+    enable: true
+    config:
+      fdb_home: 
+        /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43771465/fdb/HEALPix

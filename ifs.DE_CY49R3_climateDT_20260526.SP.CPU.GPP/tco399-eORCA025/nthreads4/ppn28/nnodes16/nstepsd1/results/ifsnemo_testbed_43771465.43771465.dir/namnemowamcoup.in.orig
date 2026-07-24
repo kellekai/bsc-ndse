@@ -1,0 +1,11 @@
+&namnemowamcoup
+  cdfile_wam_to_T='_this_must_get_ifs90-nml_ized_',
+  cdfile_wam_to_U='_this_must_get_ifs90-nml_ized_',
+  cdfile_wam_to_V='_this_must_get_ifs90-nml_ized_',
+  cdfile_T_to_wam='_this_must_get_ifs90-nml_ized_',
+  cdpathdist='./',
+  lreaddist=.false.,
+  lwritedist=.false.,
+  lparbcast=TRUE,
+  lparintmultwam=TRUE,
+/

@@ -1,0 +1,628 @@
+mappings:
+- match:
+    nemoParam: nemo-id
+  map:
+    paramId: param-id
+    unstructuredGridSubtype: unstructured-grid-subtype
+    domain: domain
+    gridType: grid-type
+    typeOfLevel: level-type
+data:
+- nemo-id: lat_T
+  param-id: 250003
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: lon_T
+  param-id: 250004
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: lat_U
+  param-id: 250005
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: oceanSurface
+- nemo-id: lon_U
+  param-id: 250006
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: oceanSurface
+- nemo-id: lat_V
+  param-id: 250007
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: oceanSurface
+- nemo-id: lon_V
+  param-id: 250008
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: oceanSurface
+- nemo-id: lat_W
+  param-id: 250009
+  grid-type: unstructured_grid
+  domain: W grid
+  unstructured-grid-subtype: W
+  level-type: oceanSurface
+- nemo-id: lon_W
+  param-id: 250010
+  grid-type: unstructured_grid
+  domain: W grid
+  unstructured-grid-subtype: W
+  level-type: oceanSurface
+- nemo-id: lat_F
+  param-id: 250011
+  grid-type: unstructured_grid
+  domain: F grid
+  unstructured-grid-subtype: F
+  level-type: oceanSurface
+- nemo-id: lon_F
+  param-id: 250012
+  grid-type: unstructured_grid
+  domain: F grid
+  unstructured-grid-subtype: F
+  level-type: oceanSurface
+- nemo-id: icethic
+  param-id: 262000
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: ice_cover
+  param-id: 262001
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceTopOnWater
+- nemo-id: snwthic
+  param-id: 262002
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: snowLayerOverIceOnWater
+- nemo-id: iicevelur
+  param-id: 262003
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: iicevelvr
+  param-id: 262004
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: icealb
+  param-id: 262005
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceTopOnWater
+- nemo-id: icettop
+  param-id: 262006
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceTopOnWater
+- nemo-id: sss
+  param-id: 262100
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: sst
+  param-id: 262101
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: 14d
+  param-id: 262102
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: isothermal
+- nemo-id: 17d
+  param-id: 262103
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: isothermal
+- nemo-id: 20d
+  param-id: 262104
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: isothermal
+- nemo-id: 26d
+  param-id: 262105
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: isothermal
+- nemo-id: 28d
+  param-id: 262106
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: isothermal
+- nemo-id: qt
+  param-id: 262108
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: vtaun
+  param-id: 262109
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: utaue
+  param-id: 262110
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: vtau
+  param-id: 262111
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: oceanSurface
+- nemo-id: utau
+  param-id: 262112
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: oceanSurface
+- nemo-id: mldr10_1
+  param-id: 262113
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixedLayerDepthByDensity
+- nemo-id: mldkr03
+  param-id: 262114
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixedLayerDepthByDensity
+- nemo-id: mldkr125
+  param-id: 262115
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixedLayerDepthByDensity
+- nemo-id: mldt02
+  param-id: 262116
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixedLayerDepthByTemperature
+- nemo-id: mldt05
+  param-id: 262117
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixedLayerDepthByTemperature
+- nemo-id: sal300
+  param-id: 262118
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: depthBelowSeaLayer
+- nemo-id: sal700
+  param-id: 262119
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: depthBelowSeaLayer
+- nemo-id: salbtm
+  param-id: 262120
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurfaceToBottom
+- nemo-id: hc300
+  param-id: 262121
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: depthBelowSeaLayer
+- nemo-id: hc700
+  param-id: 262122
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: depthBelowSeaLayer
+- nemo-id: hcbtm
+  param-id: 262123
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurfaceToBottom
+- nemo-id: ssh
+  param-id: 262124
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: hst
+  param-id: 262125
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: mlddzt
+  param-id: 262128
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: soce
+  param-id: 262500
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: toce
+  param-id: 262501
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: sigmat
+  param-id: 262502
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: voce
+  param-id: 262503
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: oceanModelLayer
+- nemo-id: uoce
+  param-id: 262504
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: oceanModelLayer
+- nemo-id: vocen
+  param-id: 262505
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: uocee
+  param-id: 262506
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: woce
+  param-id: 262507
+  grid-type: unstructured_grid
+  domain: W grid
+  unstructured-grid-subtype: W
+  level-type: oceanModel
+- nemo-id: hbp
+  param-id: 262129
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurfaceToBottom
+- nemo-id: empmr
+  param-id: 262130
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: runoffs
+  param-id: 262131
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: saltflx
+  param-id: 262132
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: qsr
+  param-id: 262900
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: taum
+  param-id: 262901
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: wspd
+  param-id: 262902
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: heightAboveSea
+- nemo-id: cdn10
+  param-id: 262903
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: heightAboveSea
+- nemo-id: qrp
+  param-id: 262133
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: erp
+  param-id: 262134
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: mldkz5
+  param-id: 262136
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixedLayerDepthByDiffusivity
+- nemo-id: precip
+  param-id: 262904
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: uocees
+  param-id: 262140
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: vocens
+  param-id: 262139
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: hc26c
+  param-id: 262141
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: waterSurfaceToIsothermalOceanLayer
+- nemo-id: thetaodmp
+  param-id: 262508
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: sodmp
+  param-id: 262509
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: ssu
+  param-id: 262137
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: oceanSurface
+- nemo-id: ssv
+  param-id: 262138
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: oceanSurface
+- nemo-id: ssw
+  param-id: 212202
+  grid-type: unstructured_grid
+  domain: W grid
+  unstructured-grid-subtype: W
+  level-type: oceanSurface
+- nemo-id: icevolu
+  param-id: 262008
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: snwvolu
+  param-id: 262009
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: snowLayerOverIceOnWater
+- nemo-id: uice
+  param-id: 262021
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: iceLayerOnWater
+- nemo-id: vice
+  param-id: 262022
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: iceLayerOnWater
+- nemo-id: utau_ai
+  param-id: 262908
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: iceTopOnWater
+- nemo-id: vtau_ai
+  param-id: 262909
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: iceTopOnWater
+- nemo-id: iocestrur
+  param-id: 262906
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: iceTopOnWater
+- nemo-id: iocestrvr
+  param-id: 262907
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: iceTopOnWater
+- nemo-id: snowpre
+  param-id: 262905
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanSurface
+- nemo-id: icetemp
+  param-id: 262010
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: snwtemp
+  param-id: 262011
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: snowLayerOverIceOnWater
+- nemo-id: icetsni
+  param-id: 262012
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceTopUnderSnowOnWater
+- nemo-id: icetbot
+  param-id: 262013
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceBottomOnWater
+- nemo-id: icehc
+  param-id: 262014
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: isnowhc
+  param-id: 262015
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: snowLayerOverIceOnWater
+- nemo-id: icefrb
+  param-id: 262016
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerAboveWaterSurface
+- nemo-id: iceapnd
+  param-id: 262017
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: entireMeltPond
+- nemo-id: icehpnd
+  param-id: 262018
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: entireMeltPond
+- nemo-id: icevpnd
+  param-id: 262019
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: entireMeltPond
+- nemo-id: icesalt
+  param-id: 262023
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceLayerOnWater
+- nemo-id: bckint
+  param-id: 262510
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: bckins
+  param-id: 262511
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: bckineta
+  param-id: 262142
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: mixingLayer
+- nemo-id: bckinseaice
+  param-id: 262020
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: iceTopOnWater
+- nemo-id: bckinu
+  param-id: 262512
+  grid-type: unstructured_grid
+  domain: U grid
+  unstructured-grid-subtype: U
+  level-type: oceanModelLayer
+- nemo-id: bckinv
+  param-id: 262513
+  grid-type: unstructured_grid
+  domain: V grid
+  unstructured-grid-subtype: V
+  level-type: oceanModelLayer
+- nemo-id: votbiasd
+  param-id: 262514
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: vosbiasd
+  param-id: 262515
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: oceanModelLayer
+- nemo-id: iceconc_cat
+  param-id: 212213
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: topSeaIceLevel
+- nemo-id: icethic_cat
+  param-id: 212215
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: topSeaIceLevel
+- nemo-id: snwthic_cat
+  param-id: 212217
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: topSeaIceLevel
+- nemo-id: icesalt_cat
+  param-id: 212230
+  grid-type: unstructured_grid
+  domain: T grid
+  unstructured-grid-subtype: T
+  level-type: topSeaIceLevel

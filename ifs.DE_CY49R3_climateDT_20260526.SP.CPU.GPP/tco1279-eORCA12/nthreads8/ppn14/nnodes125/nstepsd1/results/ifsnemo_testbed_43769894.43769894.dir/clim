@@ -1,0 +1,2562 @@
+#!/bin/bash
+#
+# Batch system independent script to run IFS model under RAPS20
+#
+# Author: Sami Saarinen (ECMWF) 24-Jan-2017 : Initial version
+#                               06-Mar-2017 : RAPS15 pre-production
+#                               31-Mar-2017 : Deadline met & RAPS15 ready and placed into the ftp-site ecbench@ftp.ecmwf.int
+#                               03-Apr-2017 : Start RAPS16 preparation and single precision validity checking
+#                               16-Apr-2017 : Added I/O capability through FDB5
+#                               08-Jun-2017 : Released RAPS16 and placed it into the ftp-site ecbench@ftp.ecmwf.int
+#                               21-Jun-2017 : Preparations towards RAPS17 -- still under the RAPS16-tag (different GIT-branch)
+#                               08-Nov-2017 : Bringing model -script more up to date for the actual RAPS17
+#                               09-Feb-2018 : Operational & research I/O activated via --od & --rd (EMOS-lib needed for --od)
+#                               23-Apr-2018 : RAPS18 starting to take a shape (GIT branch mps_CY45R1_raps18dev)
+#                               17-May-2018 : Ability to run non-hydrostatic dynamics jobs, too (even with lower resolution) : use --nhdyn
+#                               30-Aug-2018 : Final pushes for the ITT 270
+#                               09-Oct-2019 : Start RAPS19 (works with the same input as RAPS18 since CY45R1)
+#
+#         Ioan Hadade, (ECMWF), 03-Feb-2021 : Begin RAPS20 based on CY47R3
+#                               07-Dec-2023 : Major clean-up
+#                               12-Feb-2024 : RAPS21 based on CY49R1
+#                               24-Oct-2025 : Big clean-up
+#
+
+set +x
+set -eua
+
+shopt -s extglob # enables extglob i.e. @(x|y|z) regular expressions in bash
+
+bashsrc=$(basename "${BASH_SOURCE[0]}")
+
+if [[ ${BASH_VERSINFO[0]} -lt 4 ]] ; then
+    PS4='+ [${bashsrc}:${LINENO}]: '
+else # only v4 onwards supports the below one w/o silent deaths
+    _tref=$(date +%s)
+    PS4='+ [${bashsrc}:$(($(date +%s)-_tref))s:$(date +%T):${LINENO}]: '
+fi
+
+is_function() { declare -F "$@" > /dev/null; }
+
+t1=$(date +%s.%N)
+started=$(date -R) # must be with -R or date --date="$started" in jobinfo may occasionally fail
+
+errcnt=0
+launcher=${launcher:-""}
+
+cmddir=$(dirname "$(which "$0")")
+cmd=$(basename "$0")
+cmdargs=${*:-}
+
+pid=$$
+attr=""
+json=forecast.json
+stochastic=0
+
+
+# Usage: model
+lrefgen=false           #                   # Add reference output (usually by us -- prefer 6h forecast)
+ref_input_path=${REF_INPUT_PATH:-undef}     # Sets REF_INPUT_PATH to used by ifs/dia/spnorm.F90 (default = $INPROOT/reference_output/$expver)
+compiler="undef"        # -C [cray|cce|intel|gnu|pgi|nv] # Specific compiler environment in mind ?
+yyyymmddzz="undef"      # -d YYYYMMDDZZ     # Starting date (stamp)
+dryrun=0
+dycore=0                # --dycore          # activates dynamical core and sets dycore to 1
+expver="undef"          # -e experiment_id  # 4 character identification supplied by ECMWF) -- must be given
+outexp=""               # --outexp 9000     # output experiment id (default = input expver)
+fclen="t1"              # -f [h6|t20|d1]    # forecast length in hours or days (e.g. h6 or d1) or time steps (e.g. t20)
+lfdbop=true             # option -F         # Turns OFF use of FDB on (default: may use FDB4|5 or just dummies from ifsiodummy/)
+ifs_dir=${RAPS_IFS_BUILDDIR:-"undef"} # ifs-dir  # IFS build or install directory
+iodevnull=0             # --io-devnull      # Redirect FDB output to /dev/null (IFS legacy output with multio)
+nouttype=2              # =2 if FDB is on (def) or =1 otherwise (pbio)
+gstats=false            # -g                # Turns GSTATS output on (detailed & barrier stats)
+nopt_memory=2           #                   # GP-model: 0=heap 1=stack 2=improved heap (new default) version
+thread_guardsize_mb=0   # -G [0|64]         # Provide guard region (in MB) between slace thread stack (~ Cray)
+htway=1                 # -h htway          # How many ways hyperthreaded (htway e.g. 1 or 2 or even 4 on KNL)
+host=""                 # -H host       # Preferred host
+nproc_io_nodes=0        #                   # Number of I/O nodes (purely for I/O tasks -- no compute tasks)
+nproc_io=0              # -I <iotasks>      # Number of I/O server tasks -- now calculated from nproc_io_nodes unless nproc_io > 0
+ocean_nproc_ionodes=0
+ocean_nproc_io=0        #  # Number of I/O server tasks -- now calculated from nproc_io_nodes unless nproc_io > 0
+jobid=${pid}            # -j <jobid>        # Job ID
+jobname="jobname"       # -J <jobname>      # Job name
+drhook=false            # -k                # Turns DrHook profiling on (DR_HOOK=1 always, but sets DR_HOOK_OPT=prof)
+levels=137              # -l <levels>       # Number of atmospheric levels
+LABEL=LABEL             # -L [LWDA|ENFO]    # Label to locate (captured) input data
+stktrace="undef"
+memtrace=0
+membind=0               # --membind         # Adopt numactl --membind in ecbind
+nodes=0                 # -n <num_nodes>    # Number of nodes we are running (default = 0 --> we *try* to define ourselves)
+nproma=16               # -N <nproma>       # Blocking factor for IFS loops (for cache memory efficiency)
+nrproma=0               # Note: in the old RAPS, nrproma used to be set to 1 with resolutions finer than 1999 "to save memory". But, nextGEMS/climDT exps would reset it to 0 for all res.
+nproma_wam=32
+nradfr="undef"          # --nradfr <value>  # Frequency for calling the radiation scheme
+nradint="undef"         # --nradint <value> # If supplied, will replace/add nradint=<value> to the namelist NAERAD
+leradi=true
+noutput=1               # Diagnostic output 0= no diagnostic output, 1= diagnostic output from PE 0, 2= diagnostic output from all PEs
+ppout=0                 #                   # Output frequency in hours (by default) or with "<number>t" | "t<number>" to denoting timesteps
+ppout_unit=h
+tasks=0                 # -p <mpi>          # Total number of MPI-tasks (no defaults)
+PATH=".:$(pwd):$PATH"
+                        # -P $directory     # Add directory in front of $PATH -- can be supplied multiple time (LIFO-ordering)
+perf=""
+resol=0                 # -r [21|159|255|399|511|639|1023|1279|1999] # One of the atmospheric resolutions to be used (no defaults)
+rundir=""
+fdbdir="undef"
+lrefout=true            # -R                # Turns reference output check OFF -- by default an attempt to do refer. check is ON
+stacksize="undef"       # -s <stacksize_MB> # Slave thread(s) stack size in MB -- the default is resolution dependent
+sync_level=0            # -S [0|1|2]        # Sets NTRANS_SYNC_LEVEL for Transposes (nampar1) : default = 0
+tag="undef"
+threads=1               # -t <omp>          # Number of OpenMP-threads (default = 1)
+
+trunc="tco"             # -T [t|tl|tco]     # Grid type (lowercase) (default = tco)
+tstep=0                                     # Change utstep to this if tstep > 0
+vmax2="undef"          # --vmax2 <value>   # If supplied, will replace/add VMAX2=<value> to the fort.4 NAMDYN section; maximum wind value, bit ident limiter for performance.
+luseflt="undef"         # -u                # Turn explicitly FLT off (add LUSEFLT=false to NAMTRANS)
+                        # -U                # Turn explicitly FLT on  (add LUSEFLT=true to NAMTRANS)
+exefrom="ifsMASTER.*"   # -x ifsMASTER      # ifsMASTER executable path ("*" is "DP" or "SP" depending on precision used)
+wrapper=""              # -w wrapper_script # run ifsMASTER via wrapper-script (which e.g. may raise stacksize to unlimited)
+keepfdb=0               #                   # To keep FDB files after the run (eats potentially lots of disk space)
+core=1                  # --core/--no-core  # Enable/disable core dumps via DR_HOOK
+keepcore=0              #                   # To keep core-files after failure (and gdb processing)
+nwrnode=1               #                   # Number of writers per node (when I/O server is not used) (default=1)
+                                            # Can be decimal e.g. --writers=0.5 means one writer every 2nd node
+                                            # Negative (say -2) --nwriters=-2 means also every 2nd node
+nprintlev=0             #                   # 0 = "basic prints" (def); 1 = "more prints"; 2 = "debug prints"
+iomode="undef"          # iomode=od if operational I/O in all cases ppout is set to 0
+
+nhdyn=0                 # turn on non-hydrostatic dynamics via --nhdyn or --non-hydrostatic --> nhdyn=1
+keepxml=0               # Use --keepxml to avoid deletion of I/O-server related info files, like XML
+coxmldir="io_serv.xml.d"
+noxml=0                 # Use --noxml to avoid writing XML stats from I/O-server (written to /dev/null though)
+places=" --places"      # --places would add --places to any calls where we invoke ecbind -- by default IS set (use --no-places to unset)
+NTHREAD_IO=${NTHREAD_IO:-1} # How many actual OMP-threads ever made available for I/O-tasks ; should normally be 1
+member=1                # sets MEMBER=$member when $member > 0 and denotes perturbed ENS member# (--member | --pf ) 1..totens
+                        # with --cf or control forecast member stays =0 -- as if HRES (w/o stochastic physics)
+totens=${SLURM_ARRAY_TASK_MAX:-51}  # Total ensemble size (=50 by default) -- change via --totens <value> ; needed for ENS-runs
+stripe=undef            # --stripe [count],size[,poolname] or --stripe count[,size,poolname] instead of "," you can also use ":" or "/", too
+delay=undef             # --delay 10,5 would place 10 and 5 sec delays before and after the invocation of the IFS executable
+target=undef            # --target=d5 gives prediction towards 5-day FC rather than 10 or 15-day
+                        # --target=14 gives prediction towards 14 iterations in TLADJ rather than 27 (TCo) or 35 (T/TL)
+iobufs=0                # --iobufs 20 would allocate 20 I/O buffers for *each* I/O-task (default = 10 := NIO_SERV_BUF_MAXSIZE)
+physics="yes"           # --physics=no turns LEPHYS=false but also implies no NEMO & no WAM and empty NAMFPC & NAMDDH namelists
+                        # Further suboptions to be added
+inprootnam=0            # Use namelists from INPROOT (default 0 i.e., use namelists from RAPS etc dir)
+firstout=0              # --firstout=<value> : specify first output step for --ppout -kind of requests
+khz=0                   # choose clock freq via --freq or --ghz 1.8 (in GHz)
+ppnin=0                 # User defined upper limit for processes (MPI-tasks) per node via --ppn <value>
+uniq=0                  # With --uniq sets "uniqcmd" to "uniq" ; with  --no-uniq sets "uniqcmd" to "cat" -- this is the default
+mptype=${MP_TYPE:-1}               # f.ex. --mptype=2 changes MP_TYPE=1 (MPI_Send) to MP_TYPE=2 (standard MPI_Bsend -- relies on mailbox size)
+                                   # please note : when MP_TYPE=1, the mailbox-size will be set to 0
+nprtrw=0
+nprtrv=0
+compo=0
+forge_ddt=0              # --forge-ddt (default: no) runs $LAUNCHCMD inside ARM Forge/DDT. Remember to export forge_tmpdir=${TMPDIR} from your sbatch script
+forge_map=0              # --forge-map (default: no) runs $LAUNCHCMD inside ARM Forge/DDT. Remember to export forge_tmpdir=${TMPDIR} from your sbatch script
+
+# INPROOT, OUTROOT can be set via CLI, but if not, they will be read from env.
+INPROOT=${INPROOT:-"undef"}
+OUTROOT=${OUTROOT:-"undef"}
+
+# End usage
+
+lkey="generate-reference-output genref refgen"
+lkey="$lkey reference-input-path:"
+lkey="$lkey ifs-dir:"
+lkey="$lkey compiler:"
+lkey="$lkey datestamp: yyyymmddzz:"
+lkey="$lkey expver: expid: getenv: iotrace: plain: memdebug: env: outexp: unset:"
+lkey="$lkey fclen: forecast:"
+lkey="$lkey no-fdb icm io-devnull iodevnull"
+lkey="$lkey gstats"
+lkey="$lkey gp-model-heap gp-model-stack gp-model-heap2"
+lkey="$lkey thread-guardsize:"
+lkey="$lkey ht: smt:"
+lkey="$lkey host:"
+lkey="$lkey launcher:"
+lkey="$lkey iotasks: ionodes:"
+lkey="$lkey ocean-iotasks: ocean-ionodes:"
+lkey="$lkey jobid:"
+lkey="$lkey jobname:"
+lkey="$lkey drhook"
+lkey="$lkey no-drhook"
+lkey="$lkey hugepages"
+lkey="$lkey levels:"
+lkey="$lkey label: input-data-label:"
+lkey="$lkey nodes: "
+lkey="$lkey nproma: nrproma: nwamproma: old-radiation-scheme no-radiation nradfr:"
+lkey="$lkey ppout: output-frequency: firstout:"
+lkey="$lkey mpi: tasks:"
+lkey="$lkey resolution:"
+lkey="$lkey no-reference-check"
+lkey="$lkey stacksize:"
+lkey="$lkey synclevel:"
+lkey="$lkey threads: openmp: omp:"
+lkey="$lkey iopenmp: iomp: io-depth:"
+lkey="$lkey truncation:"
+lkey="$lkey no-flt noflt no-fast-legendre-transform"
+lkey="$lkey flt use-flt useflt use-fast-legendre-transform"
+lkey="$lkey executablepath:"
+lkey="$lkey wrapper:"
+lkey="$lkey noutput: scalar vector"
+lkey="$lkey memtrace stktrace: tracestack: perf-stat perf-record"
+lkey="$lkey tstep: utstep:"
+lkey="$lkey vmax2:"
+lkey="$lkey run-directory: dryrun"
+lkey="$lkey fdb-directory: fdbdirectory:"
+lkey="$lkey keep-fdb"
+lkey="$lkey keep-core core no-core"
+lkey="$lkey writers: nwriters:"
+lkey="$lkey path: verbose"
+lkey="$lkey bind: no-bind"
+lkey="$lkey tag: hres ens clim"
+lkey="$lkey print-level: nprintlev:"
+lkey="$lkey gdb"
+lkey="$lkey od rd operational research"
+lkey="$lkey nhdyn non-hydrostatic"
+lkey="$lkey xml keep-xml no-xml"
+lkey="$lkey dycore"
+lkey="$lkey stochastic places no-places ec-bind: member: totens:"
+lkey="$lkey stripe: delay:"
+lkey="$lkey cf control-forecast"
+lkey="$lkey pf: perturbed-forecast"
+lkey="$lkey rst"
+lkey="$lkey target: io-bufs:"
+lkey="$lkey hello-world"
+lkey="$lkey physics:"
+lkey="$lkey no-ozone nradint: nsiter:"
+lkey="$lkey frequency: cpu-freq: ghz:"
+lkey="$lkey ppn:"
+lkey="$lkey no-mallocenvs"
+lkey="$lkey uniq no-uniq"
+lkey="$lkey mp-type: MP_TYPE:"
+lkey="$lkey membind"
+lkey="$lkey inproot-namelists"
+lkey="$lkey nprtrv: nprtrw:"
+lkey="$lkey forge-ddt"
+lkey="$lkey forge-map"
+lkey="$lkey inproot: outroot:"
+
+shiftby=0
+
+#
+# Specification of defaults
+#
+#  The model script uses several variables that control its behaviour
+#  to configure the scientific, input, runtime, restart, coupling etc.
+#  behaviour of the model. In addition, technical options to control the
+#  parallelism and execution mode exist.
+#
+#  All of these are defined above or in the submodules below, where they
+#  are initialized to some default values which can typically be changed
+#  with command line options. To support some commonly used model
+#  configurations, overwrites for these default values can be provided
+#  using the `--defaults <name>` option. Subsequently provided CLI arguments
+#  can still be provided to subsequently change these defaults.
+#
+#  Note that the defaults overwrites are applied immediately upon
+#  encountering the `--defaults` option, thus it should be specified as
+#  the first argument.
+#
+
+# shellcheck source=defaults
+source $RAPS_ETCDIR/model/defaults
+
+# Definition of submodules for use in the model script
+#
+#  Model script submodules can be added by sourcing the relevant file.
+#
+#  These submodules may define additional variables and corresponding
+#  CLI options to change the value of these variables (register their
+#  parsing in parse_etc_model below).
+#
+#  The actual setup should be implemented as one or multiple bash
+#  functions inside the submodule that is then called at the appropriate
+#  place.
+#
+
+# Ocean models (includes NEMO and FESOM setups)
+# shellcheck source=ocean
+source $RAPS_ETCDIR/model/ocean
+
+# ecWAM wave model
+# shellcheck source=wam
+source $RAPS_ETCDIR/model/wam
+
+# Forcing options (GHG, ozone, volcanic + tropospheric aerosols, MCC and ICMCL coupling)
+# shellcheck source=forcings
+source $RAPS_ETCDIR/model/forcings
+
+# restart options
+# shellcheck source=restart
+source $RAPS_ETCDIR/model/restart
+
+# gpu options
+# shellcheck source=gpu
+source $RAPS_ETCDIR/model/gpu
+
+# fullpos setup
+# shellcheck source=fullpos
+source $RAPS_ETCDIR/model/fullpos
+
+# ifs_namelist setup
+# shellcheck source=ifs_namelist
+source $RAPS_ETCDIR/model/ifs_namelist
+
+# multio setup
+# shellcheck source=multio
+source $RAPS_ETCDIR/model/multio
+
+# IFS physics options (TOA tuning, convection)
+# shellcheck source=ifsphys
+source $RAPS_ETCDIR/model/ifsphys
+
+# Register parse methods for modules that define additional options
+function parse_etc_model() {
+    defaults_parse_opts "$@"
+    ocean_parse_opts "$@"
+    wam_parse_opts "$@"
+    forcings_parse_opts "$@"
+    restart_parse_opts "$@"
+    gpu_parse_opts "$@"
+    fullpos_parse_opts "$@"
+    ifs_namelist_parse_opts "$@"
+    multio_parse_opts "$@"
+    ifsphys_parse_opts "$@"
+}
+
+#
+# Overwrite default values given the command argument name
+#
+if [[ "$cmd" = "ens" ]] ; then
+    bench=ens
+    nemo=1
+    lwcou=true
+    stochastic=1
+elif [[ "$cmd" = "clim" ]] ; then
+    bench=clim
+    nemo=0
+    lwcou=true
+    stochastic=0
+else
+    bench=hres
+    nemo=1
+    lwcou=true
+    stochastic=0
+fi
+
+#
+# Environment handling
+#
+#  All environment variables that the model script exports, regardless
+#  of whether this is to control IFS behaviour, parallelization, or
+#  system behviour (e.g., tuning of communication libraries), should
+#  be appended to this array. This provides the ability to inspect
+#  the changes that are to be made to the environment.
+#
+#  For convenience, the function `contains_var` can be used to check
+#  if a specific environment variable is contained in the list:
+#
+#    if contains_var "${env_exports[*]}" "myvar"; then ...
+#    if ! contains_var "${env_exports[*]}" "myvar"; then ...
+#
+env_exports=()
+
+function contains_var() {
+    [[ $1 =~ (^|[[:space:]])$2= ]] && return 0 || return 1
+}
+
+#
+# Parse CLI options
+#
+rkey=$(echo "$lkey" | perl -pe 's/-//g')
+
+LONG_FLAGS=""
+for lf in $(echo "$lkey $rkey" | perl -pe 's/\s+/\n/g'| sort -u)
+do
+    LONG_FLAGS="$LONG_FLAGS -l $lf"
+done
+
+FLAGS="1C:d:D:e:f:FgG:h:H:I:j:J:kl:L:M:n:N:p:P:r:Rs:S:t:T:vuUx:w:W"
+
+OPTS=$(getopt -o $FLAGS $LONG_FLAGS -- "$@")
+
+if [[ $? -ne 0 ]] ; then
+    echo "${cmd}: (Error) Invalid or unsupported options from 'getopt'" >&2
+    exit 1
+fi
+
+trueargs=$(echo "$OPTS" | perl -pe "s/^\s+//; s/(--\S+)\s+'/\${1}=/g; s/'//g; s/--\s*$//")
+abort=no
+
+# Check if pigz -- a parallel gzip'per -- is found
+pigz=$(which pigz 2>/dev/null || echo "pigz")
+
+eval set -- "$OPTS"
+
+# Add additional binary directories to the PATH for utilities, e.g., ifsnml
+PATH="$RAPS_ROOTDIR/etc/contrib/ifsnml/bin:$PATH"
+PATH="$RAPS_ROOTDIR/etc/contrib/ecpeak/bin:$PATH"
+
+while true
+do
+    case "$1" in
+	--genref|--refgen|--generate-reference-output|--generatereferenceoutput) lrefgen=true; shift;;
+        --ifs-dir) ifs_dir="$2"; shift 2;;
+	--reference-input-path|--referenceinputpath) ref_input_path="$2"; shift 2;;
+	--cf|--control-forecast|--controlforecast) member=0; shift;; # control forecast
+    --clim) nemo=1; bench=clim; stochastic=0; shift;;
+	-C|--compiler) compiler="$2"; shift 2;;
+    --core) core=1; shift;;
+    --no-core) core=0; shift;;
+	-d|--datestamp|--yyyymmddzz) yyyymmddzz="$2"; shift 2;;
+	--delay) delay="$2"; shift 2;;
+	--dryrun) dryrun=1; shift;;
+	--dycore) dycore=1; shift;;
+    --frequency|--ghz|--cpu-freq|--cpufreq) khz=$(echo "$2" | awk '{printf("%.0f",1000000*$1)}'); shift 2;;
+	--ecbind|--ec-bind|--bind) ecbind="$2"; shift 2;;
+	--nobind|--no-bind) ecbind=0; shift;;
+	-e|--expver|--expid) expver="$2"; shift 2;;
+	--outroot) OUTROOT="$2"; shift 2;;
+	--outexp) outexp="$2"; shift 2;;
+    --ens) nemo=1; bench=ens; stochastic=1; shift;;
+	--stochastic) stochastic=1; shift;;
+	-f|--fclen|--forecast) fclen="$2"; shift 2;;
+	-F|--no-fdb|--nofdb|--icm) lfdbop=false; shift;;
+        --fdb-directory|--fdbdirectory) fdbdir=$(readlink -f "$2" || echo "$2"); keepfdb=1; shift 2;;
+	--firstout) firstout=$2; shift 2;;
+	-g|--gstats) gstats=true; shift;;
+	-G|--thread-guardsize|--threadguardsize) thread_guardsize_mb=$2; shift 2;;
+	--gp-model-heap|--gpmodelheap)  nopt_memory=0; shift;;
+	--gp-model-stack|--gpmodelstack) nopt_memory=1; shift;;
+	--gp-model-heap2|--gpmodelheap2)  nopt_memory=2; shift;;
+	-h|--ht|--smt) htway=$2; shift 2;;
+	-H|--host) host="$2"; shift 2;;
+	--launcher) launcher="$2"; shift 2;;
+    --inproot) INPROOT="$2"; shift 2;;
+	--iobufs|--io-bufs) iobufs=$2; shift 2;;
+    --iodevnull|--io-devnull) iodevnull=1; shift;;
+	--ionodes) nproc_io_nodes=$2; nproc_io=0; shift 2;;
+	-I|--iotasks) nproc_io=$2; nproc_io_nodes=0; shift 2;;
+	--ocean-ionodes) ocean_nproc_ionodes=$2; ocean_nproc_io=0; shift 2;;
+	--ocean-iotasks) ocean_nproc_io=$2; ocean_nproc_ionodes=0; shift 2;; # io tasks are the number of servers for Multio
+	-j|--jobid) jobid="$2"; shift 2;;
+	-J|--jobname) jobname="$2"; shift 2;;
+	-k|--drhook) drhook=true; shift;;
+	--keepfdb|--keep-fdb) keepfdb=1; shift;;
+	--keepcore|--keep-core) keepcore=1; shift;; # NB: an implicit --core as well
+	--xml|--keepxml|--keep-xml) keepxml=1; noxml=0; coxmldir="io_serv.xml.d"; shift;;
+	--no-xml|--noxml) keepxml=0; noxml=1; coxmldir="/dev/null"; shift;;
+	-l|--levels) levels=$2; shift 2;;
+	-L|--input-data-label|--inputdatalabel|--label) LABEL="$2"; shift 2;;
+	--membind) membind=1; shift;;
+	--memtrace) memtrace=1; drhook=true; shift;;
+	--member|--pf|--perturbed-forecast|--perturbedforecast) member=$(printf "%.0f" "$2"); shift 2;;
+	--mptype|--mp-type|--MP_TYPE) mptype="$2"; shift 2;;
+	--nhdyn|--non-hydrostatic|--nonhydrostatic) nhdyn=1; shift;;
+	-n|--nodes) nodes=$2; shift 2;;
+	--noutput) noutput=$2; shift 2;;
+	-N|--nproma) nproma=$2; shift 2;;
+	--nprintlev|--print-level|--printlevel) nprintlev=$2; shift 2;;
+	--nradfr) nradfr="$2"; shift 2;;
+	--nradint) nradint=$2; shift 2;;
+	--nrproma) nrproma=$2; shift 2;;
+	--nsiter) nsiter=$2; shift 2;;
+	--nwamproma) nproma_wam=$2; shift 2;;
+	--nodrhook|--no-drhook) drhook=off; shift;; # different than drhook=false
+	--noradiation|--no-radiation) nradfr="1000000"; leradi=false; shift;;
+	--ppout|--outputfrequency|--output-frequency) ppout=$2; iomode="undef"; shift 2;;
+	--od|--operational) iomode="od"; ppout=0; lfdbop=true; shift;;
+	--rd|--research) iomode="rd"; ppout=0; lfdbop=true; shift;;
+	-P|--path) PATH="$2:$PATH"; shift 2;;
+	-p|--tasks|--mpi) tasks=$2; shift 2;;
+	--perf-stat|--perfstat) perf="ecperf-stat"; shift;;
+	--perf-record|--perfrecord) perf="ecperf-record"; shift;;
+	--places) places=" --places"; shift;;
+	--no-places|--noplaces) places=""; shift;;
+	--physics) nemo=0; lwcou=false; physics="$2"; shift 2;; # Also turns NEMO & WAM off ; need --nemo --wam *after* --physics=<string> to re-enable them
+	--ppn) ppnin=$2; shift 2;;
+	--nprtrw) nprtrw=$2; shift 2;;
+	--nprtrv) nprtrv=$2; shift 2;;
+	-r|--resolution) resol=$2; shift 2;;
+	--run-directory|--rundirectory) rundir=$(readlink -f "$2" || echo "$2"); shift 2;;
+	-R|--no-reference-check|--noreferencecheck) lrefout=false; shift;;
+	--rst) iomode=rst; ppout=0; shift;;
+	-s|--stacksize) stacksize=$2; shift 2;;
+	-S|--synclevel) sync_level=$2; shift 2;;
+	--scalar) lopt_scalar=true; shift;;
+	--stktrace|--tracestack) stktrace="$2"; drhook=true; shift 2;;
+	--stripe) stripe="$2"; shift 2;;
+	--tag) tag=$(echo "$2" | awk '{print $1}') ; shift 2;;
+	--target) target="$2"; shift 2;;
+	-t|--threads|--openmp|--omp) threads=$2; shift 2;;
+	-T|--truncation) trunc="$2"; shift 2;;
+
+	--totens) totens=$2; shift 2;;
+	--tstep|--utstep) tstep="$2"; shift 2;;
+    --vmax2) vmax2="$2"; shift 2;;
+	-u|--no-flt|--no-fast-legendre-transform|--noflt|--nofastlegendretransform) luseflt="false"; shift;;
+	-U|--flt|--use-flt|--use-fast-legendre-transform|--useflt|--usefastlegendretransform) luseflt="true"; shift;;
+	--uniq) uniq=1; shift;;
+	--no-uniq|--nouniq) uniq=0; shift;;
+	--vector) lopt_scalar=false; shift;;
+	-v|--verbose) set -x; shift;;
+	--inproot-namelists) inprootnam=1; shift;;
+	-x|--executablepath) exefrom="$2"; shift 2;;
+	-w|--wrapper) wrapper="$2"; shift 2;;
+	--writers|--nwriters) nwrnode="$2"; shift 2;;
+    --forge-ddt) forge_ddt=1; shift;;
+    --forge-map) forge_map=1; shift;;
+	--) shift; break;;
+	*)  shiftby=0; parse_etc_model $1 $2
+        if [ $shiftby -eq 0 ]; then
+            echo "DEBUG: 1=${1:-}"
+            echo "DEBUG: 2=${2:-}"
+            abort=yes
+            break
+        fi
+        shift $shiftby
+        ;;
+    esac
+done
+
+if [[ $abort = yes ]] ; then
+    echo "${cmd}: (Error) Invalid command line arguments : $cmdargs" >&2
+    ((errcnt += 1))
+fi
+
+if [[ "${INPROOT}" = "undef" ]] ; then
+   echo "${cmd}: (Error) INPROOT must be set via --inproot flag or environment variable before running this script." >&2
+   ((errcnt += 1))
+fi
+
+if [[ "${OUTROOT}" = "undef" ]] ; then
+   echo "${cmd}: (Error) OUTROOT must be set via --outroot flag or environment variable before running this script." >&2
+   ((errcnt += 1))
+fi
+
+# Analyze sanity of arguments
+
+if [[ "$host" = "" ]] ; then
+    host=$(hostname)
+fi
+
+# Use instead of "uniq" command the "cat" in ifs.out and ifs.err filterings ?
+if [[ X"$uniq" = X0 ]] ; then
+    # the default i.e. no loss of lines
+    uniqcmd=$(which cat)
+else
+    uniqcmd=$(which uniq)
+fi
+
+gdb=$(which gdb 2>/dev/null || echo "gdb")
+mpilib=${RAPS_MPI_LIBRARY:-"undef"}
+
+
+# ###################
+# System inspection #
+# ###################
+
+lscpu=$(which lspcpu 2>/dev/null || echo "lscpu")
+lscpu_raw=$($lscpu --parse=CPU,Core,Node,Socket)
+lscpu_data="$(printf '%s\n' "$lscpu_raw" | grep -v '^#' | sed '/^$/d')"
+ncores=$(printf '%s\n' "$lscpu_data" | awk -F',' '{print $4 ":" $2}' | sort -u | wc -l)
+nnuma=$(printf '%s\n' "$lscpu_data" | awk -F',' '{print $3}' | sort -u | wc -l)
+nsockets=$(printf '%s\n' "$lscpu_data" | awk -F',' '{print $4}' | sort -u | wc -l)
+
+echo "ncores=$ncores"
+echo "nnuma=$nnuma"
+echo "nsockets=$nsockets"
+
+if [[ $ncores -le 0 ]] ; then
+    echo "${cmd}: (Error) Number of physical cores per node (ncores) is not defined." >&2
+    ((errcnt += 1))
+fi
+
+if [[ ${nsockets} -le 0 ]] ; then
+  echo "${cmd}: (Error) Number of sockets (nsockets) is not defined." >&2
+  ((errcnt += 1))
+fi
+
+cores_per_socket=$((ncores / nsockets))
+# true cores per socket to be used to handle cases where depth > omp
+user_cores_per_socket=$(( cores_per_socket * threads ))
+
+# $INPROOT = root directory where input datasets reside -- normally set in .ifsenv
+if [[ -z "${INPROOT:-}" ]] ; then
+    echo "${cmd}: (Error) INPROOT not defined" >&2
+    ((errcnt += 1))
+elif [[ ! -d "${INPROOT}" ]] ; then
+    echo "${cmd}: (Error) INPROOT directory $INPROOT not found" >&2
+    ((errcnt += 1))
+else
+    export RTTOV_COEFDIR=${RTTOV_COEFDIR:-${INPROOT}/data/sat/rttov}
+fi
+
+# $OUTROOT = root directory where output files go -- normally defined in .again
+if [[ -z "${OUTROOT:-}" ]] ; then
+    echo "${cmd}: (Error) OUTROOT not defined" >&2
+    ((errcnt += 1))
+elif [[ ! -d "${OUTROOT}" ]] ; then
+    echo "${cmd}: (Warning) OUTROOT directory $OUTROOT not found -- creating ..." >&2
+    mkdir -p $OUTROOT || :
+    if [[ ! -d "${OUTROOT}" ]] ; then
+	echo "${cmd}: (Error) OUTROOT directory $OUTROOT could not be created" >&2
+	((errcnt += 1))
+    fi
+fi
+
+ECCODES_SAMPLES_PATH=${ifs_dir}/share/eccodes/ifs_samples/grib1_mlgrib2_ccsds
+
+if [[ ! -d ${ECCODES_SAMPLES_PATH:-} ]] ; then
+    echo "${cmd}: (Error) Unable to locate ECCODES_SAMPLES_PATH-dir ${ECCODES_SAMPLES_PATH:-}" >&2
+    ((errcnt += 1))
+fi
+
+# nabr: TODO - this appears to be redundant/outdated
+# if [[ "$ifs_dir" != "undef" ]]; then
+#    ETC=${ifs_dir}/etc
+# else
+#    ETC=$RAPS_ETCDIR
+# fi
+# if [[ -z "${ETC:-}" ]] ; then
+#     echo "${cmd}: (Error) Location for install/etc (ETC-variable) not defined" >&2
+#     ((errcnt += 1))
+# elif [[ ! -d "${ETC}" ]] ; then
+#     echo "${cmd}: (Error) install/etc ETC directory $ETC not found" >&2
+#     ((errcnt += 1))
+# fi
+
+if [[ "$bench" = "ens" ]] && [[ $member -lt 0 ]] ; then
+    #    member=$totens # perturbed (max) member number (reason: perturbed slighly more expensive --> avoid control FC ; can still be turned on by --cf or --member 0)
+    member=0 # set to --cf i.e. control FC ; please note that this marginally *cheaper* than any perturbed FC i.e. --pf <member_number>
+fi
+
+if [[ "$bench" = "ens" ]]; then
+  if [[ $member -eq 0 ]] ; then
+      stochastic=0 # control fc always non-stochastic
+  elif [[ $member -gt 0 ]] ; then
+      stochastic=1 # perturbed fc always stochastic
+  fi
+fi
+
+if [[ "$lfdbop" = false ]] ; then
+    nouttype=1
+fi
+
+# ppout can now be a
+# * <number> --> hours frequency ; ppout_unit=h ( the default )
+# * h<number> or <number>h --> hours frequency ; ppout_unit=h
+# * t<number> or <number>t --> timestep level frequency ; ppout_unit=t
+# * d<number> or <number>d --> daily level frequency -- converted to hours thus ppout_unit=h eventually
+
+pp1=$(echo $ppout | cut -c1)
+re='^[0-9]+$' # regular expression for a number
+
+if [[ $ppout =~ $re ]] ; then
+    num=$ppout
+    pp1=h
+elif [[ "$pp1" = @(d|h|t) ]] ; then
+    num=$(echo $ppout | cut -c2-)
+else
+    pp1=${ppout: -1} # last char
+    num=$(echo $ppout | sed 's/[a-z]//gi')
+fi
+
+if [[ "$pp1" = "h" ]] ; then # hours
+    ppout=$num
+    ppout_unit=h
+elif [[ "$pp1" = "d" ]] ; then # days
+    ppout=$(echo "$num" | awk '{printf("%.0f",$1*24)}') # now in hours as well
+    ppout_unit=h
+elif [[ "$pp1" = "t" ]] ; then
+    ppout=$num
+    ppout_unit=t
+else
+    ppout=0
+    echo "${cmd}: (Error) Invalid definition for flag --ppout=$ppout" >&2
+    ((errcnt += 1))
+fi
+
+
+EXPVER=$expver
+if [[ $expver = "undef" ]] ; then
+    echo "${cmd}: (Error) 4-character experiment id (-e $expver) not set" >&2
+    ((errcnt += 1))
+else
+    if [[ "$outexp" = "" ]] ; then
+        attr="${attr}bench=$bench expver=$expver "
+        outexp=$expver
+    else
+        attr="${attr}bench=$bench expver=$expver outexp=$outexp "
+        EXPVER=$outexp
+    fi
+fi
+
+if [[ $defaults != "undef" ]] ; then
+    attr="${attr}defaults=$defaults "
+fi
+
+tr=${trunc}${resol}
+trl=${tr}l$levels
+if [[ "$trunc" = "t" ]] ;then
+   gtype=_full
+elif [[ "$trunc" = "tl" ]] ; then
+   gtype=l_2
+elif [[ "$trunc" = "tco" ]] ; then
+   gtype=_4
+else
+   echo "${cmd}: (Error) Truncation value of ${trunc} is invalid should be t, tl or tco" >&2
+   ((errcnt += 1))
+fi
+
+attr="${attr}resol=$trl "
+attr="${attr}stochastic=$stochastic "
+
+
+if [[ $resol = 21 ]] ; then
+    utstep=3600
+    [[ "$stacksize" != "undef" ]] || stacksize=24
+elif [[ $resol = 79 ]] ; then
+    utstep=3600
+    [[ "$stacksize" != "undef" ]] || stacksize=64
+elif [[ $resol = 159 ]] ; then
+    utstep=3600
+    [[ "$stacksize" != "undef" ]] || stacksize=64
+elif [[ $resol = @(255|319|399) ]] ; then
+    utstep=1800
+    [[ "$stacksize" != "undef" ]] || stacksize=300
+elif [[ $resol = 511 ]] ; then
+    utstep=900
+    [[ "$stacksize" != "undef" ]] || stacksize=300
+elif [[ $resol = 639 ]] ; then
+    utstep=900
+    [[ "$stacksize" != "undef" ]] || stacksize=300
+elif [[ $resol = 799 ]] ; then
+    utstep=900
+    [[ "$stacksize" != "undef" ]] || stacksize=300
+elif [[ $resol = 1023 ]] ; then
+    utstep=450
+    [[ "$stacksize" != "undef" ]] || stacksize=500
+elif [[ $resol = 1279 ]] ; then
+    utstep=450
+    [[ "$stacksize" != "undef" ]] || stacksize=500
+elif [[ $resol = 1999 ]] ; then
+    utstep=225
+    [[ "$stacksize" != "undef" ]] || stacksize=1400
+elif [[ $resol = 2559 ]] ; then
+    utstep=200
+    [[ "$stacksize" != "undef" ]] || stacksize=1400
+elif [[ $resol = 3999 ]] ; then
+    utstep=120
+    [[ "$stacksize" != "undef" ]] || stacksize=2000
+elif [[ $resol = 7999 ]] ; then
+    utstep=60
+    [[ "$stacksize" != "undef" ]] || stacksize=4000
+else
+    utstep=0
+    echo "${cmd}: (Error) Unsupported atmospheric resolution $trl in RAPS20" >&2
+    ((errcnt += 1))
+fi
+
+if [[ $tstep -gt 0 ]] ; then
+    utstep=$tstep
+fi
+attr="${attr}utstep=$utstep "
+
+# fclen can now be d10 or 10d / h6 or 6h etc.
+fc1=$(echo $fclen | cut -c1)
+if [[ "$fc1" = @(d|h|t) ]] ; then
+    num=$(echo $fclen | cut -c2-)
+else
+    fc1=${fclen: -1} # last char
+    num=$(echo $fclen | sed 's/[a-z]//gi')
+    fclen=$fc1$num
+fi
+
+nstop=0 # total number of time steps
+if [[ "$fc1" = "h" ]] ; then # hours
+    FCLEN=$num
+    if [[ $utstep -gt 0 ]] ; then
+        nstop=$(echo "$FCLEN $utstep" | awk '{printf("%.0f",($1*3600.0)/$2)}')
+    fi
+elif [[ "$fc1" = "d" ]] ; then # days
+    FCLEN=$(echo "$num" | awk '{printf("%.0f",$1*24)}') # now in hours as well
+    if [[ $utstep -gt 0 ]] ; then
+        nstop=$(echo "$FCLEN $utstep" | awk '{printf("%.0f",($1*3600.0)/$2)}')
+    fi
+elif [[ "$fc1" = "t" ]] ; then
+    nstop=$num
+    FCLEN=$(echo "$num $utstep" | awk '{printf("%.0f",($1*$2)/3600.0)}') # in hours (can be < 1 -- rare)
+else
+    FCLEN=0
+    echo "${cmd}: (Error) Invalid forecast length $fclen" >&2
+    ((errcnt += 1))
+fi
+
+if [[ $FCLEN -gt 0 ]] ; then
+    hfclen=h$FCLEN
+    if [[ $ppout -gt 0 ]] ; then
+	    if [[ "$ppout_unit" = "h" ]] ; then
+	    # ppout := output frequency in FC hours
+	        if [[ $firstout -gt 0 ]] ; then
+		        firstout=$((-firstout))
+	        fi
+	        cnt=$(seq $firstout -$ppout -$FCLEN | wc -l)
+	        output_steps=$(seq -s',' $firstout -$ppout -$FCLEN)
+	        nposts="-${cnt},$output_steps"
+	    else # ppout := output frequency in timesteps
+	        if [[ $firstout -lt 0 ]] ; then
+		        firstout=$((-firstout))
+	        fi
+	        cnt=$(seq $firstout $ppout $nstop | wc -l)
+	        output_steps=$(seq -s',' $firstout $ppout $nstop)
+	        nposts="${cnt},$output_steps"
+	    fi
+	    nhists="$nposts"
+	    attr="${attr}ppout=${ppout_unit}$ppout "
+    elif [[ "$iomode" = "rst" ]] ; then
+	    attr="${attr}iomode=$iomode "
+    elif [[ "$iomode" = "rd" ]] ; then
+	    nposts3h="-0,-3,-6,-9,-12,-15,-18,-21,-24,-27,-30" # freq 3h x 11 (0 .. 30h)
+	    nposts6h="-36,-42,-48,-54,-60,-66,-72,-78,-84,-90,-96,-102,-108,-114,-120" # freq 6h x 15 (1.5d .. 3d)
+	    nposts12h="-132,-144,-156,-168,-180,-192,-204,-216,-228,-240" # freq 12h x 10 (3.5d .. 10d)
+	    nposts24h="-264,-288,-312,-336,-360" # freq 24h x 5 (+10d .. 15d -- i.e. for ENS in fact)
+	    ((cnt = 11 + 15 + 10 + 5)) # 41
+	    nposts="-${cnt},${nposts3h},${nposts6h},${nposts12h},${nposts24h}"
+	    nhists="$nposts"
+	    attr="${attr}iomode=$iomode "
+    elif [[ "$iomode" = "od" ]] ; then
+        if [[ "$bench" = @(hres|clim) ]] ; then
+	        cnt1h=$(seq 0 -1 -90 | wc -l)
+	        nposts1h=$(seq -s ',' 0 -1 -90) # freq 1h x 91 (0 .. 90h)
+	        cnt3h=$(seq -93 -3 -144 | wc -l)
+	        nposts3h=$(seq -s ',' -93 -3 -144) # freq 3h x 18 (93h .. 144h)
+	        cnt6h=$(seq -150 -6 -240 | wc -l)
+	        nposts6h=$(seq -s ',' -150 -6 -240) # freq 6h x 16 (150h .. 240h)
+	        ((cnt = cnt1h + cnt3h + cnt6h)) # 125
+	        nposts="-${cnt},${nposts1h},${nposts3h},${nposts6h}"
+	    elif [[ "$bench" = ens ]] ; then
+	        cnt1h=$(seq 0 -1 -90 | wc -l)
+	        nposts1h=$(seq -s ',' 0 -1 -90) # freq 1h x 91 (0 .. 90h)
+	        cnt3h=$(seq -93 -3 -144 | wc -l)
+	        nposts3h=$(seq -s ',' -93 -3 -144) # freq 3h x 18 (93h .. 144h)
+	        cnt6h=$(seq -150 -6 -360 | wc -l)
+	        nposts6h=$(seq -s ',' -150 -6 -360) # freq 6h x 36 (150h .. 360h)
+	        ((cnt = cnt1h + cnt3h + cnt6h)) # 145
+	        nposts="-${cnt},${nposts1h},${nposts3h},${nposts6h}"
+            if [[ $FCLEN -gt 360 ]]; then
+                nposts6h=$(seq -s ',' -0 -6 -$FCLEN) # freq 6h x 36 (150h .. 360h)
+	            cnt6h=$(seq -0 -6 -$FCLEN | wc -l)
+	            nposts="-${cnt6h},${nposts6h}"
+            fi
+	    fi
+	    nhists="$nposts"
+	    attr="${attr}iomode=$iomode "
+    fi
+else
+    hfclen=$fclen
+    FCLEN=1 # for NEMO nn_itend
+fi
+
+attr="${attr}fclen=$hfclen "
+
+# f.ex. 10-day ENS launched from hres-script (by hres --cf or hres --pf member#)
+#       is still considered bench=hres despite variable bench := ens
+
+if [[ "$target" = "undef" ]] ; then
+    if [[ "$bench" = ens ]] ; then
+	    target=h360
+    elif [[ "$bench" = @(hres|clim) ]] ; then
+	    target=h240
+    else
+        echo "${cmd}: (Error) invalid bench $bench" >&2
+        ((errcnt += 1))
+    fi
+else # target already set to some value
+    if [[ "$bench" = @(ens|hres|clim) ]] ; then # check correctness of target when FC experiment
+	    tc1=$(echo $target | cut -c1)
+
+	    # target can now be d10 or 10d / h24 or 24h etc.
+	    if [[ "$tc1" = @(d|h) ]] ; then
+	        num=$(echo $target | cut -c2-)
+	    else
+	        tc1=${target: -1} # last char
+	        num=$(echo $target | sed 's/[a-z]//gi')
+	    fi
+
+	    if [[ "$tc1" = "h" ]] ; then # target given in hours e.g. --target=h48
+	        hours=$num
+	    elif [[ "$tc1" = "d" ]] ; then # target given in days e.g. --target=d5
+	        hours=$(echo "$num" | awk '{printf("%.0f",$1*24)}') # now in hours as well
+	    else
+            echo "${cmd}: (Error) Invalid target $target" >&2
+            ((errcnt += 1))
+        fi
+        # Make sure target hours are never LESS than the FCLEN hours
+	    if [[ $hours -lt $FCLEN ]] ; then
+	        hours=$FCLEN
+	        target="h$hours"
+	    fi
+
+	    # Limit target FC hours for the corresponding bench hres|ens i.e. 240h|240h|360h
+	    if [[ "$bench" = "ens" ]] ; then
+	        [[ $hours -le 360 ]] || target="h360"
+        elif [[ "$bench" = @(hres|clim) ]] ; then
+	        [[ $hours -le 240 ]] || target="h240"
+	    fi
+    fi
+fi
+
+attr="${attr}target=$target "
+
+if [[ $nstop -gt 0 ]] ; then
+    attr="${attr}nstop=$nstop "
+fi
+
+if [[ $nopt_memory -eq 0 ]] ; then
+    gpmodel=heap
+elif [[ $nopt_memory -eq 1 ]] ; then
+    gpmodel=stack
+else
+    gpmodel=heap2
+fi
+
+if [[ $htway -lt 1 ]] ; then
+    htway=1
+fi
+
+if [[ $nodes -lt 1 ]] ; then
+    echo "${cmd}: (Error) Total number of nodes must be given" >&2
+    ((errcnt += 1))
+    nodes=1 # Since destined to failure, now just avoid div-by-zero
+fi
+
+# processes ('tasks') per node
+ppn=$(((tasks+nodes-1)/nodes))
+if [[ $ppnin -gt 0 ]] && [[ $ppnin -lt $ppn ]] ; then
+    ppn=$ppnin # --ppn rules
+fi
+
+tasks=$((ppn * nodes))
+ioppn=$ppn
+
+if [[ $nproc_io -gt 0 ]] ; then
+    nproc_io_nodes=0
+    tasks=$((tasks - nproc_io)) # the number of computational tasks; in this case the same depth is used for *all* tasks
+elif [[ $nproc_io_nodes -gt 0 ]] ; then
+    # Calculate total number of I/O-tasks
+    nproc_io=$((nproc_io_nodes * ioppn))
+    # Adjust the count of computational tasks
+    tasks=$((ppn * (nodes - nproc_io_nodes)))
+else
+    nproc_io=0
+    nproc_io_nodes=0
+fi
+
+if [[ $nproc_io_nodes -gt 0 ]] ; then
+    ionodes=$nproc_io_nodes
+    compnodes=$((nodes - ionodes)) # computational nodes
+else
+    ionodes=0
+    compnodes=$nodes
+fi
+
+nproc_io_nodes=$ionodes
+nproc=$((tasks + nproc_io))
+
+unset ionodes # "ionodes" not to be used anymore -- nproc_io_nodes instead, where applicable
+
+if [[ $nproc_io_nodes -gt 0 ]] ; then
+    nodelabel="${compnodes}+$nproc_io_nodes"
+else
+    nodelabel="$nodes"
+fi
+
+#Setup Ocean IO nodes
+
+ocean_ioppn=$ppn
+if [[ $ocean_nproc_io -gt 0 ]] ; then
+    ocean_nproc_ionodes=0
+    tasks=$((tasks - ocean_nproc_io)) # the number of computational tasks; in this case the same depth is used for *all* tasks
+elif [[ $ocean_nproc_ionodes -gt 0 ]] ; then
+    # Calculate total number of I/O-tasks
+    ocean_nproc_io=$((ocean_nproc_ionodes * ocean_ioppn))
+    # Adjust the count of computational tasks
+    tasks=$((ppn * (nodes - nproc_io_nodes - ocean_nproc_ionodes)))
+else
+    ocean_nproc_io=0
+    ocean_nproc_ionodes=0
+fi
+
+
+compnodes=$((nodes - ocean_nproc_ionodes)) # computational nodes
+nproc=$((tasks + nproc_io + ocean_nproc_io))
+
+if [[ $ocean_nproc_ionodes -gt 0 ]] ; then
+    if [[ X$nodelabel = X$nodes ]] ; then
+        nodelabel="${compnodes}+$ocean_nproc_ionodes"
+    else
+        nodelabel="${nodelabel}+$ocean_nproc_ionodes"
+    fi
+fi
+
+
+if [[ $tasks -lt 1 ]] ; then
+    echo "${cmd}: (Error) Number of compute tasks < 1 -- maybe because # of I/O-nodes  (= $nproc_io_nodes) or I/O-tasks  (= $nproc_io) was too high ? Yet total # of MPI-tasks = $nproc (# of nodes = $nodes)" >&2
+    ((errcnt += 1))
+fi
+
+nwrtout=0
+if [[ $nodes -lt 1 ]] ; then
+    echo "${cmd}: (Error) Number of nodes ($nodes) < 1 : (nproc=$nproc, tasks=$tasks, threads=$threads, htway=$htway, nproc_io=$nproc_io, nproc_io_nodes=$nproc_io_nodes)" >&2
+    ((errcnt += 1))
+else
+    nwrtout=$(echo "$nproc $nodes $nwrnode" | awk '{printf("%.0f",($3 != 0) ? (($3 > 0) ? ($1/$2)/$3 : ($1/$2)*(-$3)) : ($1/$2))}')
+    [[ $nwrtout -gt 0 ]] || nwrtout=1
+    [[ $nwrtout -le $tasks ]] || nwrtout=$tasks
+fi
+
+if [[ "$lrefgen" = true ]] ; then
+    # Generating reference outputs
+    # Turn lrefout off (as it does not make sense)
+    lrefout=false
+fi
+
+if [[ $nproma -gt 0 ]] ; then
+    nproma=$((-nproma))
+fi
+absnproma=$((-nproma))
+
+# Default nrproma=0 leads to (see l. 976 in arpifs/phys_radi/suecrad.F90):
+#   if LOPT_SCALAR: NRPROMA=-8
+#   else: NRPROMA=511.
+# Unless lopt_scalar=false is explicitly set as a bash environment variable we will have LOPT_SCALAR=.TRUE.
+# Note: in the old RAPS, nrproma used to be set to 1 with resolutions finer than 1999 (but was kept to 0 for nextGEMS/climDT).
+if [[ $nrproma -gt 0 ]] ; then
+    nrproma=$((-nrproma))
+fi
+absnrproma=$((-nrproma))
+
+WORK=$INPROOT/$trl
+if [[ ! -d $WORK ]] ; then
+    echo "${cmd}: (Error) Unable to locate WORK-dir $WORK" >&2
+    ((errcnt += 1))
+fi
+
+EXPROOT=$WORK/$expver
+if [[ ! -d $EXPROOT ]] ; then
+    echo "${cmd}: (Error) Unable to locate EXPROOT-dir $EXPROOT" >&2
+    ((errcnt += 1))
+fi
+
+DATA=$EXPROOT/data
+if [[ ! -d $DATA ]] ; then
+    echo "${cmd}: (Error) Unable to locate DATA-dir $DATA" >&2
+    ((errcnt += 1))
+fi
+
+env_exports+=("CRTABLEDIR=./") # as in the source code
+
+ifsdata=$DATA/ifsdata
+if [[ ! -d $ifsdata ]] ; then
+    echo "${cmd}: (Error) Unable to locate ifsdata-dir $ifsdata" >&2
+    ((errcnt += 1))
+fi
+
+climdata=$DATA/climate
+if [[ ! -d $climdata ]] ; then
+    echo "${cmd}: (Error) Unable to locate climate-dir $climdata" >&2
+    ((errcnt += 1))
+fi
+
+astro=$DATA/astro
+if [[ ! -d $astro ]] ; then
+    if [[ ${RAPS_IFS_CYCLE:0:2} -gt 50 || "$RAPS_IFS_CYCLE" = "49r2" || "$RAPS_IFS_CYCLE" = "49r3" ]] ; then
+        echo "${cmd}: (Error) Unable to locate astro-dir $astro -- for CY49R2 or later this is required" >&2
+        ((errcnt += 1))
+    fi
+fi
+
+compodata=$DATA/compo
+if [[ "$compo" -eq 1 ]] ; then
+    if [[ ! -d ${compodata} ]]; then
+       echo "${cmd}: (Error) Unable to find COMPO data directory ${compodata}" >&2
+        ((errcnt += 1))
+    fi
+fi
+if [[ "$trunc" = "tl" ]] ; then
+    ifs=$DATA/ifs
+    if [[ ! -d $ifs ]] ; then
+	echo "${cmd}: (Error) Unable to locate ifs-dir $ifs (required for TL-models only)" >&2
+	((errcnt += 1))
+    fi
+fi
+
+restart_check_opts
+gpu_check_opts
+ocean_check_opts
+wam_check_opts
+multio_check_opts
+ifsphys_check_opts
+
+refdir=$bench
+
+if [[ $nemo -eq 1 ]] ; then
+    refdir+=".nemo"
+elif [[ $fesom -eq 1 ]] ; then
+  refdir+=".fesom"
+fi
+
+if [[ "$lwcou" = true ]] ; then
+    # With WAM
+    refdir+=".wam"
+else
+    # Without WAM
+    refdir+=".nowam"
+fi
+if [[ "$leradi" = "true" ]] ; then
+  refdir+=".rad"
+fi
+
+
+attr="${attr}refdir=$refdir "
+
+if [[ "$lrefout" = true ]] ; then
+    if [[ "$ref_input_path" = "undef" ]] ; then
+        echo "${cmd}: (Info) Reference input path not set by user -- disabling reference output check" >&2
+        lrefout=false
+    else
+        env_exports+=("REF_INPUT_PATH=$ref_input_path")
+        if [[ ! -d $ref_input_path ]] ; then
+            echo "${cmd}: (Error) Unable to locate the reference input path for bench=$bench : REF_INPUT_PATH-dir $ref_input_path" >&2
+            ((errcnt += 1))
+        fi
+    fi
+fi
+
+YYYYMMDDZZ=$yyyymmddzz
+labelroot=$EXPROOT/$LABEL
+if [[ ! -d $labelroot ]] ; then
+    echo "${cmd}: (Error) Unable to locate labelroot-dir $labelroot" >&2
+    ((errcnt += 1))
+else
+    if [[ $yyyymmddzz = "undef" ]] ; then
+	    YYYYMMDDZZ=$(\ls -C1 $labelroot | tail -n1)
+    fi
+fi
+labelzz=$labelroot/$YYYYMMDDZZ
+label=$labelzz/gfc # for LWDA (fc only)
+if [[ ! -d $label ]] ; then
+    echo "${cmd}: (Error) Unable to locate label-dir $label" >&2
+    ((errcnt += 1))
+fi
+
+if [[ "$ifs_dir" != "undef" ]]; then
+    exefrom=$(find $ifs_dir/bin -maxdepth 1 -name "ifsMASTER.*")
+  if [[ ! -x "$exefrom" ]] ; then
+    echo "${cmd}: (Error) Unable to locate ifsMASTER in $ifs_dir/bin" >&2
+    ((errcnt += 1))
+  fi
+  if [[ -f $ifs_dir/env.sh ]]; then
+    source $ifs_dir/env.sh
+  else
+    echo "${cmd}: (Warning) Unable to locate env.sh in IFS build/install dir $ifs_dir" >&2
+    ((errcnt += 1))
+  fi
+fi
+
+exefrom=$(which $exefrom 2>/dev/null || echo $exefrom)
+
+if [[ ! -x $exefrom ]] ; then
+    echo "${cmd}: (Error) Invalid or non-existent ifsMASTER-executable $exefrom" >&2
+    ((errcnt += 1))
+    prec=unknown
+else
+    # fetch the precision : dp=double (the default), sp=single
+    # exefrom = /path/ifsMASTER.DP or ifsMASTER.SP
+      prec=$(basename $exefrom | cut -d. -f2 | perl -pe 's/.*(dp|sp)$/\L$1/i')
+    if [[ "$prec" = "sp" ]] ; then
+	  IFS_PREC=single
+    else
+ 	  IFS_PREC=double
+	  prec="dp"
+    fi
+    attr="${attr}prec=$prec "
+fi
+
+if [[ "$wrapper" != "" ]] ; then
+    wrapper=$(which $wrapper 2>/dev/null || echo $wrapper)
+    if [[ ! -x $wrapper ]] ; then
+	    echo "${cmd}: (Error) Unable to invoke the provided wrapper $wrapper" >&2
+	    ((errcnt += 1))
+    fi
+fi
+
+echo "Command: $cmd $trueargs" >&2
+
+if [[ $errcnt -gt 0 ]] ; then
+    awk '/# Usage/,/# End/' $0 | fgrep -v awk >&2 || :
+    echo "${cmd}: (Error) Exiting with error count = $errcnt" >&2
+    exit $errcnt
+fi
+
+set -x
+
+pwd
+
+nhdynstr=""
+[[ $nhdyn -eq 0 ]] || nhdynstr="nh"
+
+runroot=$OUTROOT/${nhdynstr}$trl/$EXPVER
+mkdir -p $runroot
+cd $runroot
+
+ioserv=""
+if [[ $nproc_io -gt 0 ]] ; then
+	ioserv="+ioT${nproc_io}xt${threads}"
+fi
+
+if [[ $ppout -gt 0 ]] ; then
+    if [[ "$ppout_unit" = "h" ]] ; then
+	    ioserv="${ioserv}.out_${ppout}h"
+    else
+	    ioserv="${ioserv}.out_${ppout}t"
+    fi
+        ppoutextra=200
+    if [[ "$stacksize" != "undef" ]] ; then
+	    stacksize=$((stacksize + ppoutextra))
+    fi
+elif [[ "$iomode" = @(od|rd|rst) ]] ; then
+    ioserv="${ioserv}.iomode_$iomode"
+    odrdextra=200
+    if [[ "$stacksize" != "undef" ]] ; then
+	    stacksize=$((stacksize + odrdextra))
+    fi
+fi
+
+htstr="xh${htway}"
+nemoext=""
+[[ $nemo -eq 0 ]] || nemoext=".${orca}"
+
+if [[ $nemo -eq 1 ]] ; then
+    nemostack=450
+    if [[ "$stacksize" != "undef" ]] ; then
+	    stacksize=$((stacksize + nemostack))
+    fi
+fi
+
+attr="${attr}comp=$compiler nodes=$nodes ionodes=$nproc_io_nodes mpi=$tasks omp=$threads ht=$htway ppn=$ppn "
+attr="${attr}iompi=$nproc_io ioppn=$ioppn "
+attr="${attr}nproma=$absnproma nrproma=$absnrproma nproma_wam=$nproma_wam nwrnode=$nwrnode nwrtout=$nwrtout "
+attr="${attr}gpmodel=$gpmodel "
+attr="${attr}stacksize=$stacksize "
+attr="${attr}nhdyn=$nhdyn "
+attr="${attr}tag=$tag "
+
+cutjobid=$(echo "$jobid" | cut -d. -f1)
+if [[ "$rundir" = "" ]] ; then
+    if [[ "$lwcou" = true ]] ; then
+	    wamext="w${nproma_wam}"
+    else
+	    wamext=""
+    fi
+    if [[ "$bench" = "ens" ]] ; then
+	    if [[ "$member" = "0" ]] ; then
+	        ensext=".cf"
+	    else
+	        ensext=".pf"
+	    fi
+	    ensext+="${member}-${totens}"
+    else
+	    ensext=""
+    fi
+    if [[ "$tag" = "undef" ]]; then
+        tagext=""
+    else
+        tagext="-${tag}"
+    fi
+    compiler_ver=${RAPS_COMPILER_VERSION:-"undef"}
+    mpilib_ver=${RAPS_MPI_LIBRARY_VERSION:-"undef"}
+    compsys="${compiler}-${compiler_ver}/${mpilib}-${mpilib_ver}"
+    rundir="$(pwd)/${bench}/${prec}/${compsys}/${host}/${hfclen}.N${nodelabel}.T${tasks}xt${threads}${htstr}${ioserv}.i${absnproma}r${absnrproma}${wamext}${nemoext}${ensext}.${jobname}-${cutjobid}${tagext}"
+fi
+
+# Now finally in the destination run directory !
+mkdir -p $rundir
+cd $rundir
+
+{ # >> ifs.log
+
+[[ "${SHOWUSAGE:-}" = "" ]] || $SHOWUSAGE || :
+
+pwd
+
+delaybef=0
+delayaft=0
+if [[ "$delay" != "undef" ]] ; then
+    # Get delays before and after IFS invocation
+    delaybef=$(echo "$delay" | perl -pe 's%[:/,]%,%' | cut -d, -f1)
+    delayaft=$(echo "$delay" | perl -pe 's%[:/,]%,%' | cut -d, -f2)
+    [[ "$delaybef" != "" ]] || delaybef=0
+    [[ "$delayaft" != "" ]] || delayaft=0
+fi
+
+if [[ -x $(which lfs 2>/dev/null) ]] ; then
+    if [[ "$stripe" != "undef" ]] ; then
+        # Lustre stripe count and/or size
+        stripecount=$(echo "$stripe" | perl -pe 's%[:/,]%,%' | cut -d, -f1)
+        stripesize=$(echo "$stripe" | perl -pe 's%[:/,]%,%' | cut -d, -f2)
+        stripepool=$(echo "$stripe" | perl -pe 's%[:/,]%,%' | cut -d, -f3)
+        [[ "$stripepool" = "" ]] || stripepool="--pool $stripepool" # --pool
+        stripestr=""
+        [[ "$stripecount" = "" ]] || stripestr="$stripestr --stripe-count $stripecount"
+        [[ "$stripesize" = "" ]]  || stripestr="$stripestr --stripe-size $stripesize"
+        [[ "$stripestr" = "" ]] || lfs setstripe $stripestr $stripepool . || :
+    fi
+
+  lfs getstripe ${stripepool:-} -d "$(pwd)" || : # display Lustre striping (where applicable)
+fi
+
+# Copy this cmd script over
+if [[ -f $cmddir/$cmd ]] ; then
+    \cp -f $cmddir/$cmd . || :
+fi
+
+# compinfo.txt should be in the same location as this cmd script => copy it over
+if [[ -f $cmddir/compinfo.txt ]] ; then
+    \cp -f $cmddir/compinfo.txt . || :
+fi
+
+
+### setup local FDB via helper script.
+if [[ "${fdbdir}" = "undef" ]]; then
+    fdbdir="${rundir}/fdb"
+fi
+#
+#   This will setup a fdb directory in -o dir, with the -c config, and -s schema
+#   located in -t folder.
+#   Depending on the arguments in -f N FDBs are configured with the specified names.
+#   The helper script will write a utily output (-r $rundir/tmp/fdb.setup) that saves
+#   the number of folders in a mapping file, that futher down can be used to generate
+#   environment variables for MultIO plans.
+local_fdb_setup.sh -o ${fdbdir} -t ${RAPS_ETCDIR}/fdb -c config.yaml -s schema.DestinE -f HEALPix,Native,RegularLL -r $rundir/.fdb.setup
+
+
+multio_setup_ifs
+multio_setup_ocean
+multio_setup_optimizations
+
+# Source the generated environment file for MultIO
+if [[ -f ".multio.env" ]]; then
+    source "${rundir}/.multio.env"
+fi
+
+# Call / do not call MPI_Waitall / Waitany from within MPL_WAITALL / WAITANY
+MPL_WAITALL=${MPL_WAITALL:-"true"}
+MPL_WAITANY=${MPL_WAITANY:-"true"}
+
+# This part uses IFSIO legacy, which is an old way to use MultIO with IFS.
+# It will be deprecated in the future.
+if [[ $use_multio_ifs != true ]] ; then
+    if [[ $ppout -gt 0 ]] || [[ "$iomode" = @(od|rd) ]] ; then
+        if [[ $iodevnull -eq 0 ]] ; then
+            MULTIO_CONFIG_FILE=$RAPS_ETCDIR/fdb/multio_config_fdb5
+        else # Output goes still to FDB5 but no I/O is performed (or it "goes" to /dev/null)
+            MULTIO_CONFIG_FILE=$RAPS_ETCDIR/fdb/multio_config_devnull
+        fi
+    else
+        ppout=0
+        MULTIO_CONFIG_FILE=$RAPS_ETCDIR/fdb/multio_config_dummy
+    fi
+
+    if [[ ! -f $MULTIO_CONFIG_FILE ]] ; then
+        echo "${cmd}: (Error) Unable to locate MULTIO_CONFIG_FILE from $MULTIO_CONFIG_FILE" >&2
+        ((errcnt += 1))
+    fi
+    \cat $MULTIO_CONFIG_FILE
+    if [[ $ppout -gt 0 ]] || [[ "$iomode" = @(od|rd) ]] ; then
+        env_exports+=("MULTIO_SINKS=fdb5")
+        if [[ -z ${FDB_HOME:-} ]] ; then # FDB_HOME not interfering/available in any ways, then ...
+            echo "fdbdir=$fdbdir"
+            env_exports+=("FDB_ROOT_DIRECTORY=${fdbdir}")
+            if [[ ! -d ${fdbdir} ]]; then
+                mkdir -p $fdbdir
+                # Lustre stripe count and/or size
+                if [[ -x $(which lfs 2>/dev/null) ]] ; then
+                    [[ "${stripestr:-}" = "" ]] || lfs setstripe $stripestr $stripepool $fdbdir || :
+                fi
+            fi
+        fi
+        ECKIT_EXCEPTION_DUMPS_BACKTRACE=${ECKIT_EXCEPTION_DUMPS_BACKTRACE:-1} # Traceback before throw'ing exception
+    fi
+fi
+
+# Limits fiddle (some of this may be necessary ... sigh !)
+\cat /proc/self/limits || :
+prlimit=$(which prlimit 2>/dev/null || echo "")
+[[ "$prlimit" = "" ]] || $prlimit || :
+ulimit -a || :
+
+hardlimit=unlimited
+ulimit -m $hardlimit || :
+
+hardlimit=unlimited
+if [[ -f /proc/self/limits ]] ; then
+    limit=$(fgrep 'Max stack size' /proc/self/limits | awk '{print $5}')
+    if [[ "$limit" != unlimited ]] ; then
+        limit=$((limit / 1024))
+    fi
+    hardlimit=$limit
+fi
+ulimit -s $hardlimit || :
+
+hardlimit=unlimited
+if [[ -f /proc/self/limits ]] ; then
+    limit=$(fgrep 'Max data size' /proc/self/limits | awk '{print $5}')
+    if [[ "$limit" != unlimited ]] ; then
+        limit=$((limit / 1024))
+    fi
+    hardlimit=$limit
+fi
+ulimit -d $hardlimit || :
+
+hardlimit=unlimited
+if [[ -f /proc/self/limits ]] ; then
+    limit=$(fgrep 'Max address space' /proc/self/limits | awk '{print $5}')
+    if [[ "$limit" != unlimited ]] ; then
+        limit=$((limit / 1024))
+    fi
+    hardlimit=$limit
+fi
+ulimit -v $hardlimit || :
+
+# A comment on DR_HOOK_NOT_MPI (by SS/16-Oct-2020)
+#
+# Formerly the value "0" could hang IO server runs due to the global opers in MPL_GETARG -- now fixed in dr_hook_util.F90 & mpl_init_mod.F90
+# Though the value  "1" works and is an emergency option for sequential runs, its use in parallel runs should be avoided,
+# as it potentially screws up DrHook's initial output so that *ALL* tasks write the prolog information out -- very messy
+
+env_exports+=("DR_HOOK_NOT_MPI=${DR_HOOK_NOT_MPI:-0}")
+
+env_exports+=("DR_HOOK_WATCH_PRINT_MAX=${DR_HOOK_WATCH_PRINT_MAX:-300}")
+
+\rm -f core core.*
+ulimit -S -c 0 || : # Soft-suppress producing core file(s) -- DrHook can still override
+if [[ $core -eq 1 ]]; then
+    env_exports+=("DR_HOOK_ALLOW_COREDUMP=-1") # Means: allow core dump from any MPI-task .. that DrHook fails
+else
+    env_exports+=("DR_HOOK_ALLOW_COREDUMP=0") # No core dumps
+    env_exports+=("DR_HOOK_HARAKIRI_TIMEOUT=${DR_HOOK_HARAKIRI_TIMEOUT:-60}")
+fi
+
+env_exports+=("EC_MEMINFO=${EC_MEMINFO:-1}") # turns EC_MEMINFO output ON=1/OFF=0 -- ON is the default (see ifsaux/utilities/ec_meminfo.F90)
+env_exports+=("EC_PMON=${EC_PMON:-"-1"}")      # turns power/energy monitoring output ON=1/OFF=0 -- ON is the default (see ifsaux/utilities/ec_meminfo.F90)
+env_exports+=("EC_MEMINFO_TMPDIR=$(pwd)") # current dir for EC_MEMINFO
+env_exports+=("EC_MEMINFO_JOBNAME=${EC_MEMINFO_JOBNAME:-$jobname}")
+env_exports+=("EC_MEMINFO_JOBID=${EC_MEMINFO_JOBID:-$jobid}")
+
+# Task binding with ecbind tool, on by default
+ecbind=${ecbind:-2}
+
+if [[ $ecbind -gt 0 ]] ; then
+    if [[ "${wrapper:-}" = "" ]] ; then
+	cpstr=""
+	if [[ $user_cores_per_socket -lt $cores_per_socket ]] ; then
+	    cpstr=" --cps ${user_cores_per_socket}"
+	else
+	    cpstr=" --cps ${cores_per_socket}"
+	fi
+	perftool=""
+	if [[ "$perf" != "" ]] ; then
+	    perftool=" --tool $perf"
+	    perf=""
+	fi
+	if [[ $membind -eq 0 ]] ; then
+	    membind=""
+	else
+	    membind=" --membind"
+	fi
+	wrapper="$cmddir/ecbind -V0 --ppn $ppn -h $htway --depth $threads$membind --bind=$ecbind$places$cpstr$perftool"
+    fi
+fi
+
+# Threads & their stacks
+
+env_exports+=("OMP_NUM_THREADS=$threads")
+env_exports+=("OMP_THREAD_LIMIT=${OMP_THREAD_LIMIT:-$threads}")
+env_exports+=("OMP_DYNAMIC=${OMP_DYNAMIC:-false}")
+
+env_exports+=("OMP_MAX_ACTIVE_LEVELS=${OMP_MAX_ACTIVE_LEVELS:-1}") # No support for OpenMP nesting (must be >= 1 or none of the OMP-parallel regions do anything)
+
+thread_stacksize_mb=$stacksize
+thread_stacksize_mb=$((thread_stacksize_mb + thread_guardsize_mb))
+env_exports+=("THREAD_GUARDSIZE=${thread_guardsize_mb}M")
+env_exports+=("OMP_STACKSIZE=${thread_stacksize_mb}M")
+
+\cat /proc/self/limits || :
+[[ "$prlimit" = "" ]] || $prlimit || :
+ulimit -a || :
+
+env_exports+=("FORT_BLOCKSIZE=${FORT_BLOCKSIZE:-1048576}")
+env_exports+=("FORT_BUFFERED=${FORT_BUFFERED:-true}")
+
+###########
+# DR HOOK #
+###########
+
+DR_HOOK_PROFILE_DIR="$(pwd)/drhook.dir"
+mkdir -p "$DR_HOOK_PROFILE_DIR"
+# DrHook (traceback trigger & profiler (if DR_HOOK=1 *and* DR_HOOK_OPT=prof => 5-10% overhead)
+env_exports+=("DR_HOOK_RANDOM_MEMSTAT=${DR_HOOK_RANDOM_MEMSTAT:-0}") # off by default -- too many /proc/self/status & /proc/self/statm opens
+if [[ "$drhook" = true ]] ; then
+    env_exports+=("DR_HOOK_INIT_SIGNALS=1")
+    env_exports+=("DR_HOOK=1")
+    env_exports+=("DR_HOOK_OPT=${DR_HOOK_OPT:-prof}") # with --drhook *AND* DR_HOOK_OPT preset to something else than "prof" also now possible
+    env_exports+=("DR_HOOK_PROFILE=$DR_HOOK_PROFILE_DIR/drhook.%d")
+    if [[ $memtrace -eq 1 ]] ; then
+	    env_exports+=("DR_HOOK_TIMELINE=1")          # MPL-task 1
+	    env_exports+=("DR_HOOK_TIMELINE_FREQ=${DR_HOOK_TIMELINE_FREQ:-10000}") # every 10000 call to DR_HOOK we print a line -- could adjust this, too
+	    env_exports+=("DR_HOOK_TIMELINE_UNITNO=${DR_HOOK_TIMELINE_UNITNO:-6}") # stderr 0 , stdout 6
+	    env_exports+=("DR_HOOK_TIMELINE_MB=${DR_HOOK_TIMELINE_MB:-10.0}")      # every time memory "jumps" +/- 10MB
+	# Plots via : flexbuild/bin/tlplot outputfile
+    fi
+    if [[ "$stktrace" != "undef" ]] ; then
+        # Implies DR_HOOK_RANDOM_MEMSTAT=1 on master MPI & abort when master threads stack usage 1.5 x OMP_STACKSIZE
+	    env_exports+=("DR_HOOK_TRACE_STACK=$stktrace") # e.g. 1.5
+    fi
+elif [[ "$drhook" = false ]] ; then
+    env_exports+=("DR_HOOK_INIT_SIGNALS=${DR_HOOK_INIT_SIGNALS:-1}")
+    env_exports+=("DR_HOOK=${DR_HOOK:-1}")
+    env_exports+=("DR_HOOK_OPT=${DR_HOOK_OPT:-none}")
+    env_exports+=("DR_HOOK_PROFILE=${DR_HOOK_PROFILE:-${DR_HOOK_PROFILE_DIR}/drhook.%d}")
+elif [[ "$drhook" = off ]] ; then
+    env_exports+=("DR_HOOK=0")
+    env_exports+=("DR_HOOK_OPT=none")
+    env_exports+=("DR_HOOK_IGNORE_SIGNALS=-1")
+    env_exports+=("DR_HOOK_INIT_SIGNALS=0")
+fi
+
+# Trap=1 / don't trap=0 FPEs (even if DR_HOOK_IGNORE_SIGNALS was NOT set to 8 := a definitive no-trapfpe by DrHook)
+env_exports+=("DR_HOOK_TRAPFPE=${DR_HOOK_TRAPFPE:-1}")
+env_exports+=("DR_HOOK_TRAPFPE_INVALID=${DR_HOOK_TRAPFPE_INVALID:-1}")
+env_exports+=("DR_HOOK_TRAPFPE_DIVBYZERO=${DR_HOOK_TRAPFPE_DIVBYZERO:-1}")
+env_exports+=("DR_HOOK_TRAPFPE_OVERFLOW=${DR_HOOK_TRAPFPE_OVERFLOW:-1}")
+
+# whether to print executables|libso's full path (=1) or just its "basename" (=0)
+env_exports+=("LINUXTRBK_FULLPATH=${LINUXTRBK_FULLPATH:-1}")
+
+# Data links
+for dd in $ifsdata ${ifs:-}
+do
+    \ln -s $dd .
+done
+
+if [[ -d $astro ]]
+then
+    for f in $astro/*
+    do
+        b=$(basename $f)
+        \ln -s $astro/$b $b
+    done
+fi
+
+if [[ -d $compodata ]] && [[ "$compo" -eq 1 ]]
+then
+    for f in $compodata/*
+    do
+        b=$(basename $f)
+        \ln -s $compodata/$b $b
+    done
+fi
+for icm in $label/ICM*
+do
+    \ln -s $icm .
+done
+
+ln -s ${climdata}/${resol}${gtype} .
+
+
+restart_setup_files
+ocean_setup_files
+wam_setup_files
+forcings_setup_files
+
+if [[ $nemo -eq 0 && $fesom -eq 0 ]] ; then
+	[[ $dycore -eq 1 ]] && mcc=0
+fi
+
+if [[ $inprootnam -eq 0 ]]; then
+  [[ -L "fort.4" ]] && unlink "fort.4"
+  if [[ "$bench" = "ens" ]]; then
+    if [[ "$member" -gt 0 ]]; then
+      RAPS_NAMDIR="${RAPS_ETCDIR}/nam/${RAPS_IFS_CYCLE}/${bench}/pf"
+    else
+      RAPS_NAMDIR="${RAPS_ETCDIR}/nam/${RAPS_IFS_CYCLE}/${bench}/cf"
+    fi
+  else
+    RAPS_NAMDIR="${RAPS_ETCDIR}/nam/${RAPS_IFS_CYCLE}/${bench}"
+  fi
+  if [[ ! -f $RAPS_NAMDIR/fort.4 ]] ; then
+    echo "${cmd}: (Error) Unable to locate IFS main namelist (fort.4) in $RAPS_NAMDIR" >&2
+    exit 1
+  fi
+  ln -s "$RAPS_NAMDIR/fort.4" .
+else
+  if [[ ! -f $label/fort.4 ]] ; then
+      echo "${cmd}: (Error) Unable to locate IFS main namelist (fort.4)" >&2
+      exit 1
+  fi
+  \ln -s "${label}/fort.4" .
+fi
+
+fort4="fort.4.${pid}"
+\cat fort.4 > $fort4
+
+env PRETTYFI_SPLIT=0 prettyfi_namelists.pl $fort4  # $fort4.sorted only -- turn off splitting long lines
+\mv $fort4.sorted $fort4
+
+\cat fort.4 > fort.4.orig
+\rm -f fort.4
+
+#prettyfi_namelists.pl -fort.4.orig  # fort.4.orig.sorted & fort.4.orig.blocks/*
+env PRETTYFI_SPLIT=0 prettyfi_namelists.pl fort.4.orig  # fort.4.orig.sorted only -- turn off splitting long lines
+\mv fort.4.orig.sorted fort.4.orig
+
+# Namelist massage
+
+# compute the original start date of the run as epoch
+YYYY=$(echo $YYYYMMDDZZ | cut -c1-4)
+MM=$(echo $YYYYMMDDZZ | cut -c5-6)
+DD=$(echo $YYYYMMDDZZ | cut -c7-8)
+ZZ=$(echo $YYYYMMDDZZ | cut -c9-10)
+ifs_initial_date_epoch=$(date -d "${YYYY}-${MM}-${DD} ${ZZ}:00" +%s)
+
+restart_setup_namelists
+gpu_setup_namelists
+ocean_setup_namelists
+wam_setup_namelists
+forcings_setup_namelists
+
+lopt_scalar=${lopt_scalar:-true}
+
+if [[ $nprtrw -gt 0 ]]; then
+  if [[ $nprtrv -eq 0 ]]; then
+    nprtrv=$(($tasks/$nprtrw))
+  fi
+elif [[ $nprtrv -gt 0 ]]; then
+  nprtrw=$(($tasks/$nprtrv))
+fi
+
+if [[ $nprtrv -gt 0 ]] || [[ $nprtrw -gt 0 ]]; then
+  if [[ $(($nprtrw*$nprtrv)) -ne $tasks ]]; then
+    echo "${cmd}: (Error) NPRTW*NPRTV is not equal to NTASKS" >&2
+    exit 1
+  fi
+fi
+
+# Group: NAMPAR1
+v_par1=( \
+    -v "NTRANS_SYNC_LEVEL=${sync_level}" \
+    -v "NOUTTYPE=${nouttype}" \
+    -v "NWRTOUT=${nwrtout}" \
+)
+ifs-f90nml -i -g NAMPAR1 "${v_par1[@]}" $fort4
+
+# Group: NAMCT0
+v_ct0=( \
+    -v "NFRCO=${nfrco}" \
+    -v "LREFOUT=${lrefout}" \
+    -v "LREFGEN=${lrefgen}" \
+    -v "NOPT_MEMORY=${nopt_memory}" \
+    -v "LSMSSIG=false" \
+    -v "LFDBOP=${lfdbop}" \
+)
+ifs-f90nml -i -g NAMCT0 "${v_ct0[@]}" $fort4
+
+# Group: NAMPAR0
+v_par0=( \
+    -v "NPROC=${tasks}" \
+    -v "MBX_SIZE=0" \
+    -v "NOUTPUT=${noutput}" \
+    -v "LOPT_SCALAR=${lopt_scalar}" \
+    -v "LOPT_RS6K=false" \
+    -v "NPRINTLEV=${nprintlev}" \
+    -v "NPRTRV=${nprtrv}" \
+    -v "NPRTRW=${nprtrw}" \
+    -v "NSPECRESMIN=$((resol+1))" \
+    -v "MP_TYPE=${mptype}" \
+    -v "NPRNT_STATS=${tasks}" \
+)
+ifs-f90nml -i -g NAMPAR0 "${v_par0[@]}" $fort4
+
+# Group: NAMIO_SERV
+
+ifs-f90nml -i -g NAMIO_SERV -v "NPROC_IO=${nproc_io}" $fort4
+
+# Group: NAMRIP
+v_rip=( \
+    -v "CSTOP=${hfclen}" \
+    -v "TSTEP=${utstep}" \
+)
+ifs-f90nml -i -g NAMRIP "${v_rip[@]}" $fort4
+
+# Group: NAMDIM
+ifs-f90nml -i -g NAMDIM -v "NPROMA=${nproma}" $fort4
+
+# Group: NAERAD
+v_naerad=(-v "NRPROMA=${nrproma}")
+[[ "${nradfr}" != "undef" ]] && v_naerad+=(-v "NRADFR=${nradfr}")
+[[ "${nradint}" != "undef" ]] && v_naerad+=(-v "NRADINT=${nradint}")
+ifs-f90nml -i -g NAERAD "${v_naerad[@]}" $fort4
+ifsphys_setup_namelists
+# Group: NAMDYNA
+ifs-f90nml -i -g NAMDYNA -v "LTWOTL=true" $fort4
+
+v_namdyn=()
+[[ "$vmax2" != "undef" ]] && v_namdyn+=(-v "VMAX2=${vmax2}")
+if [[ ${#v_namdyn[@]} -gt 0 ]] ; then  
+    ifs-f90nml -i -g NAMDYN "${v_namdyn[@]}" $fort4
+fi
+
+#TODO: dycore needs to be tested
+if [[ $dycore -eq 1 ]] ; then
+    attr="${attr}dycore=1 "
+
+    # Group: NAMCT0
+    v_ct0=( \
+        -v "N3DINI=2" \
+        -v "NFRSDI=24" \
+        -v "NFRGDI=24" \
+    )
+    ifs-f90nml -i -g NAMCT0 "${v_ct0[@]}" $fort4
+
+    # Group: NAEPHY
+    v_aephy=(\
+        -v "LSLPHY=false" \
+        -v "LEPHYS=true" \
+        -v "LEVDIF=false" \
+        -v "LESURF=false" \
+        -v "LECOND=false" \
+        -v "LECUMF=false" \
+        -v "LEEVAP=false" \
+        -v "LEVGEN=false" \
+        -v "LESSRO=false" \
+        -v "LEGWWMS=false" \
+        -v "LEGWDG=false" \
+        -v "LEQNGT=false" \
+        -v "LEOZOC=false" \
+        -v "LESICE=false" \
+        -v "LERADI=false" \
+        -v "LERADS=false" \
+    )
+
+    ifs-f90nml -i -g NAEPHY "${v_aephy[@]}" $fort4
+
+    # Group: NAMDYNCORE
+    v_namdyncore=( \
+        -v "LAQUA=true" \
+        -v "NTESTCASE=162" \
+        -v "CTEST_FAMILY=\"DCMIP16\"" \
+        -v "LPPSTEPS=true" \
+    )
+
+    ifs-f90nml -i -g NAMDYNCORE "${v_namdyncore[@]}" $fort4
+
+    # Group: NAMDYN
+    ifs-f90nml -i -g NAMDYN -v "LRFRIC=true" $fort4
+
+    # Group: NAMDYNA
+    ifs-f90nml -i -g NAMDYNA -v "LEPCLD=true" $fort4
+
+    # Group: NAMFPC
+    v_namfpc=( \
+        -v "NFPPHY=6" \
+        -v "NFP3DFS=5" \
+        -v "NFP3DFP=6" \
+        -v "MFPPHY=142,143,228218,228219,228220,228221" \
+        -v "MFP3DFS=130,135,138,155,120" \
+        -v "MFP3DFP=129,130,135,138,155,120" \
+    )
+    ifs-f90nml -i -g NAMFPC "${v_namfpc[@]}" $fort4
+
+fi
+
+# Convection and TOA-tuning patches are handled by ifsphys_setup_namelists (called above)
+
+
+if [[ $nproc_io -gt 0 ]] ; then
+    if [[ $keepxml -eq 1 ]] ; then
+        # Group: NAMIO_SERV
+        v_namio_serv=( \
+            -v "NMSG_LEVEL_CLIENT=3" \
+            -v "NMSG_LEVEL_SERVER=3" \
+        )
+        ifs-f90nml -i -g NAMIO_SERV "${v_namio_serv[@]}" $fort4
+    fi
+    if [[ $iobufs -gt 0 ]] ; then
+        # Group: NAMIO_SERV
+        ifs-f90nml -i -g NAMIO_SERV -v "NIO_SERV_BUF_MAXSIZE=${iobufs}" $fort4
+    fi
+    # Group: NAMIO_SERV
+    ifs-f90nml -i -g NAMIO_SERV -v "COXMLDIR=\"${coxmldir}\"" $fort4
+    [[ $noxml != 0 ]] || mkdir -pv $coxmldir || :
+fi
+
+if [[ $stochastic -eq 1 ]] ; then
+    # Group: NAMSPSDT
+    v_spsdt=( \
+        -v "LRESETSEED_SDT=true" \
+        -v "LSPPTGFIX=true" \
+        -v "LSPSDT=false" \
+        -v "NPATFR=1" \
+        -v "NSCALES_SDT=3" \
+        -v "RESETSEEDFRQ_SDT=192" \
+        -v "SDEV_SDT=0.42,0.14,0.048" \
+        -v "TAU_SDT=2.16e4,2.592e5,2.592e6" \
+        -v "XLCOR_SDT=500.e3,1000.e3,2000.e3" \
+    )
+    ifs-f90nml -i -g NAMSPSDT "${v_spsdt[@]}" $fort4
+fi
+
+if [[ "$gstats" = true ]] ; then
+    # Group: NAMPAR0
+    v_par0=( \
+        -v "LSTATS=true" \
+        -v "LDETAILED_STATS=true" \
+        -v "LBARRIER_STATS=true" \
+        -v "LBARRIER_STATS2=true" \
+    )
+    ifs-f90nml -i -g NAMPAR0 "${v_par0[@]}" $fort4
+fi
+
+if [[ "$luseflt" != "undef" ]] ; then
+    if [[ "$luseflt" = true ]] ; then
+        # Enable Fast legendre transforms
+        v_trans=(\
+            -v "LUSEFLT=true" \
+            -v "LUSERPNM=false" \
+            -v "LKEEPRPNM=false" \
+        )
+    else
+        # Disable Fast legendre transforms
+        v_trans=(\
+            -v "LUSEFLT=false" \
+            -v "LUSERPNM=true" \
+            -v "LKEEPRPNM=true" \
+        )
+    fi
+    ifs-f90nml -i -g NAMTRANS "${v_trans[@]}" $fort4
+fi
+
+if [[ "$iomode" = "rd" ]] ; then
+    #TODO: clear the group with ifsnml ??
+    perl -ne 'print unless (m%^\s*\&namddh\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMDDH altogether
+    echo -e '&NAMDDH\n/' >> $fort4
+elif [[ "$iomode" = "rst" ]] ; then # only restart output activation
+    #TODO: clear the group with ifsnml ??
+    perl -ne 'print unless (m%^\s*\&namddh\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMDDH altogether
+    echo -e '&NAMDDH\n/' >> $fort4
+    h48=48
+    [[ $FCLEN -ge $h48 ]] || h48=$FCLEN
+    if [[ "$bench" = @(hres|clim) ]] ; then
+	    ndhfdts="576,$(seq -s ',' 1 576)" # only applicable for HRES
+        # Group: NAMCT0
+        ifs-f90nml -i -g NAMCT0 -v "NDHFDTS=${ndhfdts}" "$fort4"
+
+    elif [[ "$bench" = ens ]] ; then
+	    ndhfdts="0" # not applicable for ENS
+        #TODO: here the same as above for NDHFDTS
+        # Group: NAMCT0
+	    ifs-f90nml -i -g NAMCT0 -v "NDHFDTS=${ndhfdts}" $fort4
+    fi
+elif [[ "$iomode" = "od" ]] ; then
+    h48=48
+    [[ $FCLEN -ge $h48 ]] || h48=$FCLEN
+    [[ -f dirlist ]] && unlink dirlist
+    [[ -d postins ]] && unlink postins
+    for f in $(ls full*) $(ls reduced*)
+    do
+        [[ -f $f ]] && unlink $f
+    done
+
+    [[ -f ppnamelist ]] && unlink ppnamelist
+    # TODO: clear groups in ifsnml
+    perl -ne 'print unless (m%^\s*\&namfpc\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMFPC altogether
+    perl -ne 'print unless (m%^\s*\&namddh\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMDDH altogether
+
+    # Group: NAEPHY
+    ifs-f90nml -i -g NAEPHY -v "LDIAGTURB_EC=true" $fort4
+
+    etcdir=$RAPS_ETCDIR
+    if [[ "$bench" = @(hres|clim) ]] ; then
+       #perl -ne 'print unless (m%^\s*\&namsatsim\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMSATSIM altogether
+       #echo -e '&NAMSATSIM\nMSATSIM=057207005,057207006,057207009,\n/' >> $fort4
+       \cat $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/namfpc >> $fort4
+       \cp -r $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/postins .
+       \cp $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/full* .
+       \cp $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/reduced* .
+       \cp $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/ppnamelist .
+       \cat $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/namddh >> $fort4
+       ln -s $RTTOV_COEFDIR/* .
+    fi
+
+    if [[ "$bench" = @(hres|clim) ]] ; then
+	    ctype="fc"
+	    ndhfdts="576,$(seq -s ',' 1 576)" # only applicable for HRES
+
+        # Group: NAMCT0
+        ifs-f90nml -i -g NAMCT0 -v "CFDIRLST='dirlist'" -v "CNPPATH='postins'" $fort4
+
+        # Group: NAMGRIB
+        ifs-f90nml -i -g NAMGRIB -v "NSTREAM=0" -v "NLOCGRB=1" $fort4
+
+    elif [[ "$bench" = ens ]] ; then
+	    member=$(echo "$member" | awk '{printf("%d",$1);}')
+	    if [[ $member -gt 0 ]] ; then # no check on upper bound (should be <= $totens)
+	        env_exports+=("MEMBER=$member")
+	        ctype="pf"
+	    else # control forecast
+	        ctype="cf"
+            # Group: NAMSPSDT
+           ifs-f90nml -i -g NAMSPSDT -v "LRESETSEED_SDT=false" -v "LSPPTGFIX=false" -v "LSPSDT=false" $fort4
+	    fi
+
+        \cat $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/$ctype/namfpc >> $fort4
+        \cp  $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/$ctype/dirlist .
+        \cp -r $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/$ctype/postins .
+        \cp $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/$ctype/full* .
+        \cp $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/$ctype/ppnamelist .
+        \cat $etcdir/$iomode/$RAPS_IFS_CYCLE/$bench/$ctype/namddh >> $fort4
+	    ndhfdts="0" # not applicable for ENS
+
+	    # NSTREAM becomes 1035 with NLOCGRB=30
+	    # After this we should have : stream=enfo, class=od, type=cf or pf and no sign of "lwda" anymore
+
+        # Group: NAMCT0
+        v_ct0=( \
+            -v "NDHFDTS=${ndhfdts}" \
+            -v "CFDIRLST='dirlist'" \
+            -v "CNPPATH='postins'" \
+        )
+        ifs-f90nml -i -g NAMCT0 "${v_ct0[@]}" $fort4
+
+        # Group: NAMGRIB
+        ifs-f90nml -i -g NAMGRIB -v "NSTREAM=0" -v "NLOCGRB=30" $fort4
+
+        #TODO: clear with ifsnml
+        perl -ne 'print unless (m%^\s*\&namgrib\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMGRIB altogether
+        echo -e "&NAMGRIB\nCFCLASS='od',\nCTYPE='$ctype',\nNCYCLE=158,\nNENSFNB=$member,\nNLEG=1,\nNLOCGRB=30,\nNREFERENCE=0,\nNTOTENS=$totens,\nNREFERENCE=0\n/" >> $fort4
+    fi
+fi
+
+# Non-hydrostatic dynamics on ?
+if [[ $nhdyn -eq 1 ]] ; then
+    nsiter=${nsiter:-1}
+    attr="${attr}nsiter=$nsiter "
+    #TODO: clear with ifsnml
+    perl -ne 'print unless (m%^\s*\&namdyn\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMGFL altogether
+    echo -e '&NAMDYN\nLMASCOR=true,\nNITMP=3,\nSITRA=10.0,\nXIDT=0.14,\nNSITER='"${nsiter}"',\nNITERHELM=1,\n/' >> $fort4
+
+    perl -ne 'print unless (m%^\s*\&namgfl\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMGFL altogether
+    echo -e '&NAMGFL\nYQ_NL%LMASSFIX=true,\nYL_NL%LMASSFIX=true,\nYI_NL%LMASSFIX=true,\nYR_NL%LMASSFIX=true,\nYS_NL%LMASSFIX=true,\nLTRCMFBC=true,\nNOPTMFBC=3,\nLTRCMFIX_PS=true,\nNOPTVFE=1,\nNMFDIAGLEV=1,\n/' >> $fort4
+
+    perl -ne 'print unless (m%^\s*\&namcver\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMCVER altogether
+    echo -e '&NAMCVER\nLVERTFE=true,\nNVSCH=3,\nLVFE_GWMPA=false,\nLVFE_GW=false,\nLVFE_Z_TERM=true,\nLVFE_X_TERM=true,\nLVFE_LAPL_BC=false,\nLVFE_LAPL=true,\nLVFE_LAPL_BBC=false,\nLVFE_LAPL_TBC=false,\nLVFE_DELNHPRE=true,\nLVFE_APPROX=false,\nLVFE_CHEB=false,\nLVFE_CENTRI=true,\nNVFE_DERBC=3,\nNVFE_INTBC=3,\nLVFE_ECMWF=false,\n/' >> $fort4
+
+    # Group: NAMDYNA
+    v_namdyna=( \
+        -v "LNHEE=true" \
+        -v "LNHQE=false" \
+        -v "LSETTLS=false" \
+        -v "LPC_FULL=true" \
+        -v "LNESC=true" \
+        -v "LGRADSP=false" \
+        -v "LGWADV=true" \
+        -v "LRDBBC=false" \
+        -v "LSI_NHEE=false" \
+    )
+
+    # v_namdyna="LNHEE=true, LNHQE=false, LSETTLS=false, LPC_FULL=true, LNESC=true, LGRADSP=false, LGWADV=true, LRDBBC=false, LSI_NHEE=false"
+    ifs-f90nml -i -g NAMDYNA "${v_namdyna[@]}" $fort4
+
+    # Group: NAMCT0
+    v_namct0=( \
+        -v "NFRMASSCON=1" \
+        -v "LARPEGEF=false" \
+    )
+    ifs-f90nml -i -g NAMCT0 "${v_namct0[@]}" $fort4
+
+    # Group: NAEPHY
+    v_naephy=( \
+        -v "LSLPHY=true" \
+        -v "LEO3CH=false" \
+    )
+    ifs-f90nml -i -g NAEPHY "${v_naephy[@]}" $fort4
+fi
+
+# EXPVER
+if [[ "$expver" != "$EXPVER" ]] ; then
+    # Output experiment id differs from input expid
+    for f in ICM*${expver}*
+    do
+	ff=$(echo $f|perl -pe "s/${expver}/$EXPVER/")
+	ln -s $f $ff
+    done
+fi
+    # Group: NAMARG
+    ifs-f90nml -i -g NAMARG -v "CNMEXP=${EXPVER}" $fort4
+
+if [[ "$physics" != "yes" ]] ; then
+    perl -ne 'print unless (m%^\s*\&namfpc\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMFPC altogether
+    perl -ne 'print unless (m%^\s*\&namddh\s*$%i .. m%^\s*/\s*$%)' -i $fort4 # remove NAMDDH altogether
+    # Replace with empty namelists
+    echo -e '&NAMFPC\n/\n&NAMDDH\n/' >> $fort4
+    if [[ "$physics" = "no" ]] ; then
+        # Group: NAEPHY
+        ifs-f90nml -i -g NAEPHY -v "LEPHYS=false" $fort4
+    else
+
+    # TODO: replace these with ifsnml
+	# Turn these OFF i.e. false e.g. LEVDIF,GWD,LEPCLD,LEGWWMS,LERADI[,LECUMF] (the "LE" can be dropped; case insensitive)
+	# Please note that --norad already would imply LERADI=false
+	for x in $(echo "$physics" | perl -pe 's/(\w+)/\L$1/gi; s/\ble//gi; s/,/ /g; s/(\w+)/le$1/gi')
+	do
+	    perl -pe "s/($x"'=)true/${1}false/i;' -i $fort4
+	done
+    fi
+fi
+
+
+wam_assemble_namelists_io # IFS Fort4 and Wam_namelist need to be consistent for internal communication. This function is in $RAPSETCDIR/model/wam
+fullpos_assemble_namfpc # utility function in $RAPSETCDIR/model/fullpos
+fullpos_assemble_namcnt0
+fullpos_assemble_namafn
+fullpos_assemble_namgrib
+fullpos_assemble_namddh
+fullpos_assemble_namppc
+fullpos_assemble_namgfl
+
+# generalise ifs_namelist manipulations
+# Utility functions in $RAPSETCDIR/model/ifs_namelist
+ifs_namelist_assemble_naephy
+ifs_namelist_assemble_naerad
+ifs_namelist_assemble_naeaer
+ifs_namelist_assemble_namchem
+ifs_namelist_assemble_namcompo
+ifs_namelist_assemble_namcompo_emis
+ifs_namelist_assemble_namcompo_emis_aux
+ifs_namelist_assemble_namdyna
+ifs_namelist_assemble_namgem
+ifs_namelist_assemble_namspp
+ifs_namelist_assemble_nam_spp_active
+ifs_namelist_assemble_namcver
+ifs_namelist_assemble_namsatsim
+ifs_namelist_assemble_namdyncore
+ifs_namelist_assemble_namdyn
+ifs_namelist_assemble_nammcc
+ifs_namelist_assemble_namspsdt
+ifs_namelist_assemble_namdphy
+
+# $fort4 is complete now
+
+if [[ $errcnt -gt 0 ]] ; then
+    echo "${cmd}: (Error) Namelist and rundir setup failled with error count = $errcnt" >&2
+    exit $errcnt
+fi
+
+\mv $fort4 fort.4
+
+if [[ $compo -eq 0 ]] ; then
+prettyfi_namelists.pl fort.4  # fort.4.sorted only -- splitting long lines back on (the default)
+\mv fort.4.sorted fort.4
+
+# redo fort.4.orig -- now with splitting of long lines back on -- better for sdiff
+env PRETTYFI_SPLIT=1 prettyfi_namelists.pl fort.4.orig  # fort.4.orig.sorted
+\mv fort.4.orig.sorted fort.4.orig
+fi
+
+
+args=""
+
+# Record the essential NAMELIST diffs
+for f in namelist_streams_io fort.4 "$json"; do
+    if [[ -f $f.orig ]] && [[ -f $f ]] ; then
+        nml-diff "$f.orig" "$f" || d=$?
+        if [[ $d -gt 1 ]]; then
+            echo "${cmd}: (Error) nml-diff failed to compare $f and $f.orig" >&2
+            exit 1
+        fi
+    fi
+done
+
+
+LD_LIBRARY_PATH="${ifs_dir}/lib:${ifs_dir}/ifs_${prec}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
+if [[ -n "${LIBBLACKDUMMY_DIR:-}" ]]; then
+  ln -s ${LIBBLACKDUMMY_DIR}/libblackdummy.so libblack.so
+  LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+fi
+env_exports+=("LD_LIBRARY_PATH=${LD_LIBRARY_PATH}")
+
+if [[ -n "${LD_LIBRARY_PATH:-}" ]] ; then
+    echo "LD_LIBRARY_PATH ="
+    echo "$LD_LIBRARY_PATH" | perl -pe 's/:/\n/g' | \cat -n || :
+fi
+
+exe=./ifsMASTER
+ls -ltrL $exefrom
+\ln -s $exefrom $exe
+ldd $exe || :  # we normally prefer dynamic linking -- and then this "ldd" would fail if you haven't linked dynamically
+
+exe=$(readlink -f $exe)
+
+# Show RUNPATH (rpath) hardcoded in the executable (don't fail with this)
+chrpath -kl $exe || :
+
+#************ RUN ************
+
+# Get the number of NUMA-nodes for EC_MAXNUMA -- if possible
+numactl=$(which numactl 2>/dev/null || echo "numactl")
+if [[ -x $numactl ]] ; then
+	EC_MAXNUMA=$($numactl -H | egrep ^available: | awk '{print $2}')
+fi
+
+if [[ -z "${EC_MAXNUMA:-}" ]] ; then
+    EC_MAXNUMA=$nnuma
+fi
+
+if [[ $nnuma -lt ${EC_MAXNUMA:-0} ]] ; then
+    EC_MAXNUMA=$nnuma
+fi
+
+
+# Avoid smsmeter (cmeter)
+unset SMSNAME
+unset ECF_NAME
+
+if [[ -x $(which lfs 2>/dev/null) ]] ; then
+    # Display OST info (Lustre specific)
+    # 1) Current rundir
+    # 2) Input data dir
+    # 3) FDB dir (if exists)
+    $cmddir/OST_info . $INPROOT ${fdbdir} || :
+fi
+
+# If launcher empty, look for srun and then mpirun, in that order
+if [[ "$launcher" = "" ]]; then
+  if [[ -x $(which "srun") ]] ; then
+    launcher="srun"
+  elif [[ -x $(which "mpirun") ]] ; then
+    launcher="mpirun"
+  fi
+else
+  echo "${cmd}: (Error) No launcher provided or found." >&2
+  exit 1
+fi
+
+# Get the first word of the $launcher string := fw
+fw=${launcher%% *}
+if [[ "$fw" = "srun" ]]; then
+  launcher="${launcher} -N $nodes -n $nproc --cpus-per-task=$threads --ntasks-per-node=$ppn"
+  if [[ $htway -eq 1 ]]; then
+        launcher+=" --hint=nomultithread"
+    else
+        launcher+=" --hint=multithread"
+    fi
+elif [[ "$fw" = "mpirun" ]]; then
+    launcher="$launcher -np $nproc"
+fi
+
+
+# Placeholder warning for --frequency option
+if [[ $khz -ne 0 ]] ; then
+    echo "${cmd}: (Warning) Frequency option not implemented yet! It does not has any effect on the run. khz: ${khz}" >&2
+fi
+
+if [[ "$mpilib" == intelmpi* ]] ; then
+    impi_info -a >& impi_info.txt || \rm -f impi_info.txt
+elif [[ "$mpilib" = @(hpcx|openmpi) ]] ; then
+    OMPI_MCA_btl_self_eager_limit=${OMPI_MCA_btl_self_eager_limit:-65535} # Some (standard) MPI_Sends block whilst sending to itself as the default msgsize is only 1024 bytes
+    OMPI_MCA_mpi_show_mca_params=${OMPI_MCA_mpi_show_mca_params:-all} # Display the actual OpenMPI settings as seen by the rank#0 upon MPI-initialization
+    ompi_info -a >& ompi_info.txt || \rm -f ompi_info.txt
+fi
+
+ucx_info=$(which ucx_info 2>/dev/null || echo "")
+[[ "$ucx_info" = "" ]] || $ucx_info -abcdfvy >& ucx_info.txt || \rm -f ucx_info.txt
+
+fi_info=$(which fi_info 2>/dev/null || echo "")
+[[ "$fi_info" = "" ]] || $fi_info -p efa -t FI_EP_RDM >& fi_info.txt || \rm -f fi_info.txt
+
+if [[ -n "${SLURM_JOB_NODELIST:-}" ]] ; then # it is likely we are running under SLURM -- show config
+    scontrol show config >& slurm_config.txt || \rm -f slurm_config.txt
+fi
+
+unset LAUNCHCMD
+
+if [[ -z "${LAUNCHCMD:-}" ]] ; then
+	LAUNCHCMD="$launcher ${wrapper:-} ${perf:-} $exe $args"
+fi
+
+
+if [[ $forge_ddt -eq 1 ]] ; then
+    if [[ $forge_map -eq 1 ]] ; then
+        echo "${cmd}: (Error) Wrong Forge settings, it is not possible to select MAP and DDT at the same time."
+        exit 1
+    fi
+
+    TMPPATH=$(which ddt)
+    if ! [[ -x "${TMPPATH}" ]] ; then
+        echo "${cmd}: (Error): Linaro Forge DDT is not accessible - make sure the correct module is loaded."
+        exit 1
+    fi
+    TMPDIR=${forge_tmpdir:-}
+    LAUNCHCMD="ddt --connect ${LAUNCHCMD}"
+fi
+
+if [[ $forge_map -eq 1 ]] ; then
+    if [[ $forge_ddt -eq 1 ]] ; then
+        echo "${cmd}: (Error) Wrong Forge settings, it is not possible to select MAP and DDT at the same time."
+        exit 1
+    fi
+    TMPPATH=$(which map)
+    if ! [[ -x "${TMPPATH}" ]] ; then
+        echo "${cmd}: (Error) Linaro Forge MAP is not accessible - make sure the correct module is loaded."
+        exit 1
+    fi
+    TMPDIR=${forge_tmpdir:-}  # Currently set the same tempdir as for ddt
+    LAUNCHCMD="map --profile ${LAUNCHCMD}"
+fi
+
+# Export all the environment variables collected into env_exports
+for e in "${env_exports[@]}"; do
+    export ${e?}
+done
+
+pwd
+(set +x; echo "# Job attributes: $attr" || :)
+rc=0
+
+# Create files
+\cat /dev/null > ifs.out
+\cat /dev/null > ifs.err
+
+printenv > ifs.env
+
+# Helper function to unset all env variables that start with lowercase characters
+unset_lowercase_vars() { while IFS='=' read -r name _; do [[ $name =~ ^bash ]] || unset "$name"; done < <(printenv | grep -E '^[a-z]\w*=') ; }
+
+# Helper function to unset all functions defined in the current environment
+unset_functions() { for f in $(compgen -A function); do unset $f; done }
+
+if [[ $dryrun -eq 0 ]] ; then
+    if [[ $delaybef -gt 0 ]] ; then
+	    sleep $delaybef || :
+    fi
+
+    date -R > running # indicator for jobinfo (if invoked whilst running jobs)
+
+	# Reduce the number of env variables : get rid of those starting with lowercase characters and functions
+    ( \
+        unset_lowercase_vars ; unset_functions ; \
+        MPI_EPOCH=$(date +%s.%N) ; export MPI_EPOCH ; \
+        printenv > ifs.reduced.env; \
+        set -eu ; \
+        $LAUNCHCMD \
+    ) \
+	 >>ifs.out 2>>ifs.err || rc=$?
+
+	\mv -f running waiting
+
+else
+    # Reduce the number of env variables : get rid of those starting with lowercase characters and functions
+    ( \
+        unset_lowercase_vars ; unset_functions ; \
+        MPI_EPOCH=$(date +%s.%N) ; export MPI_EPOCH ; \
+        printenv > ifs.reduced.env; \
+        set -eu ; \
+        echo $LAUNCHCMD > ifs.run \
+    )
+    exit 0
+fi
+
+if [[ $rc -eq 0 ]] ; then
+# After-delay only if successful run
+   if [[ $delayaft -gt 0 ]] ; then
+      sleep $delayaft || :
+   fi
+fi
+
+set +eu # Ignore any scripting errors from now on
+
+# Post-run: persist the FESOM clock (updated in the rundir by the model run)
+# into the external restart directory and verify the restart files FESOM
+# writes at the end of the leg. A missing restart marks the run as failed.
+if [[ $fesom -eq 1 && $rc -eq 0 ]] ; then
+    fesom_postprocess_restart || rc=$?
+fi
+
+if [[ $rc -ne 0 ]] ; then
+    for core in core core.*
+    do
+	if [[ -f $core ]] ; then
+	    (set -x; $gdb -batch -n -q -ex "thread apply all bt" $exe $core 2>/dev/null | perl -pe 's/\(.*\)\s+at\s+/() at /') >> ifs.err
+	    [[ $keepcore -eq 0 ]] && \rm -f $core
+	fi
+    done
+fi
+
+bailout=""
+if [[ $rc -ne 0 ]] ; then
+    if [[ -s ifs.stat ]] ; then
+        # Some error(s) happen after all the realistic computation has finished, i.e. CNT0 has appeared in ifs.stat
+        cnt0=$(tail -n1 ifs.stat | awk '{print $3}')
+        if [[ "$cnt0" = "CNT0" ]] ; then
+            bailout=" (ifsMASTER reached CNT0)"
+        fi
+    fi
+
+    # try to generate useful traceback in ifs.trbk
+    $cmddir/ec_addr2line ifs.err | tee ifs.trbk # try first with ec_addr2line (more compact)
+    [[ -s ifs.trbk ]] || $cmddir/trbk2line ifs.err | tee ifs.trbk # if empty, use tool useful with ecProf
+    [[ -s ifs.trbk ]] || $cmddir/ec_drhook ifs.err | tee ifs.trbk # if empty, fetch EC_DRHOOK lines and a bit more
+    [[ -s ifs.trbk ]] || \rm -f ifs.trbk # remove if empty file
+fi
+
+if [[ $rc -eq 0 ]] ; then
+  if [[ -s "$DR_HOOK_PROFILE_DIR/drhook.1" ]] ; then
+        pushd "$DR_HOOK_PROFILE_DIR"
+	    if [[ $nproc_io -gt 0 ]] ; then
+            comp_tasks=$(seq -s ' drhook.' 1 "$tasks")
+            io_tasks=$(seq -s ' drhook.' $((tasks+1)) "$nproc")
+            $cmddir/drhook_merge_walltime.pl drhook.$comp_tasks > drhook.txt &
+            $cmddir/drhook_merge_walltime.pl drhook.$io_tasks > iodrhook.txt &
+         else
+	        $cmddir/drhook_merge_walltime.pl drhook.[0-9]* > drhook.txt & # Computational tasks
+	    fi
+        popd
+    fi
+fi
+
+# Filter down ifs.err
+perl -pe 's/^\s*\[\d+\]\s+//' < ifs.err | $uniqcmd > ifs.err.$pid &
+
+if [[ $ppout -gt 0 ]] || [[ "$iomode" = @(od|rd) ]] ; then
+    # Filter down ifs.out
+    # Display $fdbdir aka fdb5
+    if [[ -d $fdbdir ]] ; then
+	if [[ "$lfdbop" = true ]] ; then
+	    ls -ld $fdbdir
+	    fdbsize=$(du -bs $fdbdir | cut -f1)
+	    echo "FDB size : $fdbsize bytes for $fdbdir"
+	    ls -ltrR $fdbdir || :
+	fi
+	[[ $keepfdb -eq 0 ]] && \rm -rf $fdbdir &
+    fi
+    if [[ "$lfdbop" = false ]] ; then
+	fdbsize=$(du -bs ICM*+* | awk '{s+=$1} END {printf("%d\n",s)}')
+	echo "ICM size : $fdbsize bytes for files "'ICM*+*'
+	ls -ltr ICM*+* || :
+	[[ $keepfdb -eq 0 ]] && \rm -rf ICM*+* # ICM-files are only kept if --keepfdb is supplied
+    fi
+else
+    perl -pe 's/^\s*\[\d+\]\s+//' < ifs.out | $uniqcmd > ifs.out.$pid &
+fi
+
+echo " " >> ifs.out.$pid # output may not have ended up with a newline
+\mv -f ifs.out.$pid ifs.out
+\mv -f ifs.err.$pid ifs.err
+
+##-- HACK: to turn on the detailed timing on NEMO side:
+if [ -f namelist_cfg ]; then
+    sed -i -E '
+      /^[[:space:]]*sn_cfctl%l_runstat[[:space:]]*=/d;
+      /^[[:space:]]*ln_timing_detail[[:space:]]*=/d
+    ' namelist_cfg
+    sed -i -E '
+      s/ln_timing[[:space:]]*=.*$/&\nln_timing_detail=.true.\nsn_cfctl%l_runstat=.true./
+    ' namelist_cfg
+    grep -q 'ln_timing_detail=.true.' namelist_cfg || { echo "${cmd}: (Error) namelist_cfg doesn't contain the timing detail setting" >&2; exit 1; }
+    grep -q 'sn_cfctl%l_runstat=.true.' namelist_cfg || { echo "${cmd}: (Error) namelist_cfg doesn't contain the runstat setting" >&2; exit 1; }
+fi
+##----
+
+##-- HACK: to turn on the detailed timing on NEMO side:
+if [ -f namelist_cfg ]; then
+    sed -i -E '
+      /^[[:space:]]*sn_cfctl%l_runstat[[:space:]]*=/d;
+      /^[[:space:]]*ln_timing_detail[[:space:]]*=/d
+    ' namelist_cfg
+    sed -i -E '
+      s/ln_timing[[:space:]]*=.*$/&\nln_timing_detail=.true.\nsn_cfctl%l_runstat=.true./
+    ' namelist_cfg
+    grep -q 'ln_timing_detail=.true.' namelist_cfg || { echo "${cmd}: (Error) namelist_cfg doesn't contain the timing detail setting" >&2; exit 1; }
+    grep -q 'sn_cfctl%l_runstat=.true.' namelist_cfg || { echo "${cmd}: (Error) namelist_cfg doesn't contain the runstat setting" >&2; exit 1; }
+fi
+##----
+
+##-- HACK: to turn on the detailed timing on NEMO side:
+if [ -f namelist_cfg ]; then
+    sed -i -E '
+      /^[[:space:]]*sn_cfctl%l_runstat[[:space:]]*=/d;
+      /^[[:space:]]*ln_timing_detail[[:space:]]*=/d
+    ' namelist_cfg
+    sed -i -E '
+      s/ln_timing[[:space:]]*=.*$/&\nln_timing_detail=.true.\nsn_cfctl%l_runstat=.true./
+    ' namelist_cfg
+    grep -q 'ln_timing_detail=.true.' namelist_cfg || { echo "${cmd}: (Error) namelist_cfg doesn't contain the timing detail setting" >&2; exit 1; }
+    grep -q 'sn_cfctl%l_runstat=.true.' namelist_cfg || { echo "${cmd}: (Error) namelist_cfg doesn't contain the runstat setting" >&2; exit 1; }
+fi
+##----
+
+pwd
+
+hostname
+\cat ifs.hw
+id
+\cat ifs.out
+[[ -f "$DR_HOOK_PROFILE_DIR/drhook.txt" ]] && head -n30 "$DR_HOOK_PROFILE_DIR/drhook.txt"
+if [[ $nproc_io -gt 0 ]] ; then
+  [[ -f "$DR_HOOK_PROFILE_DIR"/iodrhook.txt ]] && head -n30 "$DR_HOOK_PROFILE_DIR/iodrhook.txt"
+  if [[ $keepxml -eq 0 ]] ; then
+    \rm -rf io_serv.*.d io_serv.*.xml IOSERV.* &
+  fi
+fi
+
+\rm -rf $coxmldir &
+
+# Waiting for subtasks to finish
+wait
+
+\cat compinfo.txt
+\cat ifs.err
+\strings meminfo.txt # may contain unprintable chars
+\cat ifs.stat
+if [[ "$lrefout" = true ]] ; then
+    ls -ltr res_*_* $ref_input_path/ref_*_*
+    \cat res_*_*
+    if ! grep -q "calculations are correct" res_*_*; then
+      echo "Validation of reference failed! Setting exit code to 1"
+      rc=1
+      echo "Namelist differences:"
+      nml-diff "$ref_input_path/fort.4" fort.4 2>&1 || true
+    fi
+fi
+ecpeak pie -o 'gstats_pie_plot.pdf' -i NODE.001_01
+egrep '(FORECAST DAYS PER DAY|WALLCLOCK|util::Timers::Total)' NODE.001_01
+
+set +x
+
+ifstime="n/a"
+if [[ -s ifs.stat ]] ; then
+    ifstime=$(tail -n1 ifs.stat | awk '{print $9}' | awk -F: '{printf("%.0fs",$1*60 + $2)}')
+fi
+
+mpistartupcost=$(awk '/MPI startup cost/ {s=$(NF-1); ++i} END {printf("%s", (i > 0 && s > 0) ? sprintf("%.3fs",s) : "N/A")}' ifs.err)
+
+ended=$(date -R) # must be with -R or date --date="$ended" in jobinfo may occasionally fail
+t2=$(date +%s.%N)
+tdiff=$(printf "%.0fs" "$(echo "$t1 $t2" | awk '{print $2-$1}')")
+
+echo " "
+echo "**************************************************************************************************************"
+echo "cmd: $cmd $trueargs"
+echo "host        : $host"
+echo "cmddir      : $cmddir"
+echo "rundir      : $(pwd)"
+echo "MPI-run     : $LAUNCHCMD"
+echo "Precision   : $IFS_PREC"
+echo "Attributes  : $attr"
+echo "Job started : $started"
+echo "Job ended   : $ended"
+echo "Job total   : $tdiff"
+echo "IFS time    : $ifstime"
+echo "MPI startup : $mpistartupcost"
+echo "Return code : ${rc}$bailout"
+echo "**************************************************************************************************************"
+echo " "
+
+\rm -f waiting
+
+exit $rc
+} 2>&1 | tee ifs.log
+
+rc=${PIPESTATUS[0]}
+
+
+# just plain "estim" for suffix
+estim="estim"
+
+$cmddir/jobinfo | tee ifs.$estim # general very long line job estimation summary
+$cmddir/csvinfo ifs.$estim | tee ifs.csv # suitable for loffice/excel : uses benchmark_summary -c for csv-gen but adds double quotes around each cell
+$cmddir/benchmark_summary ifs.$estim -ab | tee ifs.table # benchmark summary in a table suitable for Confluence browsing
+$cmddir/benchmark_summary ifs.$estim -a | tee ifs.summary # benchmark summary in a more user friendly format
+
+{
+    set -x
+    \cat ifs.$estim
+    \cat ifs.csv
+    \cat ifs.table
+    \cat ifs.summary
+    pwd
+    ls -ltrR
+    du -sh .
+    [[ "${SHOWUSAGE:-}" = "" ]] || $SHOWUSAGE || :
+} 2>&1 | tee -a ifs.log
+
+if [[ $rc -eq 0 ]] ; then
+    if [[ "$lrefgen" = true ]] ; then
+	set +eu # stop failures (not all files below always exist)
+	# Gather reference output(s) into one place -- using the final directory structure
+	if [[ "$iomode" = @(od|rd|rst) ]] ; then
+	    refgen_output_root=io.$refdir
+	    refgen_output=$refgen_output_root/$iomode
+	    if [[ $nproc_io_nodes -gt 0 ]] ; then
+		refgen_output=$refgen_output/io-server/${nproc_io_nodes}_io-nodes
+	    else
+		refgen_output=$refgen_output/no_io-server
+	    fi
+	else
+	    refgen_output_root=$refdir
+	    refgen_output=$refgen_output_root
+	fi
+	reftag=$trl.$expver.$compiler # we keep $compiler here to emphasize where all came from
+	refgen_output=$pid/$refgen_output/$reftag/$hfclen # per FC hours
+	mkdir -p $refgen_output
+	set +x
+	if [[ -f $cmd ]] ; then
+	    also="${also}$cmd "
+	else
+	    also=""
+	fi
+	if [[ $nemo -eq 1 ]] ; then
+	    also="${also}layout.dat solver.stat time.step timing.output ocean.output "
+	fi
+
+	# Keep the big ones (drhook.tgz & ECPROF.tgz), too, for reference tarball -- not going to GIT anymore (but ftp.ecmwf.int)
+    for f in ifs.* fort.4* NODE.* *nam* ref_*_* $DR_HOOK_PROFILE_DIR/drhook.txt $DR_HOOK_PROFILE_DIR/iodrhook.txt \
+           fio.csv fio.txt compinfo.txt meminfo.txt papi_*.txt bwinfo.txt $also
+    do
+	    [[ -f "$f" ]] && cp -v $f $refgen_output/ &
+	done
+	set -x
+	wait
+	\rm -f $refgen_output/*.orig &
+	wait
+	tgz="${reftag}.tgz"
+	cd $pid
+	if [[ -x $pigz ]] ; then # multithreaded gzipped tar creation
+	    tar -I $pigz -cvf ../$tgz $refgen_output_root
+	else
+	    tar -zcvf ../$tgz $refgen_output_root
+	fi
+	cd ..
+	\rm -rf $pid &
+	echo "*** Reference output tarball in the file $(pwd)/$tgz"
+	pwd
+	ls -l $tgz
+	wait
+    fi
+fi
+
+set -x
+exit $rc

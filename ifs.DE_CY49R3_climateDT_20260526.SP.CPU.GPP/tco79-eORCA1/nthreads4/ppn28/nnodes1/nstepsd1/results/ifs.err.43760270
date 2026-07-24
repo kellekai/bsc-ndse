@@ -1,0 +1,1852 @@
++ [clim:30s:11:41:59:2260]: unset_lowercase_vars
++ [clim:30s:11:41:59:2246]: IFS==
+++ [clim:30s:11:41:59:2246]: printenv
+++ [clim:30s:11:41:59:2246]: grep -E '^[a-z]\w*='
++ [clim:30s:11:41:59:2246]: read -r name _
++ [clim:30s:11:41:59:2246]: [[ icmgg =~ ^bash ]]
++ [clim:30s:11:41:59:2246]: unset icmgg
++ [clim:30s:11:41:59:2246]: IFS==
++ [clim:30s:11:41:59:2246]: read -r name _
++ [clim:30s:11:41:59:2246]: [[ nemoyproc =~ ^bash ]]
++ [clim:30s:11:41:59:2246]: unset nemoyproc
++ [clim:30s:11:41:59:2246]: IFS==
++ [clim:30s:11:41:59:2246]: read -r name _
++ [clim:30s:11:41:59:2246]: [[ multio_ifs_plan_template =~ ^bash ]]
++ [clim:30s:11:41:59:2246]: unset multio_ifs_plan_template
++ [clim:30s:11:41:59:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ oceanpart =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset oceanpart
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ purge_namafn =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset purge_namafn
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ ddh_template =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset ddh_template
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ trunc =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset trunc
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ nemo =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset nemo
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ delayaft =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset delayaft
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ absnproma =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset absnproma
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ dphy_template =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset dphy_template
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ ecbind =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset ecbind
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ nfrsdi =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset nfrsdi
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ fi_info =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset fi_info
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ purge_namsatsim =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset purge_namsatsim
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ mpilib =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset mpilib
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ defaults =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset defaults
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ numactl =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset numactl
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ ifsdata =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset ifsdata
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ resolution =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset resolution
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ multio_ifs_model =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset multio_ifs_model
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ dyncore_template =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset dyncore_template
++ [clim:31s:11:42:00:2246]: IFS==
++ [clim:31s:11:42:00:2246]: read -r name _
++ [clim:31s:11:42:00:2246]: [[ hardlimit =~ ^bash ]]
++ [clim:31s:11:42:00:2246]: unset hardlimit
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ lscpu_raw =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset lscpu_raw
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ attr =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset attr
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ multio_plans_root =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset multio_plans_root
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ ocean_nproc_ionodes =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset ocean_nproc_ionodes
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ nfrpos =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset nfrpos
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ num =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset num
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ nwinoff =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset nwinoff
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ multio_message_queue_size =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset multio_message_queue_size
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ ocedirdate =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset ocedirdate
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ multio_server_mpi_buffer_size =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset multio_server_mpi_buffer_size
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ cnf_vname =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset cnf_vname
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ iodevnull =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset iodevnull
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ ioppn =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset ioppn
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ abort =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset abort
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ errcnt =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset errcnt
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ experiment =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset experiment
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ nfrdhfg =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset nfrdhfg
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ this_namelist =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset this_namelist
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ gstats =~ ^bash ]]
++ [clim:32s:11:42:01:2246]: unset gstats
++ [clim:32s:11:42:01:2246]: IFS==
++ [clim:32s:11:42:01:2246]: read -r name _
++ [clim:32s:11:42:01:2246]: [[ compnodes =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset compnodes
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ afn_template =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset afn_template
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ ghg_scenario =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset ghg_scenario
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ mars_stream =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset mars_stream
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ htstr =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset htstr
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ restart_directory =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset restart_directory
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ lf =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset lf
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ member =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset member
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ prlimit =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset prlimit
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ yyyymmddzz =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset yyyymmddzz
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ no_restart =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset no_restart
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ tstep =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset tstep
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ grb_template =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset grb_template
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ nproc_io =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset nproc_io
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ send =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset send
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ nemo_full_grid =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset nemo_full_grid
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ fclen =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset fclen
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ activity =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset activity
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ lfdbop =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset lfdbop
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ vmax2 =~ ^bash ]]
++ [clim:33s:11:42:02:2246]: unset vmax2
++ [clim:33s:11:42:02:2246]: IFS==
++ [clim:33s:11:42:02:2246]: read -r name _
++ [clim:33s:11:42:02:2246]: [[ mptype =~ ^bash ]]
++ [clim:33s:11:42:03:2246]: unset mptype
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ ppnin =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset ppnin
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ nemo_vertical_axis =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset nemo_vertical_axis
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ totens =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset totens
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ nemover =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset nemover
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ nradint =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset nradint
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ chem_template =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset chem_template
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ compodata =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset compodata
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ compo_emis_aux_template =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset compo_emis_aux_template
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ purge_namdyna =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset purge_namdyna
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ inprootnam =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset inprootnam
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ dyna_template =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset dyna_template
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ nflag_value =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset nflag_value
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ coup_namelist =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset coup_namelist
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ purge_namcompo =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset purge_namcompo
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ pigz =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset pigz
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ purge_namdyncore =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset purge_namdyncore
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ nrproma =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset nrproma
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ dd =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset dd
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ stktrace =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset stktrace
++ [clim:34s:11:42:03:2246]: IFS==
++ [clim:34s:11:42:03:2246]: read -r name _
++ [clim:34s:11:42:03:2246]: [[ lscpu =~ ^bash ]]
++ [clim:34s:11:42:03:2246]: unset lscpu
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nposts =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nposts
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ pid =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset pid
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ jobid =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset jobid
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ threads =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset threads
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ purge_namgfl =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset purge_namgfl
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nhdynstr =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nhdynstr
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nemo_oce_restart =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nemo_oce_restart
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ cutjobid =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset cutjobid
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ gem_template =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset gem_template
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ writerst =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset writerst
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ wam_output =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset wam_output
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ forge_ddt =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset forge_ddt
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nouttype =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nouttype
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nnuma =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nnuma
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ idelpro =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset idelpro
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ fc1 =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset fc1
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ resol =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset resol
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nemo_icebergs =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nemo_icebergs
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ naephy_template =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset naephy_template
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:35s:11:42:04:2246]: read -r name _
++ [clim:35s:11:42:04:2246]: [[ nfrdhp =~ ^bash ]]
++ [clim:35s:11:42:04:2246]: unset nfrdhp
++ [clim:35s:11:42:04:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ gdb =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset gdb
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ this_gridtype =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset this_gridtype
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ fw =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset fw
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ json =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset json
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ valb =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset valb
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ lrefgen =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset lrefgen
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ purge_namddh =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset purge_namddh
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ icm =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset icm
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ rstsize =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset rstsize
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ tasks =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset tasks
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ purge_namdphy =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset purge_namdphy
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ keepfdb =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset keepfdb
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ purge_namgem =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset purge_namgem
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ levels =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset levels
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ leradi =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset leradi
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ satsim_template =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset satsim_template
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ purge_namcompo_emis =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset purge_namcompo_emis
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ purge_nammcc =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset purge_nammcc
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ args =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset args
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:36s:11:42:05:2246]: [[ ifs_dir =~ ^bash ]]
++ [clim:36s:11:42:05:2246]: unset ifs_dir
++ [clim:36s:11:42:05:2246]: IFS==
++ [clim:36s:11:42:05:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ stacksize =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset stacksize
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ naerad_template =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset naerad_template
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ dryrun =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset dryrun
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ namelist_nemo_seaice =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset namelist_nemo_seaice
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ labelroot =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset labelroot
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ noutput =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset noutput
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ remap =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset remap
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ end_restart =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset end_restart
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ lkey =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset lkey
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ volcanic =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset volcanic
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ fpc_template =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset fpc_template
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ delaybef =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset delaybef
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ ppc_template =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset ppc_template
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ perf =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset perf
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ iobufs =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset iobufs
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ s =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset s
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ compo_template =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset compo_template
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ runroot =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset runroot
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ gfl_template =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset gfl_template
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ levimoe =~ ^bash ]]
++ [clim:37s:11:42:06:2246]: unset levimoe
++ [clim:37s:11:42:06:2246]: IFS==
++ [clim:37s:11:42:06:2246]: read -r name _
++ [clim:37s:11:42:06:2246]: [[ f =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset f
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ e =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset e
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ d =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset d
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ keepcore =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset keepcore
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ lopt_scalar =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset lopt_scalar
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ b =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset b
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ trueargs =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset trueargs
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ pp1 =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset pp1
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ shiftby =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset shiftby
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ limit =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset limit
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ nprtrw =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset nprtrw
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ ct0_template =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset ct0_template
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ nprtrv =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset nprtrv
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ nradfr =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset nradfr
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ purge_naerad =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset purge_naerad
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ multio_server_mpi_pool_size =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset multio_server_mpi_pool_size
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ ice_cpl_albedo =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset ice_cpl_albedo
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ nemo_eos =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset nemo_eos
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ spp_template =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset spp_template
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ wam_start =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset wam_start
++ [clim:38s:11:42:07:2246]: IFS==
++ [clim:38s:11:42:07:2246]: read -r name _
++ [clim:38s:11:42:07:2246]: [[ nemo_grid =~ ^bash ]]
++ [clim:38s:11:42:07:2246]: unset nemo_grid
++ [clim:38s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ compiler =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset compiler
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ bench =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset bench
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ fesom_grid =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset fesom_grid
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ compo =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset compo
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ ppout =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset ppout
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ multio_client_mpi_buffer_size =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset multio_client_mpi_buffer_size
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ nemo_next_chunk_step0_chunk =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset nemo_next_chunk_step0_chunk
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ lnrcfread =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset lnrcfread
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ multio_client_mpi_pool_size =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset multio_client_mpi_pool_size
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ ifs_initial_date_epoch =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset ifs_initial_date_epoch
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ prec =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset prec
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ realization =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset realization
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ expver =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset expver
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ luseflt =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset luseflt
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ iomode =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset iomode
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ trl =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset trl
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ multio_ocean_plan_processor_args =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset multio_ocean_plan_processor_args
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ ppn =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset ppn
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ places =~ ^bash ]]
++ [clim:39s:11:42:08:2246]: unset places
++ [clim:39s:11:42:08:2246]: IFS==
++ [clim:39s:11:42:08:2246]: read -r name _
++ [clim:39s:11:42:08:2246]: [[ nml_localgrb =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset nml_localgrb
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ purge_nam_spp_active =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset purge_nam_spp_active
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ wrapper =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset wrapper
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ sync_level =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset sync_level
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ tropaerosols =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset tropaerosols
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ nfrhis =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset nfrhis
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ purge_namchem =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset purge_namchem
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ nn_stock =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset nn_stock
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ absnrproma =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset absnrproma
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ xypos =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset xypos
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ uniq =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset uniq
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ idelwo =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset idelwo
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ idelwi =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset idelwi
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ multio_mpi_buffer_size =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset multio_mpi_buffer_size
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ purge_namspp =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset purge_namspp
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ ocean_ioppn =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset ocean_ioppn
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ noxml =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset noxml
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ nwrtout =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset nwrtout
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ spp_active_template =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset spp_active_template
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ mcc_template =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset mcc_template
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:09:2246]: read -r name _
++ [clim:40s:11:42:09:2246]: [[ orca =~ ^bash ]]
++ [clim:40s:11:42:09:2246]: unset orca
++ [clim:40s:11:42:09:2246]: IFS==
++ [clim:40s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ nproma =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset nproma
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ nproc_io_nodes =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset nproc_io_nodes
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ htway =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset htway
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ bashsrc =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ tracing_ =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset tracing_
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ nfrco =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset nfrco
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ convection =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset convection
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ exefrom =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset exefrom
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ purge_namppc =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset purge_namppc
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ refdir =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset refdir
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ nemo_ice_albedos =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset nemo_ice_albedos
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ dycore =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset dycore
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ tropaerosols_file =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset tropaerosols_file
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ nemorwdist =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset nemorwdist
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ spsdt_template =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset spsdt_template
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ ozone_scenario =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset ozone_scenario
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ nhdyn =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset nhdyn
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ end_restarts =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset end_restarts
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ mars_class =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset mars_class
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ tag =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset tag
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:41s:11:42:10:2246]: read -r name _
++ [clim:41s:11:42:10:2246]: [[ ghg_file =~ ^bash ]]
++ [clim:41s:11:42:10:2246]: unset ghg_file
++ [clim:41s:11:42:10:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ nml_generatingProcessIdentifier =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset nml_generatingProcessIdentifier
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ interval =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset interval
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ fort4 =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset fort4
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ thread_stacksize_mb =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset thread_stacksize_mb
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ started =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset started
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ icmcl =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset icmcl
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ label =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset label
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ cmd =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset cmd
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ nn_flxdist =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset nn_flxdist
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ hfclen =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset hfclen
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ nemo_time_step =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset nemo_time_step
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ coupfreq =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset coupfreq
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ nprintlev =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset nprintlev
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ nodes =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset nodes
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ launcher =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset launcher
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ idelt =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset idelt
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ purge_namspsdt =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset purge_namspsdt
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ nemo_start_date =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset nemo_start_date
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ user_cores_per_socket =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset user_cores_per_socket
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ purge_naephy =~ ^bash ]]
++ [clim:42s:11:42:11:2246]: unset purge_naephy
++ [clim:42s:11:42:11:2246]: IFS==
++ [clim:42s:11:42:11:2246]: read -r name _
++ [clim:42s:11:42:11:2246]: [[ astro =~ ^bash ]]
++ [clim:42s:11:42:12:2246]: unset astro
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ exe =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset exe
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ cpstr =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset cpstr
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ purge_namdyn =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset purge_namdyn
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ norms_frequency =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset norms_frequency
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ lscpu_data =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset lscpu_data
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ ice_cpl_type =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset ice_cpl_type
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ nsockets =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset nsockets
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ use_multio_ifs =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset use_multio_ifs
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ icmcl_dir =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset icmcl_dir
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ multio_ifs_plan_processor_args =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset multio_ifs_plan_processor_args
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ nang =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset nang
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ nstpw =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset nstpw
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ nemorcf_file =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset nemorcf_file
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ purge_naeaer =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset purge_naeaer
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ lwcou =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset lwcou
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ rcldiff =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset rcldiff
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ nemo_ice_restart =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset nemo_ice_restart
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ delprolf =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset delprolf
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ ghg =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset ghg
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:43s:11:42:12:2246]: [[ drhook =~ ^bash ]]
++ [clim:43s:11:42:12:2246]: unset drhook
++ [clim:43s:11:42:12:2246]: IFS==
++ [clim:43s:11:42:12:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ naeaer_template =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset naeaer_template
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ re =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset re
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ rc =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset rc
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ nfrgdi =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset nfrgdi
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ purge_namfpc =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset purge_namfpc
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ nn_itend =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset nn_itend
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ nwrnode =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset nwrnode
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ tr =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset tr
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ multio_ocean_grib_templates_path =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset multio_ocean_grib_templates_path
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ nemoreadchunk =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset nemoreadchunk
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ rnf_file =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset rnf_file
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ nproma_wam =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset nproma_wam
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ ref_input_path =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset ref_input_path
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ purge_namgrb =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset purge_namgrb
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ multio_ocean_plan_template =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset multio_ocean_plan_template
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ physics =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset physics
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ cmddir =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset cmddir
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ lrefout =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset lrefout
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ toa_tuning =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset toa_tuning
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ keepxml =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset keepxml
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:44s:11:42:13:2246]: read -r name _
++ [clim:44s:11:42:13:2246]: [[ jobname =~ ^bash ]]
++ [clim:44s:11:42:13:2246]: unset jobname
++ [clim:44s:11:42:13:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ nstop =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset nstop
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ core =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset core
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ ioserv =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset ioserv
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ ozone_dir =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset ozone_dir
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ perftool =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset perftool
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ lnrcfwrite =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset lnrcfwrite
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ gtype =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset gtype
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ t1 =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset t1
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ cver_template =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset cver_template
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ compo_emis_template =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset compo_emis_template
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ nemostack =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset nemostack
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ stripe =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset stripe
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ volcanic_file =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset volcanic_file
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ uniqcmd =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset uniqcmd
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ ncores =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset ncores
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ firstout =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset firstout
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ which_declare =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset which_declare
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ khz =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset khz
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ mcc =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset mcc
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ cmdargs =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset cmdargs
++ [clim:45s:11:42:14:2246]: IFS==
++ [clim:45s:11:42:14:2246]: read -r name _
++ [clim:45s:11:42:14:2246]: [[ host =~ ^bash ]]
++ [clim:45s:11:42:14:2246]: unset host
++ [clim:45s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ rkey =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset rkey
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ cores_per_socket =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset cores_per_socket
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ utstep =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset utstep
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ ocean_nproc_io =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset ocean_nproc_io
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ nemoext =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset nemoext
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ purge_namcompo_emis_aux =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset purge_namcompo_emis_aux
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ coxmldir =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset coxmldir
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ climdata =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset climdata
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ portfolio =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset portfolio
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ membind =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset membind
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ ozone =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset ozone
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ nemoxproc =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset nemoxproc
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ nhists =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset nhists
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ outexp =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset outexp
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ ifrelfmax =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset ifrelfmax
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ nodelabel =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset nodelabel
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ fesom =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset fesom
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ namelist_nemo_ocean =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset namelist_nemo_ocean
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ multio_mpi_pool_size =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset multio_mpi_pool_size
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ delay =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset delay
++ [clim:46s:11:42:15:2246]: IFS==
++ [clim:46s:11:42:15:2246]: read -r name _
++ [clim:46s:11:42:15:2246]: [[ purge_namcver =~ ^bash ]]
++ [clim:46s:11:42:15:2246]: unset purge_namcver
++ [clim:46s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ fixyear =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset fixyear
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ thread_guardsize_mb =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset thread_guardsize_mb
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ rundir =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset rundir
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ purge_namct0 =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset purge_namct0
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ target =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset target
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ gpmodel =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset gpmodel
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ si3_flux_dist =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset si3_flux_dist
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ ucx_info =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset ucx_info
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ fdbdir =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset fdbdir
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ generation =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset generation
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ wam_six_hours_later =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset wam_six_hours_later
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ nproc =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset nproc
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ ppout_unit =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset ppout_unit
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ use_multio_ocean =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset use_multio_ocean
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ ddh_frequency =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset ddh_frequency
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ ocedirconst =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset ocedirconst
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ nopt_memory =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset nopt_memory
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ namelists_nemo_ref =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset namelists_nemo_ref
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ nemo_start_time =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset nemo_start_time
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ output_off =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset output_off
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:47s:11:42:16:2246]: read -r name _
++ [clim:47s:11:42:16:2246]: [[ stochastic =~ ^bash ]]
++ [clim:47s:11:42:16:2246]: unset stochastic
++ [clim:47s:11:42:16:2246]: IFS==
++ [clim:48s:11:42:17:2246]: read -r name _
++ [clim:48s:11:42:17:2246]: [[ dyn_template =~ ^bash ]]
++ [clim:48s:11:42:17:2246]: unset dyn_template
++ [clim:48s:11:42:17:2246]: IFS==
++ [clim:48s:11:42:17:2246]: read -r name _
++ [clim:48s:11:42:17:2246]: [[ multio_server_distribution =~ ^bash ]]
++ [clim:48s:11:42:17:2246]: unset multio_server_distribution
++ [clim:48s:11:42:17:2246]: IFS==
++ [clim:48s:11:42:17:2246]: read -r name _
++ [clim:48s:11:42:17:2246]: [[ forge_map =~ ^bash ]]
++ [clim:48s:11:42:17:2246]: unset forge_map
++ [clim:48s:11:42:17:2246]: IFS==
++ [clim:48s:11:42:17:2246]: read -r name _
++ [clim:48s:11:42:17:2246]: [[ labelzz =~ ^bash ]]
++ [clim:48s:11:42:17:2246]: unset labelzz
++ [clim:48s:11:42:17:2246]: IFS==
++ [clim:48s:11:42:17:2246]: read -r name _
++ [clim:48s:11:42:17:2246]: [[ memtrace =~ ^bash ]]
++ [clim:48s:11:42:17:2246]: unset memtrace
++ [clim:48s:11:42:17:2246]: IFS==
++ [clim:48s:11:42:17:2246]: read -r name _
++ [clim:48s:11:42:17:2260]: unset_functions
+++ [clim:48s:11:42:17:2249]: compgen -A function
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset apply_custom_namelist_edits
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset clearLmod
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset clearMT
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset contains_var
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset defaults_parse_opts
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fesom_apply_custom_namelist_edits
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fesom_parse_opts
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fesom_postprocess_restart
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fesom_setup_files
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fesom_setup_namelists
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset forcings_parse_opts
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset forcings_setup_files
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset forcings_setup_namelists
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namafn
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namcnt0
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namddh
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namfpc
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namgfl
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namgrib
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_assemble_namppc
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_count_fields
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset fullpos_parse_opts
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset gpu_check_opts
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset gpu_option_enabled
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset gpu_parse_opts
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset gpu_setup_namelists
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset ifs_namelist_assemble_naeaer
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset ifs_namelist_assemble_naephy
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset ifs_namelist_assemble_naerad
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:48s:11:42:17:2249]: unset ifs_namelist_assemble_nam_spp_active
++ [clim:48s:11:42:17:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namchem
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namcompo
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namcompo_emis
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namcompo_emis_aux
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namcver
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namdphy
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namdyn
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namdyna
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namdyncore
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namgem
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_nammcc
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namsatsim
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namspp
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_assemble_namspsdt
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifs_namelist_parse_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifsphys_check_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifsphys_parse_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ifsphys_setup_namelists
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset is_function
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset load_defaults
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ml
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset module
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset module_load
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset module_purge
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset module_unload
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_check_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_ifs_plan_defaults
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_ocean_grib_templates_path
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_ocean_plan_defaults
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_parse_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_setup_ifs
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_setup_nemo
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_setup_ocean
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset multio_setup_optimizations
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset nemo_check_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset nemo_parse_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset nemo_setup_files
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset nemo_setup_namelists
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset nfrhis
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset nfrpos
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ocean_check_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ocean_parse_opts
++ [clim:49s:11:42:18:2249]: for f in $(compgen -A function)
++ [clim:49s:11:42:18:2249]: unset ocean_setup_files
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset ocean_setup_namelists
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset parse_etc_model
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset restart_check_opts
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset restart_parse_opts
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset restart_setup_files
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset restart_setup_namelists
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset unset_functions
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset unset_lowercase_vars
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset wam_assemble_namelists_io
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset wam_check_opts
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset wam_parse_opts
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset wam_setup_files
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset wam_setup_namelists
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset which
++ [clim:50s:11:42:19:2249]: for f in $(compgen -A function)
++ [clim:50s:11:42:19:2249]: unset xSetTitleLmod
+++ [clim:50s:11:42:19:2261]: date +%s.%N
++ [clim:50s:11:42:19:2261]: MPI_EPOCH=1784886139.368922973
++ [clim:50s:11:42:19:2261]: export MPI_EPOCH
++ [clim:50s:11:42:19:2262]: printenv
++ [clim:50s:11:42:19:2263]: set -eu
++ [clim:50s:11:42:19:2265]: srun -N 1 -n 28 --cpus-per-task=4 --ntasks-per-node=28 --hint=nomultithread /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/raps/bin/ecbind -V0 --ppn 28 -h 1 --depth 4 --bind=2 --places --cps 56 /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP
++ [clim:57s:11:42:26:612]: exec /usr/bin/taskset --cpu-list 0,1,2,3 /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] KMP_ABORT_DELAY='0'
+  [host] KMP_ADAPTIVE_LOCK_PROPS='1,1024'
+  [host] KMP_ALIGN_ALLOC='64'
+  [host] KMP_ALL_THREADPRIVATE='896'
+  [host] KMP_ATOMIC_MODE='2'
+  [host] KMP_BLOCKTIME='2147483ms
+  [host] KMP_CPUINFO_FILE: value is not defined
+  [host] KMP_DETERMINISTIC_REDUCTION='FALSE'
+  [host] KMP_DEVICE_THREAD_LIMIT='2147483647'
+  [host] KMP_DISP_HAND_THREAD='FALSE'
+  [host] KMP_DISP_NUM_BUFFERS='7'
+  [host] KMP_DUPLICATE_LIB_OK='FALSE'
+  [host] KMP_ENABLE_TASK_THROTTLING='TRUE'
+  [host] KMP_FORCE_MONOTONIC_DYNAMIC_SCHEDULE='FALSE'
+  [host] KMP_FORCE_REDUCTION: value is not defined
+  [host] KMP_FOREIGN_THREADS_THREADPRIVATE='TRUE'
+  [host] KMP_FORKJOIN_BARRIER='2,2'
+  [host] KMP_FORKJOIN_BARRIER_PATTERN='hyper,hyper'
+  [host] KMP_FORKJOIN_FRAMES='TRUE'
+  [host] KMP_FORKJOIN_FRAMES_MODE='3'
+  [host] KMP_GTID_MODE='3'
+  [host] KMP_HANDLE_SIGNALS='FALSE'
+  [host] KMP_HIDDEN_HELPER_AFFINITY='noverbose,warnings,granularity=core,none'
+  [host] KMP_HOT_TEAMS_MAX_LEVEL='1'
+  [host] KMP_HOT_TEAMS_MODE='0'
+  [host] KMP_INIT_AT_FORK='TRUE'
+  [host] KMP_ITT_PREPARE_DELAY='0'
+  [host] KMP_LIBRARY='turnaround'
+  [host] KMP_LOCK_KIND='tas'
+  [host] KMP_MALLOC_POOL_INCR='1M'
+  [host] KMP_MWAIT_HINTS='0'
+  [host] KMP_NESTING_MODE=0
+  [host] KMP_NUM_LOCKS_IN_BLOCK='1'
+  [host] KMP_PLAIN_BARRIER='2,2'
+  [host] KMP_PLAIN_BARRIER_PATTERN='hyper,hyper'
+  [host] KMP_REDUCTION_BARRIER='1,1'
+  [host] KMP_REDUCTION_BARRIER_PATTERN='hyper,hyper'
+  [host] KMP_SCHEDULE='static,balanced;guided,iterative'
+  [host] KMP_SETTINGS='FALSE'
+  [host] KMP_SPIN_BACKOFF_PARAMS='4096,100'
+  [host] KMP_STACKOFFSET='64'
+  [host] KMP_STACKPAD='0'
+  [host] KMP_STACKSIZE='514M'
+  [host] KMP_STORAGE_MAP='FALSE'
+  [host] KMP_TASKING='2'
+  [host] KMP_TASKLOOP_MIN_TASKS='0'
+  [host] KMP_TASK_STEALING_CONSTRAINT='1'
+  [host] KMP_TEAMS_PROC_BIND='spread'
+  [host] KMP_TEAMS_THREAD_LIMIT='224'
+  [host] KMP_TOPOLOGY_METHOD='all'
+  [host] KMP_TPAUSE='0'
+  [host] KMP_USER_LEVEL_MWAIT='FALSE'
+  [host] KMP_USE_YIELD='1'
+  [host] KMP_VERSION='FALSE'
+  [host] KMP_WARNINGS='TRUE'
+  [host] LIBOMP_NUM_HIDDEN_HELPER_THREADS='0'
+  [host] LIBOMP_USE_HIDDEN_HELPER_TASK='FALSE'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEBUG='disabled'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='VERBOSE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_TEAMS='0'
+  [host] OMP_NUM_THREADS='4'
+  [host] OMP_PLACES='0,1,2,3'
+  [host] OMP_PROC_BIND='spread'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='514M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_TEAMS_THREAD_LIMIT='0'
+  [host] OMP_THREAD_LIMIT='4'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_TOOL_VERBOSE_INIT: value is not defined
+  [host] OMP_WAIT_POLICY='ACTIVE'
+  [host] KMP_AFFINITY='noverbose,warnings,respect,noreset,granularity=thread,proclist=[0,1,2,3],explicit'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+ MAIN: MPI startup cost =             -1777132169.138005 secs
+[EC_DRHOOK:hostname:myproc:omltid:pid:unixtid] [YYYYMMDD:HHMMSS:walltime] [function@file:lineno] -- Max OpenMP threads = 4
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2276] DR_HOOK_SILENT=0
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2279] fp = 0x14714838c6a0
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2301] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2322] DR_HOOK_PROFILE=/gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/sandbox/ifsnemo_testbed_43760270/drhook.dir/drhook.%d
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2328] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2334] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2422] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2433] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2441] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2449] DR_HOOK_HARAKIRI_TIMEOUT=500
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2456] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2463] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2470] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2477] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2484] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [process_options@drhook.c:2639]
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [ignore_signals@drhook.c:1417]  DR_HOOK_IGNORE_SIGNALS=<undef>
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [restore_default_signals@drhook.c:1350] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2097] New signal handler 'signal_drhook' for signal#6 (SIGABRT) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2098] New signal handler 'signal_drhook' for signal#7 (SIGBUS) at 0x14714b637fb0 (next at (nil))
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2099] New signal handler 'signal_drhook' for signal#11 (SIGSEGV) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2104] New signal handler 'signal_drhook' for signal#16 (SIGSTKFLT) at 0x14714b637fb0 (next at (nil))
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [trapfpe_treatment@drhook.c:1300] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [trapfpe@drhook.c:258] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [trapfpe@drhook.c:263] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [trapfpe@drhook.c:270] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2106] New signal handler 'signal_drhook' for signal#8 (SIGFPE) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2107] New signal handler 'signal_drhook' for signal#4 (SIGILL) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2108] New signal handler 'signal_drhook' for signal#5 (SIGTRAP) at 0x14714b637fb0 (next at (nil))
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2109] New signal handler 'signal_drhook' for signal#2 (SIGINT) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2117] New signal handler 'signal_drhook' for signal#3 (SIGQUIT) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2118] New signal handler 'signal_drhook' for signal#15 (SIGTERM) at 0x14714b637fb0 (next at 0x416d80)
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2123] New signal handler 'signal_drhook' for signal#24 (SIGXCPU) at 0x14714b637fb0 (next at (nil))
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2125] New signal handler 'signal_drhook' for signal#25 (SIGXFSZ) at 0x14714b637fb0 (next at (nil))
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [signal_drhook_init@drhook.c:2130] New signal handler 'signal_drhook' for signal#31 (SIGSYS) at 0x14714b637fb0 (next at (nil))
+[EC_DRHOOK:gs28r1b35:1:1:2408119:2408119] [20260724:114228:0.001] [catch_signals@drhook.c:1262] DR_HOOK_CATCH_SIGNALS=<undef>
+ EC_MEMINFO@RNSORT: MINCID, MAXCID, NUMNODES =  0 104 1
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP -- wall-time :      0.016s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 26 compute + 1 I/O-tasks and 4+1 threads at 11:42:28.319 on 24-Jul-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 43760270
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs28r1b35              42178    8537       0     31831   74684    40982   67890    217085    2319      3.7   0.0         0      0     106  Sm/p:master:computation
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /gpfs/scratch/ehpc01/bsc631248/ifsnc-49r3-test/direct/ifsnemo-build/src/ifsnemo-XXX.src/install/bin/ifsMASTER.SP -- wall-time :      0.045s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 25 compute + 1 I/O-tasks and 4+1 threads at 11:42:28.348 on 24-Jul-2026
+## EC_MEMINFO The Job Name is ifsnemo-basic-test and the Job ID is 43760270
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 gs28r1b35              42334    8711       0     31790   74598    40947   67802    216834    2330      3.8   0.0         0      0     106  Sm/p:oops:ifs_init
+[EC_DRHOOK:gs28r1b35:1:4:2408119:2409910] [20260724:114228:0.207] [trapfpe_treatment@drhook.c:1300] DR_HOOK enables SIGFPE-related floating point trapping since DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:gs28r1b35:1:4:2408119:2409910] [20260724:114228:0.207] [trapfpe@drhook.c:258] DR_HOOK trapfpe() : Exceptions before = 0xd [13] -- after = 0xd [13]
+[EC_DRHOOK:gs28r1b35:1:4:2408119:2409910] [20260724:114228:0.207] [trapfpe@drhook.c:263] DR_HOOK trapfpe() : with FE_INVALID = 0x1 [1] -- FE_DIVBYZERO = 0x4 [4] -- FE_OVERFLOW = 0x8 [8]
+[EC_DRHOOK:gs28r1b35:1:4:2408119:2409910] [20260724:114228:0.207] [trapfpe@drhook.c:270] DR_HOOK trapfpe() : feenableexcept(0xd [13]) returns rc=13
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         200
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         200
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+          13
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+          78
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         200
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         200
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         200
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         200
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+         159
+ WARNING: rank            1 REMOVE_REQ called with a request array of size 
+          14
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+           read bottom_level (rec:      1) in domain_cfg.nc ok
+  11:42:39 STEP    0 H=   0:00 +CPU=  7.498    
+           STEP    0 :## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power LoadAvg
+           STEP    0 :## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+           STEP    0 :## EC_MEMINFO Node Name                 | Heap  | RSS(tsk)        | Small  Huge or | Small  Huge or | Total          |
+           STEP    0 :## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+           STEP    0 :## EC_MEMINFO    0 gs28r1b35               3012    1805       0     27566   61248    37363   56314    184196    2687      1.0   0.0         0      0   17.02  Sm/p
+  11:42:40 STEP    1 H=   1:00 +CPU=  2.873    
+           STEP    1 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26672   67026    36553   61254    193203    2723      1.0   0.0         0      0   17.02  Sm/p
+  11:42:46 STEP    2 H=   2:00 +CPU=  2.363    
+           STEP    2 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26633   67014    36424   61146    192919    2748      1.0   0.0         0      0   24.15  Sm/p
+  11:42:48 STEP    3 H=   3:00 +CPU=  2.270    
+           STEP    3 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26621   67016    36407   61146    192895    2762      1.0   0.0         0      0   30.70  Sm/p
+  11:42:50 STEP    4 H=   4:00 +CPU=  2.318    
+           STEP    4 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26605   67024    36401   61140    192875    2771      1.0   0.0         0      0   30.70  Sm/p
+  11:42:52 STEP    5 H=   5:00 +CPU=  2.263    
+           STEP    5 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26647   67068    36429   61172    193019    2779      1.0   0.0         0      0   36.72  Sm/p
+  11:42:54 STEP    6 H=   6:00 +CPU=  2.362    
+           STEP    6 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26631   67070    36437   61182    193022    2785      1.0   0.0         0      0   36.72  Sm/p
+  11:42:56 STEP    7 H=   7:00 +CPU=  2.282    
+           STEP    7 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26629   67068    36437   61180    193017    2788      1.0   0.0         0      0   36.72  Sm/p
+  11:42:58 STEP    8 H=   8:00 +CPU=  2.331    
+           STEP    8 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26629   67068    36432   61176    193008    2791      1.0   0.0         0      0   42.28  Sm/p
+  11:43:00 STEP    9 H=   9:00 +CPU=  2.245    
+           STEP    9 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26629   67062    36432   61178    193005    2793      1.0   0.0         0      0   42.28  Sm/p
+  11:43:02 STEP   10 H=  10:00 +CPU=  2.310    
+           STEP   10 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26629   67054    36430   61168    192984    2795      1.0   0.0         0      0   47.38  Sm/p
+  11:43:04 STEP   11 H=  11:00 +CPU=  2.253    
+           STEP   11 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26630   67058    36428   61164    192984    2797      1.0   0.0         0      0   47.38  Sm/p
+  11:43:06 STEP   12 H=  12:00 +CPU=  2.314    
+           STEP   12 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26637   67054    36436   61164    192994    2798      1.0   0.0         0      0   47.38  Sm/p
+  11:43:07 STEP   13 H=  13:00 +CPU=  2.259    
+           STEP   13 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26636   67054    36431   61164    192988    2800      1.0   0.0         0      0   52.08  Sm/p
+  11:43:09 STEP   14 H=  14:00 +CPU=  2.300    
+           STEP   14 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26628   67060    36426   61160    192977    2801      1.0   0.0         0      0   52.08  Sm/p
+  11:43:12 STEP   15 H=  15:00 +CPU=  2.268    
+           STEP   15 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26633   67058    36428   61166    192989    2802      1.0   0.0         0      0   56.40  Sm/p
+  11:43:13 STEP   16 H=  16:00 +CPU=  2.327    
+           STEP   16 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26630   67058    36428   61164    192981    2803      1.0   0.0         0      0   56.40  Sm/p
+  11:43:15 STEP   17 H=  17:00 +CPU=  2.257    
+           STEP   17 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26640   67058    36425   61162    192986    2803      1.0   0.0         0      0   56.40  Sm/p
+  11:43:17 STEP   18 H=  18:00 +CPU=  2.315    
+           STEP   18 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26636   67048    36426   61154    192967    2804      1.0   0.0         0      0   60.37  Sm/p
+  11:43:19 STEP   19 H=  19:00 +CPU=  2.252    
+           STEP   19 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26635   67054    36426   61158    192975    2804      1.0   0.0         0      0   60.37  Sm/p
+  11:43:21 STEP   20 H=  20:00 +CPU=  2.352    
+           STEP   20 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26637   67050    36425   61146    192963    2804      1.0   0.0         0      0   64.02  Sm/p
+  11:43:23 STEP   21 H=  21:00 +CPU=  2.271    
+           STEP   21 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26643   67048    36422   61152    192969    2805      1.0   0.0         0      0   64.02  Sm/p
+  11:43:25 STEP   22 H=  22:00 +CPU=  2.364    
+           STEP   22 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26635   67050    36421   61152    192961    2806      1.0   0.0         0      0   64.02  Sm/p
+  11:43:27 STEP   23 H=  23:00 +CPU=  2.262    
+           STEP   23 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26640   67052    36423   61160    192979    2806      1.0   0.0         0      0   67.38  Sm/p
+  11:43:29 STEP   24 H=  24:00 +CPU=  2.370    
+           STEP   24 :## EC_MEMINFO    0 gs28r1b35               3012    1967       0     26612   67174    36408   61274    193167    2807      1.0   0.0         0      0   67.38  Sm/p

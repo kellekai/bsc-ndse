@@ -1,0 +1,4 @@
+&namio
+ntask_xios = 0
+ntask_multio = 42
+/

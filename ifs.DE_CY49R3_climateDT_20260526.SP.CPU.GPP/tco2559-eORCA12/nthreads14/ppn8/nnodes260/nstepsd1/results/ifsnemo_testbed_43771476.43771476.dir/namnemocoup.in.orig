@@ -1,0 +1,13 @@
+&namnemocoup
+  cdfile_gauss_to_T='_this_must_get_ifs90-nml_ized_',
+  cdfile_gauss_to_U='_this_must_get_ifs90-nml_ized_',
+  cdfile_gauss_to_V='_this_must_get_ifs90-nml_ized_',
+  cdfile_T_to_gauss='_this_must_get_ifs90-nml_ized_',
+  nsstlvl(1)=1,
+  nsstlvl(2)=1,
+  lparbcast=TRUE
+  cdpathdist='./',
+  lreaddist=.false.,
+  lwritedist=.false.,
+  lparintmultatm=TRUE,
+/
